@@ -30,13 +30,10 @@ class ProductTemplate(models.Model):
 
     note_contract_date = fields.Date("Contract date")
     note_publishing_contract_date = fields.Date("Publishing contract date")
-    note_publishing_contract_date = fields.Date("Publishing contract date")
 
     note_royalty_date = fields.Date("Royalty date")
     note_royalty_notice = fields.Date("Royalty notice")
-    note_royalty_notice = fields.Date("Royalty notice")
 
-    note_contract_ended = fields.Boolean("Contract ended")
     note_contract_ended = fields.Boolean("Contract ended")
 
     note_creator_piece_delivered = fields.Boolean("Tekijänkappale delivered")
