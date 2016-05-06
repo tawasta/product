@@ -1,0 +1,133 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_attributes_sheetmusic
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-05-06 14:23+0000\n"
+"PO-Revision-Date: 2016-05-06 17:26+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
+msgid "Box number or PDF location"
+msgstr "Laatikon numero tai PDF:n sijainti"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_catalog_number:0
+msgid "Catalog number"
+msgstr "Kataloginumero"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_contract_date:0
+msgid "Contract date"
+msgstr "Sopimuksen päiväys"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_contract_ended:0
+msgid "Contract ended"
+msgstr "Sopimus päättynyt"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
+msgid "Contracts"
+msgstr "Sopimukset"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_ismn:0
+msgid "ISMN"
+msgstr "ISMN"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
+msgid "Info"
+msgstr "Info"
+
+#. module: product_attributes_sheetmusic
+#: help:product.template,note_ismn:0
+msgid "International Standard Music Number"
+msgstr "International Standard Music Number"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_length:0
+msgid "Length"
+msgstr "Kesto"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
+msgid "Notes"
+msgstr "Nuotit"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_original_location:0
+msgid "Original location"
+msgstr "Originaalin sijainti"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_original_nonexistent:0
+msgid "Original nonexistent"
+msgstr "Originaalia ei ole olemassa"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
+msgid "Other"
+msgstr "Muu"
+
+#. module: product_attributes_sheetmusic
+#: model:ir.model,name:product_attributes_sheetmusic.model_product_template
+msgid "Product Template"
+msgstr "Tuotemalli"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_publisher:0
+msgid "Publisher"
+msgstr "Julkaisija"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_publishing_contract_date:0
+msgid "Publishing contract date"
+msgstr "Julkaisusopimuksen päiväys"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_royalty_date:0
+msgid "Royalty date"
+msgstr "Rojaltin päiväys"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_royalty_notice:0
+msgid "Royalty notice done"
+msgstr "Rojalti-ilmoitus tehty"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_creator_piece_delivered:0
+msgid "Tekijänkappale delivered"
+msgstr "Tekijänkappale toimitettu"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_free_piece_delivered:0
+msgid "Vapaakappaleet delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet toimitettu Kansallisarkistoon"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
+msgid "e.g. 1023c tai 1023 tai 1023/1"
+msgstr "esim. 1023c tai 1023 tai 1023/1"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
+msgid "e.g. 3:20 or ~3min"
+msgstr "esim. 3:20 or ~3min"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
+msgid "e.g. 979-0-55012-187-4 tai M-55002-xxx-x"
+msgstr "esim. 979-0-55012-187-4 tai M-55002-xxx-x"
