@@ -22,9 +22,10 @@ class ProductTemplate(models.Model):
     # 2. Fields declaration
     note_catalog_number = fields.Char("Catalog number")
     note_length = fields.Char("Length")
+    note_ismn = fields.Char("ISMN", help="International Standard Music Number")
 
     note_original_location = fields.Char("Original location")
-    note_original_nonexistent = fields.Char("Original nonexistent")
+    note_original_nonexistent = fields.Boolean("Original nonexistent")
 
     note_publisher = fields.Char("Publisher")
 
@@ -32,7 +33,7 @@ class ProductTemplate(models.Model):
     note_publishing_contract_date = fields.Date("Publishing contract date")
 
     note_royalty_date = fields.Date("Royalty date")
-    note_royalty_notice = fields.Date("Royalty notice")
+    note_royalty_notice = fields.Date("Royalty notice done")
 
     note_contract_ended = fields.Boolean("Contract ended")
 

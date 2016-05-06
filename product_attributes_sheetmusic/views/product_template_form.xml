@@ -5,29 +5,46 @@
 		<record id="product_template_only_form_view" model="ir.ui.view">
 			<field name="name">product.template.form.sheetmusic</field>
 			<field name="model">product.template</field>
-			<field name="inherit_id" ref=" product.product_template_only_form_view " />
+			<field name="inherit_id" ref="product.product_template_only_form_view" />
 			<field name="arch" type="xml">
 
 				<notebook position="inside">
-					<page string="Notes">
-                        <field name="note_catalog_number" />
-                        <field name="note_length" />
+					<page name="notes" string="Notes">
+                        <group string="Info">
+                            <group>
+                                <field name="note_catalog_number" placeholder="e.g. 1023c tai 1023 tai 1023/1" />
+                                <field name="note_length" placeholder="e.g. 3:20 or ~3min" />
+                                <field name="note_publisher" />
+                                <field name="note_ismn" placeholder="e.g. 979-0-55012-187-4 tai M-55002-xxx-x" />
+                            </group>
 
-                        <field name="note_original_location" />
-                        <field name="note_original_nonexistent" />
+                            <group>
+                                <field name="note_original_location"
+                                       attrs="{'readonly':[('note_original_nonexistent','=',True)]}"
+                                       placeholder="Box number or PDF location"
+                                />
+                                <field name="note_original_nonexistent" />
+                            </group>
 
-                        <field name="note_publisher" />
+                        </group>
 
-                        <field name="note_contract_date" />
-                        <field name="note_publishing_contract_date" />
+                        <group name="contracts" string="Contracts">
+                            <group>
+                                <field name="note_contract_ended" />
+                                <field name="note_contract_date" attrs="{'readonly':[('note_contract_ended','=',True)]}"/>
+                                <field name="note_publishing_contract_date" attrs="{'readonly':[('note_contract_ended','=',True)]}"/>
+                            </group>
 
-                        <field name="note_royalty_date" />
-                        <field name="note_royalty_notice" />
+                            <group>
+                                <field name="note_royalty_date" />
+                                <field name="note_royalty_notice" />
+                            </group>
+                        </group>
 
-                        <field name="note_contract_ended" />
-
-                        <field name="note_creator_piece_delivered" />
-                        <field name="note_free_piece_delivered" />
+                        <group name="other" string="Other">
+                            <field name="note_creator_piece_delivered" />
+                            <field name="note_free_piece_delivered" />
+                        </group>
                     </page>
 				</notebook>
 
