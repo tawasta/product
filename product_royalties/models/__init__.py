@@ -1,0 +1,2 @@
+import product_royalty
+import product_template

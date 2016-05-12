@@ -14,13 +14,16 @@ from openerp import api, fields, models
 # 6. Unknown third party imports:
 
 
-class ProductTemplate(models.Model):
+class ProductRoyalty(models.Model):
     
     # 1. Private attributes
-    _inherit = 'product.template'
+    _name = 'product.royalty'
 
     # 2. Fields declaration
-    royalties = fields.One2many('product.royalty', 'product')
+    name = fields.Char("Description")
+    royalty_recipient = fields.Many2one('res.partner', domain=[('is_company', '=', 'False')])
+    royalty_percent = fields.Float('Royalty amount')
+    product = fields.Many2one('product.template')
 
     # 3. Default methods
 
