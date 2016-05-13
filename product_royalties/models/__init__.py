@@ -1,2 +1,3 @@
 import product_royalty
 import product_template
+import res_partner
