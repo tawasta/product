@@ -12,9 +12,9 @@
 					<group string="Royalties" name="royalties">
 						<field name="royalties" nolabel="1">
                             <tree editable="top">
-                                <field name="name" />
-                                <field name="royalty_recipient" />
-                                <field name="royalty_percent" />
+                                <field name="name" invisible="1"/>
+                                <field name="recipient" />
+                                <field name="percent" sum='Total percent'/>
                             </tree>
                         </field>
 					</group>

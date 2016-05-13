@@ -21,8 +21,8 @@ class ProductRoyalty(models.Model):
 
     # 2. Fields declaration
     name = fields.Char("Description")
-    royalty_recipient = fields.Many2one('res.partner', domain=[('is_company', '=', 'False')])
-    royalty_percent = fields.Float('Royalty amount')
+    recipient = fields.Many2one('res.partner', domain=[('is_company', '=', 'False')])
+    percent = fields.Float('Royalty %')
     product = fields.Many2one('product.template')
 
     # 3. Default methods
@@ -30,6 +30,13 @@ class ProductRoyalty(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
 
     # 5. Constraints and onchanges
+    @api.onchange('percent')
+    def onchange_percent(self):
+        # Not implemented yet
+        royalty_total = 0
+
+        for royalty in self.product.royalties:
+            royalty_total += royalty.percent
 
     # 6. CRUD methods
 
