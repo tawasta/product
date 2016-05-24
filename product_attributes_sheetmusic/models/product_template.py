@@ -40,6 +40,10 @@ class ProductTemplate(models.Model):
     note_creator_piece_delivered = fields.Boolean("Tekijänkappale delivered")
     note_free_piece_delivered = fields.Boolean("Vapaakappaleet delivered to Kansallisarkisto")
 
+    note_pdf_filename = fields.Char("Sample PDF Filename")
+    note_pdf = fields.Binary("Sample PDF")
+    note_url = fields.Char("Sample URL")
+
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
