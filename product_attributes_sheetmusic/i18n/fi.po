@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-24 16:08+0000\n"
-"PO-Revision-Date: 2016-05-24 19:10+0300\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2016-05-25 09:48+0000\n"
+"PO-Revision-Date: 2016-05-25 12:48+0200\n"
+"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: fi\n"
-"X-Generator: Poedit 1.8.7.1\n"
+"X-Generator: Poedit 1.7.5\n"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
@@ -121,6 +121,12 @@ msgstr "Näyte-PDF:n tiedostonnimi"
 #: field:product.template,note_url:0
 msgid "Sample URL"
 msgstr "Näyte-URL"
+
+#. module: product_attributes_sheetmusic
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:59
+#, python-format
+msgid "Sample URL is not valid"
+msgstr "Näyte-URL ei ole kelvollinen"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view

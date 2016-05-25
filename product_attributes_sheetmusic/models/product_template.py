@@ -3,9 +3,12 @@
 # 1. Standard library imports:
 
 # 2. Known third party imports:
+import validators
 
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
+from openerp import _
+from openerp.exceptions import ValidationError
 
 # 4. Imports from Odoo modules:
 
@@ -49,6 +52,11 @@ class ProductTemplate(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
 
     # 5. Constraints and onchanges
+    @api.one
+    @api.constrains('note_url')
+    def _check_note_url(self):
+        if not validators.url(self.note_url):
+            raise ValidationError(_("Sample URL is not valid"))
 
     # 6. CRUD methods
 
