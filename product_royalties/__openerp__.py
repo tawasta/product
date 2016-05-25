@@ -22,7 +22,7 @@
 {
     'name': 'Product royalties',
     'summary': 'Allows defining royalties for products',
-    'version': '8.0.0.3.0',
+    'version': '8.0.0.3.1',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -40,6 +40,7 @@
     'data': [
         'views/product_template.xml',
         'views/res_partner.xml',
+        'security/ir.model.access.csv',
     ],
     'demo': [
     ],
