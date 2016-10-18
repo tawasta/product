@@ -24,6 +24,7 @@ class ProductTemplate(models.Model):
 
     # 2. Fields declaration
     mold_number = fields.Char("Mold number")
+    mold_location = fields.Char("Mold location", help="Mold warehouse location number")
 
     # 3. Default methods
 
