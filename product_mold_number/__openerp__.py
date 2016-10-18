@@ -22,7 +22,7 @@
 {
     'name': 'Product mold number',
     'summary': 'Adds mold numbers for products',
-    'version': '8.0.0.5.0',
+    'version': '8.0.0.5.1',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -31,7 +31,6 @@
     'installable': True,
     'external_dependencies': {
         'python': [
-            'validators',
         ],
         'bin': [],
     },

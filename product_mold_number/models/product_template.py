@@ -3,7 +3,6 @@
 # 1. Standard library imports:
 
 # 2. Known third party imports:
-import validators
 
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
