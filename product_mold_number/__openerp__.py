@@ -22,7 +22,7 @@
 {
     'name': 'Product mold number',
     'summary': 'Adds mold numbers for products',
-    'version': '8.0.0.3.0',
+    'version': '8.0.0.4.0',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
@@ -40,7 +40,9 @@
     ],
     'data': [
        'views/product_product_form.xml',
+       'views/product_product_search.xml',
        'views/product_template_form.xml',
+       'views/product_template_search.xml',
     ],
     'demo': [
     ],
