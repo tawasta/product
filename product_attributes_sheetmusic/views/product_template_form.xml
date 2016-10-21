@@ -15,7 +15,8 @@
                                 <field name="note_catalog_number" placeholder="e.g. 1023c tai 1023 tai 1023/1" />
                                 <field name="note_length" placeholder="e.g. 3:20 or ~3min" />
                                 <field name="note_publisher" />
-                                <field name="note_ismn" placeholder="e.g. 979-0-55012-187-4 tai M-55002-xxx-x" />
+                                <field name="note_ismn_paper" placeholder="e.g. 979-0-55012-187-4 tai M-55002-xxx-x" />
+                                <field name="note_ismn_pdf" placeholder="e.g. 979-0-55012-187-4 tai M-55002-xxx-x" />
                             </group>
 
                             <group>
@@ -43,6 +44,9 @@
 
                         <group name="samples" string="Samples">
                             <field name="note_url" widget="url" />
+                            <field name="note_youtube_url" widget="url" />
+                            <field name="note_soundcloud_url" widget="url" />
+                            <field name="note_finnbandshop_url" widget="url" />
                             <field name="note_pdf_filename" invisible="1" />
                             <field name="note_pdf" widget="binary" filename="note_pdf_filename" />
                         </group>

@@ -25,7 +25,9 @@ class ProductTemplate(models.Model):
     # 2. Fields declaration
     note_catalog_number = fields.Char("Catalog number")
     note_length = fields.Char("Length")
-    note_ismn = fields.Char("ISMN", help="International Standard Music Number")
+
+    note_ismn_paper = fields.Char("ISMN paper", help="International Standard Music Number")
+    note_ismn_pdf = fields.Char("ISMN PDF", help="International Standard Music Number")
 
     note_original_location = fields.Char("Original location")
     note_original_nonexistent = fields.Boolean("Original nonexistent")
@@ -45,7 +47,11 @@ class ProductTemplate(models.Model):
 
     note_pdf_filename = fields.Char("Sample PDF Filename")
     note_pdf = fields.Binary("Sample PDF")
+
     note_url = fields.Char("Sample URL")
+    note_youtube_url = fields.Char("Youtube URL")
+    note_soundcloud_url = fields.Char("Soundcloud URL")
+    note_finnbandshop_url = fields.Char("Finnbandshop URL")
 
     # 3. Default methods
 
@@ -55,7 +61,7 @@ class ProductTemplate(models.Model):
     @api.one
     @api.constrains('note_url')
     def _check_note_url(self):
-        if not validators.url(self.note_url):
+        if self.note_url and not validators.url(self.note_url):
             raise ValidationError(_("Sample URL is not valid"))
 
     # 6. CRUD methods
