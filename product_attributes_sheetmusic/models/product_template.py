@@ -36,10 +36,10 @@ class ProductTemplate(models.Model):
 
     note_contract_date = fields.Date("Contract date")
 
-    note_publishing_contract_exists = fields.Char("Publishing contract exists")
+    note_publishing_contract_exists = fields.Boolean("Publishing contract exists")
     note_publishing_contract_date = fields.Date("Publishing contract date")
 
-    note_publishing_agreement_exists = fields.Char("Publishing agreement exists")
+    note_publishing_agreement_exists = fields.Boolean("Publishing agreement exists")
     note_publishing_agreement_date = fields.Date("Publishing agreement date")
 
     note_royalty_notice_done = fields.Boolean("Royalty notice done")
