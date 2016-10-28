@@ -6,16 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-05-25 09:48+0000\n"
-"PO-Revision-Date: 2016-05-25 12:48+0200\n"
-"Last-Translator: Jarmo Kortetjärvi <jarmo@futurable.fi>\n"
+"POT-Creation-Date: 2016-10-28 08:19+0000\n"
+"PO-Revision-Date: 2016-10-28 11:24+0300\n"
+"Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: \n"
 "Language: fi\n"
-"X-Generator: Poedit 1.7.5\n"
+"X-Generator: Poedit 1.8.7.1\n"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
@@ -43,9 +43,19 @@ msgid "Contracts"
 msgstr "Sopimukset"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_ismn:0
-msgid "ISMN"
-msgstr "ISMN"
+#: field:product.template,note_finnbandshop_url:0
+msgid "Finnbandshop URL"
+msgstr "Finnbandshop URL"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_ismn_pdf:0
+msgid "ISMN PDF"
+msgstr "ISMN PDF"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_ismn_paper:0
+msgid "ISMN paper"
+msgstr "ISMN paperi"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
@@ -53,7 +63,8 @@ msgid "Info"
 msgstr "Info"
 
 #. module: product_attributes_sheetmusic
-#: help:product.template,note_ismn:0
+#: help:product.template,note_ismn_paper:0
+#: help:product.template,note_ismn_pdf:0
 msgid "International Standard Music Number"
 msgstr "International Standard Music Number"
 
@@ -93,19 +104,34 @@ msgid "Publisher"
 msgstr "Julkaisija"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_publishing_contract_date:0
-msgid "Publishing contract date"
+#: field:product.template,note_publishing_agreement_date:0
+msgid "Publishing agreement date"
 msgstr "Julkaisusopimuksen päiväys"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_royalty_date:0
-msgid "Royalty date"
-msgstr "Rojaltin päiväys"
+#: field:product.template,note_publishing_agreement_exists:0
+msgid "Publishing agreement exists"
+msgstr "Julkaisusopimus olemassa"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_publishing_contract_date:0
+msgid "Publishing contract date"
+msgstr "Kustannussopimuksen päiväys"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_publishing_contract_exists:0
+msgid "Publishing contract exists"
+msgstr "Kustannussopimus olemassa"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_royalty_contract_date:0
+msgid "Royalty contract date"
+msgstr "Teoston sopimuksen päiväys"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_royalty_notice:0
 msgid "Royalty notice done"
-msgstr "Rojalti-ilmoitus tehty"
+msgstr "Teoston ilmoitus tehty"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_pdf:0
@@ -123,7 +149,7 @@ msgid "Sample URL"
 msgstr "Näyte-URL"
 
 #. module: product_attributes_sheetmusic
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:59
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:71
 #, python-format
 msgid "Sample URL is not valid"
 msgstr "Näyte-URL ei ole kelvollinen"
@@ -134,14 +160,29 @@ msgid "Samples"
 msgstr "Näytteet"
 
 #. module: product_attributes_sheetmusic
+#: field:product.template,note_soundcloud_url:0
+msgid "Soundcloud URL"
+msgstr "Soundcloud URL"
+
+#. module: product_attributes_sheetmusic
 #: field:product.template,note_creator_piece_delivered:0
 msgid "Tekijänkappale delivered"
 msgstr "Tekijänkappale toimitettu"
 
 #. module: product_attributes_sheetmusic
+#: field:product.template,note_free_piece_delivered_pdf:0
+msgid "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
+
+#. module: product_attributes_sheetmusic
 #: field:product.template,note_free_piece_delivered:0
-msgid "Vapaakappaleet delivered to Kansallisarkisto"
-msgstr "Vapaakappaleet toimitettu Kansallisarkistoon"
+msgid "Vapaakappaleet (paper) delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet (paper) delivered to Kansallisarkisto"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_youtube_url:0
+msgid "Youtube URL"
+msgstr "Youtube URL"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view

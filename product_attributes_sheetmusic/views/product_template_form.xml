@@ -41,8 +41,8 @@
                             </group>
 
                             <group>
-                                <field name="note_royalty_contract_date" />
-                                <field name="note_royalty_notice" />
+                                <field name="note_royalty_notice_done" />
+                                <field name="note_royalty_contract_date" attrs="{'invisible':[('note_royalty_notice_done','=',True)]}"/>
                             </group>
                         </group>
 
