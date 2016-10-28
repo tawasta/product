@@ -33,7 +33,11 @@
                             <group>
                                 <field name="note_contract_ended" />
                                 <field name="note_contract_date" attrs="{'readonly':[('note_contract_ended','=',True)]}"/>
-                                <field name="note_publishing_contract_date" attrs="{'readonly':[('note_contract_ended','=',True)]}"/>
+                                <field name="note_publishing_contract_exists" />
+                                <field name="note_publishing_contract_date" attrs="{'invisible':[('note_publishing_contract_exists','=',True)]}"/>
+                                <field name="note_publishing_agreement_exists" />
+                                <field name="note_publishing_agreement_date" attrs="{'invisible':[('note_publishing_agreement_exists','=',True)]}"/>
+
                             </group>
 
                             <group>
@@ -54,6 +58,7 @@
                         <group name="other" string="Other" col="4">
                             <field name="note_creator_piece_delivered" />
                             <field name="note_free_piece_delivered" />
+                            <field name="note_free_piece_delivered_pdf" />
                         </group>
 
                     </page>

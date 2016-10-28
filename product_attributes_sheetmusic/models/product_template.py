@@ -35,15 +35,21 @@ class ProductTemplate(models.Model):
     note_publisher = fields.Char("Publisher")
 
     note_contract_date = fields.Date("Contract date")
+
+    note_publishing_contract_exists = fields.Char("Publishing contract exists")
     note_publishing_contract_date = fields.Date("Publishing contract date")
 
-    note_royalty_date = fields.Date("Royalty date")
+    note_publishing_agreement_exists = fields.Char("Publishing agreement exists")
+    note_publishing_agreement_date = fields.Date("Publishing agreement date")
+
+    note_royalty_contract_date = fields.Date("Royalty contract date")
     note_royalty_notice = fields.Date("Royalty notice done")
 
     note_contract_ended = fields.Boolean("Contract ended")
 
     note_creator_piece_delivered = fields.Boolean("Tekijänkappale delivered")
-    note_free_piece_delivered = fields.Boolean("Vapaakappaleet delivered to Kansallisarkisto")
+    note_free_piece_delivered = fields.Boolean("Vapaakappaleet (paper) delivered to Kansallisarkisto")
+    note_free_piece_delivered_pdf = fields.Boolean("Vapaakappaleet (PDF) delivered to Kansallisarkisto")
 
     note_pdf_filename = fields.Char("Sample PDF Filename")
     note_pdf = fields.Binary("Sample PDF")
