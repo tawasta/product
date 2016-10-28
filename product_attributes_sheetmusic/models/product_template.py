@@ -42,8 +42,8 @@ class ProductTemplate(models.Model):
     note_publishing_agreement_exists = fields.Char("Publishing agreement exists")
     note_publishing_agreement_date = fields.Date("Publishing agreement date")
 
+    note_royalty_notice_done = fields.Boolean("Royalty notice done")
     note_royalty_contract_date = fields.Date("Royalty contract date")
-    note_royalty_notice = fields.Date("Royalty notice done")
 
     note_contract_ended = fields.Boolean("Contract ended")
 
