@@ -25,6 +25,8 @@ Attributes
 * "Tekijänkappale" delivered
 * "Vapaakappaleet" delivered to Kansallisarkisto
 
+* TBD: complete this list
+
 Installation
 ============
 

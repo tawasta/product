@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-10-28 08:19+0000\n"
-"PO-Revision-Date: 2016-10-28 11:24+0300\n"
+"POT-Creation-Date: 2016-11-10 13:49+0000\n"
+"PO-Revision-Date: 2016-11-10 15:51+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,6 +21,11 @@ msgstr ""
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
 msgid "Box number or PDF location"
 msgstr "Laatikon numero tai PDF:n sijainti"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_card_index:0
+msgid "Card index"
+msgstr "Kortistossa"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_catalog_number:0
@@ -45,7 +50,7 @@ msgstr "Sopimukset"
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_finnbandshop_url:0
 msgid "Finnbandshop URL"
-msgstr "Finnbandshop URL"
+msgstr "Finnbandshop-linkki"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_ismn_pdf:0
@@ -94,6 +99,11 @@ msgid "Other"
 msgstr "Muu"
 
 #. module: product_attributes_sheetmusic
+#: field:product.template,note_parts:0
+msgid "Parts"
+msgstr "Stemmat"
+
+#. module: product_attributes_sheetmusic
 #: model:ir.model,name:product_attributes_sheetmusic.model_product_template
 msgid "Product Template"
 msgstr "Tuotemalli"
@@ -124,14 +134,24 @@ msgid "Publishing contract exists"
 msgstr "Kustannussopimus olemassa"
 
 #. module: product_attributes_sheetmusic
+#: field:product.template,note_royalty_list:0
+msgid "Roayalty new list"
+msgstr "Teoston uusi lista"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_royalty_old_list:0
+msgid "Roayalty old list"
+msgstr "Teoston vanha lista"
+
+#. module: product_attributes_sheetmusic
 #: field:product.template,note_royalty_contract_date:0
 msgid "Royalty contract date"
 msgstr "Teoston sopimuksen päiväys"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_royalty_notice:0
+#: field:product.template,note_royalty_notice_done:0
 msgid "Royalty notice done"
-msgstr "Teoston ilmoitus tehty"
+msgstr "Teosto-ilmoitus tehty"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_pdf:0
@@ -146,13 +166,13 @@ msgstr "Näyte-PDF:n tiedostonnimi"
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_url:0
 msgid "Sample URL"
-msgstr "Näyte-URL"
+msgstr "Näyte-linkki"
 
 #. module: product_attributes_sheetmusic
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:71
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:77
 #, python-format
 msgid "Sample URL is not valid"
-msgstr "Näyte-URL ei ole kelvollinen"
+msgstr "Näyte-linkki ei ole kelvollinen"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
@@ -162,7 +182,7 @@ msgstr "Näytteet"
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_soundcloud_url:0
 msgid "Soundcloud URL"
-msgstr "Soundcloud URL"
+msgstr "Soundcloud-linkki"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_creator_piece_delivered:0
@@ -172,17 +192,17 @@ msgstr "Tekijänkappale toimitettu"
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_free_piece_delivered_pdf:0
 msgid "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
-msgstr "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet (PDF) toimitettu Kansallisarkistoon"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_free_piece_delivered:0
 msgid "Vapaakappaleet (paper) delivered to Kansallisarkisto"
-msgstr "Vapaakappaleet (paper) delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet (paperi) toimitettu Kansallisarkistoon"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_youtube_url:0
 msgid "Youtube URL"
-msgstr "Youtube URL"
+msgstr "Youtube-linkki"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view

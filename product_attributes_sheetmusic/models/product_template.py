@@ -32,6 +32,10 @@ class ProductTemplate(models.Model):
     note_original_location = fields.Char("Original location")
     note_original_nonexistent = fields.Boolean("Original nonexistent")
 
+    note_card_index = fields.Boolean("Card index")
+
+    note_parts = fields.Text("Parts")
+
     note_publisher = fields.Char("Publisher")
 
     note_contract_date = fields.Date("Contract date")
@@ -44,6 +48,8 @@ class ProductTemplate(models.Model):
 
     note_royalty_notice_done = fields.Boolean("Royalty notice done")
     note_royalty_contract_date = fields.Date("Royalty contract date")
+    note_royalty_old_list = fields.Boolean("Roayalty old list")
+    note_royalty_list = fields.Boolean("Roayalty new list")
 
     note_contract_ended = fields.Boolean("Contract ended")
 
