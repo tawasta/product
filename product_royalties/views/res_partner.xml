@@ -14,6 +14,7 @@
                             <tree create="false" delete="false" editable="false">
                                 <field name="name" invisible="1"/>
                                 <field name="product" />
+                                <field name="role" />
                                 <field name="percent" />
                             </tree>
                         </field>
