@@ -61,7 +61,8 @@ class ProductTemplate(models.Model):
     note_free_copy = fields.Date("Free copy (PDF)")
 
     note_pdf_ok = fields.Char("PDF-version OK")
-    note_scanned_pdf = fields.Char("Scanned PDF name")
+    note_scan_name = fields.Char("Scanned PDF name")
+    note_scan_date = fields.Char("Scan date")
     note_page_count_score = fields.Integer("Page count score")
     note_parts_count = fields.Integer("Parts count")
 

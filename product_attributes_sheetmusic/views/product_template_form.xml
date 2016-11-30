@@ -53,7 +53,8 @@
                         <group name="digitization" string="Digitization">
                             <group>
                                 <field name="note_pdf_ok" />
-                                <field name="note_scanned_pdf" />
+                                <field name="note_scan_name" />
+                                <field name="note_scan_date" />
                                 <field name="note_page_count_score" />
                                 <field name="note_parts_count" />
                             </group>

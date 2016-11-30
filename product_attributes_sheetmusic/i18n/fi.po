@@ -215,9 +215,14 @@ msgid "Samples"
 msgstr "Näytteet"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_scanned_pdf:0
+#: field:product.template,note_scan_name:0
 msgid "Scanned PDF name"
 msgstr "Skannatun PDF:n nimi"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_scan_name:0
+msgid "Scan date"
+msgstr "Skannauspäivä"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_soundcloud_url:0
