@@ -220,7 +220,7 @@ msgid "Scanned PDF name"
 msgstr "Skannatun PDF:n nimi"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_scan_name:0
+#: field:product.template,note_scan_date:0
 msgid "Scan date"
 msgstr "Skannauspäivä"
 
