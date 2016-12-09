@@ -11,9 +11,10 @@
 				<notebook position="inside">
                     <page string ="Royalties" attrs="{'invisible': [('royalties', '=', False)]}" >
                         <field name="royalties">
-                            <tree create="false" delete="false" editable="false">
+                            <tree delete="false" editable="bottom">
                                 <field name="name" invisible="1"/>
                                 <field name="product" />
+                                <field name="role" />
                                 <field name="percent" />
                             </tree>
                         </field>

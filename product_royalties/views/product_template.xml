@@ -8,17 +8,20 @@
 			<field name="inherit_id" ref="product.product_template_only_form_view" />
 			<field name="arch" type="xml">
 
-				<field name="description_sale" position="after">
-					<group string="Royalties" name="royalties">
-						<field name="royalties" nolabel="1">
-                            <tree editable="top">
-                                <field name="name" invisible="1"/>
-                                <field name="recipient" />
-                                <field name="percent" sum='Total percent'/>
-                            </tree>
-                        </field>
-					</group>
-				</field>
+				<notebook position="inside">
+					<page string="Authors">
+						<group name="royalties">
+							<field name="royalties" nolabel="1">
+								<tree editable="top">
+									<field name="name" invisible="1"/>
+									<field name="recipient" />
+									<field name="role" />
+									<field name="percent" sum='Total percent'/>
+								</tree>
+							</field>
+						</group>
+					</page>
+				</notebook>
 
 			</field>
 		</record> 

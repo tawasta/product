@@ -21,7 +21,13 @@ class ProductRoyalty(models.Model):
 
     # 2. Fields declaration
     name = fields.Char("Description")
-    recipient = fields.Many2one('res.partner', domain=[('is_company', '=', 'False')])
+    recipient = fields.Many2one('res.partner')
+    role = fields.Selection([
+        ('arranger', 'Arranger'),
+        ('composer', 'Composer'),
+        ('lyricist', 'Lyricist'),
+        ('translator', 'Translator'),
+    ])
     percent = fields.Float('Royalty %')
     product = fields.Many2one('product.template')
 

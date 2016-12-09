@@ -54,6 +54,21 @@
                             </group>
                         </group>
 
+                        <group name="digitization" string="Digitization">
+                            <group>
+                                <field name="note_pdf_ok" />
+                                <field name="note_scan_name" />
+                                <field name="note_scan_date" />
+                                <field name="note_page_count_score" />
+                                <field name="note_parts_count" />
+                            </group>
+                            <group>
+                                <field name="note_free_copy" />
+                                <field name="note_original_saleable_exists" />
+                                <field name="note_original_non_saleable_exists" />
+                            </group>
+                        </group>
+
                         <group name="samples" string="Samples">
                             <field name="note_url" widget="url" />
                             <field name="note_youtube_url" widget="url" />
