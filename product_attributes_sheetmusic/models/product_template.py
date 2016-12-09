@@ -23,6 +23,8 @@ class ProductTemplate(models.Model):
     _inherit = 'product.template'
 
     # 2. Fields declaration
+    note_information_checked = fields.Date("Everything checked", help="Everything is OK!")
+
     note_catalog_number = fields.Char("Catalog number")
     note_length = fields.Char("Length")
 
@@ -30,6 +32,7 @@ class ProductTemplate(models.Model):
     note_ismn_pdf = fields.Char("ISMN PDF", help="International Standard Music Number")
 
     note_original_location = fields.Char("Original location")
+    note_original_exists = fields.Boolean("Original exists")
     note_original_nonexistent = fields.Boolean("Original nonexistent")
 
     note_card_index = fields.Boolean("Card index")

@@ -11,6 +11,9 @@
 				<notebook position="inside">
 					<page name="notes" string="Notes">
                         <group string="Info">
+                            <group colspan="2">
+                                <field name="note_information_checked" />
+                            </group>
                             <group>
                                 <field name="note_catalog_number" placeholder="e.g. 1023c tai 1023 tai 1023/1" />
                                 <field name="note_length" placeholder="e.g. 3:20 or ~3min" />
@@ -24,6 +27,7 @@
                                        attrs="{'readonly':[('note_original_nonexistent','=',True)]}"
                                        placeholder="Box number or PDF location"
                                 />
+                                <field name="note_original_exists" />
                                 <field name="note_original_nonexistent" />
                                 <field name="note_card_index" />
                             </group>
