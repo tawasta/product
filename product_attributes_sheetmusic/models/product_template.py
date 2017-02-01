@@ -94,6 +94,24 @@ class ProductTemplate(models.Model):
         if self.note_url and not validators.url(self.note_url):
             raise ValidationError(_("Sample URL is not valid"))
 
+    @api.one
+    @api.constrains('note_youtube_url')
+    def _check_note_youtube_url(self):
+        if self.note_youtube_url and not validators.url(self.note_youtube_url):
+            raise ValidationError(_("Sample URL is not valid"))
+
+    @api.one
+    @api.constrains('note_soundcloud_url')
+    def _check_note_soundcloud_url(self):
+        if self.note_youtube_url and not validators.url(self.note_soundcloud_url):
+            raise ValidationError(_("Sample URL is not valid"))
+
+    @api.one
+    @api.constrains('note_finnbandshop_url')
+    def _check_note_finnbandshop_url(self):
+        if self.note_finnbandshop_url and not validators.url(self.note_finnbandshop_url):
+            raise ValidationError(_("Sample URL is not valid"))
+
     # 6. CRUD methods
 
     # 7. Action methods

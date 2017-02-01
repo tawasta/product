@@ -8,8 +8,8 @@
 			<field name="inherit_id" ref="product.product_template_only_form_view" />
 			<field name="arch" type="xml">
 
-				<notebook position="inside">
-					<page name="notes" string="Notes">
+                <xpath expr="//page[1]" position="before">
+                    <page name="notes" string="Notes">
                         <group string="Info">
                             <group colspan="2">
                                 <field name="note_information_checked" />
@@ -85,7 +85,7 @@
                         </group>
 
                     </page>
-				</notebook>
+                </xpath>
 
 			</field>
 		</record> 
