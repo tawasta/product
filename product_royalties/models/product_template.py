@@ -47,10 +47,10 @@ class ProductTemplate(models.Model):
         string="Translators",
     )
 
-    royalty_arrangers_string = fields.Char("Arrangers", compute='compute_royalty_arrangers_string')
-    royalty_composers_string = fields.Char("Composers", compute='compute_royalty_composers_string')
-    royalty_lyricists_string = fields.Char("Lyricists", compute='compute_royalty_lyricists_string')
-    royalty_translators_string = fields.Char("Translators", compute='compute_royalty_translators_string')
+    royalty_arrangers_string = fields.Char(string="Arrangers", compute='compute_royalty_arrangers_string')
+    royalty_composers_string = fields.Char(string="Composers", compute='compute_royalty_composers_string')
+    royalty_lyricists_string = fields.Char(string="Lyricists", compute='compute_royalty_lyricists_string')
+    royalty_translators_string = fields.Char(string="Translators", compute='compute_royalty_translators_string')
 
     # 3. Default methods
 
