@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-30 12:45+0000\n"
-"PO-Revision-Date: 2016-11-30 14:46+0200\n"
+"POT-Creation-Date: 2017-02-01 12:12+0000\n"
+"PO-Revision-Date: 2017-02-01 14:13+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -48,19 +48,9 @@ msgid "Description"
 msgstr "Kuvaus"
 
 #. module: product_royalties
-#: field:product.royalty,display_name:0
-msgid "Display Name"
-msgstr "Nimi"
-
-#. module: product_royalties
 #: field:product.royalty,id:0
 msgid "ID"
 msgstr "ID"
-
-#. module: product_royalties
-#: field:product.royalty,__last_update:0
-msgid "Last Modified on"
-msgstr "Viimeksi muokattu"
 
 #. module: product_royalties
 #: field:product.royalty,write_uid:0
@@ -76,6 +66,11 @@ msgstr "Viimeksi päivitetty"
 #: selection:product.royalty,role:0
 msgid "Lyricist"
 msgstr "Sanoittaja"
+
+#. module: product_royalties
+#: field:product.template,royalty_lyricists:0
+msgid "Lyricists"
+msgstr "Sanoittajat"
 
 #. module: product_royalties
 #: model:ir.model,name:product_royalties.model_res_partner
@@ -123,3 +118,8 @@ msgstr "Kokonaisprosentti"
 #: selection:product.royalty,role:0
 msgid "Translator"
 msgstr "Kääntäjä"
+
+#. module: product_royalties
+#: field:product.template,royalty_translators:0
+msgid "Translators"
+msgstr "Kääntäjät"
