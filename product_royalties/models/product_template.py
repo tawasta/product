@@ -60,7 +60,7 @@ class ProductTemplate(models.Model):
         for record in records:
             string += record.recipient.name + ",\n"
 
-        string.rstrip("\n").rstrip(",")
+        string = string.rstrip("\n").rstrip(",")
 
         return string
 
