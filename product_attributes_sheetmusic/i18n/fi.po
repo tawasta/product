@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-12-09 11:26+0000\n"
-"PO-Revision-Date: 2016-12-09 13:32+0200\n"
+"POT-Creation-Date: 2017-02-01 10:00+0000\n"
+"PO-Revision-Date: 2017-02-01 12:01+0200\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -48,15 +48,6 @@ msgid "Contracts"
 msgstr "Sopimukset"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_information_checked:0
-msgid "Everything checked"
-msgstr "Kaikki OK"
-
-#. module: product_attributes_sheetmusic
-#: help:product.template,note_information_checked:0
-msgid "Everything is OK!"
-msgstr "Kaikki on tarkastettu"
-
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
 msgid "Digitization"
 msgstr "Digitointi"
@@ -64,7 +55,7 @@ msgstr "Digitointi"
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_finnbandshop_url:0
 msgid "Finnbandshop URL"
-msgstr "Finnbandshop-linkki"
+msgstr "Finnbandshop URL"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_free_copy:0
@@ -106,11 +97,6 @@ msgstr "Ei-myyntikuntoinen originaali olemassa"
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
 msgid "Notes"
 msgstr "Nuotit"
-
-#. module: product_attributes_sheetmusic
-#: field:product.template,note_original_exists:0
-msgid "Original exists"
-msgstr "Originaali on olemassa"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_original_location:0
@@ -218,7 +204,10 @@ msgid "Sample URL"
 msgstr "Näyte-URL"
 
 #. module: product_attributes_sheetmusic
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:91
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:101
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:108
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:115
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:122
 #, python-format
 msgid "Sample URL is not valid"
 msgstr "Näyte-URL ei ole kelvollinen"
@@ -229,39 +218,42 @@ msgid "Samples"
 msgstr "Näytteet"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_scan_name:0
-msgid "Scanned PDF name"
-msgstr "Skannatun PDF:n nimi"
-
-#. module: product_attributes_sheetmusic
 #: field:product.template,note_scan_date:0
 msgid "Scan date"
 msgstr "Skannauspäivä"
 
 #. module: product_attributes_sheetmusic
+#: field:product.template,note_scan_name:0
+msgid "Scanned PDF name"
+msgstr "Skannatun PDF:n nimi"
+
+#. module: product_attributes_sheetmusic
 #: field:product.template,note_soundcloud_url:0
 msgid "Soundcloud URL"
-msgstr "Soundcloud-linkki"
+msgstr "Soundcloud URL"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_creator_piece_delivered:0
+#: field:product.template,note_creator_piece_delivered_date:0
 msgid "Tekijänkappale delivered"
 msgstr "Tekijänkappale toimitettu"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_free_piece_delivered_pdf:0
+#: field:product.template,note_free_piece_delivered_pdf_date:0
 msgid "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
-msgstr "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet (PDF) toimitettu Kansallisarkistoon"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_free_piece_delivered:0
+#: field:product.template,note_free_piece_delivered_date:0
 msgid "Vapaakappaleet (paper) delivered to Kansallisarkisto"
-msgstr "Vapaakappaleet (paper) delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet (paperi) toimitettu Kansallisarkistoon"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_youtube_url:0
 msgid "Youtube URL"
-msgstr "Youtube-linkki"
+msgstr "Youtube URL"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view

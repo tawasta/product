@@ -79,9 +79,19 @@
                         </group>
 
                         <group name="other" string="Other" col="4">
-                            <field name="note_creator_piece_delivered" />
-                            <field name="note_free_piece_delivered" />
-                            <field name="note_free_piece_delivered_pdf" />
+                            <group>
+                                <field name="note_creator_piece_delivered" />
+                                <field name="note_creator_piece_delivered_date" />
+                            </group>
+
+                            <group>
+                                <field name="note_free_piece_delivered" />
+                                <field name="note_free_piece_delivered_date" />
+
+                                <field name="note_free_piece_delivered_pdf" />
+                                <field name="note_free_piece_delivered_pdf_date" />
+                            </group>
+
                         </group>
 
                     </page>

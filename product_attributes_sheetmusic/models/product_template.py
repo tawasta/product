@@ -71,8 +71,13 @@ class ProductTemplate(models.Model):
 
     # Other
     note_creator_piece_delivered = fields.Boolean("Tekijänkappale delivered")
+    note_creator_piece_delivered_date = fields.Date("Tekijänkappale delivered")
+
     note_free_piece_delivered = fields.Boolean("Vapaakappaleet (paper) delivered to Kansallisarkisto")
+    note_free_piece_delivered_date = fields.Date("Vapaakappaleet (paper) delivered to Kansallisarkisto")
+
     note_free_piece_delivered_pdf = fields.Boolean("Vapaakappaleet (PDF) delivered to Kansallisarkisto")
+    note_free_piece_delivered_pdf_date = fields.Date("Vapaakappaleet (PDF) delivered to Kansallisarkisto")
 
     # Samples
     note_pdf_filename = fields.Char("Sample PDF Filename")
@@ -88,29 +93,54 @@ class ProductTemplate(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
 
     # 5. Constraints and onchanges
-    @api.one
+    @api.multi
     @api.constrains('note_url')
     def _check_note_url(self):
-        if self.note_url and not validators.url(self.note_url):
-            raise ValidationError(_("Sample URL is not valid"))
+        for record in self:
+            if record.note_url and not validators.url(record.note_url):
+                raise ValidationError(_("Sample URL is not valid"))
 
-    @api.one
+    @api.multi
     @api.constrains('note_youtube_url')
     def _check_note_youtube_url(self):
-        if self.note_youtube_url and not validators.url(self.note_youtube_url):
-            raise ValidationError(_("Sample URL is not valid"))
+        for record in self:
+            if record.note_youtube_url and not validators.url(record.note_youtube_url):
+                raise ValidationError(_("Sample URL is not valid"))
 
-    @api.one
+    @api.multi
     @api.constrains('note_soundcloud_url')
     def _check_note_soundcloud_url(self):
-        if self.note_youtube_url and not validators.url(self.note_soundcloud_url):
-            raise ValidationError(_("Sample URL is not valid"))
+        for record in self:
+            if record.note_youtube_url and not validators.url(record.note_soundcloud_url):
+                raise ValidationError(_("Sample URL is not valid"))
 
-    @api.one
+    @api.multi
     @api.constrains('note_finnbandshop_url')
     def _check_note_finnbandshop_url(self):
-        if self.note_finnbandshop_url and not validators.url(self.note_finnbandshop_url):
-            raise ValidationError(_("Sample URL is not valid"))
+        for record in self:
+            if record.note_finnbandshop_url and not validators.url(record.note_finnbandshop_url):
+                raise ValidationError(_("Sample URL is not valid"))
+
+    @api.multi
+    @api.onchange('note_creator_piece_delivered_date')
+    def onchange_note_creator_piece_delivered_date_update_note_creator_piece_delivered(self):
+        for record in self:
+            if record.note_creator_piece_delivered_date:
+                record.note_creator_piece_delivered = True
+
+    @api.multi
+    @api.onchange('note_free_piece_delivered_date')
+    def onchange_note_free_piece_delivered_date_update_note_free_piece_delivered(self):
+        for record in self:
+            if record.note_free_piece_delivered_date:
+                record.note_free_piece_delivered = True
+
+    @api.multi
+    @api.onchange('note_free_piece_delivered_pdf_date')
+    def onchange_note_free_piece_delivered_pdf_date_update_note_free_piece_delivered_pdf(self):
+        for record in self:
+            if record.note_free_piece_delivered_pdf_date:
+                record.note_free_piece_delivered_pdf = True
 
     # 6. CRUD methods
 
