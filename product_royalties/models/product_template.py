@@ -67,22 +67,22 @@ class ProductTemplate(models.Model):
     @api.multi
     def compute_royalty_arrangers_string(self):
         for record in self:
-            record.royalty_arrangers_string = record.compute_royalty_string(record.royalty_arrangers)
+            record.royalty_arrangers_string = record.sudo().compute_royalty_string(record.royalty_arrangers)
 
     @api.multi
     def compute_royalty_composers_string(self):
         for record in self:
-            record.royalty_composers_string = record.compute_royalty_string(record.royalty_composers)
+            record.royalty_composers_string = record.sudo().compute_royalty_string(record.royalty_composers)
 
     @api.multi
     def compute_royalty_lyricists_string(self):
         for record in self:
-            record.royalty_lyricists_string = record.compute_royalty_string(record.royalty_lyricists)
+            record.royalty_lyricists_string = record.sudo().compute_royalty_string(record.royalty_lyricists)
 
     @api.multi
     def compute_royalty_translators_string(self):
         for record in self:
-            record.royalty_translators_string = record.compute_royalty_string(record.royalty_translators)
+            record.royalty_translators_string = record.sudo().compute_royalty_string(record.royalty_translators)
 
     # 5. Constraints and onchanges
 
