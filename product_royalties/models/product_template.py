@@ -26,31 +26,31 @@ class ProductTemplate(models.Model):
         'product.royalty',
         'product',
         domain=[('role', '=', 'arranger')],
-        string="Arrangers",
+        string="Arranger",
     )
     royalty_composers = fields.One2many(
         'product.royalty',
         'product',
         domain=[('role', '=', 'composer')],
-        string="Composers",
+        string="Composer",
     )
     royalty_lyricists = fields.One2many(
         'product.royalty',
         'product',
         domain=[('role', '=', 'lyricist')],
-        string="Lyricists",
+        string="Lyricist",
     )
     royalty_translators = fields.One2many(
         'product.royalty',
         'product',
         domain=[('role', '=', 'translator')],
-        string="Translators",
+        string="Translator",
     )
 
-    royalty_arrangers_string = fields.Char(string="Arrangers", compute='compute_royalty_arrangers_string')
-    royalty_composers_string = fields.Char(string="Composers", compute='compute_royalty_composers_string')
-    royalty_lyricists_string = fields.Char(string="Lyricists", compute='compute_royalty_lyricists_string')
-    royalty_translators_string = fields.Char(string="Translators", compute='compute_royalty_translators_string')
+    royalty_arrangers_string = fields.Char(string="Arranger", compute='compute_royalty_arrangers_string')
+    royalty_composers_string = fields.Char(string="Composer", compute='compute_royalty_composers_string')
+    royalty_lyricists_string = fields.Char(string="Lyricist", compute='compute_royalty_lyricists_string')
+    royalty_translators_string = fields.Char(string="Translator", compute='compute_royalty_translators_string')
 
     # 3. Default methods
 
