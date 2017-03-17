@@ -40,15 +40,15 @@
                                 <field name="note_contract_ended" />
                                 <field name="note_contract_date" attrs="{'readonly':[('note_contract_ended','=',True)]}"/>
                                 <field name="note_publishing_contract_exists" />
-                                <field name="note_publishing_contract_date" attrs="{'invisible':[('note_publishing_contract_exists','=',True)]}"/>
+                                <field name="note_publishing_contract_date" />
                                 <field name="note_publishing_agreement_exists" />
-                                <field name="note_publishing_agreement_date" attrs="{'invisible':[('note_publishing_agreement_exists','=',True)]}"/>
+                                <field name="note_publishing_agreement_date" />
 
                             </group>
 
                             <group>
                                 <field name="note_royalty_notice_done" />
-                                <field name="note_royalty_contract_date" attrs="{'invisible':[('note_royalty_notice_done','=',True)]}"/>
+                                <field name="note_royalty_contract_date" />
                                 <field name="note_royalty_old_list" />
                                 <field name="note_royalty_list" />
                             </group>
