@@ -40,25 +40,21 @@ class ProductProduct(models.Model):
 
             records.append((record.id, name))
 
-        #res = super(ProductProduct, self).name_get()
-
         return records
 
-    def name_get2(self, cr, user, ids, context=None):
-        if context is None:
-            context = {}
-        if isinstance(ids, (int, long)):
-            ids = [ids]
-        if not len(ids):
-            return []
+    @api.model
+    def name_search(self, name='', args=None, operator='ilike', limit=100):
+        domain = [
+            '|',
+            '|',
+            ('name', 'ilike', name),
+            ('default_code', 'ilike', name),
+            ('attribute_line_ids.value_ids.name', 'ilike', name),
+        ]
 
-        def _name_get(d):
-            name = d.get('name','')
-            code = context.get('display_default_code', True) and d.get('default_code',False) or False
-            if code:
-                name = '[%s] %s' % (code,name)
-            return (d['id'], name)
+        products = self.search(expression.AND([domain, args]))
 
+        return products.name_get()
 
     # 4. Compute and search fields, in the same order that fields declaration
 
