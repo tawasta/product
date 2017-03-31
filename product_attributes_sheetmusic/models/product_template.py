@@ -88,6 +88,9 @@ class ProductTemplate(models.Model):
     note_soundcloud_url = fields.Char("Soundcloud URL")
     note_finnbandshop_url = fields.Char("Finnbandshop URL")
 
+    # Helper fields
+    note_class = fields.Char("Note class", compute='compute_note_class', store=True)
+
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
@@ -141,6 +144,16 @@ class ProductTemplate(models.Model):
         for record in self:
             if record.note_free_piece_delivered_pdf_date:
                 record.note_free_piece_delivered_pdf = True
+
+    @api.multi
+    @api.depends('attribute_line_ids')
+    def compute_note_class(self):
+        for record in self:
+            for attribute in record.attribute_line_ids:
+                if attribute.attribute_id.name == 'Laji' and attribute.value_ids:
+                    # TODO: use all classes
+                    record.note_class = attribute.value_ids[0].name
+
 
     # 6. CRUD methods
 

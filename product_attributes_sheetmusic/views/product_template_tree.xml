@@ -29,6 +29,10 @@
 					<attribute name="string">Amount</attribute>
 				</field>
 
+				<field name="qty_available" position="before">
+					<field name="note_class" />
+				</field>
+
 				<field name="virtual_available" position="attributes">
 					<attribute name="invisible">1</attribute>
 				</field>
