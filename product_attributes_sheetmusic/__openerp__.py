@@ -22,7 +22,7 @@
 {
     'name': 'Product sheet music attributes',
     'summary': 'Sheet music attributes for products',
-    'version': '8.0.0.2.1',
+    'version': '8.0.0.2.2',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

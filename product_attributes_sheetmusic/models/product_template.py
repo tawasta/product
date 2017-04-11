@@ -93,7 +93,7 @@ class ProductTemplate(models.Model):
     note_class = fields.Char("Note class", compute='compute_note_class', store=True)
 
     # Alternative price
-    list_price_members = fields.Float("Member prices", digits=dp.get_precision('Product Price'))
+    list_price_members = fields.Float("Member price", digits=dp.get_precision('Product Price'))
 
     # 3. Default methods
 
