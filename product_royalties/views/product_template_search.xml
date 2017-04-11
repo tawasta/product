@@ -9,10 +9,18 @@
 			<field name="arch" type="xml">
 
 				<search position="inside">
-                    <field name="royalty_arrangers" string="Arranger" filter_domain="[('royalty_arrangers.recipient', 'ilike', self)]"/>
-                    <field name="royalty_composers" string="Composer" filter_domain="[('royalty_composers.recipient', 'ilike', self)]"/>
-                    <field name="royalty_lyricists" string="Lyricist" filter_domain="[('royalty_lyricists.recipient', 'ilike', self)]"/>
-                    <field name="royalty_translators" string="Translator" filter_domain="[('royalty_translators.recipient', 'ilike', self)]"/>
+                    <field name="royalty_arrangers"
+						   string="Arranger"
+						   filter_domain="[('royalty_arrangers.recipient', 'ilike', self), ('royalty_arrangers.role', '=', 'arranger')]"/>
+                    <field name="royalty_composers"
+						   string="Composer"
+						   filter_domain="[('royalty_composers.recipient', 'ilike', self), ('royalty_composers.role', '=', 'composer')]"/>
+                    <field name="royalty_lyricists"
+						   string="Lyricist"
+						   filter_domain="[('royalty_lyricists.recipient', 'ilike', self), ('royalty_lyricists.role', '=', 'lyricist')]"/>
+                    <field name="royalty_translators"
+						   string="Translator"
+						   filter_domain="[('royalty_translators.recipient', 'ilike', self), ('royalty_translators.role', '=', 'translator')]"/>
 				</search>
 
 			</field>
