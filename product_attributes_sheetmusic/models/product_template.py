@@ -9,6 +9,7 @@ import validators
 from openerp import api, fields, models
 from openerp import _
 from openerp.exceptions import ValidationError
+import openerp.addons.decimal_precision as dp
 
 # 4. Imports from Odoo modules:
 
@@ -91,6 +92,9 @@ class ProductTemplate(models.Model):
     # Helper fields
     note_class = fields.Char("Note class", compute='compute_note_class', store=True)
 
+    # Alternative price
+    list_price_members = fields.Float("Member prices", digits=dp.get_precision('Product Price'))
+
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
@@ -153,7 +157,6 @@ class ProductTemplate(models.Model):
                 if attribute.attribute_id.name == 'Laji' and attribute.value_ids:
                     # TODO: use all classes
                     record.note_class = attribute.value_ids[0].name
-
 
     # 6. CRUD methods
 
