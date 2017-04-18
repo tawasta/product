@@ -9,7 +9,10 @@
 			<field name="arch" type="xml">
 
 				<search position="inside">
-                    <field name="royalty_arrangers"
+                    <field name="royalties"
+						   string="Author"
+						   filter_domain="[('royalties.recipient', 'ilike', self)]"/>
+					<field name="royalty_arrangers"
 						   string="Arranger"
 						   filter_domain="[('royalty_arrangers.recipient', 'ilike', self), ('royalty_arrangers.role', '=', 'arranger')]"/>
                     <field name="royalty_composers"
