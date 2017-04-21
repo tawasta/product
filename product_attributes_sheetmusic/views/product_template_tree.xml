@@ -32,6 +32,8 @@
 				<field name="qty_available" position="before">
 					<field name="note_class" />
 					<field name="note_composition" />
+					<field name="note_contract_date" />
+					<field name="note_publish_year" />
 				</field>
 
 				<field name="virtual_available" position="attributes">

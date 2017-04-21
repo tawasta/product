@@ -92,6 +92,7 @@ class ProductTemplate(models.Model):
     # Helper fields
     note_class = fields.Char("Note class", compute='compute_note_attributes', store=True)
     note_composition = fields.Char("Note composition", compute='compute_note_attributes', store=True)
+    note_publish_year = fields.Char("Note publish year", compute='compute_note_attributes', store=True)
 
     # Alternative price
     list_price_members = fields.Float("Member price", digits=dp.get_precision('Product Price'))
@@ -162,6 +163,10 @@ class ProductTemplate(models.Model):
                 if attribute.attribute_id.name == 'Kokoonpano' and attribute.value_ids:
                     # TODO: use all classes
                     record.note_composition = attribute.value_ids[0].name
+
+                if attribute.attribute_id.name == 'Julkaisuvuosi' and attribute.value_ids:
+                    # TODO: use all classes
+                    record.note_publish_year = attribute.value_ids[0].name
 
     # 6. CRUD methods
 
