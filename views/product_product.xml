@@ -8,7 +8,7 @@
             <field name="arch" type="xml">
                 <notebook position="inside">
                     <page string="Internal Comments">
-                        <field name="internal_comments"/>
+                        <field name="internal_comments" placeholder="Internal comments..."/>
                     </page>
                 </notebook>
             </field>
