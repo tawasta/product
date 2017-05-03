@@ -1,2 +1,3 @@
-import product_template
+import product_attribute
 import product_attribute_line
+import product_template
