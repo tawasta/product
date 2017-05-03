@@ -90,6 +90,7 @@ class ProductTemplate(models.Model):
     note_finnbandshop_url = fields.Char("Finnbandshop URL")
 
     # Helper fields
+    note_grade = fields.Char("Note grade", compute='compute_note_attributes', store=True)
     note_class = fields.Char("Note class", compute='compute_note_attributes', store=True)
     note_composition = fields.Char("Note composition", compute='compute_note_attributes', store=True)
     note_publish_year = fields.Char("Note publish year", compute='compute_note_attributes', store=True)
@@ -156,6 +157,10 @@ class ProductTemplate(models.Model):
     def compute_note_attributes(self):
         for record in self:
             for attribute in record.attribute_line_ids:
+                if attribute.attribute_id.name == 'Grade' and attribute.value_ids:
+                    # TODO: use all classes
+                    record.note_grade = attribute.value_ids[0].name
+
                 if attribute.attribute_id.name == 'Laji' and attribute.value_ids:
                     # TODO: use all classes
                     record.note_class = attribute.value_ids[0].name
