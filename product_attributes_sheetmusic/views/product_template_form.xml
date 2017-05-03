@@ -42,7 +42,7 @@
                         <group name="contracts" string="Contracts">
                             <group>
                                 <field name="note_contract_ended" />
-                                <field name="note_contract_date" attrs="{'readonly':[('note_contract_ended','=',True)]}"/>
+                                <field name="note_contract_date" />
                                 <field name="note_publishing_contract_exists" />
                                 <field name="note_publishing_contract_date" />
                                 <field name="note_publishing_agreement_exists" />
