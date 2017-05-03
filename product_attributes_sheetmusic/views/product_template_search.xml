@@ -13,6 +13,17 @@
                     <field name="note_class" string="Class" filter_domain="[('note_class', 'ilike', self)]"/>
 				</search>
 
+				<field name="product_variant_ids" position="before">
+                    <filter string="Has contract"
+                            domain="['|',
+                            ('note_publishing_agreement_date', '!=', False),
+                            ('note_publishing_contract_date', '!=', False)
+                            ]" />
+
+                    <filter string="Has publishing year"
+                            domain="[('note_publish_year', '!=', False),]" />
+				</field>
+
 			</field>
 		</record> 
 

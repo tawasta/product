@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-04-21 10:42+0000\n"
-"PO-Revision-Date: 2017-04-21 13:43+0300\n"
+"POT-Creation-Date: 2017-05-03 12:12+0000\n"
+"PO-Revision-Date: 2017-05-03 15:13+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -83,6 +83,21 @@ msgid "Free copy (PDF)"
 msgstr "Vapaakappale (PDF)"
 
 #. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_search_view
+msgid "Grade"
+msgstr "Grade"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_search_view
+msgid "Has contract"
+msgstr "Sopimus olemassa"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_search_view
+msgid "Has publishing year"
+msgstr "Julkaisuvuosi olemassa"
+
+#. module: product_attributes_sheetmusic
 #: field:product.template,note_ismn_pdf:0
 msgid "ISMN PDF"
 msgstr "ISMN PDF"
@@ -109,6 +124,7 @@ msgid "Length"
 msgstr "Kesto"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,list_price_members:0
 #: field:product.template,list_price_members:0
 msgid "Member price"
 msgstr "Jäsenhinta"
@@ -119,16 +135,23 @@ msgid "Non-saleable original exists"
 msgstr "Ei-myyntikuntoinen originaali olemassa"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_class:0
+#: field:product.product,note_class:0 field:product.template,note_class:0
 msgid "Note class"
 msgstr "Laji"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_composition:0
 #: field:product.template,note_composition:0
 msgid "Note composition"
 msgstr "Kokoonpano"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_grade:0 field:product.template,note_grade:0
+msgid "Note grade"
+msgstr "Note grade"
+
+#. module: product_attributes_sheetmusic
+#: field:product.product,note_publish_year:0
 #: field:product.template,note_publish_year:0
 msgid "Note publish year"
 msgstr "Julkaisuvuosi"
@@ -254,10 +277,10 @@ msgid "Sample URL"
 msgstr "Näyte-URL"
 
 #. module: product_attributes_sheetmusic
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:110
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:117
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:124
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:131
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:111
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:118
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:125
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:132
 #, python-format
 msgid "Sample URL is not valid"
 msgstr "Näyte-URL ei ole kelvollinen"
