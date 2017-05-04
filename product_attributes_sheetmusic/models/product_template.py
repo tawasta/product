@@ -90,14 +90,33 @@ class ProductTemplate(models.Model):
     note_finnbandshop_url = fields.Char("Finnbandshop URL")
 
     # Helper fields
-    note_grade = fields.Many2one('product.attribute.value', "Note grade", compute='compute_note_attributes', store=True)
-    note_class = fields.Many2one('product.attribute.value', "Note class", compute='compute_note_attributes', store=True)
-    note_composition = fields.Many2one('product.attribute.value', "Note composition", compute='compute_note_attributes', store=True)
+    note_grade = fields.Many2one(
+        'product.attribute.value',
+        "Note grade",
+        compute='compute_note_attributes',
+        store=True,
+        domain=[('attribute_id.name', '=', 'Grade')],
+    )
+    note_class = fields.Many2one(
+        'product.attribute.value',
+        "Note class",
+        compute='compute_note_attributes',
+        store=True,
+        domain = [('attribute_id.name', '=', 'Laji')],
+    )
+    note_composition = fields.Many2one(
+        'product.attribute.value',
+        "Note composition",
+        compute='compute_note_attributes',
+        store=True,
+        domain=[('attribute_id.name', '=', 'Kokoonpano')],
+    )
     note_publish_year = fields.Many2one(
         'product.attribute.value',
         "Note publish year",
         compute='compute_note_attributes',
-        store=True
+        store=True,
+        domain=[('attribute_id.name', '=', 'Julkaisuvuosi')],
     )
 
     # Alternative price
