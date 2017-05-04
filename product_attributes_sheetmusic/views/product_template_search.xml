@@ -11,6 +11,8 @@
 				<search position="inside">
                     <field name="note_grade" string="Grade" />
                     <field name="note_class" string="Class" />
+                    <field name="note_composition" string="Composition" />
+                    <field name="note_publish_year" string="Publish year" />
 				</search>
 
 				<field name="product_variant_ids" position="before">
