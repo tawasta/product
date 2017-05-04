@@ -15,8 +15,10 @@
 
 				<field name="product_variant_ids" position="before">
                     <filter string="Has contract"
-                            domain="['|', '|',
+                            domain="['|', '|', '|', '|',
+                            ('note_publishing_agreement_exists', '!=', False),
                             ('note_publishing_agreement_date', '!=', False),
+                            ('note_publishing_contract_exists', '!=', False),
                             ('note_publishing_contract_date', '!=', False),
                             ('note_contract_date', '!=', False)
                             ]" />

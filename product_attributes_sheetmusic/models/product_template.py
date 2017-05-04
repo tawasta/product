@@ -90,10 +90,15 @@ class ProductTemplate(models.Model):
     note_finnbandshop_url = fields.Char("Finnbandshop URL")
 
     # Helper fields
-    note_grade = fields.Char("Note grade", compute='compute_note_attributes', store=True)
-    note_class = fields.Char("Note class", compute='compute_note_attributes', store=True)
-    note_composition = fields.Char("Note composition", compute='compute_note_attributes', store=True)
-    note_publish_year = fields.Char("Note publish year", compute='compute_note_attributes', store=True)
+    note_grade = fields.Many2one('product.attribute.value', "Note grade", compute='compute_note_attributes', store=True)
+    note_class = fields.Many2one('product.attribute.value', "Note class", compute='compute_note_attributes', store=True)
+    note_composition = fields.Many2one('product.attribute.value', "Note composition", compute='compute_note_attributes', store=True)
+    note_publish_year = fields.Many2one(
+        'product.attribute.value',
+        "Note publish year",
+        compute='compute_note_attributes',
+        store=True
+    )
 
     # Alternative price
     list_price_members = fields.Float("Member price", digits=dp.get_precision('Product Price'))
@@ -158,20 +163,28 @@ class ProductTemplate(models.Model):
         for record in self:
             for attribute in record.attribute_line_ids:
                 if attribute.attribute_id.name == 'Grade' and attribute.value_ids:
-                    # TODO: use all classes
-                    record.note_grade = attribute.value_ids[0].name
+                    record.note_grade = attribute.value_ids[0].id
 
                 if attribute.attribute_id.name == 'Laji' and attribute.value_ids:
-                    # TODO: use all classes
-                    record.note_class = attribute.value_ids[0].name
+                    record.note_class = attribute.value_ids[0].id
 
                 if attribute.attribute_id.name == 'Kokoonpano' and attribute.value_ids:
-                    # TODO: use all classes
-                    record.note_composition = attribute.value_ids[0].name
+                    record.note_composition = attribute.value_ids[0].id
 
                 if attribute.attribute_id.name == 'Julkaisuvuosi' and attribute.value_ids:
-                    # TODO: use all classes
-                    record.note_publish_year = attribute.value_ids[0].name
+                    record.note_publish_year = attribute.value_ids[0].id
+
+    @api.onchange('note_publishing_contract_date')
+    def onchange_note_publishing_contract_date_update_note_publishing_contract_exists(self):
+        for record in self:
+            if record.note_publishing_contract_date:
+                record.note_publishing_contract_exists = True
+
+    @api.onchange('note_publishing_agreement_date')
+    def onchange_note_publishing_agreement_date_update_note_publishing_agreement_exists(self):
+        for record in self:
+            if record.note_publishing_agreement_date:
+                record.note_publishing_agreement_exists = True
 
     # 6. CRUD methods
 
