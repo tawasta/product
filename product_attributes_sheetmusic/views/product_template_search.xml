@@ -9,8 +9,8 @@
 			<field name="arch" type="xml">
 
 				<search position="inside">
-                    <field name="note_grade" string="Grade" filter_domain="[('note_grade', 'ilike', self)]"/>
-                    <field name="note_class" string="Class" filter_domain="[('note_class', 'ilike', self)]"/>
+                    <field name="note_grade" string="Grade" />
+                    <field name="note_class" string="Class" />
 				</search>
 
 				<field name="product_variant_ids" position="before">

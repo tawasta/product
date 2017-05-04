@@ -92,7 +92,7 @@ class ProductTemplate(models.Model):
     # Helper fields
     note_grade = fields.Many2one(
         'product.attribute.value',
-        "Note grade",
+        "Grade",
         compute='compute_note_attributes',
         store=True,
         domain=[('attribute_id.name', '=', 'Grade')],
@@ -102,7 +102,7 @@ class ProductTemplate(models.Model):
         "Note class",
         compute='compute_note_attributes',
         store=True,
-        domain = [('attribute_id.name', '=', 'Laji')],
+        domain=[('attribute_id.name', '=', 'Laji')],
     )
     note_composition = fields.Many2one(
         'product.attribute.value',
