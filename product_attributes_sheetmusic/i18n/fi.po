@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-03 12:12+0000\n"
-"PO-Revision-Date: 2017-05-03 15:13+0300\n"
+"POT-Creation-Date: 2017-05-04 06:37+0000\n"
+"PO-Revision-Date: 2017-05-04 09:38+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -28,6 +28,7 @@ msgid "Box number or PDF location"
 msgstr "Laatikon numero tai PDF:n sijainti"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_card_index:0
 #: field:product.template,note_card_index:0
 msgid "Card index"
 msgstr "Kortistossa"
@@ -41,6 +42,11 @@ msgstr "Kataloginumero"
 #: view:product.template:product_attributes_sheetmusic.product_template_search_view
 msgid "Class"
 msgstr "Laji"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_search_view
+msgid "Composition"
+msgstr "Kokoonpano"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_contract_date:0
@@ -63,11 +69,13 @@ msgid "Digitization"
 msgstr "Digitointi"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_information_checked:0
 #: field:product.template,note_information_checked:0
 msgid "Everything checked"
 msgstr "Kaikki OK"
 
 #. module: product_attributes_sheetmusic
+#: help:product.product,note_information_checked:0
 #: help:product.template,note_information_checked:0
 msgid "Everything is OK!"
 msgstr "Kaikki on tarkastettu"
@@ -78,12 +86,15 @@ msgid "Finnbandshop URL"
 msgstr "Finnbandshop URL"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_free_copy:0
 #: field:product.template,note_free_copy:0
 msgid "Free copy (PDF)"
 msgstr "Vapaakappale (PDF)"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_grade:0
 #: view:product.template:product_attributes_sheetmusic.product_template_search_view
+#: field:product.template,note_grade:0
 msgid "Grade"
 msgstr "Grade"
 
@@ -130,6 +141,7 @@ msgid "Member price"
 msgstr "Jäsenhinta"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_original_non_saleable_exists:0
 #: field:product.template,note_original_non_saleable_exists:0
 msgid "Non-saleable original exists"
 msgstr "Ei-myyntikuntoinen originaali olemassa"
@@ -146,11 +158,6 @@ msgid "Note composition"
 msgstr "Kokoonpano"
 
 #. module: product_attributes_sheetmusic
-#: field:product.product,note_grade:0 field:product.template,note_grade:0
-msgid "Note grade"
-msgstr "Note grade"
-
-#. module: product_attributes_sheetmusic
 #: field:product.product,note_publish_year:0
 #: field:product.template,note_publish_year:0
 msgid "Note publish year"
@@ -162,6 +169,7 @@ msgid "Notes"
 msgstr "Nuotit"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_original_exists:0
 #: field:product.template,note_original_exists:0
 msgid "Original exists"
 msgstr "Originaali on olemassa"
@@ -182,21 +190,23 @@ msgid "Other"
 msgstr "Muu"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_pdf_ok:0
+#: field:product.product,note_pdf_ok:0 field:product.template,note_pdf_ok:0
 msgid "PDF-version OK"
 msgstr "PDF-versio kunnossa"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_page_count_score:0
 #: field:product.template,note_page_count_score:0
 msgid "Page count score"
 msgstr "Sivumäärä score"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_parts:0
+#: field:product.product,note_parts:0 field:product.template,note_parts:0
 msgid "Parts"
 msgstr "Stemmat"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_parts_count:0
 #: field:product.template,note_parts_count:0
 msgid "Parts count"
 msgstr "Stemmojen määrä"
@@ -210,6 +220,11 @@ msgstr "Tuote"
 #: model:ir.model,name:product_attributes_sheetmusic.model_product_template
 msgid "Product Template"
 msgstr "Tuotemalli"
+
+#. module: product_attributes_sheetmusic
+#: view:product.template:product_attributes_sheetmusic.product_template_search_view
+msgid "Publish year"
+msgstr "Julkaisuvuosi"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_publisher:0
@@ -237,11 +252,13 @@ msgid "Publishing contract exists"
 msgstr "Kustannussopimus olemassa"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_royalty_list:0
 #: field:product.template,note_royalty_list:0
 msgid "Roayalty new list"
 msgstr "Teoston uusi lista"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_royalty_old_list:0
 #: field:product.template,note_royalty_old_list:0
 msgid "Roayalty old list"
 msgstr "Teoston vanha lista"
@@ -257,6 +274,7 @@ msgid "Royalty notice done"
 msgstr "Teosto-ilmoitus tehty"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_original_saleable_exists:0
 #: field:product.template,note_original_saleable_exists:0
 msgid "Saleable original exists"
 msgstr "Myyntikuntoinen originaali olemassa"
@@ -277,10 +295,10 @@ msgid "Sample URL"
 msgstr "Näyte-URL"
 
 #. module: product_attributes_sheetmusic
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:111
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:118
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:125
-#: code:addons/product_attributes_sheetmusic/models/product_template.py:132
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:135
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:142
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:149
+#: code:addons/product_attributes_sheetmusic/models/product_template.py:156
 #, python-format
 msgid "Sample URL is not valid"
 msgstr "Näyte-URL ei ole kelvollinen"
@@ -291,11 +309,13 @@ msgid "Samples"
 msgstr "Näytteet"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_scan_date:0
 #: field:product.template,note_scan_date:0
 msgid "Scan date"
 msgstr "Skannauspäivä"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_scan_name:0
 #: field:product.template,note_scan_name:0
 msgid "Scanned PDF name"
 msgstr "Skannatun PDF:n nimi"
@@ -306,16 +326,19 @@ msgid "Soundcloud URL"
 msgstr "Soundcloud URL"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_creator_piece_delivered_date:0
 #: field:product.template,note_creator_piece_delivered:0
 msgid "Tekijänkappale delivered"
 msgstr "Tekijänkappale toimitettu"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_free_piece_delivered_pdf_date:0
 #: field:product.template,note_free_piece_delivered_pdf:0
 msgid "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
 msgstr "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
 
 #. module: product_attributes_sheetmusic
+#: field:product.product,note_free_piece_delivered_date:0
 #: field:product.template,note_free_piece_delivered:0
 msgid "Vapaakappaleet (paper) delivered to Kansallisarkisto"
 msgstr "Vapaakappaleet (paper) delivered to Kansallisarkisto"
