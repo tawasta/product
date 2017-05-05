@@ -119,12 +119,40 @@ class ProductTemplate(models.Model):
         domain=[('attribute_id.name', '=', 'Julkaisuvuosi')],
     )
 
+    note_publishing_agreement_or_contract_date = fields.Date(
+        "Contract date",
+        compute='compute_note_publishing_agreement_or_contract_date',
+        store=True
+    )
+
     # Alternative price
     list_price_members = fields.Float("Member price", digits=dp.get_precision('Product Price'))
 
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
+    @api.multi
+    @api.depends('attribute_line_ids')
+    def compute_note_attributes(self):
+        for record in self:
+            for attribute in record.attribute_line_ids:
+                if attribute.attribute_id.name == 'Grade' and attribute.value_ids:
+                    record.note_grade = attribute.value_ids[0].id
+
+                if attribute.attribute_id.name == 'Laji' and attribute.value_ids:
+                    record.note_class = attribute.value_ids[0].id
+
+                if attribute.attribute_id.name == 'Kokoonpano' and attribute.value_ids:
+                    record.note_composition = attribute.value_ids[0].id
+
+                if attribute.attribute_id.name == 'Julkaisuvuosi' and attribute.value_ids:
+                    record.note_publish_year = attribute.value_ids[0].id
+    @api.multi
+    @api.depends('note_publishing_contract_date', 'note_publishing_agreement_date')
+    def compute_note_publishing_agreement_or_contract_date(self):
+        for record in self:
+            record.note_publishing_agreement_or_contract_date = \
+                record.note_publishing_agreement_date or record.note_publishing_contract_date
 
     # 5. Constraints and onchanges
     @api.multi
@@ -175,23 +203,6 @@ class ProductTemplate(models.Model):
         for record in self:
             if record.note_free_piece_delivered_pdf_date:
                 record.note_free_piece_delivered_pdf = True
-
-    @api.multi
-    @api.depends('attribute_line_ids')
-    def compute_note_attributes(self):
-        for record in self:
-            for attribute in record.attribute_line_ids:
-                if attribute.attribute_id.name == 'Grade' and attribute.value_ids:
-                    record.note_grade = attribute.value_ids[0].id
-
-                if attribute.attribute_id.name == 'Laji' and attribute.value_ids:
-                    record.note_class = attribute.value_ids[0].id
-
-                if attribute.attribute_id.name == 'Kokoonpano' and attribute.value_ids:
-                    record.note_composition = attribute.value_ids[0].id
-
-                if attribute.attribute_id.name == 'Julkaisuvuosi' and attribute.value_ids:
-                    record.note_publish_year = attribute.value_ids[0].id
 
     @api.onchange('note_publishing_contract_date')
     def onchange_note_publishing_contract_date_update_note_publishing_contract_exists(self):
