@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 8.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-05 07:47+0000\n"
-"PO-Revision-Date: 2017-05-05 10:48+0300\n"
+"POT-Creation-Date: 2017-05-09 07:46+0000\n"
+"PO-Revision-Date: 2017-05-09 10:47+0300\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -48,7 +48,6 @@ msgid "Composition"
 msgstr "Kokoonpano"
 
 #. module: product_attributes_sheetmusic
-#: field:product.template,note_contract_date:0
 #: field:product.template,note_publishing_agreement_or_contract_date:0
 msgid "Contract date"
 msgstr "Sopimuksen päiväys"
@@ -57,6 +56,11 @@ msgstr "Sopimuksen päiväys"
 #: field:product.template,note_contract_ended:0
 msgid "Contract ended"
 msgstr "Sopimus päättynyt"
+
+#. module: product_attributes_sheetmusic
+#: field:product.template,note_contract_ended_date:0
+msgid "Contract ended date"
+msgstr "Sopimuksen päättymispäivä"
 
 #. module: product_attributes_sheetmusic
 #: view:product.template:product_attributes_sheetmusic.product_template_only_form_view
@@ -317,12 +321,12 @@ msgstr "Tekijänkappale toimitettu"
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_free_piece_delivered_pdf:0
 msgid "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
-msgstr "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet (PDF) toimitettu Kansallisarkistoon"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_free_piece_delivered:0
 msgid "Vapaakappaleet (paper) delivered to Kansallisarkisto"
-msgstr "Vapaakappaleet (paper) delivered to Kansallisarkisto"
+msgstr "Vapaakappaleet (paperi) toimitettu Kansallisarkistoon"
 
 #. module: product_attributes_sheetmusic
 #: field:product.template,note_youtube_url:0

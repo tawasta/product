@@ -47,7 +47,7 @@ class ProductTemplate(models.Model):
 
     # Contracts
     note_contract_ended = fields.Boolean("Contract ended")
-    note_contract_date = fields.Date("Contract date")
+    note_contract_ended_date = fields.Date("Contract ended date")
 
     note_publishing_contract_exists = fields.Boolean("Publishing contract exists")
     note_publishing_contract_date = fields.Date("Publishing contract date")
@@ -61,7 +61,7 @@ class ProductTemplate(models.Model):
     note_royalty_old_list = fields.Boolean("Roayalty old list")
     note_royalty_list = fields.Boolean("Roayalty new list")
 
-    # Digitalization
+    # Digitization
     note_free_copy = fields.Date("Free copy (PDF)")
 
     note_pdf_ok = fields.Char("PDF-version OK")
