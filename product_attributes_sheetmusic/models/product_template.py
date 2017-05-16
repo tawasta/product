@@ -80,6 +80,8 @@ class ProductTemplate(models.Model):
     note_free_piece_delivered_pdf = fields.Boolean("Vapaakappaleet (PDF) delivered to Kansallisarkisto")
     note_free_piece_delivered_pdf_date = fields.Date("Vapaakappaleet (PDF) delivered to Kansallisarkisto")
 
+    note_transciption_recommendation = fields.Boolean("Transcription recommendation")
+
     # Samples
     note_pdf_filename = fields.Char("Sample PDF Filename")
     note_pdf = fields.Binary("Sample PDF")

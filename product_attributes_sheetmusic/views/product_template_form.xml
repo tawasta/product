@@ -32,8 +32,8 @@
                                        placeholder="Box number or PDF location"
                                 />
                                 <field name="note_original_exists" />
-                                <field name="note_original_nonexistent" />
-                                <field name="note_card_index" />
+                                <field name="note_original_saleable_exists" />
+                                <field name="note_original_non_saleable_exists" />
                             </group>
                             <label for="note_parts" colspan="2" />
                             <field name="note_parts" colspan="2" nolabel="1" />
@@ -55,6 +55,8 @@
                                 <field name="note_royalty_contract_date" />
                                 <field name="note_royalty_old_list" />
                                 <field name="note_royalty_list" />
+                                <field name="note_original_nonexistent" />
+                                <field name="note_card_index" />
                             </group>
                         </group>
 
@@ -68,8 +70,7 @@
                             </group>
                             <group>
                                 <field name="note_free_copy" />
-                                <field name="note_original_saleable_exists" />
-                                <field name="note_original_non_saleable_exists" />
+                                <field name="note_transciption_recommendation" />
                             </group>
                         </group>
 
