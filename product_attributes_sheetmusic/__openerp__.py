@@ -22,7 +22,7 @@
 {
     'name': 'Product sheet music attributes',
     'summary': 'Sheet music attributes for products',
-    'version': '8.0.0.3.7',
+    'version': '8.0.1.0.0',
     'category': 'Product',
     'website': 'https://github.com/Tawasta/product',
     'author': 'Oy Tawasta Technologies Ltd.',

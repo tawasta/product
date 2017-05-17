@@ -6,7 +6,7 @@
 Product royalties
 =================
 
-Allows defining royalties for products
+Allows defining royalties for products and partners
 
 Installation
 ============
