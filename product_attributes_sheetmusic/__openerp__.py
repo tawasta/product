@@ -22,9 +22,9 @@
 {
     'name': 'Product sheet music attributes',
     'summary': 'Sheet music attributes for products',
-    'version': '8.0.0.3.6',
+    'version': '8.0.0.3.7',
     'category': 'Product',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://github.com/Tawasta/product',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
