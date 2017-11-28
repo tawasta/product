@@ -7,6 +7,7 @@ Available addons
 ----------------
 **Addon** | **Summary**
 --- | ---
+[product_internal_comments](product_internal_comments/) | Freetext field for describing product material
 [product_material_description](product_material_description/) | Freetext field for describing product material
 
 Unported addons

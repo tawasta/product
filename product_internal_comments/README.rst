@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=======================================
-Material Description field for Products
-=======================================
+==============================
+Internal Comments for Products
+==============================
 
-* Adds a new field to Product for describing the material
+* Adds a new field to Products for typing internal comments and notes
 
 Installation
 ============
@@ -22,7 +22,7 @@ Usage
 
 Known issues / Roadmap
 ======================
-* A m2o relation to a new model would be better when the material data can be expected to be uniform
+* None
 
 Credits
 =======
