@@ -3,6 +3,12 @@ Product mananagement
 
 [//]: # (addons)
 
+Available addons
+----------------
+**Addon** | **Summary**
+--- | ---
+[product_material_description](product_material_description/) | Freetext field for describing product material
+
 Unported addons
 ----------------
 **Addon** | **Summary**
