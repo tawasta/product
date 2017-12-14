@@ -9,6 +9,7 @@ Available addons
 --- | ---
 [product_internal_comments](product_internal_comments/) | New product field for typing internal comments and notes
 [product_material_description](product_material_description/) | Freetext field for describing product material
+[product_migration_info](product_migration_info/) | Helper fields for product migration tracking
 
 Unported addons
 ----------------
