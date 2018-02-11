@@ -9,7 +9,9 @@ Available addons
 --- | ---
 [product_internal_comments](product_internal_comments/) | New product field for typing internal comments and notes
 [product_material_description](product_material_description/) | Freetext field for describing product material
-[product_migration_info](product_migration_info/) | Helper fields for product migration tracking
+[product_supplierinfo_for_customer](product_supplierinfo_for_customer/) | Supplierinfo model can also store customers' product info
+[product_supplierinfo_for_customer_sale](product_supplierinfo_for_customer_sale) | Show customer product codes on sale order
+
 
 Unported addons
 ----------------
