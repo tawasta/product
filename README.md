@@ -12,6 +12,7 @@ Available addons
 [product_migration_info](product_migration_info/) | Fields for storing migration-related product metadata
 [product_supplierinfo_for_customer](product_supplierinfo_for_customer/) | Supplierinfo model can also store customers' product info
 [product_supplierinfo_for_customer_sale](product_supplierinfo_for_customer_sale) | Show customer product codes on sale order
+[product_supplierinfo_for_customer_stock](product_supplierinfo_for_customer_stock) | Customer product info fields for pack operations
 [product_vendor_codes_field](product_vendor_codes_field/) | Show product's all vendor codes in a single field
 
 
