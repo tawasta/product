@@ -22,7 +22,7 @@
 {
     'name': 'Component Stock Availability',
     'summary': "Show product's component stock levels",
-    'version': '8.0.1.0.0',
+    'version': '8.0.1.0.1',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
