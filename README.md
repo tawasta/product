@@ -5,23 +5,25 @@ Product mananagement
 
 Available addons
 ----------------
-**Addon** | **Summary**
---- | ---
-[product_internal_comments](product_internal_comments/) | New product field for typing internal comments and notes
-[product_material_description](product_material_description/) | Freetext field for describing product material
-[product_migration_info](product_migration_info/) | Fields for storing migration-related product metadata
-[product_sequence_update_button](product_sequence_update_button/) | Set product's sequence with a button
-[product_supplierinfo_for_customer](product_supplierinfo_for_customer/) | Supplierinfo model can also store customers' product info
-[product_supplierinfo_for_customer_sale](product_supplierinfo_for_customer_sale) | Show customer product codes on sale order
-[product_supplierinfo_for_customer_stock](product_supplierinfo_for_customer_stock) | Customer product info fields for pack operations
-[product_vendor_codes_field](product_vendor_codes_field/) | Show product's all vendor codes in a single field
+addon | version | summary
+--- | --- | ---
+[product_internal_comments](product_internal_comments/) | 10.0.1.0.0 | New comments field for product
+[product_material_description](product_material_description/) | 10.0.1.0.0 | Adds a new field for material description
+[product_migration_info](product_migration_info/) | 10.0.0.1.0 | Helper fields for migration tracking
+[product_sequence_update_button](product_sequence_update_button/) | 10.0.1.0.0 | Set product sequence with a button
+[product_supplierinfo_for_customer](product_supplierinfo_for_customer/) | 10.0.1.0.0 | Supplierinfo model can also store customer product info
+[product_supplierinfo_for_customer_sale](product_supplierinfo_for_customer_sale/) | 10.0.1.0.0 | Show customer-specific product info on SOs
+[product_supplierinfo_for_customer_stock](product_supplierinfo_for_customer_stock/) | 10.0.1.0.0 | Customer product info fields for pack operations
+[product_vendor_codes_field](product_vendor_codes_field/) | 10.0.1.0.0 | Show all vendor codes in a single field
 
 
 Unported addons
-----------------
-**Addon** | **Summary**
---- | ---
-[product_attributes_sheetmusic](product_attributes_sheetmusic/) | Sheet music attributes for products
-[product_mold_number](product_mold_number/) | Adds mold numbers for products
-[product_royalties](product_royalties/) | Allows defining royalties for products and partners
-[product_simplification](product_simplification/) | Simplified product views
+---------------
+addon | version | summary
+--- | --- | ---
+[product_attributes_sheetmusic](product_attributes_sheetmusic/) | 8.0.1.0.0 (unported) | Sheet music attributes for products
+[product_mold_number](product_mold_number/) | 8.0.1.0.0 (unported) | Adds mold numbers for products
+[product_royalties](product_royalties/) | 8.0.1.0.0 (unported) | Allows defining royalties for products and partners
+[product_simplification](product_simplification/) | 8.0.1.0.0 (unported) | Simplified product views
+
+[//]: # (end addons)
