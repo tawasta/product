@@ -9,6 +9,7 @@ Available addons
 ----------------
 addon | version | summary
 --- | --- | ---
+[product_cost_price_to_supplierinfo](product_cost_price_to_supplierinfo/) | 10.0.1.0.0 | Helper module to use before implementing FIFO
 [product_internal_comments](product_internal_comments/) | 10.0.1.0.0 | New comments field for product
 [product_material_description](product_material_description/) | 10.0.1.0.0 | Adds a new field for material description
 [product_migration_info](product_migration_info/) | 10.0.0.1.0 | Helper fields for migration tracking
