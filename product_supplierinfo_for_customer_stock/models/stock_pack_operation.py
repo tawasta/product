@@ -7,19 +7,21 @@ class StockPackOperation(models.Model):
     _inherit = 'stock.pack.operation'
 
     @api.multi
-    def _get_customer_product_info(self):
+    def _compute_customer_product_info(self):
         for pack_operation in self:
             for partner_info in pack_operation.product_id.customer_ids:
                 if partner_info.name == pack_operation.picking_id.partner_id:
-                    pack_operation.customer_product_code = partner_info.product_code
-                    pack_operation.customer_product_name = partner_info.product_name
+                    pack_operation.customer_product_code \
+                        = partner_info.product_code
+                    pack_operation.customer_product_name \
+                        = partner_info.product_name
 
     customer_product_code = fields.Char(
-        compute='_get_customer_product_info',
+        compute='_compute_customer_product_info',
         string='Customer Product Code'
     )
 
     customer_product_name = fields.Char(
-        compute='_get_customer_product_info',
+        compute='_compute_customer_product_info',
         string='Customer Product Name'
-    )    
+    )
