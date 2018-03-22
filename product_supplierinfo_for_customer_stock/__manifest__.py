@@ -32,7 +32,7 @@
     'external_dependencies': {
         'python': [],
         'bin': [],
-    },    
+    },
     'depends': [
         'product_supplierinfo_for_customer',
         'stock',
