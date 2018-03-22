@@ -1,0 +1,6 @@
+<odoo noupdate="0">
+    <record id="allow_cost_price_to_supplierinfo" model="res.groups">
+        <field name="name">Can copy product cost price to supplierinfo</field>
+        <field name="category_id" ref="base.module_category_hidden"/>
+    </record>
+</odoo>

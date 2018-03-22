@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record model="ir.values" id="product_template_copy_cost_price">
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="name">Copy Cost Price to Supplierinfo</field>
+        <field name="key2">client_action_multi</field>
+        <field name="value" eval="'ir.actions.act_window,' + str(ref('cost_price_to_supplierinfo_action'))" />
+        <field name="key">action</field>
+        <field name="model">product.template</field>
+    </record>
+</odoo>

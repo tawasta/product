@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="supplierinfo_placeholder_partner" model="res.partner">
+        <field name="name">Placeholder Supplier</field>
+        <field name="sale_warn">no-message</field>
+        <field name="active" eval="False"/>
+        <field name="supplier" eval="True"/>
+    </record>
+</odoo>
