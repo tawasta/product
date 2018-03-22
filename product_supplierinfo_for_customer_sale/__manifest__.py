@@ -32,6 +32,7 @@
     },
     'depends': [
         'product_supplierinfo_for_customer',
+        'sale',
     ],
     'data': [
         'views/sale_order.xml',
