@@ -24,5 +24,5 @@ class ProductSupplierinfo(models.Model):
         if not any(arg[0] == 'type' for arg in args):
             args += [('type', '=',
                       self._context.get('supplierinfo_type', 'supplier'))]
-        return super(ProductSupplierinfo, self).search(args, offset=offset, 
-            limit=limit, order=order, count=count)
+        return super(ProductSupplierinfo, self) \
+            .search(args, offset=offset, limit=limit, order=order, count=count)
