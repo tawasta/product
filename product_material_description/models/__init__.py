@@ -1,2 +1,2 @@
 # -*- coding: utf-8 -*-
-import product_template
+from . import product_template
