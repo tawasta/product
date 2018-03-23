@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+	<data>
+
+        <record id="account_invoice_royalties_form" model="ir.ui.view">
+            <field name="name">account.invoice.royalties.form</field>
+            <field name="model">account.invoice.royalties</field>
+            <field name="arch" type="xml">
+                <form string="Send invoices">
+                    <h2>Create royalty invoice</h2>
+
+                    <group>
+                        <field name="partner_id" />
+                    </group>
+
+                    <footer>
+                        <button string="Create invoice"
+                                name="create_royalties_purchase_order"
+                                type="object"
+                                default_focus="1"
+                                class="oe_highlight"
+                        />
+                        or
+                        <button string="Cancel" class="oe_link" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_account_invoice_royalties" model="ir.actions.act_window">
+            <field name="name">Invoice royalties</field>
+            <field name="res_model">account.invoice.royalties</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="account_invoice_royalties_form"/>
+            <field name="target">new</field>
+        </record>
+
+		<act_window id="act_account_invoice_royalties"
+		    name="Invoice royalties"
+		    multi="True"
+		    res_model="account.invoice.royalties"
+		    src_model="account.invoice"
+		    key2="client_action_multi"
+		    view_mode="form"
+		    view_type="form"
+		    target="new"
+		    />
+
+	</data>
+</openerp>
