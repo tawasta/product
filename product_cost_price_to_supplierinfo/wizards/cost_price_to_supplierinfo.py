@@ -10,7 +10,7 @@ class CostPriceToSupplierinfo(models.TransientModel):
         po_line_model = self.env['purchase.order.line']
         latest_line = po_line_model.search(
             args=[('product_id.product_tmpl_id', '=', product_template.id)],
-            order='id DESC',
+            order='date_planned DESC',
             limit=1,
         )
 
