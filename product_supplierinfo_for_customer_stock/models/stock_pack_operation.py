@@ -10,7 +10,8 @@ class StockPackOperation(models.Model):
     def _compute_customer_product_info(self):
         for pack_operation in self:
             for partner_info in pack_operation.product_id.customer_ids:
-                if partner_info.name == pack_operation.picking_id.partner_id:
+                if partner_info.name == pack_operation.picking_id \
+                        .partner_id.commercial_partner_id:
                     pack_operation.customer_product_code \
                         = partner_info.product_code
                     pack_operation.customer_product_name \
