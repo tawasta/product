@@ -22,7 +22,7 @@
 {
     'name': 'Product Batch Creator',
     'summary': 'Create a batch of placeholder products',
-    'version': '10.0.1.0.0',
+    'version': '10.0.1.0.1',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
