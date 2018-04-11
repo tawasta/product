@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="batch_creator_form" model="ir.ui.view">
+        <field name="name">Product Batch Creator</field>
+        <field name="model">product_sequence_batch_creator.creator_wizard</field>
+        <field name="arch" type="xml">
+            <form string="Create Products">
+                <group col="2">
+                <field name="qty" required="True"/>
+                <field name="prefix" required="True"/>
+                </group>
+
+                <footer>
+                <button name="create_products" type="object" string="Create Products" class="oe_highlight"/>
+                or
+                <button string="Cancel" class="oe_link" special="cancel"/>
+                </footer>
+
+            </form>
+        </field>
+    </record>
+
+    <record id="action_product_batch_create" model="ir.actions.act_window">
+        <field name="name">Batch Create Products</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">product_sequence_batch_creator.creator_wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_type">form</field>
+        <field eval="False" name="view_id"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
