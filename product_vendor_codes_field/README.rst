@@ -7,8 +7,8 @@ Vendor Codes Field for Product
 ==============================
 
 * Adds a new char field that lists all the vendor codes of a Product
-* Intended as a quick way to see vendor codes in a product treeview
-* Also provides a new filter for searching for a product based on the codes
+* Provides a new filter for searching for a product based on the codes
+* Does not add the field to any views
 
 Configuration
 =============
