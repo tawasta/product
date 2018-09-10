@@ -57,13 +57,13 @@ class ProductUom(models.Model):
             example = ''
             example_inverse = ''
 
-            example = '1 * {} = {} * {}'.format(
+            example = '1 * %s = %s * %s' % (
                 record.reference_unit_id.name,
                 record.reference_unit_id._compute_quantity(1, record),
                 record.name,
             )
 
-            example_inverse = '1 * {} = {} * {}'.format(
+            example_inverse = '1 * %s = %s * %s' % (
                 record.name,
                 record._compute_quantity(1, record.reference_unit_id),
                 record.reference_unit_id.name,

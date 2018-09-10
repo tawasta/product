@@ -22,7 +22,7 @@
 {
     'name': 'Helper for understanding product UOM ratios',
     'summary': 'Shows helper fields on product UOM:s',
-    'version': '10.0.1.0.1',
+    'version': '10.0.1.0.2',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
