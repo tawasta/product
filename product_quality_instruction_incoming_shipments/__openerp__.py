@@ -22,7 +22,7 @@
 {
     'name': 'Incoming Shipments Quality Checks',
     'summary': 'Mandatory quality checks when receiving goods',
-    'version': '8.0.0.1.0',
+    'version': '8.0.1.0.0',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
