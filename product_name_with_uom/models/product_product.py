@@ -5,7 +5,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import api, fields, models
+from odoo import api, models
 
 # 4. Imports from Odoo modules:
 
@@ -15,7 +15,7 @@ from odoo import api, fields, models
 
 
 class ProductProduct(models.Model):
-    
+
     # 1. Private attributes
     _inherit = 'product.product'
 
@@ -26,7 +26,6 @@ class ProductProduct(models.Model):
     def name_get(self):
         old_res = super(ProductProduct, self).name_get()
         # This is not optimal, but allows us to not override the whole method
-
 
         new_res = list()
         for record in old_res:
