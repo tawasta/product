@@ -15,7 +15,7 @@ from odoo import models, fields
 
 
 class ProductPricelistItem(models.Model):
-    
+
     # 1. Private attributes
     _inherit = 'product.pricelist.item'
 
