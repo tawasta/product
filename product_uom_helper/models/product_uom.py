@@ -15,7 +15,7 @@ from odoo import api, fields, models
 
 
 class ProductUom(models.Model):
-    
+
     # 1. Private attributes
     _inherit = 'product.uom'
 
