@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from odoo import models, fields, api
+from odoo import models, fields
 
 
 class ProductTemplate(models.Model):
@@ -16,6 +16,6 @@ class ProductTemplate(models.Model):
         self.ensure_one()
 
         analytic_tags = self.analytic_tag_ids \
-                        or self.categ_id.get_analytic_tags()
+            or self.categ_id.get_analytic_tags()
 
         return analytic_tags
