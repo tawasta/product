@@ -21,7 +21,8 @@
 
 {
     'name': 'Disallow modifying Units of Measure',
-    'summary': 'Disallow modifying Units of Measure. This overrides product.uom access rules',
+    'summary': 'Disallow modifying Units of Measure.'
+               'This overrides product.uom access rules',
     'version': '10.0.1.0.0',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',

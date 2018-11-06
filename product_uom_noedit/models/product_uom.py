@@ -10,7 +10,8 @@ class ProductUom(models.Model):
     @api.model
     def check_access_rights(self, operation, raise_exception=True):
         if operation == 'read' or self.env.user.has_group('base.group_system'):
-            return super(ProductUom, self).check_access_rights(operation, raise_exception)
+            return super(ProductUom, self)\
+                .check_access_rights(operation, raise_exception)
 
         # Disallow editing UoM:s for non-admins
         if raise_exception:
