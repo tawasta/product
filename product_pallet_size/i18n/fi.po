@@ -1,0 +1,50 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_pallet_size
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-11-06 09:22+0000\n"
+"PO-Revision-Date: 2018-11-06 09:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_pallet_size
+#: model:ir.model.fields,help:product_pallet_size.field_procountor_product_product_pallet_size
+#: model:ir.model.fields,help:product_pallet_size.field_product_product_pallet_size
+#: model:ir.model.fields,help:product_pallet_size.field_product_template_pallet_size
+msgid "How many products Unit of Measures fit on a pallet"
+msgstr "Kuinka monta mittayksikköä mahtuu lavalle"
+
+#. module: product_pallet_size
+#: model:ir.model.fields,field_description:product_pallet_size.field_procountor_product_product_pallet_size
+#: model:ir.model.fields,field_description:product_pallet_size.field_product_product_pallet_size
+#: model:ir.model.fields,field_description:product_pallet_size.field_product_template_pallet_size
+msgid "Pallet size"
+msgstr "Lavakoko"
+
+#. module: product_pallet_size
+#: model:ir.model.fields,field_description:product_pallet_size.field_procountor_product_product_pallet_weight
+#: model:ir.model.fields,field_description:product_pallet_size.field_product_product_pallet_weight
+#: model:ir.model.fields,field_description:product_pallet_size.field_product_template_pallet_weight
+msgid "Pallet weight"
+msgstr "Lavan paino"
+
+#. module: product_pallet_size
+#: model:ir.model,name:product_pallet_size.model_product_template
+msgid "Product Template"
+msgstr "Tuotemalli"
+
+#. module: product_pallet_size
+#: model:ir.model.fields,help:product_pallet_size.field_procountor_product_product_pallet_weight
+#: model:ir.model.fields,help:product_pallet_size.field_product_product_pallet_weight
+#: model:ir.model.fields,help:product_pallet_size.field_product_template_pallet_weight
+msgid "The weight of pallet contents in Kg, not including pallet weight or any packaging, etc."
+msgstr "Lavan sisällön paino kiloina. Ei sisällä lavan omaa painoa tai pakkausmateriaaleja tms."
+
