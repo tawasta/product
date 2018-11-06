@@ -15,7 +15,7 @@ from odoo import api, models
 
 
 class ResPartner(models.Model):
-    
+
     # 1. Private attributes
     _inherit = 'res.partner'
 
@@ -39,7 +39,7 @@ class ResPartner(models.Model):
     @api.model
     def create(self, vals):
         # Inherit pricelist from parent
-        if not 'property_product_pricelist' in vals and 'parent_id' in vals:
+        if 'property_product_pricelist' not in vals and 'parent_id' in vals:
             parent_id = self.browse([vals['parent_id']])
             vals['property_product_pricelist'] = \
                 parent_id.property_product_pricelist.id
