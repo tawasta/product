@@ -16,7 +16,7 @@ import odoo.addons.decimal_precision as dp
 
 
 class ProductPricelistItem(models.Model):
-    
+
     # 1. Private attributes
     _inherit = 'product.pricelist.item'
 
