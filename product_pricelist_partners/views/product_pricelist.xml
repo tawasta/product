@@ -7,7 +7,7 @@
         <field name="inherit_id" ref="product.product_pricelist_view"/>
         <field name="arch" type="xml">
 
-            <xpath expr="//div[last()]" name="country_group_ids" position="before">
+            <xpath expr="//div[@groups='product.group_pricelist_item']" name="country_group_ids" position="before">
                 <separator string="Partners using this pricelist"/>
                 <field name="partner_ids" nolabel="1">
                     <tree create="false" delete="false">
