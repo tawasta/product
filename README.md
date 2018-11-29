@@ -19,8 +19,9 @@ addon | version | summary
 [product_name_disable_translate](product_name_disable_translate/) | 10.0.1.0.0 | Removes the option to translate product names
 [product_name_with_uom](product_name_with_uom/) | 10.0.1.0.0 | Shows product name with sale UOM
 [product_pallet_size](product_pallet_size/) | 10.0.1.0.0 | Add an informative pallet size information on products
+[product_partshotel_flag](product_partshotel_flag/) | 10.0.1.0.0 | Flag products for manual export to Partshotel
 [product_pricelist_inherit](product_pricelist_inherit/) | 10.0.1.0.0 | Inherits pricelists company children
-[product_pricelist_partners](product_pricelist_partners/) | 10.0.1.0.0 | Show partners using the pricelist
+[product_pricelist_partners](product_pricelist_partners/) | 10.0.1.0.1 | Show partners using the pricelist
 [product_pricelist_price](product_pricelist_price/) | 10.0.1.0.0 | Show cost price and sale price on pricelist items
 [product_pricelist_show_create_date](product_pricelist_show_create_date/) | 10.0.1.0.0 | Show create date on pricelists
 [product_pricelist_uom](product_pricelist_uom/) | 10.0.1.0.0 | Show UOM on pricelists
