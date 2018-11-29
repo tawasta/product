@@ -13,6 +13,34 @@ class ProductTemplate(models.Model):
             p.primary_supplierinfo_id \
                 = p.seller_ids and p.seller_ids[0].id or False
 
+    @api.depends('seller_ids', 'uom_id', 'uom_po_id', 'currency_id',
+                 'currency_id.rate',
+                 'primary_supplierinfo_id.currency_id.rate')
+    def _compute_standard_price_from_vendor(self):
+        for p in self:
+            if not p.primary_supplierinfo_id:
+                p.standard_price_from_vendor = 0.00
+            else:
+                unit_cost_in_eur \
+                    = self.env['res.currency'] \
+                    ._compute(p.primary_supplierinfo_id.currency_id,
+                              p.currency_id,
+                              p.primary_supplierinfo_id.price)
+
+                p.standard_price_from_vendor = p.uom_po_id._compute_price(
+                    unit_cost_in_eur, p.uom_id
+                )
+
+    standard_price_from_vendor = fields.Float(
+        compute=_compute_standard_price_from_vendor,
+        digits=dp.get_precision('Product Price'),
+        string="Cost Price (Vendor-based)",
+        store=True,
+        help="Alternative cost price calculated based on primary vendor "
+             "information. Note that this does not affect stock valuation "
+             "and is purely informational."
+    )
+
     primary_supplierinfo_id = fields.Many2one(
         compute=_compute_primary_supplierinfo,
         comodel_name='product.supplierinfo',

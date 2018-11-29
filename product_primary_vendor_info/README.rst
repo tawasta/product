@@ -11,6 +11,11 @@ Product Primary Vendor Info
 * Shows the fields also in product treeview
 * Fields can be utilized as helpers to show the data also in other models
   (e.g. purchase request lines or BOM lines)
+* Also adds an informational "Cost Price (vendor based)" field to product form
+  that converts the primary vendor's price to the default currency, and does
+  conversion from purchase UoM to product's own UoM. I.e. it tells what does 
+  it cost in company currency to buy one <UoM> of the product. This does not
+  affect stock valuation, and is only additional information
 
 Configuration
 =============
