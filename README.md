@@ -25,7 +25,7 @@ addon | version | summary
 [product_pricelist_price](product_pricelist_price/) | 10.0.1.0.0 | Show cost price and sale price on pricelist items
 [product_pricelist_show_create_date](product_pricelist_show_create_date/) | 10.0.1.0.0 | Show create date on pricelists
 [product_pricelist_uom](product_pricelist_uom/) | 10.0.1.0.0 | Show UOM on pricelists
-[product_primary_vendor_info](product_primary_vendor_info/) | 10.0.1.0.0 | Helper fields for showing primary vendor's info
+[product_primary_vendor_info](product_primary_vendor_info/) | 10.0.1.2.0 | Helper fields for showing primary vendor's info
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 10.0.1.0.1 | Create a batch of placeholder products
 [product_sequence_update_button](product_sequence_update_button/) | 10.0.1.0.0 | Set product sequence with a button
 [product_supplierinfo_for_customer](product_supplierinfo_for_customer/) | 10.0.1.0.0 | Supplierinfo model can also store customer product info
