@@ -29,6 +29,7 @@ addon | version | summary
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 10.0.1.0.1 | Create a batch of placeholder products
 [product_sequence_update_button](product_sequence_update_button/) | 10.0.1.0.0 | Set product sequence with a button
 [product_supplierinfo_for_customer](product_supplierinfo_for_customer/) | 10.0.1.0.0 | Supplierinfo model can also store customer product info
+[product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 10.0.1.0.0 | Show all customer codes in a single field
 [product_supplierinfo_for_customer_sale](product_supplierinfo_for_customer_sale/) | 10.0.1.0.0 | Show customer-specific product info on SOs
 [product_supplierinfo_for_customer_stock](product_supplierinfo_for_customer_stock/) | 10.0.1.0.1 | Customer product info fields for pack operations
 [product_template_tags_analytic_tags](product_template_tags_analytic_tags/) | 10.0.1.0.0 | Analytic tags for product template tags
