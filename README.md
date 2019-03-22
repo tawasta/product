@@ -1,4 +1,4 @@
-[![[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
+[![License: AGPL v3](https://img.shields.io/badge/License-AGPL%20v3-blue.svg)](https://www.gnu.org/licenses/agpl-3.0)
 [![Build Status](https://travis-ci.org/Tawasta/product.svg?branch=10.0)](https://travis-ci.org/Tawasta/product)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/2e7a01b0120947df90a780fcafbe64a3)](https://www.codacy.com/app/Tawasta/product?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=Tawasta/product&amp;utm_campaign=Badge_Grade)
 
