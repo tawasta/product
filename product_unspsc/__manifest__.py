@@ -22,7 +22,7 @@
 {
     'name': 'UNSPSC Code for Products',
     'summary': "New field for UNSPSC Code",
-    'version': '10.0.1.0.1',
+    'version': '1.0.1',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

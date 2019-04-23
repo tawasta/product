@@ -22,7 +22,7 @@
 {
     'name': 'No Open Forms On Product',
     'summary': 'This module prevents to open forms on specified fields.',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Product',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

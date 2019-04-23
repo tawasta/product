@@ -22,7 +22,7 @@
 {
     'name': 'Show partners using the pricelist',
     'summary': 'Show partners using the pricelist',
-    'version': '10.0.1.0.1',
+    'version': '1.0.1',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

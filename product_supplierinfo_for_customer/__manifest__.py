@@ -19,7 +19,7 @@
 {
     'name': 'Customer Product Info',
     'summary': 'Supplierinfo model can also store customer product info',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

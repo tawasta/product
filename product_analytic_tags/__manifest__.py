@@ -22,7 +22,7 @@
 {
     'name': 'Analytic tags for products',
     'summary': 'Analytic tags for products and categories',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Product',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

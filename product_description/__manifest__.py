@@ -22,7 +22,7 @@
 {
     'name': 'Product Description for form view',
     'summary': 'Adds a desciption field for product template',
-    'version': '10.0.0.1.0',
+    'version': '0.1.0',
     'category': 'Product',
     'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

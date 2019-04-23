@@ -22,7 +22,7 @@
 {
     'name': 'Customer Codes Field for Product',
     'summary': 'Show all customer codes in a single field',
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',

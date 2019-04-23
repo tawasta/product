@@ -22,7 +22,7 @@
 {
     'name': "Competitor's alternative product info",
     'summary': "New field for info about competitor's alternative product",
-    'version': '10.0.1.0.0',
+    'version': '1.0.0',
     'category': 'Inventory',
     'website': 'http://www.tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
