@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_sequence_by_category
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-05-02 07:33+0000\n"
+"PO-Revision-Date: 2019-05-02 10:33+0300\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"Language: fi\n"
+"X-Generator: Poedit 1.8.7.1\n"
+
+#. module: product_sequence_by_category
+#: model:ir.model.fields,help:product_sequence_by_category.field_product_category_sequence_id
+msgid "A sequence that is used when creating new products to this category"
+msgstr "Numerointi jota käytetään kun tähän kategoriaan luodaan uusia tuotteita"
+
+#. module: product_sequence_by_category
+#: model:ir.model,name:product_sequence_by_category.model_product_product
+msgid "Product"
+msgstr "Tuote"
+
+#. module: product_sequence_by_category
+#: model:ir.model,name:product_sequence_by_category.model_product_category
+msgid "Product Category"
+msgstr "Tuoteryhmä"
+
+#. module: product_sequence_by_category
+#: model:ir.model.fields,field_description:product_sequence_by_category.field_product_category_sequence_id
+msgid "Product sequence"
+msgstr "Tuotenumero"
