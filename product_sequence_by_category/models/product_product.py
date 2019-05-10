@@ -22,8 +22,8 @@ class ProductProduct(models.Model):
     @api.multi
     def write(self, vals):
         for product in self:
-            if product.default_code in [False, '/']:
+            if product.default_code in [False, '/'] and product.product_tmpl_id:
                 vals['default_code'] = \
-                    self.product_tmpl_id.categ_id.next_by_id()
+                    product.product_tmpl_id.categ_id.next_by_id()
             super(ProductProduct, product).write(vals)
         return True
