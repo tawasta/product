@@ -26,4 +26,4 @@ class ProductProduct(models.Model):
                 vals['default_code'] = \
                     product.product_tmpl_id.categ_id.next_by_id()
             super(ProductProduct, product).write(vals)
-        return True
+        return super(ProductProduct, self).write()
