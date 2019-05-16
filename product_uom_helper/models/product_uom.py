@@ -17,12 +17,12 @@ from odoo import api, fields, models
 class ProductUom(models.Model):
 
     # 1. Private attributes
-    _inherit = 'product.uom'
+    _inherit = 'uom.uom'
 
     # 2. Fields declaration
     reference_unit_id = fields.Many2one(
         string='Reference unit',
-        comodel_name='product.uom',
+        comodel_name='uom.uom',
         compute='_compute_reference_unit_id',
     )
 
@@ -42,7 +42,7 @@ class ProductUom(models.Model):
     @api.onchange('category_id')
     @api.depends('category_id')
     def _compute_reference_unit_id(self):
-        ProductUom = self.env['product.uom']
+        ProductUom = self.env['uom.uom']
 
         for record in self:
             record.reference_unit_id = ProductUom.search([
