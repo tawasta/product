@@ -1,13 +1,10 @@
-<openerp>
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
     <data>
-        <!-- Add synopsis to the product grid view -->
         <template id="products" name="products_inherit" inherit_id="website_sale.products_item">
-            <xpath expr="//section[1]/h5[1]" position="after">
-                <p> 
-                    <span t-esc="product.website_synopsis"/>
-                </p>
+            <xpath expr="//a[@itemprop='name']" position="after">
+                <div class="item-description" t-esc="product.website_synopsis"/>
             </xpath>
         </template>
-                
     </data>
-</openerp>
+</odoo>
