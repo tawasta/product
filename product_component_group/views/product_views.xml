@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="mrp_bom_component_find.product_template_form_view_use_case_button" model="ir.ui.view">
+        <field name="groups_id" eval="[(4, ref('stock.group_stock_user'))]"/>
+    </record>
+</odoo>
