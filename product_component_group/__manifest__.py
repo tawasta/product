@@ -20,8 +20,8 @@
 ##############################################################################
 
 {
-    'name': 'Product Component Group',
-    'summary': 'Product Component Group',
+    'name': 'Product Component Group visible for Project / User',
+    'summary': 'Product Component Group visible for Project / User',
     'version': '10.0.1.0.0',
     'category': 'Product',
     'website': 'https://tawasta.fi',

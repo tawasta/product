@@ -6,8 +6,8 @@
 Product Component Group
 =======================
 
-This module adds a group and Product's Component-button is visible for that
-group.
+Product's Component-button is visible for 'Project / User'-group after
+installing this module.
 
 Configuration
 =============
