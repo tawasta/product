@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<odoo>
+  <template id="add_detailed_description_section" inherit_id="website_sale.product">
+    <xpath expr="//section[@id='product_detail']" position="after">
+      <t t-if="product.detailed_description">
+        <section id="detailed-desc" class="container py-2">
+          <div class="row">
+            <div class="col-12">
+              <p t-field="product.detailed_description" />
+            </div>
+          </div>
+        </section>
+      </t>
+    </xpath>
+  </template>
+</odoo>

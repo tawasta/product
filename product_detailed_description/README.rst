@@ -2,12 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==========================
-Analytic tags for products
-==========================
+==========================================
+More detailed description for the customer
+==========================================
 
-Analytic tags for products and categories
-
+* The module create a field behind the product for more detailed description. The field is displayed on the frontend if the field is filled
 
 Configuration
 =============
@@ -15,18 +14,18 @@ Configuration
 
 Usage
 =====
-\- 
+Just install this module
 
 Known issues / Roadmap
 ======================
-* None
+\-
 
 Credits
 =======
 
 Contributors
 ------------
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
 
 Maintainer

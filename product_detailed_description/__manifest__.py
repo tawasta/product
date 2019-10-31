@@ -2,7 +2,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,27 +20,21 @@
 ##############################################################################
 
 {
-    'name': 'Analytic tags for products',
-    'summary': 'Analytic tags for products and categories',
+    'name': 'More detailed description for the customer',
+    'summary': 'More detailed description for the customer',
     'version': '12.0.1.0.0',
     'category': 'Product',
-    'website': 'http://www.tawasta.fi',
+    'website': 'https://tawasta.fi',
     'author': 'Oy Tawasta Technologies Ltd.',
     'license': 'AGPL-3',
     'application': False,
     'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
     'depends': [
-        'analytic',
         'product',
+        'website_sale',
     ],
     'data': [
-        'views/product_category.xml',
-        'views/product_template.xml',
-    ],
-    'demo': [
+        'views/product_template_views.xml',
+        'views/website_sale_product_view.xml',
     ],
 }
