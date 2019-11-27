@@ -1,5 +1,6 @@
 from odoo import models, fields
 
+
 class product_template(models.Model):
 
     _inherit = "product.template"
