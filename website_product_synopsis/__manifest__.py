@@ -29,7 +29,8 @@
     ],
     'description': """
 Website - Product Synopsis
- * Adds a new field for a short description about a product. The text is shown in website's product grid view
+ * Adds a new field for a short description about a product.
+ The text is shown in website's product grid view
 
     """,
     'data': [
