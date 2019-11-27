@@ -23,16 +23,11 @@
     'category': 'Website',
     'version': '12.0.1.0.0',
     'author': 'Vizucom Oy',
+    'license': '',
     'website': 'http://www.vizucom.com',
     'depends': [
         'website_sale'
     ],
-    'description': """
-Website - Product Synopsis
- * Adds a new field for a short description about a product.
- The text is shown in website's product grid view
-
-    """,
     'data': [
         'views/product_template.xml',
         'views/product_synopsis.xml',
