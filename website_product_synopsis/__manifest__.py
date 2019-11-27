@@ -22,7 +22,7 @@
     'name': 'Website - Product Synopsis',
     'category': 'Website',
     'version': '12.0.1.0.0',
-    'author': 'Vizucom Oy',
+    'author': 'Oy Tawasta Technologies Ltd.',
     'license': '',
     'website': 'http://www.vizucom.com',
     'depends': [
