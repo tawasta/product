@@ -1,14 +1,12 @@
-# -*- coding: utf-8 -*-
 from odoo import models, fields
 
 
 class ProductCategory(models.Model):
 
-    _inherit = 'product.category'
+    _inherit = "product.category"
 
     analytic_tag_ids = fields.Many2many(
-        comodel_name='account.analytic.tag',
-        string='Analytic tags',
+        comodel_name="account.analytic.tag", string="Analytic tags",
     )
 
     def get_analytic_tags(self):
