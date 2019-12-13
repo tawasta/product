@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="stock.product_template_action_product" model="ir.actions.act_window">
+        <field name="limit">500</field>
+    </record>
+</odoo>
