@@ -30,6 +30,8 @@
     'application': False,
     'installable': True,
     'depends': [
+        'product',
+        'purchase',
         'stock',
     ],
     'data': [

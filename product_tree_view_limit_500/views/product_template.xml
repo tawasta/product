@@ -4,4 +4,10 @@
     <record id="stock.product_template_action_product" model="ir.actions.act_window">
         <field name="limit">500</field>
     </record>
+    <record id="purchase.product_normal_action_puchased" model="ir.actions.act_window">
+        <field name="limit">500</field>
+    </record>
+    <record id="product.product_template_action" model="ir.actions.act_window">
+        <field name="limit">500</field>
+    </record>
 </odoo>
