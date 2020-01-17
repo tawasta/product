@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -17,26 +16,17 @@
 ##############################################################################
 
 {
-    'name': 'Customer Product Info',
-    'summary': 'Supplierinfo model can also store customer product info',
-    'version': '1.0.0',
-    'category': 'Product',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'purchase',
-        'product'
-    ],
-    'data': [
-        'views/product_product.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Customer Product Info",
+    "summary": "Supplierinfo model can also store customer product info",
+    "version": "12.0.1.0.0",
+    "category": "Product",
+    "website": "https://github.com/Tawasta/product",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["purchase", "product"],
+    "data": ["views/product_product.xml"],
+    "demo": [],
 }

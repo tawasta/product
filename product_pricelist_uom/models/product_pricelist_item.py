@@ -1,11 +1,9 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
 
 # 3. Odoo import:
-from odoo import models, fields
+from odoo import fields, models
 
 # 4. Imports from Odoo modules:
 
@@ -17,12 +15,11 @@ from odoo import models, fields
 class ProductPricelistItem(models.Model):
 
     # 1. Private attributes
-    _inherit = 'product.pricelist.item'
+    _inherit = "product.pricelist.item"
 
     # 2. Fields declaration
     unit_of_measure = fields.Char(
-        string='Unit of measure',
-        compute='_compute_unit_of_measure',
+        string="Unit of measure", compute="_compute_unit_of_measure"
     )
 
     # 3. Default methods

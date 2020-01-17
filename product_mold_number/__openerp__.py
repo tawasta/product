@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2016 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2016 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,29 +19,22 @@
 ##############################################################################
 
 {
-    'name': 'Product mold number',
-    'summary': 'Adds mold numbers for products',
-    'version': '8.0.1.0.0',
-    'category': 'Product',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': False,
-    'external_dependencies': {
-        'python': [
-        ],
-        'bin': [],
-    },
-    'depends': [
-        'product',
+    "name": "Product mold number",
+    "summary": "Adds mold numbers for products",
+    "version": "12.0.1.0.0",
+    "category": "Product",
+    "website": "https://github.com/Tawasta/product",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": False,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["product"],
+    "data": [
+        "views/product_product_form.xml",
+        "views/product_product_search.xml",
+        "views/product_template_form.xml",
+        "views/product_template_search.xml",
     ],
-    'data': [
-       'views/product_product_form.xml',
-       'views/product_product_search.xml',
-       'views/product_template_form.xml',
-       'views/product_template_search.xml',
-    ],
-    'demo': [
-    ],
+    "demo": [],
 }

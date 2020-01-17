@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from openerp import api, fields, models
-from openerp import _
+from openerp import _, api, fields, models
 from openerp.exceptions import ValidationError
 
 # 4. Imports from Odoo modules:
@@ -17,9 +14,9 @@ from openerp.exceptions import ValidationError
 
 
 class ProductTemplate(models.Model):
-    
+
     # 1. Private attributes
-    _inherit = 'product.template'
+    _inherit = "product.template"
 
     # 2. Fields declaration
     mold_number = fields.Char("Mold number")

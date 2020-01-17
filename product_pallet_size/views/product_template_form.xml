@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <openerp>
-	<data>
+    <data>
 
-		<record id="product_template_form_view" model="ir.ui.view">
-			<field name="name">product.template.form.pallet.size</field>
-			<field name="model">product.template</field>
-			<field name="inherit_id" ref="product.product_template_form_view" />
-			<field name="arch" type="xml">
+        <record id="product_template_form_view" model="ir.ui.view">
+            <field name="name">product.template.form.pallet.size</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view"/>
+            <field name="arch" type="xml">
 
                 <field name="categ_id" position="after">
-                    <field name="pallet_size" />
-                    <field name="pallet_weight" />
+                    <field name="pallet_size"/>
+                    <field name="pallet_weight"/>
                 </field>
 
-			</field>
-		</record> 
+            </field>
+        </record>
 
-	</data>
+    </data>
 </openerp>

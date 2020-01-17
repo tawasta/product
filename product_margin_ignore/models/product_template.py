@@ -1,14 +1,12 @@
-# -*- coding: utf-8 -*-
-
-from odoo import fields, models, _
+from odoo import fields, models
 
 
 class ProductTemplate(models.Model):
 
-    _inherit = 'product.template'
+    _inherit = "product.template"
 
     margin_ignore = fields.Boolean(
-        string=_('Ignore in margin'),
-        help=_('Ignore this product when computing margins'),
+        string="Ignore in margin",
+        help="Ignore this product when computing margins",
         default=False,
     )

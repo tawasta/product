@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -17,12 +15,12 @@ from openerp import fields, models
 class ProductTemplate(models.Model):
 
     # 1. Private attributes
-    _inherit = 'product.template'
+    _inherit = "product.template"
 
     # 2. Fields declaration
-    migrated = fields.Boolean('Migrated')
-    migrated_date = fields.Datetime('Migration Date')
-    migrated_comment = fields.Char('Migration Comment')
+    migrated = fields.Boolean("Migrated")
+    migrated_date = fields.Datetime("Migration Date")
+    migrated_comment = fields.Char("Migration Comment")
 
     # 3. Default methods
 

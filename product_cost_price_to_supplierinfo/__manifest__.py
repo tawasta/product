@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,28 +19,22 @@
 ##############################################################################
 
 {
-    'name': 'Copy Product Cost Price to Supplierinfo',
-    'summary': 'Helper module to use before implementing FIFO',
-    'version': '1.0.0',
-    'category': 'Inventory',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'purchase',
+    "name": "Copy Product Cost Price to Supplierinfo",
+    "summary": "Helper module to use before implementing FIFO",
+    "version": "12.0.1.0.0",
+    "category": "Inventory",
+    "website": "https://github.com/Tawasta/product",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["purchase"],
+    "data": [
+        "data/res_groups.xml",
+        "data/res_partner.xml",
+        "wizards/cost_price_to_supplierinfo.xml",
+        "views/product_template.xml",
     ],
-    'data': [
-        'data/res_groups.xml',
-        'data/res_partner.xml',
-        'wizards/cost_price_to_supplierinfo.xml',
-        'views/product_template.xml',
-    ],
-    'demo': [
-    ]
+    "demo": [],
 }

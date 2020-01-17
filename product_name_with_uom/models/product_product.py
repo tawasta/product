@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -17,7 +15,7 @@ from odoo import api, models
 class ProductProduct(models.Model):
 
     # 1. Private attributes
-    _inherit = 'product.product'
+    _inherit = "product.product"
 
     # 2. Fields declaration
 
@@ -30,7 +28,7 @@ class ProductProduct(models.Model):
         new_res = list()
         for record in old_res:
             product = self.browse(record[0])
-            product_name = '%s / %s' % (record[1], product.uom_id.name)
+            product_name = "{} / {}".format(record[1], product.uom_id.name)
 
             new_res.append((record[0], product_name))
 

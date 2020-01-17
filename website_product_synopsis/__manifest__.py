@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,17 +19,12 @@
 ##############################################################################
 
 {
-    'name': 'Website - Product Synopsis',
-    'category': 'Website',
-    'version': '12.0.1.0.0',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': '',
-    'website': 'http://www.vizucom.com',
-    'depends': [
-        'website_sale'
-    ],
-    'data': [
-        'views/product_template.xml',
-        'views/product_synopsis.xml',
-    ]
+    "name": "Website - Product Synopsis",
+    "category": "Website",
+    "version": "12.0.1.0.0",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "",
+    "website": "https://github.com/Tawasta/product",
+    "depends": ["website_sale"],
+    "data": ["views/product_template.xml", "views/product_synopsis.xml"],
 }

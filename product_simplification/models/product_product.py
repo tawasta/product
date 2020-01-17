@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -15,10 +13,10 @@ from openerp import api, fields, models
 
 
 class ProductProduct(models.Model):
-    
+
     # 1. Private attributes
-    _inherit = 'product.product'
-    _order = 'name desc'
+    _inherit = "product.product"
+    _order = "name desc"
 
     # 2. Fields declaration
 

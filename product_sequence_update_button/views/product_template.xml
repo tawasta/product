@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <field name="default_code" position="after">
                 <label string=" " for="update_product_reference_from_sequence"/>
-                <button class="oe_edit_only fa fa-refresh o_icon_button" 
+                <button class="oe_edit_only fa fa-refresh o_icon_button"
                     name="update_product_reference_from_sequence"
                     type="object" string="Get New Reference"
                     help="Sets product's reference to the next available sequence number"

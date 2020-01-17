@@ -12,7 +12,7 @@
                         </p>
                         <p>
                             <ul>
-                                <li>If a supplierinfo row exists for some partner, create another row with the cost price applied. 
+                                <li>If a supplierinfo row exists for some partner, create another row with the cost price applied.
                                 The new one gets a higher priority (lower sequence). Old rows can be deleted manually later if so wanted.</li>
                                 <li>If a row does not exist, create one by finding what partner the product was previously purchased from</li>
                                 <li>If no purchase orders exist, create the supplierinfo row with a placeholder supplier.</li>
@@ -23,11 +23,11 @@
 
                     </group>
                     <footer>
-                        <button string="Confirm" 
-                            name="copy_cost_price" 
+                        <button string="Confirm"
+                            name="copy_cost_price"
                             type="object" class="btn-primary"/> or
-                        <button string="Cancel" 
-                            class="btn-default" 
+                        <button string="Cancel"
+                            class="btn-default"
                             special="cancel"/>
                     </footer>
                 </sheet>

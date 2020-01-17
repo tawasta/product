@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,20 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'No Open Forms On Product',
-    'summary': 'This module prevents to open forms on specified fields.',
-    'version': '1.0.0',
-    'category': 'Product',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'stock',
-        'base_view_inheritance_extension',
-    ],
-    'data': [
-        'views/no_open_view.xml',
-    ],
+    "name": "No Open Forms On Product",
+    "summary": "This module prevents to open forms on specified fields.",
+    "version": "12.0.1.0.0",
+    "category": "Product",
+    "website": "https://github.com/Tawasta/product",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock", "base_view_inheritance_extension"],
+    "data": ["views/no_open_view.xml"],
 }

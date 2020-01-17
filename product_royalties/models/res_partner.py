@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -15,12 +13,12 @@ from openerp import api, fields, models
 
 
 class ResPartner(models.Model):
-    
+
     # 1. Private attributes
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     # 2. Fields declaration
-    royalties = fields.One2many('product.royalty', 'recipient')
+    royalties = fields.One2many("product.royalty", "recipient")
 
     # 3. Default methods
 

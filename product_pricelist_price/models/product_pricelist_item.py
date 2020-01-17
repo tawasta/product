@@ -1,12 +1,10 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
 
-# 3. Odoo import:
-from odoo import models, fields
 import odoo.addons.decimal_precision as dp
+# 3. Odoo import:
+from odoo import fields, models
 
 # 4. Imports from Odoo modules:
 
@@ -18,19 +16,19 @@ import odoo.addons.decimal_precision as dp
 class ProductPricelistItem(models.Model):
 
     # 1. Private attributes
-    _inherit = 'product.pricelist.item'
+    _inherit = "product.pricelist.item"
 
     # 2. Fields declaration
     list_price = fields.Char(
-        string='Default price',
-        compute='_compute_origin_prices',
-        digits=dp.get_precision('Product Price'),
+        string="Default price",
+        compute="_compute_origin_prices",
+        digits=dp.get_precision("Product Price"),
     )
 
     standard_price = fields.Char(
-        string='Cost',
-        compute='_compute_origin_prices',
-        digits=dp.get_precision('Product Price'),
+        string="Cost",
+        compute="_compute_origin_prices",
+        digits=dp.get_precision("Product Price"),
     )
 
     # 3. Default methods

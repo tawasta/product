@@ -6,14 +6,14 @@
         <field name="priority" eval="100"/>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="purchase.view_product_supplier_inherit"/>
-        <field name="arch" type="xml">            
+        <field name="arch" type="xml">
             <field name="description_sale" position="replace"/>
-            <xpath expr="//group[@name='description']/separator" position="replace"/> 
+            <xpath expr="//group[@name='description']/separator" position="replace"/>
             <xpath expr="//group[@name='group_general']/.." position="after">
                 <separator string="Description for Quotations" colspan="4"/>
                 <field name="description_sale"/>
             </xpath>
-        </field> 
+        </field>
     </record>
-    
+
 </odoo>

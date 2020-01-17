@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    This program is free software: you can redistribute it and/or modify
@@ -17,26 +16,17 @@
 ##############################################################################
 
 {
-    'name': 'Customer Product Info - Sale Support',
-    'summary': 'Show customer-specific product info on SOs',
-    'version': '1.0.0',
-    'category': 'Product',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'product_supplierinfo_for_customer',
-        'sale',
-    ],
-    'data': [
-        'views/sale_order.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Customer Product Info - Sale Support",
+    "summary": "Show customer-specific product info on SOs",
+    "version": "12.0.1.0.0",
+    "category": "Product",
+    "website": "https://github.com/Tawasta/product",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["product_supplierinfo_for_customer", "sale"],
+    "data": ["views/sale_order.xml"],
+    "demo": [],
 }

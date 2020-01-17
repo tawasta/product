@@ -1,8 +1,7 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,27 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Analytic tags for product template tags',
-    'summary': 'Analytic tags for product template tags',
-    'version': '1.0.0',
-    'category': 'Product',
-    'website': 'http://www.tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'external_dependencies': {
-        'python': [],
-        'bin': [],
-    },
-    'depends': [
-        'analytic',
-        'product',
-        'product_template_tags',
-    ],
-    'data': [
-        'views/product_template_tag_form.xml',
-    ],
-    'demo': [
-    ],
+    "name": "Analytic tags for product template tags",
+    "summary": "Analytic tags for product template tags",
+    "version": "12.0.1.0.0",
+    "category": "Product",
+    "website": "https://github.com/Tawasta/product",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["analytic", "product", "product_template_tags"],
+    "data": ["views/product_template_tag_form.xml"],
+    "demo": [],
 }

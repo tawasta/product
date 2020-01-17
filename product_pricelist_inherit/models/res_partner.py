@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -17,7 +15,7 @@ from odoo import api, models
 class ResPartner(models.Model):
 
     # 1. Private attributes
-    _inherit = 'res.partner'
+    _inherit = "res.partner"
 
     # 2. Fields declaration
 
@@ -26,7 +24,7 @@ class ResPartner(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
 
     # 5. Constraints and onchanges
-    @api.onchange('property_product_pricelist')
+    @api.onchange("property_product_pricelist")
     def onchange_pricelist_update_children(self):
         for record in self:
             pricelist = record.property_product_pricelist
@@ -39,10 +37,9 @@ class ResPartner(models.Model):
     @api.model
     def create(self, vals):
         # Inherit pricelist from parent
-        if 'property_product_pricelist' not in vals and 'parent_id' in vals:
-            parent_id = self.browse([vals['parent_id']])
-            vals['property_product_pricelist'] = \
-                parent_id.property_product_pricelist.id
+        if "property_product_pricelist" not in vals and "parent_id" in vals:
+            parent_id = self.browse([vals["parent_id"]])
+            vals["property_product_pricelist"] = parent_id.property_product_pricelist.id
 
         res = super(ResPartner, self).create(vals)
 
@@ -52,7 +49,7 @@ class ResPartner(models.Model):
     def write(self, vals):
         res = super(ResPartner, self).write(vals)
 
-        pricelist = vals.get('property_product_pricelist', False)
+        pricelist = vals.get("property_product_pricelist", False)
         if pricelist:
             for record in self:
                 for child in record.child_ids:

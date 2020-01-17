@@ -1,15 +1,11 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
+import openerp.addons.decimal_precision as dp
 # 2. Known third party imports:
 import validators
-
 # 3. Odoo imports (openerp):
-from openerp import api, fields, models
-from openerp import _
+from openerp import _, api, fields, models
 from openerp.exceptions import ValidationError
-import openerp.addons.decimal_precision as dp
 
 # 4. Imports from Odoo modules:
 
@@ -19,19 +15,23 @@ import openerp.addons.decimal_precision as dp
 
 
 class ProductTemplate(models.Model):
-    
+
     # 1. Private attributes
-    _inherit = 'product.template'
+    _inherit = "product.template"
 
     # 2. Fields declaration
-    note_information_checked = fields.Date("Everything checked", help="Everything is OK!")
+    note_information_checked = fields.Date(
+        "Everything checked", help="Everything is OK!"
+    )
 
     # Info
     note_catalog_number = fields.Char("Catalog number")
     note_length = fields.Char("Length")
 
     # ISMN
-    note_ismn_paper = fields.Char("ISMN paper", help="International Standard Music Number")
+    note_ismn_paper = fields.Char(
+        "ISMN paper", help="International Standard Music Number"
+    )
     note_ismn_pdf = fields.Char("ISMN PDF", help="International Standard Music Number")
 
     # Note originals
@@ -74,11 +74,19 @@ class ProductTemplate(models.Model):
     note_creator_piece_delivered = fields.Boolean("Tekijänkappale delivered")
     note_creator_piece_delivered_date = fields.Date("Tekijänkappale delivered")
 
-    note_free_piece_delivered = fields.Boolean("Vapaakappaleet (paper) delivered to Kansallisarkisto")
-    note_free_piece_delivered_date = fields.Date("Vapaakappaleet (paper) delivered to Kansallisarkisto")
+    note_free_piece_delivered = fields.Boolean(
+        "Vapaakappaleet (paper) delivered to Kansallisarkisto"
+    )
+    note_free_piece_delivered_date = fields.Date(
+        "Vapaakappaleet (paper) delivered to Kansallisarkisto"
+    )
 
-    note_free_piece_delivered_pdf = fields.Boolean("Vapaakappaleet (PDF) delivered to Kansallisarkisto")
-    note_free_piece_delivered_pdf_date = fields.Date("Vapaakappaleet (PDF) delivered to Kansallisarkisto")
+    note_free_piece_delivered_pdf = fields.Boolean(
+        "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
+    )
+    note_free_piece_delivered_pdf_date = fields.Date(
+        "Vapaakappaleet (PDF) delivered to Kansallisarkisto"
+    )
 
     note_transciption_recommendation = fields.Boolean("Transcription recommendation")
 
@@ -93,127 +101,147 @@ class ProductTemplate(models.Model):
 
     # Helper fields
     note_grade = fields.Many2one(
-        'product.attribute.value',
+        "product.attribute.value",
         "Grade",
-        compute='compute_note_attributes',
+        compute="compute_note_attributes",
         store=True,
-        domain=[('attribute_id.name', '=', 'Grade')],
+        domain=[("attribute_id.name", "=", "Grade")],
     )
     note_class = fields.Many2one(
-        'product.attribute.value',
+        "product.attribute.value",
         "Note class",
-        compute='compute_note_attributes',
+        compute="compute_note_attributes",
         store=True,
-        domain=[('attribute_id.name', '=', 'Laji')],
+        domain=[("attribute_id.name", "=", "Laji")],
     )
     note_composition = fields.Many2one(
-        'product.attribute.value',
+        "product.attribute.value",
         "Note composition",
-        compute='compute_note_attributes',
+        compute="compute_note_attributes",
         store=True,
-        domain=[('attribute_id.name', '=', 'Kokoonpano')],
+        domain=[("attribute_id.name", "=", "Kokoonpano")],
     )
     note_publish_year = fields.Many2one(
-        'product.attribute.value',
+        "product.attribute.value",
         "Note publish year",
-        compute='compute_note_attributes',
+        compute="compute_note_attributes",
         store=True,
-        domain=[('attribute_id.name', '=', 'Julkaisuvuosi')],
+        domain=[("attribute_id.name", "=", "Julkaisuvuosi")],
     )
 
     note_publishing_agreement_or_contract_date = fields.Date(
         "Contract date",
-        compute='compute_note_publishing_agreement_or_contract_date',
-        store=True
+        compute="compute_note_publishing_agreement_or_contract_date",
+        store=True,
     )
 
     # Alternative price
-    list_price_members = fields.Float("Member price", digits=dp.get_precision('Product Price'))
+    list_price_members = fields.Float(
+        "Member price", digits=dp.get_precision("Product Price")
+    )
 
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
     @api.multi
-    @api.depends('attribute_line_ids')
+    @api.depends("attribute_line_ids")
     def compute_note_attributes(self):
         for record in self:
             for attribute in record.attribute_line_ids:
-                if attribute.attribute_id.name == 'Grade' and attribute.value_ids:
+                if attribute.attribute_id.name == "Grade" and attribute.value_ids:
                     record.note_grade = attribute.value_ids[0].id
 
-                if attribute.attribute_id.name == 'Laji' and attribute.value_ids:
+                if attribute.attribute_id.name == "Laji" and attribute.value_ids:
                     record.note_class = attribute.value_ids[0].id
 
-                if attribute.attribute_id.name == 'Kokoonpano' and attribute.value_ids:
+                if attribute.attribute_id.name == "Kokoonpano" and attribute.value_ids:
                     record.note_composition = attribute.value_ids[0].id
 
-                if attribute.attribute_id.name == 'Julkaisuvuosi' and attribute.value_ids:
+                if (
+                    attribute.attribute_id.name == "Julkaisuvuosi"
+                    and attribute.value_ids
+                ):
                     record.note_publish_year = attribute.value_ids[0].id
+
     @api.multi
-    @api.depends('note_publishing_contract_date', 'note_publishing_agreement_date')
+    @api.depends("note_publishing_contract_date", "note_publishing_agreement_date")
     def compute_note_publishing_agreement_or_contract_date(self):
         for record in self:
-            record.note_publishing_agreement_or_contract_date = \
-                record.note_publishing_agreement_date or record.note_publishing_contract_date
+            record.note_publishing_agreement_or_contract_date = (
+                record.note_publishing_agreement_date
+                or record.note_publishing_contract_date
+            )
 
     # 5. Constraints and onchanges
     @api.multi
-    @api.constrains('note_url')
+    @api.constrains("note_url")
     def _check_note_url(self):
         for record in self:
             if record.note_url and not validators.url(record.note_url):
                 raise ValidationError(_("Sample URL is not valid"))
 
     @api.multi
-    @api.constrains('note_youtube_url')
+    @api.constrains("note_youtube_url")
     def _check_note_youtube_url(self):
         for record in self:
             if record.note_youtube_url and not validators.url(record.note_youtube_url):
                 raise ValidationError(_("Sample URL is not valid"))
 
     @api.multi
-    @api.constrains('note_soundcloud_url')
+    @api.constrains("note_soundcloud_url")
     def _check_note_soundcloud_url(self):
         for record in self:
-            if record.note_youtube_url and not validators.url(record.note_soundcloud_url):
+            if record.note_youtube_url and not validators.url(
+                record.note_soundcloud_url
+            ):
                 raise ValidationError(_("Sample URL is not valid"))
 
     @api.multi
-    @api.constrains('note_finnbandshop_url')
+    @api.constrains("note_finnbandshop_url")
     def _check_note_finnbandshop_url(self):
         for record in self:
-            if record.note_finnbandshop_url and not validators.url(record.note_finnbandshop_url):
+            if record.note_finnbandshop_url and not validators.url(
+                record.note_finnbandshop_url
+            ):
                 raise ValidationError(_("Sample URL is not valid"))
 
     @api.multi
-    @api.onchange('note_creator_piece_delivered_date')
-    def onchange_note_creator_piece_delivered_date_update_note_creator_piece_delivered(self):
+    @api.onchange("note_creator_piece_delivered_date")
+    def onchange_note_creator_piece_delivered_date_update_note_creator_piece_delivered(
+        self
+    ):
         for record in self:
             if record.note_creator_piece_delivered_date:
                 record.note_creator_piece_delivered = True
 
     @api.multi
-    @api.onchange('note_free_piece_delivered_date')
+    @api.onchange("note_free_piece_delivered_date")
     def onchange_note_free_piece_delivered_date_update_note_free_piece_delivered(self):
         for record in self:
             if record.note_free_piece_delivered_date:
                 record.note_free_piece_delivered = True
 
     @api.multi
-    @api.onchange('note_free_piece_delivered_pdf_date')
-    def onchange_note_free_piece_delivered_pdf_date_update_note_free_piece_delivered_pdf(self):
+    @api.onchange("note_free_piece_delivered_pdf_date")
+    def onchange_note_free_piece_delivered_pdf_date_update_note_free_piece_delivered_pdf(
+        self
+    ):
         for record in self:
             if record.note_free_piece_delivered_pdf_date:
                 record.note_free_piece_delivered_pdf = True
 
-    @api.onchange('note_publishing_contract_date')
-    def onchange_note_publishing_contract_date_update_note_publishing_contract_exists(self):
+    @api.onchange("note_publishing_contract_date")
+    def onchange_note_publishing_contract_date_update_note_publishing_contract_exists(
+        self
+    ):
         for record in self:
             if record.note_publishing_contract_date:
                 record.note_publishing_contract_exists = True
 
-    @api.onchange('note_publishing_agreement_date')
-    def onchange_note_publishing_agreement_date_update_note_publishing_agreement_exists(self):
+    @api.onchange("note_publishing_agreement_date")
+    def onchange_note_publishing_agreement_date_update_note_publishing_agreement_exists(
+        self
+    ):
         for record in self:
             if record.note_publishing_agreement_date:
                 record.note_publishing_agreement_exists = True

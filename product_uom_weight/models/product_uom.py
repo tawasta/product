@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -17,7 +15,7 @@ from odoo import api, models
 class ProductUom(models.Model):
 
     # 1. Private attributes
-    _inherit = 'product.uom'
+    _inherit = "product.uom"
 
     # 2. Fields declaration
 

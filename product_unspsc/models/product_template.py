@@ -1,12 +1,8 @@
-# -*- coding: utf-8 -*-
-from odoo import models, fields
+from odoo import fields, models
 
 
 class ProductTemplate(models.Model):
 
-    _inherit = 'product.template'
+    _inherit = "product.template"
 
-    unspsc_code = fields.Char(
-        string='UNSPSC Code',
-        size=10
-    )
+    unspsc_code = fields.Char(string="UNSPSC Code", size=10)

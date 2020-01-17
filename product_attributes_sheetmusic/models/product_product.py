@@ -1,12 +1,9 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
 from openerp import api, fields, models
-
 # 4. Imports from Odoo modules:
 from openerp.osv import expression
 
@@ -16,9 +13,9 @@ from openerp.osv import expression
 
 
 class ProductProduct(models.Model):
-    
+
     # 1. Private attributes
-    _inherit = 'product.product'
+    _inherit = "product.product"
 
     # 2. Fields declaration
 
@@ -32,24 +29,27 @@ class ProductProduct(models.Model):
 
             attributes = ""
             for attribute in record.attribute_value_ids:
-                if attribute.attribute_id.name == 'Laji' or attribute.attribute_id.name == 'Kokoonpano':
+                if (
+                    attribute.attribute_id.name == "Laji"
+                    or attribute.attribute_id.name == "Kokoonpano"
+                ):
                     attributes += attribute.name + ", "
 
             if attributes:
-                name = "%s (%s)" % (name, attributes.rstrip(" ").rstrip(","))
+                name = "{} ({})".format(name, attributes.rstrip(" ").rstrip(","))
 
             records.append((record.id, name))
 
         return records
 
     @api.model
-    def name_search(self, name='', args=None, operator='ilike', limit=100):
+    def name_search(self, name="", args=None, operator="ilike", limit=100):
         domain = [
-            '|',
-            '|',
-            ('name', 'ilike', name),
-            ('default_code', 'ilike', name),
-            ('attribute_line_ids.value_ids.name', 'ilike', name),
+            "|",
+            "|",
+            ("name", "ilike", name),
+            ("default_code", "ilike", name),
+            ("attribute_line_ids.value_ids.name", "ilike", name),
         ]
 
         products = self.search(expression.AND([domain, args]))

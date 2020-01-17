@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -17,59 +15,58 @@ from odoo import api, fields, models
 class ProductUom(models.Model):
 
     # 1. Private attributes
-    _inherit = 'uom.uom'
+    _inherit = "uom.uom"
 
     # 2. Fields declaration
     reference_unit_id = fields.Many2one(
-        string='Reference unit',
-        comodel_name='uom.uom',
-        compute='_compute_reference_unit_id',
+        string="Reference unit",
+        comodel_name="uom.uom",
+        compute="_compute_reference_unit_id",
     )
 
-    factor_example = fields.Char(
-        string='Example 1',
-        compute='_compute_factor_example'
-    )
+    factor_example = fields.Char(string="Example 1", compute="_compute_factor_example")
 
     factor_example_inverse = fields.Char(
-        string='Example 2',
-        compute='_compute_factor_example'
+        string="Example 2", compute="_compute_factor_example"
     )
 
     # 3. Default methods
 
     # 4. Compute and search fields
-    @api.onchange('category_id')
-    @api.depends('category_id')
+    @api.onchange("category_id")
+    @api.depends("category_id")
     def _compute_reference_unit_id(self):
-        ProductUom = self.env['uom.uom']
+        ProductUom = self.env["uom.uom"]
 
         for record in self:
-            record.reference_unit_id = ProductUom.search([
-                ('category_id', '=', record.category_id.id),
-                ('uom_type', '=', 'reference'),
-            ], limit=1)
+            record.reference_unit_id = ProductUom.search(
+                [
+                    ("category_id", "=", record.category_id.id),
+                    ("uom_type", "=", "reference"),
+                ],
+                limit=1,
+            )
 
-    @api.onchange('factor')
-    @api.depends('factor')
+    @api.onchange("factor")
+    @api.depends("factor")
     def _compute_factor_example(self):
         for record in self:
-            example = ''
-            example_inverse = ''
+            example = ""
+            example_inverse = ""
 
-            example = '1 * %s = %s * %s' % (
+            example = "1 * {} = {} * {}".format(
                 record.reference_unit_id.name,
                 record.reference_unit_id._compute_quantity(1, record),
                 record.name,
             )
 
-            example_inverse = '1 * %s = %s * %s' % (
+            example_inverse = "1 * {} = {} * {}".format(
                 record.name,
                 record._compute_quantity(1, record.reference_unit_id),
                 record.reference_unit_id.name,
             )
 
-            if record.uom_type == 'smaller':
+            if record.uom_type == "smaller":
                 # Swap examples
                 example, example_inverse = example_inverse, example
 

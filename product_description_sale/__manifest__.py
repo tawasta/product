@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
@@ -20,20 +19,15 @@
 ##############################################################################
 
 {
-    'name': 'Sale Description on General Information Page',
-    'summary': 'Sale Description on General Information Page',
-    'version': '1.0.0',
-    'category': 'Product',
-    'website': 'https://tawasta.fi',
-    'author': 'Oy Tawasta Technologies Ltd.',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'stock',
-        'purchase',
-    ],
-    'data': [
-        'views/product_template.xml',
-    ],
+    "name": "Sale Description on General Information Page",
+    "summary": "Sale Description on General Information Page",
+    "version": "12.0.1.0.0",
+    "category": "Product",
+    "website": "https://github.com/Tawasta/product",
+    "author": "Oy Tawasta Technologies Ltd.",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": ["stock", "purchase"],
+    "data": ["views/product_template.xml"],
 }

@@ -1,4 +1,4 @@
-from odoo import models, fields
+from odoo import fields, models
 
 
 class ProductTemplate(models.Model):
@@ -6,7 +6,7 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     analytic_tag_ids = fields.Many2many(
-        comodel_name="account.analytic.tag", string="Analytic tags",
+        comodel_name="account.analytic.tag", string="Analytic tags"
     )
 
     def get_analytic_tags(self):

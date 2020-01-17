@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -15,42 +13,50 @@ from openerp import api, fields, models
 
 
 class ProductTemplate(models.Model):
-    
+
     # 1. Private attributes
-    _inherit = 'product.template'
+    _inherit = "product.template"
 
     # 2. Fields declaration
-    royalties = fields.One2many('product.royalty', 'product')
+    royalties = fields.One2many("product.royalty", "product")
 
     royalty_arrangers = fields.One2many(
-        'product.royalty',
-        'product',
-        domain=[('role', '=', 'arranger')],
+        "product.royalty",
+        "product",
+        domain=[("role", "=", "arranger")],
         string="Arranger",
     )
     royalty_composers = fields.One2many(
-        'product.royalty',
-        'product',
-        domain=[('role', '=', 'composer')],
+        "product.royalty",
+        "product",
+        domain=[("role", "=", "composer")],
         string="Composer",
     )
     royalty_lyricists = fields.One2many(
-        'product.royalty',
-        'product',
-        domain=[('role', '=', 'lyricist')],
+        "product.royalty",
+        "product",
+        domain=[("role", "=", "lyricist")],
         string="Lyricist",
     )
     royalty_translators = fields.One2many(
-        'product.royalty',
-        'product',
-        domain=[('role', '=', 'translator')],
+        "product.royalty",
+        "product",
+        domain=[("role", "=", "translator")],
         string="Translator",
     )
 
-    royalty_arrangers_string = fields.Char(string="Arranger", compute='compute_royalty_arrangers_string')
-    royalty_composers_string = fields.Char(string="Composer", compute='compute_royalty_composers_string')
-    royalty_lyricists_string = fields.Char(string="Lyricist", compute='compute_royalty_lyricists_string')
-    royalty_translators_string = fields.Char(string="Translator", compute='compute_royalty_translators_string')
+    royalty_arrangers_string = fields.Char(
+        string="Arranger", compute="compute_royalty_arrangers_string"
+    )
+    royalty_composers_string = fields.Char(
+        string="Composer", compute="compute_royalty_composers_string"
+    )
+    royalty_lyricists_string = fields.Char(
+        string="Lyricist", compute="compute_royalty_lyricists_string"
+    )
+    royalty_translators_string = fields.Char(
+        string="Translator", compute="compute_royalty_translators_string"
+    )
 
     # 3. Default methods
 
@@ -67,22 +73,30 @@ class ProductTemplate(models.Model):
     @api.multi
     def compute_royalty_arrangers_string(self):
         for record in self:
-            record.royalty_arrangers_string = record.sudo().compute_royalty_string(record.royalty_arrangers)
+            record.royalty_arrangers_string = record.sudo().compute_royalty_string(
+                record.royalty_arrangers
+            )
 
     @api.multi
     def compute_royalty_composers_string(self):
         for record in self:
-            record.royalty_composers_string = record.sudo().compute_royalty_string(record.royalty_composers)
+            record.royalty_composers_string = record.sudo().compute_royalty_string(
+                record.royalty_composers
+            )
 
     @api.multi
     def compute_royalty_lyricists_string(self):
         for record in self:
-            record.royalty_lyricists_string = record.sudo().compute_royalty_string(record.royalty_lyricists)
+            record.royalty_lyricists_string = record.sudo().compute_royalty_string(
+                record.royalty_lyricists
+            )
 
     @api.multi
     def compute_royalty_translators_string(self):
         for record in self:
-            record.royalty_translators_string = record.sudo().compute_royalty_string(record.royalty_translators)
+            record.royalty_translators_string = record.sudo().compute_royalty_string(
+                record.royalty_translators
+            )
 
     # 5. Constraints and onchanges
 

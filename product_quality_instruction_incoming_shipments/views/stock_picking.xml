@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<odoo>
+    <record id="product_quality_instruction_incoming_shipments_stock_picking_form" model="ir.ui.view">
+        <field name="name">product.quality.instruction.incoming.shipments.stock.picking.form</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>
+        <field name="arch" type="xml">
+
+            <button name="do_unreserve" position="after">
+                <button name="initialize_quality_checks" type="object" string="Reset Quality Checks"
+                    help="Click to reset the quality checklist in case you have e.g. edited the receipt's rows manually or added a new quality procedure after creation of the receipt"
+                    attrs="{ 'invisible': [('state', 'in', ['cancel', 'done'])]}"/>
+            </button>
+
+            <field name="origin" position="after">
+                <field name="quality_check_count" attrs="{ 'invisible': [('picking_type_code', '!=', 'incoming')], 'readonly': True }"/>
+            </field>
+
+            <notebook position="inside">
+                <page string="Quality Checks" attrs="{ 'invisible': [('picking_type_code', '!=', 'incoming')] }">
+                    <field name="quality_check_ids">
+                        <tree create="false" delete="false" editable="top" colors="red:result == 'fail';green:result == 'pass';gray:result == 'not_received'">
+                            <!-- The single-ID domain is a workaround to have the field not be readonly so
+                            that the instruction popup can be opened,  but still prevent the user from
+                            changing the selected instruction -->
+                            <field name="instruction_id" domain="[('id', '=' ,instruction_id)]" options="{ 'no_create': True }"/>
+                            <field name="product_id" readonly="1"/>
+                            <field name="completed"/>
+                            <field name="result"/>
+                            <field name="user_id" options="{ 'no_create': True }"/>
+                            <field name="comments"/>
+                        </tree>
+                    </field>
+                </page>
+            </notebook>
+
+        </field>
+    </record>
+</odoo>

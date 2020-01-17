@@ -1,12 +1,11 @@
-# -*- coding: utf-8 -*-
-from odoo import models, fields
+from odoo import fields, models
 
 
 class ProductTemplate(models.Model):
 
-    _inherit = 'product.template'
+    _inherit = "product.template"
 
     competitor_alternative = fields.Char(
         string="Competitor's Alternative",
-        help='Info about a similar product sold by a competitor'
+        help="Info about a similar product sold by a competitor",
     )

@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 # 1. Standard library imports:
 
 # 2. Known third party imports:
@@ -15,21 +13,23 @@ from openerp import api, fields, models
 
 
 class ProductRoyalty(models.Model):
-    
+
     # 1. Private attributes
-    _name = 'product.royalty'
+    _name = "product.royalty"
 
     # 2. Fields declaration
     name = fields.Char("Description")
-    recipient = fields.Many2one('res.partner')
-    role = fields.Selection([
-        ('arranger', 'Arranger'),
-        ('composer', 'Composer'),
-        ('lyricist', 'Lyricist'),
-        ('translator', 'Translator'),
-    ])
-    percent = fields.Float('Royalty %')
-    product = fields.Many2one('product.template')
+    recipient = fields.Many2one("res.partner")
+    role = fields.Selection(
+        [
+            ("arranger", "Arranger"),
+            ("composer", "Composer"),
+            ("lyricist", "Lyricist"),
+            ("translator", "Translator"),
+        ]
+    )
+    percent = fields.Float("Royalty %")
+    product = fields.Many2one("product.template")
 
     # 3. Default methods
 
