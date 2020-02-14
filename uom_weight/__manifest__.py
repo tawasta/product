@@ -19,15 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Product Weight Calculator",
-    "summary": "Helper for calculating product weight in different UoM",
+    "name": "UoM Weight Calculator",
+    "summary": "Helper for calculating different UoM weights",
     "category": "Inventory",
     "version": "12.0.1.0.0",
     "website": "https://github.com/Tawasta/product",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product"],
+    "depends": [
+        "uom",
+    ],
     "data": [],
 }
