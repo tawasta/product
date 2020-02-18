@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=========================
-Product Weight Calculator
-=========================
+=====================
+UoM Weight Calculator
+=====================
 
-* Helper for calculating product weight in different UoM
+* Helper for calculating different UoM weights
 
 Configuration
 =============
@@ -27,6 +27,7 @@ Contributors
 ------------
 
 * Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 * Timo Talvitie <timo.talvitie@tawasta.fi>
 
 Maintainer
