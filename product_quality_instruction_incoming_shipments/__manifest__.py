@@ -21,7 +21,7 @@
 {
     "name": "Incoming Shipments Quality Checks",
     "summary": "Mandatory quality checks when receiving goods",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "category": "Inventory",
     "website": "https://github.com/Tawasta/product",
     "author": "Oy Tawasta Technologies Ltd.",
