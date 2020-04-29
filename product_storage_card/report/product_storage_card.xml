@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<odoo>
+    <report
+        id="product_storage_card_report"
+        string="Storage Card (PDF)"
+        model="product.product"
+        report_type="qweb-html"
+        name="product_storage_card.product_storage_card_pdf"
+        file="product_storage_card.product_storage_card_pdf"
+        />
+
+    <report
+        id="product_storage_card_report"
+        string="Storage Card (PDF)"
+        model="product.template"
+        report_type="qweb-html"
+        name="product_storage_card.product_storage_card_pdf"
+        file="product_storage_card.product_storage_card_pdf"
+        />
+
+    <!-- PDF -->
+    <template id="product_storage_card_pdf">
+        <main>
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="product_storage_card.product_storage_card_document"></t>
+            </t>
+        </main>
+    </template>
+
+    <template id="product_storage_card_document">
+        <table style="width: 100%">
+            <thead></thead>
+            <tbody>
+                <tr>
+                    <td colspan="1">
+                        ID
+                    </td>
+                    <td colspan="2">
+                        <!--TODO-->
+                    </td>
+                    <td colspan="1">
+                        Code
+                    </td>
+                    <td colspan="2">
+                        <t t-if="doc.barcode">
+                            <img t-attf-src="/report/barcode/EAN13/ + doc.barcode"></img>
+                            <t t-esc="doc.barcode"></t>
+                        </t>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="1">
+                        Name
+                    </td>
+                    <td colspan="5">
+                        <t t-if="doc.name">
+                            <t t-esc="doc.name"></t>
+                        </t>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="1">
+                        Storage location
+                    </td>
+                    <td colspan="5">
+                        <t t-if="doc.property_stock_inventory">
+                            <t t-esc="doc.property_stock_inventory"></t>
+                        </t>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+</odoo>
