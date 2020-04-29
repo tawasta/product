@@ -1,10 +1,10 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <report
         id="product_storage_card_report"
         string="Storage Card (PDF)"
         model="product.product"
-        report_type="qweb-html"
+        report_type="qweb-pdf"
         name="product_storage_card.product_storage_card_pdf"
         file="product_storage_card.product_storage_card_pdf"
         />
@@ -13,44 +13,47 @@
         id="product_storage_card_report"
         string="Storage Card (PDF)"
         model="product.template"
-        report_type="qweb-html"
+        report_type="qweb-pdf"
         name="product_storage_card.product_storage_card_pdf"
         file="product_storage_card.product_storage_card_pdf"
         />
 
     <!-- PDF -->
     <template id="product_storage_card_pdf">
-        <main>
-            <t t-foreach="docs" t-as="doc">
-                <t t-call="product_storage_card.product_storage_card_document"></t>
+        <t t-call="web.html_container">
+            <t t-call="web.external_layout">
+                <t t-foreach="docs" t-as="doc">
+                    <t t-call="product_storage_card.product_storage_card_document"></t>
+                </t>
             </t>
-        </main>
+        </t>
     </template>
 
     <template id="product_storage_card_document">
-        <table style="width: 100%">
+        <table class="product_storage_card">
             <thead></thead>
             <tbody>
                 <tr>
-                    <td colspan="1">
+                    <td colspan="1" class="card_bg">
                         ID
                     </td>
                     <td colspan="2">
                         <!--TODO-->
                     </td>
-                    <td colspan="1">
+                    <td colspan="1" class="card_bg">
                         Code
                     </td>
                     <td colspan="2">
                         <t t-if="doc.barcode">
-                            <img t-attf-src="/report/barcode/EAN13/ + doc.barcode"></img>
+                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.barcode, 600, 150)"
+                                style="width: 100%; height: 50px;"/>
                             <t t-esc="doc.barcode"></t>
                         </t>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="1">
+                    <td colspan="1" class="card_bg">
                         Name
                     </td>
                     <td colspan="5">
@@ -61,26 +64,36 @@
                 </tr>
 
                 <tr>
-                    <td colspan="1">
+                    <td colspan="1" class="card_bg">
                         Storage location
                     </td>
                     <td colspan="5">
-                        <t t-if="doc.property_stock_inventory">
-                            <t t-esc="doc.property_stock_inventory"></t>
+                        <t t-if="doc.property_stock_inventory.complete_name">
+                            <t t-esc="doc.property_stock_inventory.complete_name"></t>
                         </t>
                     </td>
                 </tr>
 
                 <tr>
-                    <td>
+                    <td colspan="1" class="card_bg">
                         Alert limit
+                    </td>
+                    <td>
+                    </td>
+                    <td colspan="1" class="card_bg">
+                        Order quantity
+                    </td>
+                    <td>
+                    </td>
+                    <td colspan="1" class="card_bg">
+                        Delivery time
                     </td>
                     <td>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="1">
+                    <td colspan="1" class="card_bg">
                         Vendor
                     </td>
                     <td colspan="5">
@@ -91,7 +104,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="1">
+                    <td colspan="1" class="card_bg">
                         Vendor product name
                     </td>
                     <td colspan="5">
@@ -102,7 +115,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="1">
+                    <td colspan="1" class="card_bg">
                         Vendor product code
                     </td>
                     <td colspan="5">
