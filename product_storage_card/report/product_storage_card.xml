@@ -38,7 +38,7 @@
                         ID
                     </td>
                     <td colspan="2">
-                        <!--TODO-->
+                        <t t-esc="doc.default_code"></t>
                     </td>
                     <td colspan="1" class="card_bg">
                         Code
@@ -79,6 +79,9 @@
                         Alert limit
                     </td>
                     <td>
+                        <t t-if="doc.reordering_min_qty">
+                            <t t-esc="doc.reordering_min_qty"></t>
+                        </t>
                     </td>
                     <td colspan="1" class="card_bg">
                         Order quantity

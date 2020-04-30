@@ -2,7 +2,7 @@
 <odoo>
     <template id="storage_card_report_assets" name="Storage Card Report Assets" inherit_id="web.report_assets_common">
         <xpath expr="." position="inside">
-            <link href="/product_sotrage_card/static/src/scss/storage_card.scss" rel="stylesheet" type="text/scss"/>
+            <link href="/product_storage_card/static/src/scss/storage_card.scss" rel="stylesheet" type="text/scss"/>
         </xpath>
     </template>
 
