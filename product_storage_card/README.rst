@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-============================
-Product synopsis for website
-============================
+===========================================
+Product Storage Card
+===========================================
 
-Synopsis for website for products
+Product Storage card as a report
 
 
 Configuration
@@ -15,18 +15,19 @@ Configuration
 
 Usage
 =====
-\- 
+\-
 
 Known issues / Roadmap
 ======================
-* None
+\-
 
 Credits
 =======
 
 Contributors
 ------------
-WIP
+
+* Joona Isoaho <joona.isoaho@tawasta.fi>
 
 Maintainer
 ----------
