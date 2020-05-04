@@ -7,6 +7,7 @@
         report_type="qweb-pdf"
         name="product_storage_card.product_storage_card_pdf"
         file="product_storage_card.product_storage_card_pdf"
+        paperformat="product_storage_card.paperformat_storage_card"
         />
 
     <report
@@ -16,13 +17,14 @@
         report_type="qweb-pdf"
         name="product_storage_card.product_storage_card_pdf"
         file="product_storage_card.product_storage_card_pdf"
+        paperformat="product_storage_card.paperformat_storage_card"
         />
 
     <!-- PDF -->
     <template id="product_storage_card_pdf">
         <t t-call="web.html_container">
-            <t t-call="web.external_layout">
-                <t t-foreach="docs" t-as="doc">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
                     <t t-call="product_storage_card.product_storage_card_document"></t>
                 </t>
             </t>
@@ -78,7 +80,7 @@
                     <td colspan="1" class="card_bg">
                         Alert limit
                     </td>
-                    <td>
+                    <td colspan="1">
                         <t t-if="doc.reordering_min_qty">
                             <t t-esc="doc.reordering_min_qty"></t>
                         </t>
@@ -86,12 +88,18 @@
                     <td colspan="1" class="card_bg">
                         Order quantity
                     </td>
-                    <td>
+                    <td colspan="1">
+                        <t t-foreach="doc.seller_ids" t-as="seller">
+                            <t t-esc="seller.min_qty"></t>
+                        </t>
                     </td>
                     <td colspan="1" class="card_bg">
                         Delivery time
                     </td>
-                    <td>
+                    <td colspan="1">
+                        <t t-foreach="doc.seller_ids" t-as="seller">
+                            <t t-esc="seller.delay"></t>
+                        </t>
                     </td>
                 </tr>
 

@@ -30,6 +30,10 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["product", "stock", "purchase_stock"],
-    "data": ["views/assets.xml", "report/product_storage_card.xml"],
+    "data": [
+        "report/paperformat.xml",
+        "views/assets.xml",
+        "report/product_storage_card.xml",
+    ],
     "demo": [],
 }
