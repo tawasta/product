@@ -49,7 +49,6 @@
                         <t t-if="doc.default_code">
                             <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.default_code, 600, 150)"
                                 style="width: 100%; height: 60px;"/>
-                            <t t-esc="doc.default_code"></t>
                         </t>
                     </td>
                 </tr>
