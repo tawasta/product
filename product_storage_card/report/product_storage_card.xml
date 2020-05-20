@@ -36,26 +36,25 @@
             <thead></thead>
             <tbody>
                 <tr>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         ID
                     </td>
                     <td colspan="2">
                         <t t-esc="doc.default_code"></t>
                     </td>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Code
                     </td>
                     <td colspan="2">
-                        <t t-if="doc.barcode">
-                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.barcode, 600, 150)"
-                                style="width: 100%; height: 50px;"/>
-                            <t t-esc="doc.barcode"></t>
+                        <t t-if="doc.default_code">
+                            <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.default_code, 600, 150)"
+                                style="width: 100%; height: 60px;"/>
                         </t>
                     </td>
                 </tr>
 
                 <tr>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Name
                     </td>
                     <td colspan="5">
@@ -66,7 +65,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Storage location
                     </td>
                     <td colspan="5">
@@ -77,7 +76,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Alert limit
                     </td>
                     <td colspan="1">
@@ -85,7 +84,7 @@
                             <t t-esc="doc.reordering_min_qty"></t>
                         </t>
                     </td>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Order quantity
                     </td>
                     <td colspan="1">
@@ -93,7 +92,7 @@
                             <t t-esc="seller.min_qty"></t>
                         </t>
                     </td>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Delivery time
                     </td>
                     <td colspan="1">
@@ -104,7 +103,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Vendor
                     </td>
                     <td colspan="5">
@@ -115,7 +114,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Vendor product name
                     </td>
                     <td colspan="5">
@@ -126,7 +125,7 @@
                 </tr>
 
                 <tr>
-                    <td colspan="1" class="card_bg">
+                    <td colspan="1">
                         Vendor product code
                     </td>
                     <td colspan="5">
