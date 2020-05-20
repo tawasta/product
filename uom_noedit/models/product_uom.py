@@ -4,7 +4,7 @@ from odoo.exceptions import AccessError
 
 class ProductUom(models.Model):
 
-    _inherit = "product.uom"
+    _inherit = "uom.uom"
 
     @api.model
     def check_access_rights(self, operation, raise_exception=True):
