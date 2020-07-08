@@ -30,6 +30,6 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["product_dimension"],
-    "data": ["views/product_product.xml", "views/product_template.xml",],
+    "data": ["views/product_product.xml", "views/product_template.xml"],
     "demo": [],
 }
