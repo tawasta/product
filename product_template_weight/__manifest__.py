@@ -24,14 +24,12 @@
     "version": "12.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/Tawasta/product",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": [
-        "product"
-    ],
+    "depends": ["product"],
     "data": ["views/product_template.xml"],
     "demo": [],
 }

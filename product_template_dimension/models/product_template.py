@@ -19,14 +19,22 @@ class ProductTemplate(models.Model):
 
     def _update_variant_dimensions(self, values):
         for record in self:
-            if 'dimensional_uom_id' in values:
-                record.product_variant_ids.write({'dimensional_uom_id': values['dimensional_uom_id']})
+            if "dimensional_uom_id" in values:
+                record.product_variant_ids.write(
+                    {"dimensional_uom_id": values["dimensional_uom_id"]}
+                )
 
-            if 'product_length' in values:
-                record.product_variant_ids.write({'product_length': values['product_length']})
+            if "product_length" in values:
+                record.product_variant_ids.write(
+                    {"product_length": values["product_length"]}
+                )
 
-            if 'product_height' in values:
-                record.product_variant_ids.write({'product_height': values['product_height']})
+            if "product_height" in values:
+                record.product_variant_ids.write(
+                    {"product_height": values["product_height"]}
+                )
 
-            if 'product_width' in values:
-                record.product_variant_ids.write({'product_width': values['product_width']})
+            if "product_width" in values:
+                record.product_variant_ids.write(
+                    {"product_width": values["product_width"]}
+                )
