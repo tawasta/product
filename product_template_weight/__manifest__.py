@@ -21,7 +21,7 @@
 {
     "name": "Manage product weight and volume from product template",
     "summary": "Variant weight and volume is managed in related product template",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/Tawasta/product",
     "author": "Tawasta",
@@ -30,6 +30,6 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": ["product"],
-    "data": ["views/product_template.xml"],
+    "data": ["views/product_product.xml", "views/product_template.xml"],
     "demo": [],
 }
