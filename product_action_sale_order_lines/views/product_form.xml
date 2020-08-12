@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.action.sale.order.lines</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <button name="toggle_active" position="before">
+                <button class="oe_stat_button"
+                    name="action_view_sale_order_lines"
+                    type="object"
+                    icon="fa-signal"
+                    groups="sales_team.group_sale_salesman"
+                    help="Sold in the last 365 days">
+                        <div class="o_field_widget o_stat_info">
+                            <span class="o_stat_value">
+                                <field name="sales_count" widget="statinfo" nolabel="1" class="mr4"/>
+                                <field name="uom_name"/>
+                            </span>
+                            <span class="o_stat_text">Sold</span>
+                        </div>
+                    </button>
+                </button>
+                <group name="description" position="after">
+                    <group string="Warning when Selling this Product" groups="sale.group_warning_sale">
+                        <field name="sale_line_warn" nolabel="1"/>
+                        <field name="sale_line_warn_msg" colspan="3" nolabel="1" attrs="{'required':[('sale_line_warn','!=','no-message')],'readonly':[('sale_line_warn','=','no-message')]}"/>
+                    </group>
+                </group>
+            </data>
+        </field>
+    </record>
+</odoo>
