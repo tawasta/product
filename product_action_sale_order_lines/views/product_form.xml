@@ -28,7 +28,7 @@
         <field name="view_type">form</field>
         <field name="view_mode">tree,pivot,graph</field>
         <field name="view_id" ref="sale_order_line_view.view_order_line_tree"/>
-        <field name="domain">[('product_id', '=', 'id')]</field>
+        <field name="context">{'product_id': id}</field>
     </record>
 
 </odoo>
