@@ -30,7 +30,8 @@
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
     "depends": [
-        "product"
+        "product",
+        "sale_order_line_view",
     ],
     "data": [
         "views/product_form.xml"
