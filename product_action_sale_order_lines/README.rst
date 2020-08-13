@@ -3,10 +3,10 @@
    :alt: License: AGPL-3
 
 ===========================================
-Helper for understanding product UOM ratios
+Product - Action sale order lines
 ===========================================
 
-Shows helper fields on product UOM:s
+Shows button on product that shows the products sale order lines
 
 
 Configuration
@@ -27,7 +27,7 @@ Credits
 Contributors
 ------------
 
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
+* Joona Isoaho <joona.isoaho@tawasta.fi>
 
 Maintainer
 ----------
