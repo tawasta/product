@@ -1,1 +1,1 @@
-from . import product_uom
+from . import uom_uom

@@ -6,7 +6,7 @@
 Disallow modifying Units of Measure
 ===================================
 
-Disallow modifying Units of Measure. This overrides product.uom access rules
+Disallow modifying Units of Measure. This overrides uom.uom access rules
 
 
 Configuration

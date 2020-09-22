@@ -21,11 +21,11 @@
 {
     "name": "Disallow modifying Units of Measure",
     "summary": "Disallow modifying Units of Measure."
-    "This overrides product.uom access rules",
+    "This overrides uom.uom access rules",
     "version": "12.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/Tawasta/product",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
