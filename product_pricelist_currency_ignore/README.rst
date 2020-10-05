@@ -2,12 +2,20 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===================================
-Disallow modifying Units of Measure
-===================================
+===========================
+Pricelist - Ignore currency
+===========================
 
-Disallow modifying Units of Measure. This overrides uom.uom access rules
+Skip currency conversion on pricelists.
+This allows defining price extras in pricelist currency.
 
+Warning! This will OVERWRITE the price rule calculation, thus disabling
+any overrides for the calculation.
+
+Installation
+============
+
+\-
 
 Configuration
 =============

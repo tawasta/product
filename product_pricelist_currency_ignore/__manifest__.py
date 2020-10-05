@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,22 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Copy Product Cost Price to Supplierinfo",
-    "summary": "Helper module to use before implementing FIFO",
+    "name": "Pricelist - Ignore currency",
+    "summary": "Skip currency conversion on pricelists.",
     "version": "12.0.1.0.0",
-    "category": "Inventory",
+    "category": "Product",
     "website": "https://github.com/Tawasta/product",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["purchase"],
-    "data": [
-        "data/res_groups.xml",
-        "data/res_partner.xml",
-        "wizards/cost_price_to_supplierinfo.xml",
-        "views/product_template.xml",
-    ],
+    "depends": ["product"],
+    "data": [],
     "demo": [],
 }
