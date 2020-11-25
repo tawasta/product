@@ -5,4 +5,13 @@ table.product_storage_card {
 
 table.product_storage_card td {
     border: 1px solid black;
+    padding-left: 4px;
+}
+
+#alert_limit, #vendor {
+    height: 40px;
+}
+
+#default_code {
+    padding-left: 0px;
 }

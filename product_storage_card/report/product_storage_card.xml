@@ -45,7 +45,7 @@
                     <td colspan="1">
                         Code
                     </td>
-                    <td colspan="2">
+                    <td id="default_code" colspan="2">
                         <t t-if="doc.default_code">
                             <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.default_code, 600, 150)"
                                 style="width: 100%; height: 60px;"/>
@@ -75,15 +75,15 @@
                     </td>
                 </tr>
 
-                <tr>
+                <tr id="alert_limit">
                     <td colspan="1">
                         Alert limit
                     </td>
-                    <td colspan="1">
-                        <t t-if="doc.reordering_min_qty">
+                    <t t-if="doc.reordering_min_qty">
+                        <td colspan="1">
                             <t t-esc="doc.reordering_min_qty"></t>
-                        </t>
-                    </td>
+                        </td>
+                    </t>
                     <td colspan="1">
                         Order quantity
                     </td>
@@ -102,7 +102,7 @@
                     </td>
                 </tr>
 
-                <tr>
+                <tr id="vendor">
                     <td colspan="1">
                         Vendor
                     </td>
