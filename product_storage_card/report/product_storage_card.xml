@@ -48,7 +48,7 @@
                     <td id="default_code" colspan="2">
                         <t t-if="doc.default_code">
                             <img t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.default_code, 600, 150)"
-                                style="width: 100%; height: 60px;"/>
+                                style="max-width: 100%; height: 60px;"/>
                         </t>
                     </td>
                 </tr>
@@ -80,19 +80,19 @@
                         Alert limit
                     </td>
                     <t t-if="doc.reordering_min_qty">
-                        <td colspan="1">
+                        <td id="reordering_qty" colspan="1">
                             <t t-esc="doc.reordering_min_qty"></t>
                         </td>
                     </t>
-                    <td colspan="1">
+                    <td id="order_quantity" colspan="1">
                         Order quantity
                     </td>
-                    <td colspan="1">
+                    <td id="min_qty" colspan="1">
                         <t t-foreach="doc.seller_ids" t-as="seller">
                             <t t-esc="seller.min_qty"></t>
                         </t>
                     </td>
-                    <td colspan="1">
+                    <td id="delivery_time" colspan="1">
                         Delivery time
                     </td>
                     <td colspan="1">
