@@ -21,7 +21,7 @@
 {
     "name": "Product - Storage Card",
     "summary": "Printable product storage card",
-    "version": "12.0.1.0.1",
+    "version": "12.0.1.0.2",
     "category": "Product",
     "website": "https://github.com/Tawasta/product",
     "author": "Tawasta",
