@@ -5,7 +5,7 @@
         <field name="model">product.template</field>
         <field name="arch" type="xml">
             <page name="sales" position="inside">
-                <group name="margin" groups="base.group_no_one,stock.group_stock_manager">
+                <group name="margin" groups="stock.group_stock_manager">
                     <field name="margin_ignore" />
                 </group>
             </page>
