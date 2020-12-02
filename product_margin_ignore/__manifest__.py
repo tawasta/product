@@ -31,6 +31,7 @@
     'installable': True,
     'depends': [
         'product',
+        'stock',
     ],
     'data': [
         'views/product_template.xml',
