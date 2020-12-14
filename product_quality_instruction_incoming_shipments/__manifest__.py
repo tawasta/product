@@ -29,7 +29,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["product_quality_instruction", "purchase", "stock"],
+    "depends": ["product_quality_instruction", "purchase", "purchase_stock"],
     "data": ["views/stock_picking.xml", "security/ir.model.access.csv"],
     "demo": [],
 }
