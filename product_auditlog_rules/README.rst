@@ -6,12 +6,12 @@
 Audit Log Rules - Product
 =======================
 
-Adds audit log rules for product.product and product.template
+Adds audit log rules for product.product, product.template and product.category.
 
 
 Features
 ========
-* Add rule to audit log product.product and product.template
+* Add rule to audit log product.product, product.template and product.category.
 
 Configuration
 =============
