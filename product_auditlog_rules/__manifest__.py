@@ -20,14 +20,14 @@
 
 {
     'name': "Audit Log Rules - Product",
-    'summary': "Adds audit log rules for product.template and product.product",
+    'summary': "Adds audit log rules for product.product, product.template and product.category",
     'author': 'Tawasta',
     'license': 'AGPL-3',
     'website': "https://gitlab.com/Tawasta/product",
     'category': 'Logging',
     'application': False,
     'installable': True,
-    'version': '12.0.1.0.0',
+    'version': '12.0.1.1.0',
     'depends': [
         'product',
         'auditlog',

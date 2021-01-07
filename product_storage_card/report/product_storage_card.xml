@@ -20,7 +20,7 @@
         paperformat="product_storage_card.paperformat_storage_card"
         />
 
-    <!-- PDF -->
+        <!-- PDF -->
     <template id="product_storage_card_pdf">
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
@@ -69,19 +69,25 @@
                         Storage location
                     </td>
                     <td colspan="5">
-                        <t t-if="doc.property_stock_inventory.complete_name">
-                            <t t-esc="doc.property_stock_inventory.complete_name"></t>
+                        <t t-if="doc.mrp_area_ids">
+                            <t t-foreach="doc.mrp_area_ids" t-as="mrp_area_id">
+                                <t t-esc="mrp_area_id.mrp_area_id.location_id.location_id.name"></t>
+                                    /
+                                <t t-esc="mrp_area_id.mrp_area_id.location_id.name"></t>
+                            </t>
                         </t>
                     </td>
                 </tr>
 
-                <tr id="alert_limit">
-                    <td colspan="1">
-                        Alert limit
-                    </td>
-                    <t t-if="doc.reordering_min_qty">
-                        <td id="reordering_qty" colspan="1">
-                            <t t-esc="doc.reordering_min_qty"></t>
+                <tr>
+                    <t t-if="doc.mrp_area_ids">
+                        <td id="alert_limit" colspan="1">
+                            Alert limit
+                        </td>
+                        <td id="mrp_minimum_stock" colspan="1">
+                            <t t-foreach="doc.mrp_area_ids" t-as="mrp_area_id">
+                                <t t-esc="mrp_area_id.mrp_minimum_stock"></t>
+                            </t>
                         </td>
                     </t>
                     <td id="order_quantity" colspan="1">
