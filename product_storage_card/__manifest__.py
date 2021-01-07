@@ -21,9 +21,9 @@
 {
     "name": "Product - Storage Card",
     "summary": "Printable product storage card",
-    "version": "12.0.1.0.2",
+    "version": "12.0.1.0.3",
     "category": "Product",
-    "website": "https://github.com/Tawasta/product",
+    "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
