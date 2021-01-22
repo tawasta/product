@@ -23,7 +23,7 @@
     "summary": "Expands the product name field to 100%",
     "version": "12.0.1.0.0",
     "category": "web",
-    "website": "https://github.com/Tawasta/web",
+    "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
