@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+  <data>
+    <template id="assets_backend" name="static_resources_css" inherit_id="web.assets_backend">
+      <xpath expr="." position="inside">
+        <link rel="stylesheet" href="/product_form_view_expand_title/static/src/css/style.css" />
+      </xpath>
+    </template>
+  </data>
+</odoo>
