@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Ignore products from margin calculation",
-    "summary": "Helper field for customizing margin calculation",
-    "category": "Inventory",
+    "name": "Product Form View Expand Title",
+    "summary": "Expands the product name field to 100%",
     "version": "12.0.1.0.0",
-    "website": "https://github.com/Tawasta/product",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "category": "web",
+    "website": "https://gitlab.com/tawasta/odoo/product",
+    "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "stock"],
-    "data": ["views/product_template.xml"],
+    "depends": ["web", "product"],
+    "data": ["views/resources.xml", "views/product_views.xml"],
 }
