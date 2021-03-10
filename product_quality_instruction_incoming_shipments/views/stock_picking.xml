@@ -17,7 +17,9 @@
             </field>
 
             <notebook position="inside">
-                <page string="Quality Checks" attrs="{ 'invisible': [('picking_type_code', '!=', 'incoming')] }">
+                <!-- Earlier version below -->
+<!--                 <page string="Quality Checks" attrs="{ 'invisible': [('picking_type_code', '!=', 'incoming')] }"> -->
+                <page string="Quality Checks">
                     <field name="quality_check_ids">
                         <tree create="false" delete="false" editable="top" colors="red:result == 'fail';green:result == 'pass';gray:result == 'not_received'">
                             <!-- The single-ID domain is a workaround to have the field not be readonly so
