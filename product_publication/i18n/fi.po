@@ -1,0 +1,169 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* product_publication
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 12.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-03-18 15:07+0000\n"
+"PO-Revision-Date: 2021-03-18 15:07+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_publication
+#: model_terms:ir.ui.view,arch_db:product_publication.publication_product_template_form_view
+msgid "Attributes"
+msgstr "Attribuutit"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_authors
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_authors
+msgid "Authors"
+msgstr "Tekijät"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_authors
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_authors
+msgid "Authors of the publication"
+msgstr "Julkaisun tekijät"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_binding_form
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_binding_form
+msgid "Binding form"
+msgstr "Sidosasu"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_binding_form
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_binding_form
+msgid "Binding form of the publication (i.e. paperback, hard cover)"
+msgstr "Julkaisun sidosasu (esim. sidottu, nidottu)"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_breadth
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_breadth
+msgid "Breadth"
+msgstr "Laajuus"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_breadth
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_breadth
+msgid "Breadth of the publication"
+msgstr "Julkaisun laajuus"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_duration
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_duration
+msgid "Duration"
+msgstr "Kesto"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_duration
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_duration
+msgid "Duration of the publication"
+msgstr "Julkaisun kesto"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_edition
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_edition
+msgid "Edition"
+msgstr "Painos"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_edition
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_edition
+msgid "Edition of the publication"
+msgstr "Julkaisun painos"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_isbn
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_isbn
+msgid "ISBN"
+msgstr ""
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_isbn
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_isbn
+msgid "International Standard Book Number"
+msgstr ""
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__is_publication_product
+#: model:ir.model.fields,field_description:product_publication.field_product_template__is_publication_product
+msgid "Is a publication product"
+msgstr "Julkaisutuote"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__is_publication_product
+#: model:ir.model.fields,help:product_publication.field_product_template__is_publication_product
+msgid "Is product a publication (i.e. book, video)?"
+msgstr "Onko tuote julkaisutuote (esim. kirja, video)?"
+
+#. module: product_publication
+#: model:ir.model,name:product_publication.model_product_template
+msgid "Product Template"
+msgstr "Tuotemalli"
+
+#. module: product_publication
+#: model_terms:ir.ui.view,arch_db:product_publication.publication_product_template_form_view
+msgid "Publication Product"
+msgstr "Julkaisutuote"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_publisher
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_publisher
+msgid "Publisher"
+msgstr "Julkaisija"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_publisher
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_publisher
+msgid "Publisher of the publication"
+msgstr "Julkaisun julkaisija"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_publishing_year
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_publishing_year
+msgid "Publishing year"
+msgstr "Julkaisuvuosi"
+
+#. module: product_publication
+#: code:addons/product_publication/models/product.py:63
+#, python-format
+msgid "Publishing year is invalid: %s"
+msgstr "Julkaisuvuosi on virheellinen: %s"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_publishing_year
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_publishing_year
+msgid "Publishing year of the publication"
+msgstr "Julkaisun julkaisuvuosi"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_quantity
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_quantity
+msgid "Quantity"
+msgstr "Määrä"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_quantity
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_quantity
+msgid "Quantity of the publication"
+msgstr "Julkaisun määrä"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_product__publication_size
+#: model:ir.model.fields,field_description:product_publication.field_product_template__publication_size
+msgid "Size"
+msgstr "Koko"
+
+#. module: product_publication
+#: model:ir.model.fields,help:product_publication.field_product_product__publication_size
+#: model:ir.model.fields,help:product_publication.field_product_template__publication_size
+msgid "Size of the publication"
+msgstr "Julkaisun koko"
