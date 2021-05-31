@@ -54,12 +54,12 @@ class StockPicking(models.Model):
 
         for record in self:
             record.quality_check_ids = False
-
             incoming_products = list({move.product_id for move in record.move_lines})
 
             for product in incoming_products:
-                for quality_instruction in \
-                        product.product_tmpl_id.quality_instruction_ids:
+                for (
+                    quality_instruction
+                ) in product.product_tmpl_id.quality_instruction_ids:
                     quality_check_model.create(
                         {
                             "instruction_id": quality_instruction.id,
