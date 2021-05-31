@@ -19,17 +19,21 @@
 ##############################################################################
 
 {
-    "name": "Incoming Shipments Quality Checks",
-    "summary": "Mandatory quality checks when receiving goods",
-    "version": "12.0.1.1.1",
-    "category": "Inventory",
-    "website": "https://github.com/Tawasta/product",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["product_quality_instruction", "purchase", "purchase_stock"],
-    "data": ["views/stock_picking.xml", "security/ir.model.access.csv"],
-    "demo": [],
+    'name': "Audit Log Rules - Product",
+    'summary': "Adds audit log rules for product.product, product.template and product.category",
+    'author': 'Tawasta',
+    'license': 'AGPL-3',
+    'website': "https://gitlab.com/Tawasta/product",
+    'category': 'Logging',
+    'application': False,
+    'installable': True,
+    'version': '12.0.1.1.0',
+    'depends': [
+        'product',
+        'auditlog',
+    ],
+    'data': [
+        'data/rules.xml'
+    ],
+    'demo': [],
 }
