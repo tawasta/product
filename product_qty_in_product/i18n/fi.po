@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-27 07:37+0000\n"
-"PO-Revision-Date: 2021-07-27 07:37+0000\n"
+"POT-Creation-Date: 2021-07-27 08:35+0000\n"
+"PO-Revision-Date: 2021-07-27 08:35+0000\n"
 "Last-Translator: <>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -24,18 +24,38 @@ msgid "Current quantity of products divided by qty_used_in_product.\n"
 "In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
 "stored in the Stock Location of the Warehouse of this Shop, or any of its children.\n"
 "Otherwise, this includes goods stored in any Stock Location with 'internal' type."
-msgstr ""
-"Tuotteiden nykyinen määrä jaettuna qty_used_in_product.\n"
+msgstr "Tuotteiden nykyinen määrä jaettuna qty_used_in_product.\n"
 "Yhdessä Stock Location -tilassa tämä sisältää tavaroita, jotka on varastoitu tähän paikkaan tai mihin tahansa sen alapaikkoihin.\n"
 "Yhdessä Warehouse-ympäristössä tämä sisältää tavaroita, jotka on varastoitu tämän varaston varastopaikalle tai sen alapaikkoihin.\n"
 "tallennetaan tämän myymälän varastokohtaan tai sen lapsiin.\n"
 "Muussa tapauksessa tämä koskee tavaroita, jotka on tallennettu mihin tahansa Stock-paikkaan, jossa on sisäinen tyyppi. "
 
 #. module: product_qty_in_product
+#: model:ir.model.fields,field_description:product_qty_in_product.field_product_product__qty_available_in_product
+#: model:ir.model.fields,field_description:product_qty_in_product.field_product_template__qty_available_in_product
+#: model:ir.model.fields,field_description:product_qty_in_product.field_stock_quant__qty_available_in_product
+msgid "Estimated complete Products"
+msgstr "Arvioidut valmiit tuotteet"
+
+#. module: product_qty_in_product
 #: model:ir.model.fields,field_description:product_qty_in_product.field_product_product__virtual_available_in_product
 #: model:ir.model.fields,field_description:product_qty_in_product.field_product_template__virtual_available_in_product
-msgid "Forecast Quantity in Product"
-msgstr "Ennustettu määrä tuotteessa"
+msgid "Estimated complete Products forecast"
+msgstr "Arvioidut valmiit tuotteet ennuste"
+
+#. module: product_qty_in_product
+#: model:ir.model.fields,field_description:product_qty_in_product.field_product_product__qty_in_product
+#: model:ir.model.fields,field_description:product_qty_in_product.field_product_product__qty_used_in_product
+#: model:ir.model.fields,field_description:product_qty_in_product.field_product_template__qty_used_in_product
+msgid "Estimated quantity in complete Product"
+msgstr "Arviotu määrä valmiissa tuotteessa"
+
+#. module: product_qty_in_product
+#: model:ir.model.fields,help:product_qty_in_product.field_product_product__qty_in_product
+#: model:ir.model.fields,help:product_qty_in_product.field_product_product__qty_used_in_product
+#: model:ir.model.fields,help:product_qty_in_product.field_product_template__qty_used_in_product
+msgid "Estimated quantity used in complete product"
+msgstr "Arviotu määrä valmiissa tuotteessa"
 
 #. module: product_qty_in_product
 #: model:ir.model.fields,help:product_qty_in_product.field_product_product__virtual_available_in_product
@@ -44,8 +64,7 @@ msgid "Forecast quantity (computed as Quantity On Hand - Outgoing + Incoming) di
 "In a context with a single Stock Location, this includes goods stored in this location, or any of its children.\n"
 "In a context with a single Warehouse, this includes goods stored in the Stock Location of this Warehouse, or any of its children.\n"
 "Otherwise, this includes goods stored in any Stock Location with 'internal' type."
-msgstr ""
-"Ennusteen määrä (laskettu määränä käsin - lähtevä + saapuva) jaettuna qty_used_in_product\n"
+msgstr "Ennusteen määrä (laskettu määränä käsin - lähtevä + saapuva) jaettuna qty_used_in_product\n"
 "Yhdessä Stock Location -tilassa tämä sisältää tavaroita, jotka on varastoitu tähän paikkaan tai johonkin sen alapaikoista.\n"
 "Yhdessä Warehouse-ympäristössä tämä sisältää tavaroita, jotka on varastoitu tämän varaston varastopaikalle tai sen alapaikoille.\n"
 "Muussa tapauksessa tämä koskee tavaroita, jotka on tallennettu mihin tahansa Stock-paikkaan, jossa on sisäinen tyyppi. \""
@@ -61,30 +80,12 @@ msgid "Product Template"
 msgstr "Tuotemalli"
 
 #. module: product_qty_in_product
-#: model:ir.model.fields,field_description:product_qty_in_product.field_stock_quant__qty_available_in_product
-msgid "Quantity Available in Product"
-msgstr "Määrä tuotteessa"
-
-#. module: product_qty_in_product
-#: model:ir.model.fields,field_description:product_qty_in_product.field_product_product__qty_available_in_product
-#: model:ir.model.fields,field_description:product_qty_in_product.field_product_template__qty_available_in_product
-msgid "Quantity On Hand In Product"
-msgstr "Varastossa oleva määrä tuotteessa"
-
-#. module: product_qty_in_product
-#: model:ir.model.fields,field_description:product_qty_in_product.field_product_product__qty_used_in_product
-#: model:ir.model.fields,field_description:product_qty_in_product.field_product_template__qty_used_in_product
-msgid "Quantity used in Product"
-msgstr "Käytetty määrä tuotteessa"
-
-#. module: product_qty_in_product
-#: model:ir.model.fields,help:product_qty_in_product.field_product_product__qty_used_in_product
-#: model:ir.model.fields,help:product_qty_in_product.field_product_template__qty_used_in_product
-msgid "Quantity used in another product (estimate)"
-msgstr "Käytetty määrä toisessa tuotteessa (arvio)"
-
-#. module: product_qty_in_product
 #: model:ir.model,name:product_qty_in_product.model_stock_quant
 msgid "Quants"
 msgstr "Määrät"
+
+#. module: product_qty_in_product
+#: model:ir.model,name:product_qty_in_product.model_report_stock_forecast
+msgid "Stock Forecast Report"
+msgstr "Varaston ennuste -raportti"
 

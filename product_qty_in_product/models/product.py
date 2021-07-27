@@ -38,11 +38,12 @@ class ProductProduct(models.Model):
     _inherit = "product.product"
 
     # 2. Fields declaration
-    qty_used_in_product = fields.Integer(
-        "Quantity used in Product", help="Quantity used in another product (estimate)"
+    qty_in_product = fields.Float(
+        "Estimated quantity in complete Product",
+        help="Estimated quantity used in complete product",
     )
     qty_available_in_product = fields.Float(
-        "Quantity On Hand In Product",
+        "Estimated complete Products",
         compute="_compute_quantities",
         search="_search_qty_available",
         digits=dp.get_precision("Product Unit of Measure"),
@@ -58,7 +59,7 @@ class ProductProduct(models.Model):
         "with 'internal' type.",
     )
     virtual_available_in_product = fields.Float(
-        "Forecast Quantity in Product",
+        "Estimated complete Products forecast",
         compute="_compute_quantities",
         search="_search_virtual_available",
         digits=dp.get_precision("Product Unit of Measure"),
@@ -106,11 +107,12 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     # 2. Fields declaration
-    qty_used_in_product = fields.Integer(
-        "Quantity used in Product", help="Quantity used in another product (estimate)"
+    qty_used_in_product = fields.Float(
+        "Estimated quantity in complete Product",
+        help="Estimated quantity used in complete product",
     )
     qty_available_in_product = fields.Float(
-        "Quantity On Hand In Product",
+        "Estimated complete Products",
         compute="_compute_quantities",
         search="_search_qty_available",
         digits=dp.get_precision("Product Unit of Measure"),
@@ -126,7 +128,7 @@ class ProductTemplate(models.Model):
         "with 'internal' type.",
     )
     virtual_available_in_product = fields.Float(
-        "Forecast Quantity in Product",
+        "Estimated complete Products forecast",
         compute="_compute_quantities",
         search="_search_virtual_available",
         digits=dp.get_precision("Product Unit of Measure"),
