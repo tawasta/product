@@ -5,7 +5,7 @@
 ===========================
 Product Quantity in Product
 ===========================
-* Adds field "qty_in_product" to product
+* Adds field "qty_used_in_product" to product
 
 Configuration
 =============

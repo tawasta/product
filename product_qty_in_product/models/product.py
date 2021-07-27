@@ -33,20 +33,20 @@ from odoo.addons import decimal_precision as dp
 # 6. Unknown third party imports:
 
 
-class Product(models.Model):
+class ProductProduct(models.Model):
     # 1. Private attributes
     _inherit = "product.product"
 
     # 2. Fields declaration
-    qty_in_product = fields.Integer(
-        "Quantity in Product", help="Quantity used in another product (estimate)"
+    qty_used_in_product = fields.Integer(
+        "Quantity used in Product", help="Quantity used in another product (estimate)"
     )
     qty_available_in_product = fields.Float(
         "Quantity On Hand In Product",
         compute="_compute_quantities",
         search="_search_qty_available",
         digits=dp.get_precision("Product Unit of Measure"),
-        help="Current quantity of products divided by qty_in_product.\n"
+        help="Current quantity of products divided by qty_used_in_product.\n"
         "In a context with a single Stock Location, this includes "
         "goods stored at this Location, or any of its children.\n"
         "In a context with a single Warehouse, this includes "
@@ -63,7 +63,7 @@ class Product(models.Model):
         search="_search_virtual_available",
         digits=dp.get_precision("Product Unit of Measure"),
         help="Forecast quantity (computed as Quantity On Hand "
-        "- Outgoing + Incoming) divided by qty_in_product\n"
+        "- Outgoing + Incoming) divided by qty_used_in_product\n"
         "In a context with a single Stock Location, this includes "
         "goods stored in this location, or any of its children.\n"
         "In a context with a single Warehouse, this includes "
@@ -78,14 +78,14 @@ class Product(models.Model):
     # 4. Compute and search fields, in the same order that fields declaration
     @api.depends("stock_move_ids.product_qty", "stock_move_ids.state")
     def _compute_quantities(self):
-        res = super(Product, self)._compute_quantities()
+        res = super(ProductProduct, self)._compute_quantities()
         for product in self:
-            if product.qty_in_product:
+            if product.qty_used_in_product:
                 product.qty_available_in_product = (
-                    product.qty_available / product.qty_in_product
+                    product.qty_available / product.qty_used_in_product
                 )
                 product.virtual_available_in_product = (
-                    product.virtual_available / product.qty_in_product
+                    product.virtual_available / product.qty_used_in_product
                 )
             else:
                 product.qty_available_in_product = product.qty_available
@@ -106,15 +106,15 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     # 2. Fields declaration
-    qty_in_product = fields.Integer(
-        "Quantity in Product", help="Quantity used in another product (estimate)"
+    qty_used_in_product = fields.Integer(
+        "Quantity used in Product", help="Quantity used in another product (estimate)"
     )
     qty_available_in_product = fields.Float(
         "Quantity On Hand In Product",
         compute="_compute_quantities",
         search="_search_qty_available",
         digits=dp.get_precision("Product Unit of Measure"),
-        help="Current quantity of products divided by qty_in_product.\n"
+        help="Current quantity of products divided by qty_used_in_product.\n"
         "In a context with a single Stock Location, this includes "
         "goods stored at this Location, or any of its children.\n"
         "In a context with a single Warehouse, this includes "
@@ -131,7 +131,7 @@ class ProductTemplate(models.Model):
         search="_search_virtual_available",
         digits=dp.get_precision("Product Unit of Measure"),
         help="Forecast quantity (computed as Quantity On Hand "
-        "- Outgoing + Incoming) divided by qty_in_product\n"
+        "- Outgoing + Incoming) divided by qty_used_in_product\n"
         "In a context with a single Stock Location, this includes "
         "goods stored in this location, or any of its children.\n"
         "In a context with a single Warehouse, this includes "
@@ -152,12 +152,12 @@ class ProductTemplate(models.Model):
     def _compute_quantities(self):
         res = super(ProductTemplate, self)._compute_quantities()
         for template in self:
-            if template.qty_in_product:
+            if template.qty_used_in_product:
                 template.qty_available_in_product = (
-                    template.qty_available / template.qty_in_product
+                    template.qty_available / template.qty_used_in_product
                 )
                 template.virtual_available_in_product = (
-                    template.virtual_available / template.qty_in_product
+                    template.virtual_available / template.qty_used_in_product
                 )
             else:
                 template.qty_available_in_product = template.qty_available

@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
+#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,16 +18,39 @@
 #
 ##############################################################################
 
-{
-    "name": "Product Quantity in Product",
-    "summary": 'Adds field "qty_used_in_product" to product',
-    "version": "12.0.1.0.0",
-    "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "depends": ["product", "stock"],
-    "data": ["views/product_views.xml", "views/stock_quant_views.xml"],
-}
+# 1. Standard library imports:
+
+# 2. Known third party imports:
+
+# 3. Odoo imports (openerp):
+from odoo import fields, models
+
+# 4. Imports from Odoo modules:
+
+# 5. Local imports in the relative form:
+
+# 6. Unknown third party imports:
+
+
+class StockQuant(models.Model):
+    # 1. Private attributes
+    _inherit = "stock.quant"
+
+    # 2. Fields declaration
+    qty_available_in_product = fields.Float(
+        related="product_id.qty_available_in_product",
+        string="Quantity Available in Product",
+        readonly=True,
+    )
+
+    # 3. Default methods
+
+    # 4. Compute and search fields, in the same order that fields declaration
+
+    # 5. Constraints and onchanges
+
+    # 6. CRUD methods
+
+    # 7. Action methods
+
+    # 8. Business methods
