@@ -39,7 +39,7 @@ class StockQuant(models.Model):
     # 2. Fields declaration
     qty_available_in_product = fields.Float(
         related="product_id.qty_available_in_product",
-        string="Quantity Available in Product",
+        string="Estimated complete Products",
         readonly=True,
     )
 
