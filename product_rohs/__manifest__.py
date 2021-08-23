@@ -21,7 +21,7 @@
 {
     "name": "Product RoHS compliancy",
     "summary": "Add a field for product RoHS compliancy",
-    "version": "12.0.1.1.0",
+    "version": "12.0.1.2.0",
     "category": "Product",
     "website": "https://github.com/Tawasta/product",
     "author": "Tawasta",
