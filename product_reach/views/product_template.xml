@@ -20,7 +20,7 @@
         <field name="arch" type="xml">
 
             <field name="barcode" position="after">
-                <field name="reach_compliant" />
+                <field name="reach_compliant" readonly="1"/>
             </field>
 
         </field>
