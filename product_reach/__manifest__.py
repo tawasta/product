@@ -21,7 +21,7 @@
 {
     "name": "Product REACH compliancy",
     "summary": "Add a field for product REACH compliancy",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.1.0",
     "category": "Product",
     "website": "https://github.com/Tawasta/product",
     "author": "Tawasta",
