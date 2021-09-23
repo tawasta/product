@@ -5,7 +5,7 @@
 =======================
 Product Variant Company
 =======================
-* Add variant_company_id for product variant.
+* Add seperate Variant Company field for Product Variants.
 
 Configuration
 =============
