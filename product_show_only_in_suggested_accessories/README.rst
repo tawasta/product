@@ -6,7 +6,7 @@
 Product Show only in Suggested accessories
 ==========================================
 
-* Add a dot to the product shop settings to remove the product / shop from the view and also from its searches / categories. The product will then only appear in Suggested Accessories.
+* Add a dot to the product shop settings to remove the product from /shop view and also from its searches / categories. The product will then only appear in Suggested Accessories.
 
 Configuration
 =============
