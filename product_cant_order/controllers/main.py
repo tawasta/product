@@ -12,7 +12,6 @@ _logger = logging.getLogger(__name__)
 
 
 class CheckProduct(http.Controller):
-
     @http.route(
         ["/check/product/<int:product_id>"],
         type="http",
@@ -25,8 +24,6 @@ class CheckProduct(http.Controller):
             request.env["product.product"].sudo().search([("id", "=", product_id)])
         )
 
-        values = {
-            'order_status': product.can_not_order
-        }
+        values = {"order_status": product.can_not_order}
 
         return json.dumps(values)
