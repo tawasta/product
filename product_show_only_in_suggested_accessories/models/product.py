@@ -23,7 +23,7 @@
 # 2. Known third party imports:
 
 # 3. Odoo imports (openerp):
-from odoo import api, fields, models
+from odoo import fields, models
 
 # 4. Imports from Odoo modules:
 
@@ -37,7 +37,9 @@ class ProductTemplate(models.Model):
     _inherit = "product.template"
 
     # 2. Fields declaration
-    show_only_in_suggested_accessories = fields.Boolean(string="Show only in Suggested accessories", default=False)
+    show_only_in_suggested_accessories = fields.Boolean(
+        string="Show only in Suggested accessories", default=False
+    )
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration
