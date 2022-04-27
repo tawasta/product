@@ -21,7 +21,7 @@
 {
     "name": "Product On Hand Quantity - Show color",
     "summary": "Show color if stock belongs to several locations",
-    "version": "12.0.1.0.0",
+    "version": "12.0.1.0.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",

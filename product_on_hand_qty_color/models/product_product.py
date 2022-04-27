@@ -2,9 +2,9 @@
 from odoo import api, fields, models
 
 
-class ProductTemplate(models.Model):
+class ProductProduct(models.Model):
 
-    _inherit = 'product.template'
+    _inherit = 'product.product'
 
     has_stock_on_several_locations = fields.Boolean(
         compute=lambda self: self._compute_stock_on_several_locations())
@@ -18,9 +18,6 @@ class ProductTemplate(models.Model):
             locations = [q.location_id.id for q in quants
                          if q.location_id.usage == 'internal']
 
-            # locations is a list, e.g. [2, 2, 3]. We count the elements
-            # on this list and they are all the same element, if they
-            # match to the length of the list.
             if locations and locations.count(locations[0]) != len(locations):
                 product.has_stock_on_several_locations = True
             else:
