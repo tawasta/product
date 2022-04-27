@@ -9,7 +9,9 @@ FormRenderer.include({
         var length = node.children.length;
         var child;
         for (child = 0; child < length; child++) {
-            if ($button[0].children[child].name === "action_open_quants" &&
+            if (typeof $button[0].children !== "undefined" &&
+                    typeof $button[0].children[child] !== "undefined" &&
+                    $button[0].children[child].name === "action_open_quants" &&
                     this.state.data.has_stock_on_several_locations === true) {
                 $button[0].children[child].style.color = "brown";
             }
