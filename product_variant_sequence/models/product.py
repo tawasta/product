@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -32,14 +32,18 @@ from odoo import fields, models
 # 6. Unknown third party imports:
 
 
-class ProductTemplate(models.Model):
+class ProductProduct(models.Model):
     # 1. Private attributes
-    _inherit = "product.template"
+    _inherit = "product.product"
+    _order = "sequence_variant, default_code, name, id"
 
     # 2. Fields declaration
-    show_only_in_suggested_accessories = fields.Boolean(
-        string="Show only in Suggested accessories", default=False
+    sequence_variant = fields.Integer(
+        "Sequence Variant",
+        default=1,
+        help="Gives the sequence order when displaying a product variant list",
     )
+
     # 3. Default methods
 
     # 4. Compute and search fields, in the same order that fields declaration

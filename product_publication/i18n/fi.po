@@ -1,14 +1,14 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-#	* product_publication
+#   * product_publication
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 12.0\n"
+"Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-18 15:07+0000\n"
-"PO-Revision-Date: 2021-03-18 15:07+0000\n"
-"Last-Translator: <>\n"
+"POT-Creation-Date: 2022-04-26 17:00+0000\n"
+"PO-Revision-Date: 2022-04-26 17:00+0000\n"
+"Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,6 +57,11 @@ msgid "Breadth of the publication"
 msgstr "Julkaisun laajuus"
 
 #. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_template__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: product_publication
 #: model:ir.model.fields,field_description:product_publication.field_product_product__publication_duration
 #: model:ir.model.fields,field_description:product_publication.field_product_template__publication_duration
 msgid "Duration"
@@ -81,6 +86,11 @@ msgid "Edition of the publication"
 msgstr "Julkaisun painos"
 
 #. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_template__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: product_publication
 #: model:ir.model.fields,field_description:product_publication.field_product_product__publication_isbn
 #: model:ir.model.fields,field_description:product_publication.field_product_template__publication_isbn
 msgid "ISBN"
@@ -103,6 +113,11 @@ msgstr "Julkaisutuote"
 #: model:ir.model.fields,help:product_publication.field_product_template__is_publication_product
 msgid "Is product a publication (i.e. book, video)?"
 msgstr "Onko tuote julkaisutuote (esim. kirja, video)?"
+
+#. module: product_publication
+#: model:ir.model.fields,field_description:product_publication.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
 
 #. module: product_publication
 #: model:ir.model,name:product_publication.model_product_template
@@ -133,7 +148,7 @@ msgid "Publishing year"
 msgstr "Julkaisuvuosi"
 
 #. module: product_publication
-#: code:addons/product_publication/models/product.py:63
+#: code:addons/product_publication/models/product.py:0
 #, python-format
 msgid "Publishing year is invalid: %s"
 msgstr "Julkaisuvuosi on virheellinen: %s"
