@@ -23,7 +23,7 @@
     "summary": "New field for info about competitor's alternative product",
     "version": "14.0.1.0.0",
     "category": "Inventory",
-    "website": "https://gitlab.com/tawasta/odoo/product/",
+    "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

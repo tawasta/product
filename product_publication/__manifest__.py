@@ -31,7 +31,5 @@
     "depends": [
         "product",
     ],
-    "data": [
-        "views/product_views.xml"
-    ],
+    "data": ["views/product_views.xml"],
 }

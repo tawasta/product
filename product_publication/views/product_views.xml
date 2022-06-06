@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record model="ir.ui.view" id="publication_product_only_form_view">
         <field name="name">publication.product.template.form</field>
         <field name="model">product.template</field>
-        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
         <field name="arch" type="xml">
             <field name="barcode" position="after">
                 <field name="is_publication_product" />
@@ -21,7 +21,8 @@
                 <page
                     string="Publication Product"
                     name="publication_product"
-                    attrs="{'invisible': [('is_publication_product','=',False)]}">
+                    attrs="{'invisible': [('is_publication_product','=',False)]}"
+                >
                     <group name="publication_product">
                         <group name="attributes" string="Attributes">
                             <field name="publication_isbn" />
