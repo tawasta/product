@@ -23,7 +23,7 @@
     "summary": "Adds audit log rules for uom.uom and uom.category",
     "author": "Tawasta",
     "license": "AGPL-3",
-    "website": "https://gitlab.com/Tawasta/product",
+    "website": "https://gitlab.com/tawasta/odoo/product",
     "category": "Logging",
     "application": False,
     "installable": True,

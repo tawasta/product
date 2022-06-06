@@ -23,7 +23,7 @@
     "summary": "Show all customer codes in a single field",
     "version": "14.0.1.0.0",
     "category": "Inventory",
-    "website": "https://github.com/Tawasta/product",
+    "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,

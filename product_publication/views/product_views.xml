@@ -21,7 +21,8 @@
                 <page
                     string="Publication Product"
                     name="publication_product"
-                    attrs="{'invisible': [('is_publication_product','=',False)]}">
+                    attrs="{'invisible': [('is_publication_product','=',False)]}"
+                >
                     <group name="publication_product">
                         <group name="attributes" string="Attributes">
                             <field name="publication_isbn" />
