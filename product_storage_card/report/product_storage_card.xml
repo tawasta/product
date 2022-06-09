@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <report
+        id="product_storage_card_report"
+        string="Storage Card (PDF)"
+        model="product.product"
+        report_type="qweb-pdf"
+        name="product_storage_card.product_storage_card_pdf"
+        file="product_storage_card.product_storage_card_pdf"
+        paperformat="product_storage_card.paperformat_storage_card"
+    />
+
+    <report
+        id="product_storage_card_report"
+        string="Storage Card (PDF)"
+        model="product.template"
+        report_type="qweb-pdf"
+        name="product_storage_card.product_storage_card_pdf"
+        file="product_storage_card.product_storage_card_pdf"
+        paperformat="product_storage_card.paperformat_storage_card"
+    />
+
+        <!-- PDF -->
+    <template id="product_storage_card_pdf">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="web.external_layout">
+                    <t t-call="product_storage_card.product_storage_card_document" />
+                </t>
+            </t>
+        </t>
+    </template>
+
+    <template id="product_storage_card_document">
+        <table class="product_storage_card">
+            <thead />
+            <tbody>
+                <tr>
+                    <td colspan="1">
+                        ID
+                    </td>
+                    <td colspan="1">
+                        <t t-esc="doc.default_code" />
+                    </td>
+                    <td colspan="1">
+                        Code
+                    </td>
+                    <td id="default_code" colspan="3">
+                        <t t-if="doc.default_code">
+                            <img
+                                t-att-src="'/report/barcode/?type=%s&amp;value=%s&amp;width=%s&amp;height=%s' % ('EAN13', doc.default_code, 600, 150)"
+                                style="width: 100%; height: 60px;"
+                            />
+                        </t>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="1">
+                        Name
+                    </td>
+                    <td colspan="5">
+                        <t t-if="doc.name">
+                            <t t-esc="doc.name" />
+                        </t>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="1">
+                        Storage location
+                    </td>
+                    <td colspan="5">
+                        <t t-if="doc.mrp_area_ids">
+                            <t t-foreach="doc.mrp_area_ids" t-as="mrp_area_id">
+                                <t
+                                    t-esc="mrp_area_id.mrp_area_id.location_id.location_id.name"
+                                />
+                                    /
+                                <t t-esc="mrp_area_id.mrp_area_id.location_id.name" />
+                            </t>
+                        </t>
+                    </td>
+                </tr>
+
+                <tr>
+                    <t t-if="doc.mrp_area_ids">
+                        <td id="alert_limit" colspan="1">
+                            Alert limit
+                        </td>
+                        <td id="mrp_minimum_stock" colspan="1">
+                            <t t-foreach="doc.mrp_area_ids" t-as="mrp_area_id">
+                                <t t-esc="mrp_area_id.mrp_minimum_stock" />
+                            </t>
+                        </td>
+                    </t>
+                    <td id="order_quantity" colspan="1">
+                        Order quantity
+                    </td>
+                    <td id="min_qty" colspan="1">
+                        <t t-foreach="doc.seller_ids" t-as="seller">
+                            <t t-esc="seller.min_qty" />
+                        </t>
+                    </td>
+                    <td id="delivery_time" colspan="1">
+                        Delivery time
+                    </td>
+                    <td colspan="1">
+                        <t t-foreach="doc.seller_ids" t-as="seller">
+                            <t t-esc="seller.delay" />
+                        </t>
+                    </td>
+                </tr>
+
+                <tr id="vendor">
+                    <td colspan="1">
+                        Vendor
+                    </td>
+                    <td colspan="5">
+                        <t t-foreach="doc.seller_ids" t-as="seller">
+                            <t t-esc="seller.name.name" />
+                        </t>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="1">
+                        Vendor product name
+                    </td>
+                    <td colspan="5">
+                        <t t-foreach="doc.seller_ids" t-as="seller">
+                            <t t-esc="seller.product_name" />
+                        </t>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="1">
+                        Vendor product code
+                    </td>
+                    <td colspan="5">
+                        <t t-foreach="doc.seller_ids" t-as="seller">
+                            <t t-esc="seller.product_code" />
+                        </t>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </template>
+</odoo>

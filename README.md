@@ -18,6 +18,7 @@ addon | version | maintainers | summary
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_publication](product_publication/) | 14.0.1.0.0 |  | Adds publication attributes for products.
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 14.0.1.0.1 |  | Product Show only in Suggested accessories
+[product_storage_card](product_storage_card/) | 14.0.1.0.0 |  | Printable product storage card
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 14.0.1.0.0 |  | Show all customer codes in a single field
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
 [product_variant_company](product_variant_company/) | 14.0.1.0.0 |  | Add varian_company_id for product variant
