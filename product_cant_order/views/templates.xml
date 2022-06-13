@@ -5,15 +5,8 @@
         id="suggested_products_list"
         inherit_id="website_sale.suggested_products_list"
     >
-        <xpath
-            expr="//a[@class='btn btn-link js_add_suggested_products']"
-            position="replace"
-        >
-            <t t-if="not product.can_not_order">
-                <a role="button" class="btn btn-link js_add_suggested_products">
-                    <strong>Add to Cart</strong>
-                </a>
-            </t>
+        <xpath expr="//a[hasclass('js_add_suggested_products')]" position="attributes">
+            <attribute name="t-if">not product.can_not_order</attribute>
         </xpath>
     </template>
 
