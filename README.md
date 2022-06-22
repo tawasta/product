@@ -12,6 +12,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [product_analytic_tags](product_analytic_tags/) | 14.0.1.0.0 |  | Analytic tags for products and categories
+[product_auditlog_rules](product_auditlog_rules/) | 14.0.1.1.0 |  | Audit log rules for product.product, product.template and product.category
 [product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
