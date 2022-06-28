@@ -1,8 +1,6 @@
 odoo.define("product_cant_order.product", function (require) {
     "use strict";
 
-    var toastr = require("website_utilities.notifications").toastr;
-
     $("input[type=hidden][class='product_id']").bind("change", function () {
         var product_id = $(this).val();
         if (product_id) {
@@ -10,7 +8,7 @@ odoo.define("product_cant_order.product", function (require) {
             $.post(action, function (res) {
                 var results = JSON.parse(res);
                 if (results.error) {
-                    toastr.error(results.error);
+                    console.error(results.error);
                 } else if (results.order_status === true) {
                     $("#add_to_cart").removeClass().addClass("d-none");
                 } else {
