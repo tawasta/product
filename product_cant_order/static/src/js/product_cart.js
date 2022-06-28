@@ -1,4 +1,4 @@
-odoo.define("product_cant_order.product", function (require) {
+odoo.define("product_cant_order.product", function () {
     "use strict";
 
     $("input[type=hidden][class='product_id']").bind("change", function () {
