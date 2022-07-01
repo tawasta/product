@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.common.form.weight</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+
+            <field name="weight" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'readonly':[('is_product_variant', '=', True)]}</attribute>
+            </field>
+
+            <xpath expr="//label[@for='weight']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='weight']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </xpath>
+
+            <field name="volume" position="attributes">
+                <attribute
+                    name="attrs"
+                >{'readonly':[('is_product_variant', '=', True)]}</attribute>
+            </field>
+
+            <xpath expr="//label[@for='volume']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </xpath>
+
+            <xpath expr="//div[@name='volume']" position="attributes">
+                <attribute name="attrs">{}</attribute>
+            </xpath>
+
+        </field>
+    </record>
+</odoo>
