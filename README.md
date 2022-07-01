@@ -21,6 +21,7 @@ addon | version | maintainers | summary
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 14.0.1.0.1 |  | Product Show only in Suggested accessories
 [product_storage_card](product_storage_card/) | 14.0.1.0.0 |  | Printable product storage card
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 14.0.1.0.0 |  | Show all customer codes in a single field
+[product_template_dimension](product_template_dimension/) | 14.0.1.0.0 |  | Variant dimensions are managed in related product template
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
 [product_variant_company](product_variant_company/) | 14.0.1.0.0 |  | Add varian_company_id for product variant
 [product_variant_sequence](product_variant_sequence/) | 14.0.1.0.0 |  | Order Product Variants based on sequence_variant.
