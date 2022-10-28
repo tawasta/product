@@ -1,0 +1,155 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_quality_instruction_incoming_shipments
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20221025\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-28 19:14+0000\n"
+"PO-Revision-Date: 2022-10-28 19:14+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model_terms:ir.ui.view,arch_db:product_quality_instruction_incoming_shipments.product_quality_instruction_incoming_shipments_stock_picking_form
+msgid ""
+"Click to reset the quality checklist in case you have e.g. edited the "
+"receipt's rows manually or added a new quality procedure after creation of "
+"the receipt"
+msgstr ""
+"Palauta laadun tarkistuslista klikkaamalla, jos olet esimerkiksi muokannut "
+"kuitin rivejä manuaalisesti tai lisännyt uuden laatumenettelyn kuitin luomisen "
+"jälkeen"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__comments
+msgid "Comments"
+msgstr "Kommentit"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__completed
+msgid "Completed"
+msgstr "Suoritettu"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__user_id
+msgid "Completed by"
+msgstr "Suorittanut"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__display_name
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_purchase_order__display_name
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_stock_picking__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields.selection,name:product_quality_instruction_incoming_shipments.selection__product_quality_instruction_i_s_check__result__fail
+msgid "Failed"
+msgstr "Epäonnistunut"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__id
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_purchase_order__id
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_stock_picking__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__instruction_id
+msgid "Instruction"
+msgstr "Ohje"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model,name:product_quality_instruction_incoming_shipments.model_product_quality_instruction_i_s_check
+msgid "Instruction for incoming shipments"
+msgstr "Ohjeet saapuville lähetyksille"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check____last_update
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_purchase_order____last_update
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_stock_picking____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields.selection,name:product_quality_instruction_incoming_shipments.selection__product_quality_instruction_i_s_check__result__not_received
+msgid "Not Received"
+msgstr "Ei vastaanotettu"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields.selection,name:product_quality_instruction_incoming_shipments.selection__product_quality_instruction_i_s_check__result__pass
+msgid "Passed"
+msgstr "Läpäisty"
+
+#. module: product_quality_instruction_incoming_shipments
+#: code:addons/product_quality_instruction_incoming_shipments/models/stock_picking.py:0
+#, python-format
+msgid "Please finish the quality check list before receiving the goods."
+msgstr "Viimeistele laadun tarkistuslista ennen tavaroiden vastaanottamista."
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__product_id
+msgid "Product"
+msgstr "Tuote"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model,name:product_quality_instruction_incoming_shipments.model_purchase_order
+msgid "Purchase Order"
+msgstr "Ostotilaus"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_stock_picking__quality_check_count
+msgid "Quality Check Count"
+msgstr "Laatutarkistusten määrä"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_stock_picking__quality_check_ids
+#: model_terms:ir.ui.view,arch_db:product_quality_instruction_incoming_shipments.product_quality_instruction_incoming_shipments_stock_picking_form
+msgid "Quality Checks"
+msgstr "Laatutarkastukset"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__picking_id
+msgid "Receipt"
+msgstr "Kuitti"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model_terms:ir.ui.view,arch_db:product_quality_instruction_incoming_shipments.product_quality_instruction_incoming_shipments_stock_picking_form
+msgid "Reset Quality Checks"
+msgstr "Nollaa laatutarkastukset"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model.fields,field_description:product_quality_instruction_incoming_shipments.field_product_quality_instruction_i_s_check__result
+msgid "Result"
+msgstr "Tulos"
+
+#. module: product_quality_instruction_incoming_shipments
+#: model:ir.model,name:product_quality_instruction_incoming_shipments.model_stock_picking
+msgid "Transfer"
+msgstr "Siirto"
