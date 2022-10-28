@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_publication](product_publication/) | 14.0.1.0.0 |  | Adds publication attributes for products.
+[product_quality_instruction](product_quality_instruction/) | 14.0.1.0.0 |  | Instruction Documents for Products
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 14.0.1.0.1 |  | Product Show only in Suggested accessories
 [product_storage_card](product_storage_card/) | 14.0.1.0.0 |  | Printable product storage card
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 14.0.1.0.0 |  | Show all customer codes in a single field
