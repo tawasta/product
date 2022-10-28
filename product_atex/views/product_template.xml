@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="product_template_only_form_view" model="ir.ui.view">
+        <field name="name">product.template.product.form.rohs</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view"/>
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+                <field name="atex_compliant" />
+            </field>
+        </field>
+    </record>
+    <record id="product_template_tree_view" model="ir.ui.view">
+        <field name="name">product.template.product.tree.rohs</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+                <field name="atex_compliant" optional="hide"/>
+            </field>
+        </field>
+    </record>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.rohs</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view"/>
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+                <field name="atex_compliant" readonly="1" />
+            </field>
+        </field>
+    </record>
+    <record id="product_product_tree_view" model="ir.ui.view">
+        <field name="name">product.product.tree.rohs</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view"/>
+        <field name="arch" type="xml">
+            <field name="barcode" position="after">
+                <field name="atex_compliant" optional="hide" readonly="1" />
+            </field>
+        </field>
+    </record>
+</odoo>
