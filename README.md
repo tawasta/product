@@ -22,6 +22,8 @@ addon | version | maintainers | summary
 [product_publication](product_publication/) | 14.0.1.0.0 |  | Adds publication attributes for products.
 [product_quality_instruction](product_quality_instruction/) | 14.0.1.0.0 |  | Instruction Documents for Products
 [product_quality_instruction_incoming_shipments](product_quality_instruction_incoming_shipments/) | 14.0.1.0.0 |  | Mandatory quality checks when receiving goods
+[product_reach](product_reach/) | 14.0.1.0.0 |  | Add a field for product REACH compliancy
+[product_rohs](product_rohs/) | 14.0.1.0.0 |  | Add a field for product RoHS compliancy
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 14.0.1.0.1 |  | Product Show only in Suggested accessories
 [product_storage_card](product_storage_card/) | 14.0.1.0.0 |  | Printable product storage card
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 14.0.1.0.0 |  | Show all customer codes in a single field
