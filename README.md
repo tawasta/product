@@ -31,6 +31,7 @@ addon | version | maintainers | summary
 [product_template_weight](product_template_weight/) | 14.0.1.0.0 |  | Variant weight and volume is managed in related product template
 [product_translations](product_translations/) | 14.0.1.0.0 |  | Product translations in backend
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
+[product_update_quantity_to_inventory_adjustment](product_update_quantity_to_inventory_adjustment/) | 14.0.1.0.0 |  | Use Inventory Adjustment from Update Quantity functionality
 [product_use_tree_as_default_view](product_use_tree_as_default_view/) | 14.0.1.0.0 |  | Use tree as a default view for products
 [product_variant_company](product_variant_company/) | 14.0.1.0.0 |  | Add varian_company_id for product variant
 [product_variant_sequence](product_variant_sequence/) | 14.0.1.0.0 |  | Order Product Variants based on sequence_variant.
