@@ -28,6 +28,7 @@ addon | version | maintainers | summary
 [product_storage_card](product_storage_card/) | 14.0.1.0.0 |  | Printable product storage card
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 14.0.1.0.0 |  | Show all customer codes in a single field
 [product_template_dimension](product_template_dimension/) | 14.0.1.0.0 |  | Variant dimensions are managed in related product template
+[product_template_hide_sh_tags](product_template_hide_sh_tags/) | 14.0.1.0.0 |  | Hide SH tags from product template
 [product_template_weight](product_template_weight/) | 14.0.1.0.0 |  | Variant weight and volume is managed in related product template
 [product_translations](product_translations/) | 14.0.1.0.0 |  | Product translations in backend
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
