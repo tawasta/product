@@ -27,6 +27,7 @@ addon | version | maintainers | summary
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 14.0.1.0.1 |  | Product Show only in Suggested accessories
 [product_storage_card](product_storage_card/) | 14.0.1.0.0 |  | Printable product storage card
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 14.0.1.0.0 |  | Show all customer codes in a single field
+[product_template_attribute_value_ids_hide](product_template_attribute_value_ids_hide/) | 14.0.1.0.0 |  | Hides the product_template_attribute_value_ids by default on product tree
 [product_template_dimension](product_template_dimension/) | 14.0.1.0.0 |  | Variant dimensions are managed in related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 14.0.1.0.0 |  | Hide SH tags from product template
 [product_template_weight](product_template_weight/) | 14.0.1.0.0 |  | Variant weight and volume is managed in related product template
