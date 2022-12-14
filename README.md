@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [product_auditlog_rules](product_auditlog_rules/) | 14.0.1.1.0 |  | Audit log rules for product.product, product.template and product.category
 [product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
+[product_materials](product_materials/) | 14.0.1.0.0 |  | Product Materials model to be used on products
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
