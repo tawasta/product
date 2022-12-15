@@ -9,7 +9,7 @@
                 expr="//page[@name='general_information']//field[@name='company_id']"
                 position="after"
             >
-                <field name="material" />
+                <field name="material" widget="many2many_tags" />
             </xpath>
         </field>
     </record>
