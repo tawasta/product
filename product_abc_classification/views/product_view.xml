@@ -30,6 +30,7 @@
         <field name="inherit_id" ref="product.product_template_tree_view" />
         <field name="arch" type="xml">
             <field name="categ_id" position="after">
+                <field name="product_variant_count" invisible="1" />
                 <field
                     name="abc_classification_profile_id"
                     optional="hide"
