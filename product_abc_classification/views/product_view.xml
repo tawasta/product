@@ -8,17 +8,19 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_search_view" />
         <field name="arch" type="xml">
-            <xpath expr="//group" position="inside">
-                <filter
-                    string="ABC Classification Profile"
-                    name="abc_classification_profile"
-                    context="{'group_by':'abc_classification_profile_id'}"
-                />
-                <filter
-                    string="ABC Classification Level"
-                    name="abc_classification_level"
-                    context="{'group_by':'abc_classification_level_id'}"
-                />
+            <xpath expr="//search" position="inside">
+                <group expand="1" string="Group By">
+                    <filter
+                        string="ABC Classification Profile"
+                        name="abc_classification_profile"
+                        context="{'group_by':'abc_classification_profile_id'}"
+                    />
+                    <filter
+                        string="ABC Classification Level"
+                        name="abc_classification_level"
+                        context="{'group_by':'abc_classification_level_id'}"
+                    />
+                </group>
             </xpath>
         </field>
     </record>
