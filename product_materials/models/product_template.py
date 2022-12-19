@@ -5,4 +5,4 @@ class ProductTemplate(models.Model):
 
     _inherit = "product.template"
 
-    material = fields.Many2one("product.material", string="Material")
+    material = fields.Many2many("product.material", string="Material")
