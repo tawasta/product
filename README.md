@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [product_auditlog_rules](product_auditlog_rules/) | 14.0.1.1.0 |  | Audit log rules for product.product, product.template and product.category
 [product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
+[product_materials](product_materials/) | 14.0.1.0.2 |  | Product Materials model to be used on products
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
@@ -31,6 +32,7 @@ addon | version | maintainers | summary
 [product_template_dimension](product_template_dimension/) | 14.0.1.0.0 |  | Variant dimensions are managed in related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 14.0.1.0.0 |  | Hide SH tags from product template
 [product_template_rack](product_template_rack/) | 14.0.1.0.0 |  | Introduces a new field, Rack, to set stable product locations
+[product_template_row](product_template_row/) | 14.0.1.0.0 |  | Introduces a new field, Row, to set stable product locations
 [product_template_weight](product_template_weight/) | 14.0.1.0.0 |  | Variant weight and volume is managed in related product template
 [product_translations](product_translations/) | 14.0.1.0.0 |  | Product translations in backend
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
