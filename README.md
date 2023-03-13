@@ -13,6 +13,7 @@ addon | version | maintainers | summary
 --- | --- | --- | ---
 [coupon_product_set_company](coupon_product_set_company/) | 14.0.1.0.0 |  | Sets company field for coupon product
 [product_analytic_tags](product_analytic_tags/) | 14.0.1.0.0 |  | Analytic tags for products and categories
+[product_archive_product_archive_mrp_parameter](product_archive_product_archive_mrp_parameter/) | 14.0.1.0.0 |  | Archive Product and archive its MRP area parameter
 [product_atex](product_atex/) | 14.0.1.0.0 |  | Add a field for product ATEX compliancy
 [product_auditlog_rules](product_auditlog_rules/) | 14.0.1.1.0 |  | Audit log rules for product.product, product.template and product.category
 [product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
