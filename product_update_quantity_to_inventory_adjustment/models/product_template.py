@@ -47,5 +47,5 @@ class ProductTemplate(models.Model):
             "view_type": "form",
             "view_mode": "form",
             "res_id": adjustment.id,
-            "target": "new",
+            "target": "current",
         }
