@@ -18,7 +18,7 @@ addon | version | maintainers | summary
 [product_auditlog_rules](product_auditlog_rules/) | 14.0.1.1.0 |  | Audit log rules for product.product, product.template and product.category
 [product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
-[product_materials](product_materials/) | 14.0.1.0.2 |  | Product Materials model to be used on products
+[product_materials](product_materials/) | 14.0.1.0.3 |  | Product Materials model to be used on products
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
@@ -39,7 +39,7 @@ addon | version | maintainers | summary
 [product_translations](product_translations/) | 14.0.1.0.0 |  | Product translations in backend
 [product_tree_description](product_tree_description/) | 14.0.1.0.0 |  | Description field in product tree view
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
-[product_update_quantity_to_inventory_adjustment](product_update_quantity_to_inventory_adjustment/) | 14.0.1.0.0 |  | Use Inventory Adjustment from Update Quantity functionality
+[product_update_quantity_to_inventory_adjustment](product_update_quantity_to_inventory_adjustment/) | 14.0.1.0.1 |  | Use Inventory Adjustment from Update Quantity functionality
 [product_use_tree_as_default_view](product_use_tree_as_default_view/) | 14.0.1.0.0 |  | Use tree as a default view for products
 [product_variant_company](product_variant_company/) | 14.0.1.0.0 |  | Add varian_company_id for product variant
 [product_variant_sequence](product_variant_sequence/) | 14.0.1.0.0 |  | Order Product Variants based on sequence_variant.
