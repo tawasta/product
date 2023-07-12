@@ -10,14 +10,15 @@ class ProductTemplate(models.Model):
             product_length, product_height, product_width, uom_id
         )
 
-        if self.volume_uom_id.uom_type == "reference":
-            # Convert first to liters, which is the reference unit
-            volume = volume * 1000
-        else:
-            # This is okay because the original volume is in cubic meters
-            volume = volume / 1000
+        # Just return the original volume, if the selected UoM is in cubic meters
+        if self.volume_uom_id.id == self.env.ref("uom.product_uom_cubic_meter").id:
+            return volume
 
-        volume = volume / self.volume_uom_id.factor
+        # Convert first to liters, which is the reference unit
+        volume = volume * 1000
+
+        # Then convert liters to the selected volume
+        volume = volume * self.volume_uom_id.factor
 
         return volume
 
