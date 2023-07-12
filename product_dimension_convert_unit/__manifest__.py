@@ -21,7 +21,7 @@
 {
     "name": "Convert the computed volume of a product by its volume UoM",
     "summary": "Convert the computed volume of a product by its volume UoM",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
