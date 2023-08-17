@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
+[product_pricelist_show_create_date](product_pricelist_show_create_date/) | 14.0.1.0.0 |  | Show create date on pricelists
 [product_publication](product_publication/) | 14.0.1.0.0 |  | Adds publication attributes for products.
 [product_quality_instruction](product_quality_instruction/) | 14.0.1.0.0 |  | Instruction Documents for Products
 [product_quality_instruction_incoming_shipments](product_quality_instruction_incoming_shipments/) | 14.0.1.0.0 |  | Mandatory quality checks when receiving goods
