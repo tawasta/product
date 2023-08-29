@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
+[product_pricelist_inherit](product_pricelist_inherit/) | 14.0.1.0.0 |  | Inherits pricelists company children
 [product_pricelist_partners](product_pricelist_partners/) | 14.0.1.0.0 |  | Show partners using the pricelist
 [product_pricelist_price](product_pricelist_price/) | 14.0.1.0.0 |  | Show cost price and sale price on pricelist items
 [product_pricelist_show_create_date](product_pricelist_show_create_date/) | 14.0.1.0.0 |  | Show create date on pricelists
