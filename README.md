@@ -19,6 +19,7 @@ addon | version | maintainers | summary
 [product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_dimension_convert_unit](product_dimension_convert_unit/) | 14.0.1.0.1 |  | Convert the computed volume of a product by its volume UoM
+[product_margin_ignore](product_margin_ignore/) | 14.0.1.0.0 |  | Helper field for customizing margin calculation
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
 [product_materials](product_materials/) | 14.0.1.0.3 |  | Product Materials model to be used on products
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
