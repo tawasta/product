@@ -22,6 +22,7 @@ addon | version | maintainers | summary
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
 [product_materials](product_materials/) | 14.0.1.0.3 |  | Product Materials model to be used on products
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
+[product_name_with_uom](product_name_with_uom/) | 14.0.1.0.0 |  | Shows product name with sale UOM
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_pricelist_inherit](product_pricelist_inherit/) | 14.0.1.0.0 |  | Inherits pricelists company children
