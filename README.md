@@ -53,5 +53,6 @@ addon | version | maintainers | summary
 [product_variant_sequence](product_variant_sequence/) | 14.0.1.0.0 |  | Order Product Variants based on sequence_variant.
 [product_vendor_codes_field](product_vendor_codes_field/) | 14.0.1.0.1 |  | Show all vendor codes in a single field
 [uom_auditlog_rules](uom_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for uom.uom and uom.category
+[uom_weight](uom_weight/) | 14.0.1.0.0 |  | Helper for calculating different UoM weights
 
 [//]: # (end addons)
