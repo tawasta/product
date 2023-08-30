@@ -28,7 +28,7 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "stock", "account"],
+    "depends": ["product", "stock", "account", "sale"],
     "data": [
         "security/ir.model.access.csv",
         "report/invoice_report.xml",
