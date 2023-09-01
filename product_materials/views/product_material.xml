@@ -8,6 +8,7 @@
             <tree string="Material info">
                 <field name="name" />
                 <field name="material_info" />
+                <field name="category" />
             </tree>
         </field>
     </record>
@@ -22,6 +23,7 @@
                     <group name="product_material_group">
                         <field name="name" />
                         <field name="material_info" />
+                        <field name="category" />
                     </group>
                 </sheet>
                 <div class="oe_chatter" />

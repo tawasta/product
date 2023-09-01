@@ -11,7 +11,7 @@
             >
                 <field name="material" widget="many2many_tags" />
             </xpath>
-<!--             <xpath
+            <xpath
                 expr="//group[@name='inventory']"
                 position="after"
             >
@@ -20,7 +20,7 @@
                     <field name="material_purchase" widget="many2many_tags" domain="[('category','=','purchase')]" string="Material"/>
                 </div>
                 
-            </xpath> -->
+            </xpath>
         </field>
     </record>
 </odoo>
