@@ -9,7 +9,7 @@
                 expr="//page[@name='general_information']//field[@name='company_id']"
                 position="after"
             >
-                <field name="material" widget="many2many_tags" />
+                <field name="material" widget="many2many_tags" domain="[('category','=','product')]" />
             </xpath>
             <xpath
                 expr="//group[@name='inventory']"
