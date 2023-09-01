@@ -34,6 +34,7 @@
         "report/invoice_report.xml",
         "report/stock_report.xml",
         "views/product_material.xml",
+        "views/product_material_category.xml",
         "views/product_product.xml",
         "views/sale_order.xml",
     ],
