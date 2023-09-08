@@ -11,14 +11,21 @@
             >
                 <field name="material" widget="many2many_tags" />
             </xpath>
+        </field>
+    </record>
+    <record id="account_product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.form..account.material</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="account.product_template_form_view" />
+        <field name="arch" type="xml">
             <xpath
-                expr="//group[@name='inventory']"
+                expr="//group[@name='bill']"
                 position="after"
             >
-                <label for="material_purchase"/>
-                <div class="o_row" name="material_purchase">
+                <group>
                     <field name="material_purchase" widget="many2many_tags" string="Material"/>
-                </div>
+                    <field name="material_purchase_text" />
+                </group>
                 
             </xpath>
         </field>
