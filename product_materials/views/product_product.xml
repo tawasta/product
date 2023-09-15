@@ -18,15 +18,16 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="account.product_template_form_view" />
         <field name="arch" type="xml">
-            <xpath
-                expr="//group[@name='bill']"
-                position="after"
-            >
+            <xpath expr="//group[@name='bill']" position="after">
                 <group>
-                    <field name="material_purchase" widget="many2many_tags" string="Material"/>
+                    <field
+                        name="material_purchase"
+                        widget="many2many_tags"
+                        string="Material"
+                    />
                     <field name="material_purchase_text" />
                 </group>
-                
+
             </xpath>
         </field>
     </record>
