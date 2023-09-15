@@ -1,5 +1,7 @@
-from odoo import models
 import logging
+
+from odoo import models
+
 
 class StockMoveLine(models.Model):
 
@@ -22,11 +24,13 @@ class StockMoveLine(models.Model):
                 + str(uom.id)
             )
 
-            materials = self.env["product.material"].sudo().search([
-                ('id', 'in', move_line.move_id.product_id.material.ids)
-            ])
-            logging.info("=====MATERIALS======");
-            logging.info(materials);
+            materials = (
+                self.env["product.material"]
+                .sudo()
+                .search([("id", "in", move_line.move_id.product_id.material.ids)])
+            )
+            logging.info("=====MATERIALS======")
+            logging.info(materials)
             if line_key in aggregated_move_lines:
                 aggregated_move_lines[line_key]["materials"] = materials
 

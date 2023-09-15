@@ -11,9 +11,9 @@ class ProductTemplate(models.Model):
     # )
 
     atex_compliant = fields.Many2many(
-        'product.compliant',
-        string='ATEX Compliant',
-        help='This product is ATEX directive compliant.'
+        "product.compliant",
+        string="ATEX Compliant",
+        help="This product is ATEX directive compliant.",
     )
 
     # reach_compliant = fields.Boolean(
@@ -21,12 +21,13 @@ class ProductTemplate(models.Model):
     #     help="This product is Registration, Evaluation, Authorisation and Restriction "
     #     "of Chemicals regulation compliant.",
     # )
-    
+
     reach_compliant = fields.Many2many(
-        'product.compliant',
-        string='REACH Compliant',
+        "product.compliant",
+        string="REACH Compliant",
         relation="rel_reach_compliant",
-        help='This product is Registration, Evaluation, Authorisation and Restriction of Chemicals regulation compliant.'
+        help="""This product is Registration, Evaluation, Authorisation and
+                Restriction of Chemicals regulation compliant.""",
     )
 
     # rohs_compliant = fields.Boolean(
@@ -36,8 +37,9 @@ class ProductTemplate(models.Model):
     # )
 
     rohs_compliant = fields.Many2many(
-        'product.compliant',
-        string='RoHS Compliant',
+        "product.compliant",
+        string="RoHS Compliant",
         relation="rel_rohs_compliant",
-        help='This product is Restriction of Hazardous Substances Directive 2002/95/EC compliant.'
+        help="""This product is Restriction of Hazardous Substances
+                Directive 2002/95/EC compliant.""",
     )

@@ -1,40 +1,48 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <template id="report_delivery_document" inherit_id="stock.report_delivery_document">
-        <xpath expr="//table[@name='stock_move_table']/tbody/tr/td[last()]" position="after">
-                <t t-if="move.product_id.material and o.sale_id.show_materials_with_report">
+        <xpath
+            expr="//table[@name='stock_move_table']/tbody/tr/td[last()]"
+            position="after"
+        >
+                <t
+                t-if="move.product_id.material and o.sale_id.show_materials_with_report"
+            >
                     <tr>
                         <td><span>Materials:</span>
                             <t t-if="len(move.product_id.material) > 1">
                                 <t t-foreach="move.product_id.material" t-as="m">
-                                    <span t-field="m.name"/>,
+                                    <span t-field="m.name" />,
                                 </t>
                             </t>
                             <t t-else="">
                                 <t t-foreach="move.product_id.material" t-as="m">
-                                    <span t-field="m.name"/>
+                                    <span t-field="m.name" />
                                 </t>
                             </t>
                         </td>
-                        <td></td>
+                        <td />
                     </tr>
                 </t>
             <!-- </t> -->
         </xpath>
 
     </template>
-    <template id="stock_report_delivery_aggregated_move_lines" inherit_id="stock.stock_report_delivery_aggregated_move_lines">
+    <template
+        id="stock_report_delivery_aggregated_move_lines"
+        inherit_id="stock.stock_report_delivery_aggregated_move_lines"
+    >
         <xpath expr="//tr/td[last()]" position="after">
                 <tr>
                     <td><span>Materials:</span>
                         <t t-if="len(aggregated_lines[line]['materials']) > 1">
                             <t t-foreach="aggregated_lines[line]['materials']" t-as="m">
-                                <span t-field="m.name"/>,
+                                <span t-field="m.name" />,
                             </t>
                         </t>
                         <t t-else="">
                             <t t-foreach="aggregated_lines[line]['materials']" t-as="m">
-                                <span t-field="m.name"/>
+                                <span t-field="m.name" />
                             </t>
                         </t>
                     </td>
