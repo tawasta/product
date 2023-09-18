@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_material_category_tree" model="ir.ui.view">
+        <field name="name">product.material.category.tree</field>
+        <field name="model">product.material.category</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree string="Material category">
+                <field name="name" />
+                <field name="code" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_product_material_category_form" model="ir.ui.view">
+        <field name="name">product.material.category.form</field>
+        <field name="model">product.material.category</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <form string="Material category">
+                <sheet>
+                    <group name="product_material_group">
+                        <field name="name" />
+                        <field name="code" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_material_category_action" model="ir.actions.act_window">
+        <field name="name">Material Category</field>
+        <field name="res_model">product.material.category</field>
+        <field name="view_mode">form,tree</field>
+        <field name="view_id" ref="view_product_material_category_tree" />
+    </record>
+
+    <menuitem
+        id="menu_product_material_category"
+        parent="stock.menu_product_in_config_stock"
+        sequence="30"
+        action="product_material_category_action"
+    />
+</odoo>

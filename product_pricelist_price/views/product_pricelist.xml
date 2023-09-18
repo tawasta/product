@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="product_pricelist_view" model="ir.ui.view">
+        <field name="name">product.pricelist.uom</field>
+        <field name="model">product.pricelist</field>
+        <field name="inherit_id" ref="product.product_pricelist_view" />
+        <field name="arch" type="xml">
+
+            <xpath
+                expr="//field[@name='item_ids']//tree//field[@name='price']"
+                position="before"
+            >
+                <field name="standard_price" />
+                <field name="list_price" />
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>

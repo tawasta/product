@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Tree view -->
+        <record id="view_product_compliant_tree" model="ir.ui.view">
+            <field name="name">product.compliant.tree</field>
+            <field name="model">product.compliant</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name" />
+                    <field name="description" />
+                    <!-- Add other fields here -->
+                </tree>
+            </field>
+        </record>
+
+        <!-- Form view -->
+        <record id="view_product_compliant_form" model="ir.ui.view">
+            <field name="name">product.compliant.form</field>
+            <field name="model">product.compliant</field>
+            <field name="arch" type="xml">
+                <form>
+                    <group>
+                        <field name="name" />
+                        <field name="description" />
+                        <!-- Add other fields here -->
+                    </group>
+                </form>
+            </field>
+        </record>
+
+        <!-- Create an action to open the view -->
+        <record id="action_product_compliant" model="ir.actions.act_window">
+            <field name="name">Product Compliant</field>
+            <field name="res_model">product.compliant</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem
+            id="menu_product_compliant"
+            name="Product Compliant"
+            action="action_product_compliant"
+            parent="sale.product_menu_catalog"
+        />
+    </data>
+</odoo>

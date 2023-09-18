@@ -18,12 +18,21 @@ addon | version | maintainers | summary
 [product_auditlog_rules](product_auditlog_rules/) | 14.0.1.1.0 |  | Audit log rules for product.product, product.template and product.category
 [product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
+[product_compliant](product_compliant/) | 14.0.1.0.0 |  | Add a fields for product compliancy
+[product_default_location](product_default_location/) | 14.0.1.0.0 |  | Product Default Location
 [product_dimension_convert_unit](product_dimension_convert_unit/) | 14.0.1.0.1 |  | Convert the computed volume of a product by its volume UoM
+[product_margin_ignore](product_margin_ignore/) | 14.0.1.0.0 |  | Helper field for customizing margin calculation
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
 [product_materials](product_materials/) | 14.0.1.0.3 |  | Product Materials model to be used on products
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
+[product_name_with_uom](product_name_with_uom/) | 14.0.1.0.0 |  | Shows product name with sale UOM
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 14.0.1.0.0 |  | Don't force using same company for product and product pricelist
+[product_pricelist_inherit](product_pricelist_inherit/) | 14.0.1.0.0 |  | Inherits pricelists company children
+[product_pricelist_partners](product_pricelist_partners/) | 14.0.1.0.0 |  | Show partners using the pricelist
+[product_pricelist_price](product_pricelist_price/) | 14.0.1.0.0 |  | Show cost price and sale price on pricelist items
+[product_pricelist_show_create_date](product_pricelist_show_create_date/) | 14.0.1.0.0 |  | Show create date on pricelists
+[product_pricelist_uom](product_pricelist_uom/) | 14.0.1.0.0 |  | Show UOM on pricelists
 [product_publication](product_publication/) | 14.0.1.0.0 |  | Adds publication attributes for products.
 [product_quality_instruction](product_quality_instruction/) | 14.0.1.0.0 |  | Instruction Documents for Products
 [product_quality_instruction_incoming_shipments](product_quality_instruction_incoming_shipments/) | 14.0.1.0.0 |  | Mandatory quality checks when receiving goods
@@ -47,5 +56,6 @@ addon | version | maintainers | summary
 [product_variant_sequence](product_variant_sequence/) | 14.0.1.0.0 |  | Order Product Variants based on sequence_variant.
 [product_vendor_codes_field](product_vendor_codes_field/) | 14.0.1.0.1 |  | Show all vendor codes in a single field
 [uom_auditlog_rules](uom_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for uom.uom and uom.category
+[uom_weight](uom_weight/) | 14.0.1.0.0 |  | Helper for calculating different UoM weights
 
 [//]: # (end addons)

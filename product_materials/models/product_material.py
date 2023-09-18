@@ -8,3 +8,7 @@ class ProductMaterial(models.Model):
 
     name = fields.Char(string="Name")
     material_info = fields.Text(string="Material info")
+
+    category = fields.Many2many(
+        string="Category", comodel_name="product.material.category"
+    )
