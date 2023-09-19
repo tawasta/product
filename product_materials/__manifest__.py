@@ -21,14 +21,20 @@
 {
     "name": "Product Materials",
     "summary": "Product Materials model to be used on products",
-    "version": "14.0.1.0.3",
+    "version": "14.0.1.0.4",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "stock", "account", "sale"],
+    "depends": [
+        "account_invoice_related_sale_order",
+        "product",
+        "stock",
+        "account",
+        "sale",
+    ],
     "data": [
         "security/ir.model.access.csv",
         "report/invoice_report.xml",
