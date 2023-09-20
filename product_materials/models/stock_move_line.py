@@ -31,7 +31,13 @@ class StockMoveLine(models.Model):
             )
             logging.info("=====MATERIALS======")
             logging.info(materials)
+            # T64403
+            show_materials = (
+                move_line.move_id.sale_line_id.order_id.show_materials_with_report
+            )
+
             if line_key in aggregated_move_lines:
                 aggregated_move_lines[line_key]["materials"] = materials
+                aggregated_move_lines[line_key]["show_materials"] = show_materials
 
         return aggregated_move_lines
