@@ -33,7 +33,7 @@ class StockMoveLine(models.Model):
             logging.info(materials)
             # T64403
             show_materials = (
-                move_line.move_id.sale_line_id.order.show_materials_with_report
+                move_line.move_id.sale_line_id.order_id.show_materials_with_report
             )
 
             if line_key in aggregated_move_lines:
