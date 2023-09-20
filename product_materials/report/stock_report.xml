@@ -33,7 +33,9 @@
         inherit_id="stock.stock_report_delivery_aggregated_move_lines"
     >
         <xpath expr="//tr/td[last()]" position="after">
-                <tr>
+                <tr
+                t-if="aggregated_lines[line]['show_materials'] and aggregated_lines[line]['materials']"
+            >
                     <td><span>Materials:</span>
                         <t t-if="len(aggregated_lines[line]['materials']) > 1">
                             <t t-foreach="aggregated_lines[line]['materials']" t-as="m">
