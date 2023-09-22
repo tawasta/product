@@ -7,7 +7,7 @@
         <field name="arch" type="xml">
             <field name="barcode" position="after">
                 <field name="atex_compliant" />
-                <field name="reach_compliant"/>
+                <field name="reach_compliant" />
                 <field name="rohs_compliant" />
             </field>
         </field>
