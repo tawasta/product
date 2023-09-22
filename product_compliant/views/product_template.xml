@@ -6,9 +6,9 @@
         <field name="inherit_id" ref="product.product_template_only_form_view" />
         <field name="arch" type="xml">
             <field name="barcode" position="after">
-                <field name="atex_compliant" widget="many2many_tags" />
-                <field name="reach_compliant" widget="many2many_tags" />
-                <field name="rohs_compliant" widget="many2many_tags" />
+                <field name="atex_compliant" />
+                <field name="reach_compliant"/>
+                <field name="rohs_compliant" />
             </field>
         </field>
     </record>
@@ -30,9 +30,9 @@
         <field name="inherit_id" ref="product.product_normal_form_view" />
         <field name="arch" type="xml">
             <field name="barcode" position="after">
-                <field name="atex_compliant" widget="many2many_tags" readonly="1" />
-                <field name="reach_compliant" widget="many2many_tags" readonly="1" />
-                <field name="rohs_compliant" widget="many2many_tags" readonly="1" />
+                <field name="atex_compliant" readonly="1" />
+                <field name="reach_compliant" readonly="1" />
+                <field name="rohs_compliant" readonly="1" />
             </field>
         </field>
     </record>

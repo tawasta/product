@@ -10,7 +10,7 @@ class ProductTemplate(models.Model):
     #     help="This product is ATEX directive compliant.",
     # )
 
-    atex_compliant = fields.Many2many(
+    atex_compliant = fields.Many2one(
         "product.compliant",
         string="ATEX Compliant",
         help="This product is ATEX directive compliant.",
@@ -22,7 +22,7 @@ class ProductTemplate(models.Model):
     #     "of Chemicals regulation compliant.",
     # )
 
-    reach_compliant = fields.Many2many(
+    reach_compliant = fields.Many2one(
         "product.compliant",
         string="REACH Compliant",
         relation="rel_reach_compliant",
@@ -36,7 +36,7 @@ class ProductTemplate(models.Model):
     #     "compliant.",
     # )
 
-    rohs_compliant = fields.Many2many(
+    rohs_compliant = fields.Many2one(
         "product.compliant",
         string="RoHS Compliant",
         relation="rel_rohs_compliant",
