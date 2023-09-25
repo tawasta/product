@@ -33,6 +33,7 @@ addon | version | maintainers | summary
 [product_pricelist_price](product_pricelist_price/) | 14.0.1.0.0 |  | Show cost price and sale price on pricelist items
 [product_pricelist_show_create_date](product_pricelist_show_create_date/) | 14.0.1.0.0 |  | Show create date on pricelists
 [product_pricelist_uom](product_pricelist_uom/) | 14.0.1.0.0 |  | Show UOM on pricelists
+[product_primary_vendor_info](product_primary_vendor_info/) | 14.0.1.0.0 |  | Helper fields for showing primary vendor's info
 [product_publication](product_publication/) | 14.0.1.0.0 |  | Adds publication attributes for products.
 [product_quality_instruction](product_quality_instruction/) | 14.0.1.0.0 |  | Instruction Documents for Products
 [product_quality_instruction_incoming_shipments](product_quality_instruction_incoming_shipments/) | 14.0.1.0.0 |  | Mandatory quality checks when receiving goods
@@ -46,10 +47,12 @@ addon | version | maintainers | summary
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 14.0.1.0.0 |  | Hide SH tags from product template
 [product_template_rack](product_template_rack/) | 14.0.1.0.0 |  | Introduces a new field, Rack, to set stable product locations
 [product_template_row](product_template_row/) | 14.0.1.0.0 |  | Introduces a new field, Row, to set stable product locations
+[product_template_tags_analytic_tags](product_template_tags_analytic_tags/) | 14.0.1.0.0 |  | Analytic tags for product template tags
 [product_template_weight](product_template_weight/) | 14.0.1.0.0 |  | Variant weight and volume is managed in related product template
 [product_translations](product_translations/) | 14.0.1.0.0 |  | Product translations in backend
 [product_tree_description](product_tree_description/) | 14.0.1.0.0 |  | Description field in product tree view
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
+[product_uom_helper](product_uom_helper/) | 14.0.1.0.0 |  | Shows helper fields on product UOM:s
 [product_update_quantity_to_inventory_adjustment](product_update_quantity_to_inventory_adjustment/) | 14.0.1.0.1 |  | Use Inventory Adjustment from Update Quantity functionality
 [product_use_tree_as_default_view](product_use_tree_as_default_view/) | 14.0.1.0.0 |  | Use tree as a default view for products
 [product_variant_company](product_variant_company/) | 14.0.1.0.0 |  | Add varian_company_id for product variant
