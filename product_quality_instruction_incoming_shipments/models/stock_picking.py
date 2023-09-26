@@ -26,7 +26,7 @@ class StockPicking(models.Model):
     def create(self, vals):
         # When an incoming picking is created from scratch,
         # create the quality checklist
-        res = super(StockPicking, self).create(vals)
+        res = super().create(vals)
         if res.picking_type_code == "incoming":
             res.initialize_quality_checks()
         return res
@@ -43,7 +43,7 @@ class StockPicking(models.Model):
                     )
                 )
 
-        return super(StockPicking, self).button_validate()
+        return super().button_validate()
 
     def initialize_quality_checks(self):
         # Go through all unique products that appear on the picking lines.
@@ -51,6 +51,10 @@ class StockPicking(models.Model):
         quality_check_model = self.env["product_quality_instruction_i_s.check"]
 
         for record in self:
+            if record.picking_type_code != "incoming":
+                # Only match Receipts
+                continue
+
             record.quality_check_ids = False
             incoming_products = list({move.product_id for move in record.move_lines})
 
@@ -58,17 +62,16 @@ class StockPicking(models.Model):
                 for (
                     quality_instruction
                 ) in product.product_tmpl_id.quality_instruction_ids:
-                    quality_check_model.create(
-                        {
-                            "instruction_id": quality_instruction.id,
-                            "product_id": product.id,
-                            "picking_id": record.id,
-                        }
-                    )
+                    values = {
+                        "instruction_id": quality_instruction.id,
+                        "product_id": product.id,
+                        "picking_id": record.id,
+                    }
+                    quality_check_model.create(values)
 
     def _create_backorder(self):
         # When an incoming picking is created as a backorder
         # from another picking, create the quality checklist
-        res = super(StockPicking, self)._create_backorder()
+        res = super()._create_backorder()
         res.initialize_quality_checks()
         return res
