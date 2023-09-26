@@ -29,13 +29,10 @@
     "application": False,
     "installable": True,
     "depends": [
-        "base_automation",
         "product_quality_instruction",
-        "purchase",
         "purchase_stock",
     ],
     "data": [
-        "data/automation_rule.xml",
         "views/stock_picking.xml",
         "security/ir.model.access.csv",
     ],
