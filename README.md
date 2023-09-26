@@ -36,7 +36,7 @@ addon | version | maintainers | summary
 [product_primary_vendor_info](product_primary_vendor_info/) | 14.0.1.0.0 |  | Helper fields for showing primary vendor's info
 [product_publication](product_publication/) | 14.0.1.0.0 |  | Adds publication attributes for products.
 [product_quality_instruction](product_quality_instruction/) | 14.0.1.0.0 |  | Instruction Documents for Products
-[product_quality_instruction_incoming_shipments](product_quality_instruction_incoming_shipments/) | 14.0.1.0.0 |  | Mandatory quality checks when receiving goods
+[product_quality_instruction_incoming_shipments](product_quality_instruction_incoming_shipments/) | 14.0.1.0.1 |  | Mandatory quality checks when receiving goods
 [product_reach](product_reach/) | 14.0.1.0.0 |  | Add a field for product REACH compliancy
 [product_rohs](product_rohs/) | 14.0.1.0.0 |  | Add a field for product RoHS compliancy
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 14.0.1.0.1 |  | Product Show only in Suggested accessories

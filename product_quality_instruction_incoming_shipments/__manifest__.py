@@ -21,13 +21,22 @@
 {
     "name": "Incoming Shipments Quality Checks",
     "summary": "Mandatory quality checks when receiving goods",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.0.1",
     "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product_quality_instruction", "purchase", "purchase_stock"],
-    "data": ["views/stock_picking.xml", "security/ir.model.access.csv"],
+    "depends": [
+        "base_automation",
+        "product_quality_instruction",
+        "purchase",
+        "purchase_stock",
+    ],
+    "data": [
+        "data/automation_rule.xml",
+        "views/stock_picking.xml",
+        "security/ir.model.access.csv",
+    ],
 }
