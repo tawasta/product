@@ -6,9 +6,9 @@
         <field name="inherit_id" ref="product.product_template_only_form_view" />
         <field name="arch" type="xml">
             <field name="barcode" position="after">
-                <field name="atex_compliant" />
-                <field name="reach_compliant" />
-                <field name="rohs_compliant" />
+                <field name="atex_compliant" options="{'no_create': True}" />
+                <field name="reach_compliant" options="{'no_create': True}" />
+                <field name="rohs_compliant" options="{'no_create': True}" />
             </field>
         </field>
     </record>
