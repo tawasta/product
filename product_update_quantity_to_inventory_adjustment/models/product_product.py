@@ -32,6 +32,7 @@ class ProductProduct(models.Model):
             "product_ids": [(6, 0, [self.id])],
             "location_ids": [(6, 0, [location.id])],
             "company_id": company.id,
+            "exhausted": True,
             "prefill_counted_quantity": "counted",
             "name": "{}/{}/{}".format("Adjustment", disp_name, now_date),
         }

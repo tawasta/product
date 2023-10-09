@@ -32,6 +32,7 @@ class ProductTemplate(models.Model):
         inv_vals = {
             "product_ids": [(6, 0, self.product_variant_ids.ids)],
             "location_ids": [(6, 0, [location.id])],
+            "exhausted": True,
             "company_id": company.id,
             "prefill_counted_quantity": "counted",
             "name": "{}/{}/{}".format("Adjustment", disp_name, now_date),
