@@ -1,13 +1,13 @@
 # Translation of Odoo Server.
 # This file contains the translation of the following modules:
-# 	* product_atex
+# 	* product_compliant
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0-20221025\n"
+"Project-Id-Version: Odoo Server 14.0-20230925\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-28 18:35+0000\n"
-"PO-Revision-Date: 2022-10-28 18:35+0000\n"
+"POT-Creation-Date: 2023-10-11 12:40+0000\n"
+"PO-Revision-Date: 2023-10-11 12:40+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -15,34 +15,245 @@ msgstr ""
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
 
-#. module: product_atex
-#: model:ir.model.fields,field_description:product_atex.field_product_product__atex_compliant
-#: model:ir.model.fields,field_description:product_atex.field_product_template__atex_compliant
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_procountor_product_product__atex_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_product__atex_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_template__atex_compliant
 msgid "ATEX Compliant"
 msgstr "ATEX-yhteensopiva"
 
-#. module: product_atex
-#: model:ir.model.fields,field_description:product_atex.field_product_template__display_name
+#. module: product_compliant
+#: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'ATEX Compliant' status selection field on product page."
+msgstr "Rastita näyttääksesi 'ATEX-yhteensopiva' -valintakenttä tuotesivulla."
+
+#. module: product_compliant
+#: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'Composition Checked' status selection field on product "
+"page."
+msgstr ""
+"Rastita näyttääksesi 'Materiaalit listattu' -valintakenttä tuotesivulla."
+
+#. module: product_compliant
+#: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'MSDS (Material Safety Data Sheet) Checked' status "
+"selection field on product page."
+msgstr ""
+"Rastita näyttääksesi 'KTT (Käyttöturvallisuustiedote) tarkistettu' "
+"-valintakenttä tuotesivulla."
+
+#. module: product_compliant
+#: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'Reach Compliant' status selection field on product page."
+msgstr ""
+"Rastita näyttääksesi 'REACH-yhteensopiva' -valintakenttä tuotesivulla."
+
+#. module: product_compliant
+#: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'RoHS Compliant' status selection field on product page."
+msgstr "Rastita näyttääksesi 'RoHS-yhteensopiva' -valintakenttä tuotesivulla."
+
+#. module: product_compliant
+#: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'Work Safety Checked' status selection field on product "
+"page."
+msgstr ""
+"Rastita näyttääksesi 'Työturvallisuus tarkistettu' -valintakenttä "
+"tuotesivulla."
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_procountor_product_product__composition_checked_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_product__composition_checked_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_template__composition_checked_compliant
+msgid "Composition Checked"
+msgstr "Materiaalit listattu"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant__description
+msgid "Description"
+msgstr "Kuvaus"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant__display_name
+#: model:ir.model.fields,field_description:product_compliant.field_product_template__display_name
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
 
-#. module: product_atex
-#: model:ir.model.fields,field_description:product_atex.field_product_template__id
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant__id
+#: model:ir.model.fields,field_description:product_compliant.field_product_template__id
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__id
 msgid "ID"
-msgstr "Tunniste (ID)"
+msgstr ""
 
-#. module: product_atex
-#: model:ir.model.fields,field_description:product_atex.field_product_template____last_update
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant____last_update
+#: model:ir.model.fields,field_description:product_compliant.field_product_template____last_update
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings____last_update
 msgid "Last Modified on"
 msgstr "Viimeksi muokattu"
 
-#. module: product_atex
-#: model:ir.model,name:product_atex.model_product_template
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi muokannut"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi muokattu"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_procountor_product_product__msds_checked_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_product__msds_checked_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_template__msds_checked_compliant
+msgid "MSDS (Material Safety Data Sheet) Checked"
+msgstr "KTT (Käyttöturvallisuustiedote) tarkistettu"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__group_product_template_manage_compliance_atex
+#: model:res.groups,name:product_compliant.group_product_template_manage_compliance_atex
+msgid "Manage ATEX Compliance Info for Products"
+msgstr "Hallinnoi ATEX-yhteensopivuustietoa tuotteilla"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__group_product_template_manage_compliance_composition_checked
+#: model:res.groups,name:product_compliant.group_product_template_manage_compliance_composition_checked
+msgid "Manage Composition Checked Info for Products"
+msgstr "Hallinnoi materiaalien listauksen statusta tuotteilla"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__group_product_template_manage_compliance_msds_checked
+#: model:res.groups,name:product_compliant.group_product_template_manage_compliance_msds_checked
+msgid "Manage MSDS (Material Safety Data Sheet) Checked Info for Products"
+msgstr ""
+"Hallinnoi käyttöturvallisuustiedotteen tarkistuksen statusta tuotteilla"
+
+#. module: product_compliant
+#: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
+msgid "Manage Product Compliance Values"
+msgstr "Hallinnoi vaatimuksenmukaisuuden arvoja"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__group_product_template_manage_compliance_reach
+#: model:res.groups,name:product_compliant.group_product_template_manage_compliance_reach
+msgid "Manage REACH Compliance Info for Products"
+msgstr "Hallinnoi REACH-yhteensopivuustietoa tuotteilla"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__group_product_template_manage_compliance_rohs
+#: model:res.groups,name:product_compliant.group_product_template_manage_compliance_rohs
+msgid "Manage RoHS Compliance Info for Products"
+msgstr "Hallinnoi RoHS-yhteensopivuustietoa tuotteilla"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__group_product_template_manage_compliance_work_safety_checked
+#: model:res.groups,name:product_compliant.group_product_template_manage_compliance_work_safety_checked
+msgid "Manage Work Safety Checked Info for Products"
+msgstr "Hallitse työturvallisuuden tarkistuksen statusta tuotteilla"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_compliant__name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: product_compliant
+#: model:ir.actions.act_window,name:product_compliant.action_product_compliant_res_config_settings
+#: model:ir.model,name:product_compliant.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr ""
+
+#. module: product_compliant
+#: model:ir.ui.menu,name:product_compliant.menu_product_compliant_submenu
+#: model_terms:ir.ui.view,arch_db:product_compliant.product_template_only_form_view
+msgid "Product Compliance"
+msgstr "Vaatimuksenmukaisuus"
+
+#. module: product_compliant
+#: model:ir.ui.menu,name:product_compliant.menu_product_compliant_res_config_settings
+#: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
+msgid "Product Compliance Types"
+msgstr "Vaatimuksenmukaisuuden tyypit"
+
+#. module: product_compliant
+#: model:ir.actions.act_window,name:product_compliant.action_product_compliant_values
+#: model:ir.ui.menu,name:product_compliant.menu_product_compliant_values
+msgid "Product Compliance Values"
+msgstr "Vaatimuksenmukaisuuden arvot"
+
+#. module: product_compliant
+#: model:ir.model,name:product_compliant.model_product_compliant
+msgid "Product Compliant"
+msgstr ""
+
+#. module: product_compliant
+#: model:ir.model,name:product_compliant.model_product_template
 msgid "Product Template"
 msgstr "Tuotemalli"
 
-#. module: product_atex
-#: model:ir.model.fields,help:product_atex.field_product_product__atex_compliant
-#: model:ir.model.fields,help:product_atex.field_product_template__atex_compliant
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_procountor_product_product__reach_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_product__reach_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_template__reach_compliant
+msgid "REACH Compliant"
+msgstr "REACH-yhteensopiva"
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_procountor_product_product__rohs_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_product__rohs_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_template__rohs_compliant
+msgid "RoHS Compliant"
+msgstr "RoHS-yhteensopiva"
+
+#. module: product_compliant
+#: model:ir.model.fields,help:product_compliant.field_procountor_product_product__atex_compliant
+#: model:ir.model.fields,help:product_compliant.field_product_product__atex_compliant
+#: model:ir.model.fields,help:product_compliant.field_product_template__atex_compliant
 msgid "This product is ATEX directive compliant."
-msgstr "Tämä tuote on ATEX-direktiivin mukainen"
+msgstr "Tuote on ATEX-direktiivin mukainen"
+
+#. module: product_compliant
+#: model:ir.model.fields,help:product_compliant.field_procountor_product_product__reach_compliant
+#: model:ir.model.fields,help:product_compliant.field_product_product__reach_compliant
+#: model:ir.model.fields,help:product_compliant.field_product_template__reach_compliant
+msgid ""
+"This product is Registration, Evaluation, Authorisation and\n"
+"                Restriction of Chemicals regulation compliant."
+msgstr ""
+"Tämä tuote on 'Registration, Evaluation, Authorisation and\n"
+"                Restriction of Chemicals' -säädöksen mukainen"
+
+#. module: product_compliant
+#: model:ir.model.fields,help:product_compliant.field_procountor_product_product__rohs_compliant
+#: model:ir.model.fields,help:product_compliant.field_product_product__rohs_compliant
+#: model:ir.model.fields,help:product_compliant.field_product_template__rohs_compliant
+msgid ""
+"This product is Restriction of Hazardous Substances\n"
+"                Directive 2002/95/EC compliant."
+msgstr ""
+"Tämä tuote on 'Restriction of Hazardous Substances\n"
+"                Directive 2002/95/EC' -direktiivin mukainen."
+
+#. module: product_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_procountor_product_product__work_safety_checked_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_product__work_safety_checked_compliant
+#: model:ir.model.fields,field_description:product_compliant.field_product_template__work_safety_checked_compliant
+msgid "Work Safety Checked"
+msgstr "Työturvallisuus tarkistettu"

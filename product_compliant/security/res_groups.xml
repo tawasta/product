@@ -1,0 +1,42 @@
+<odoo>
+    <record id="group_product_template_manage_compliance_atex" model="res.groups">
+        <field name="name">Manage ATEX Compliance Info for Products</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record id="group_product_template_manage_compliance_reach" model="res.groups">
+        <field name="name">Manage REACH Compliance Info for Products</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record id="group_product_template_manage_compliance_rohs" model="res.groups">
+        <field name="name">Manage RoHS Compliance Info for Products</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record
+        id="group_product_template_manage_compliance_composition_checked"
+        model="res.groups"
+    >
+        <field name="name">Manage Composition Checked Info for Products</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record
+        id="group_product_template_manage_compliance_msds_checked"
+        model="res.groups"
+    >
+        <field
+            name="name"
+        >Manage MSDS (Material Safety Data Sheet) Checked Info for Products</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record
+        id="group_product_template_manage_compliance_work_safety_checked"
+        model="res.groups"
+    >
+        <field name="name">Manage Work Safety Checked Info for Products</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+</odoo>
