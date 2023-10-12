@@ -20,18 +20,20 @@
 
 {
     "name": "Product Compliant",
-    "summary": "Add a fields for product compliancy",
-    "version": "14.0.1.0.0",
+    "summary": "Add fields for product compliance (REACH, RoHS, Work Safety etc)",
+    "version": "14.0.1.1.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product"],
+    "depends": ["sale"],
     "data": [
         "security/ir.model.access.csv",
+        "security/res_groups.xml",
         "views/product_compliant.xml",
         "views/product_template.xml",
+        "views/res_config_settings.xml",
     ],
 }
