@@ -26,3 +26,6 @@ class ProductPricelistItem(models.Model):
             if product_id:
                 record.list_price = product_id.list_price
                 record.standard_price = product_id.standard_price
+            else:
+                record.list_price = False
+                record.standard_price = False
