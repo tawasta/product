@@ -21,7 +21,7 @@
 {
     "name": "Pricelist sale and cost price",
     "summary": "Show cost price and sale price on pricelist items",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
