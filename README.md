@@ -32,7 +32,7 @@ addon | version | maintainers | summary
 [product_pricelist_partners](product_pricelist_partners/) | 14.0.1.0.0 |  | Show partners using the pricelist
 [product_pricelist_price](product_pricelist_price/) | 14.0.1.0.1 |  | Show cost price and sale price on pricelist items
 [product_pricelist_show_create_date](product_pricelist_show_create_date/) | 14.0.1.0.0 |  | Show create date on pricelists
-[product_pricelist_uom](product_pricelist_uom/) | 14.0.1.0.1 |  | Show UOM on pricelists
+[product_pricelist_uom](product_pricelist_uom/) | 14.0.1.0.0 |  | Show UOM on pricelists
 [product_primary_vendor_info](product_primary_vendor_info/) | 14.0.1.0.0 |  | Helper fields for showing primary vendor's info
 [product_publication](product_publication/) | 14.0.1.0.0 |  | Adds publication attributes for products.
 [product_quality_instruction](product_quality_instruction/) | 14.0.1.0.0 |  | Instruction Documents for Products

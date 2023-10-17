@@ -15,5 +15,3 @@ class ProductPricelistItem(models.Model):
 
             if product_id:
                 record.unit_of_measure = product_id.uom_id.name
-            else:
-                record.unit_of_measure = False
