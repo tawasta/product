@@ -21,7 +21,7 @@
 {
     "name": "Pricelist UOM",
     "summary": "Show UOM on pricelists",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
