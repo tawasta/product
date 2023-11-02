@@ -20,8 +20,8 @@
 
 {
     "name": "Product Materials",
-    "summary": "Product Materials model to be used on products",
-    "version": "14.0.1.0.5",
+    "summary": "Product Materials info for products and their packaging",
+    "version": "14.0.2.0.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
@@ -29,19 +29,22 @@
     "application": False,
     "installable": True,
     "depends": [
-        "account_invoice_related_sale_order",
-        "product",
         "stock",
-        "account",
         "sale",
+        "account_invoice_related_sale_order",
+        "product_compliant",
     ],
     "data": [
         "security/ir.model.access.csv",
+        "security/res_groups.xml",
         "report/invoice_report.xml",
         "report/stock_report.xml",
         "views/product_material.xml",
-        "views/product_material_category.xml",
-        "views/product_product.xml",
+        "views/product_material_class.xml",
+        "views/product_material_waste_component.xml",
+        "views/product_material_waste_component_class.xml",
+        "views/product_template.xml",
+        "views/res_config_settings.xml",
         "views/sale_order.xml",
     ],
 }

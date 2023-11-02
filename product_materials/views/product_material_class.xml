@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_material_class_tree" model="ir.ui.view">
+        <field name="name">product.material.class.tree</field>
+        <field name="model">product.material.class</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree string="Product Material Class info">
+                <field name="name" />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_product_material_class_form" model="ir.ui.view">
+        <field name="name">product.material.class.form</field>
+        <field name="model">product.material.class</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <form string="Product Material Class Info">
+                <sheet>
+
+                    <div class="oe_title">
+                        <label
+                            class="oe_edit_only"
+                            for="name"
+                            string="Material Class Name"
+                        />
+                        <h1>
+                            <field name="name" placeholder="Material Name" />
+                        </h1>
+                    </div>
+
+                    <notebook>
+                        <page
+                            string="Product Material Class Info"
+                            name="material_class_info"
+                        >
+                            <field name="description" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_material_class_action" model="ir.actions.act_window">
+        <field name="name">Product Material Classes</field>
+        <field name="res_model">product.material.class</field>
+        <field name="view_mode">form,tree</field>
+        <field name="view_id" ref="view_product_material_class_tree" />
+    </record>
+
+    <menuitem
+        id="menu_product_material_class"
+        parent="stock.menu_product_in_config_stock"
+        sequence="31"
+        action="product_material_class_action"
+    />
+</odoo>
