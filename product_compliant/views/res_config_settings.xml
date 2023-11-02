@@ -113,7 +113,10 @@
                         </div>
 
                         <!-- Add a link to the menu where the yes/no etc. allowed values are managed -->
-                        <div class="col-12 col-lg-6 o_setting_box">
+                        <div
+                            class="col-12 col-lg-6 o_setting_box"
+                            id="product_compliance_values_link_box"
+                        >
                             <button
                                 name="product_compliant.action_product_compliant_values"
                                 icon="fa-arrow-right"

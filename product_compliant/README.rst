@@ -7,7 +7,8 @@ Product Compliance
 ==================
 
 * A module for managing various types of compliance for product templates
-* All compliance types share the same possible values, which can be added/configured in settings (e.g. "Yes", "No", "Not Applicable")
+* Compliance types by default share the same possible values, which can be added/configured in settings (e.g. "Yes", "No", "Not Applicable"). You can also set 
+  a value to be specific to only for a single compliance (e.g. REACH)
 * You can also configure in settings which of the supported compliance type fields should be shown and which are irrelevant and can be hidden from users altogether
 * Currently supported compliance types:
 
