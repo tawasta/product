@@ -21,7 +21,7 @@
 {
     "name": "Internal note for product variant",
     "summary": "Internal note for product variant",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
