@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.internal.note</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']/.." position="after">
+                <group string="Variant Notes">
+                    <field
+                        name="internal_note"
+                        nolabel="1"
+                        placeholder="Notes for a product variant..."
+                    />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
