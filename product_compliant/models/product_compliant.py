@@ -14,7 +14,7 @@ class ProductCompliant(models.Model):
         selection=[
             ("atex", "ATEX Compliant"),
             ("reach", "REACH Compliant"),
-            ("rohs", " RoHS Compliant"),
+            ("rohs", "RoHS Compliant"),
             ("composition", "Composition Checked"),
             ("msds", "MSDS (Material Safety Data Sheet) Checked"),
             ("work_safety", "Work Safety Checked"),

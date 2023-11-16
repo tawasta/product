@@ -8,9 +8,10 @@ class ProductMaterialWasteComponent(models.Model):
 
     name = fields.Char(string="Name", required=True)
 
-    product_material_waste_component_class = fields.Many2one(
-        comodel_name="product.material.waste.component.class",
-        string="Waste Component Class",
+    product_material_waste_endpoint_id = fields.Many2one(
+        comodel_name="product.material.waste.endpoint",
+        string="Waste Endpoint",
+        description="The endpoint this type of waste typically ends up in",
     )
 
     description = fields.Text(

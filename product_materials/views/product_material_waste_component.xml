@@ -8,7 +8,7 @@
             <tree string="Product Material Waste Component Info" multi_edit="1">
                 <field name="name" />
                 <field
-                    name="product_material_waste_component_class"
+                    name="product_material_waste_endpoint_id"
                     options="{ 'no_create': True }"
                 />
                 <field name="description" />
@@ -39,7 +39,7 @@
 
                         <group>
                             <field
-                                name="product_material_waste_component_class"
+                                name="product_material_waste_endpoint_id"
                                 options="{ 'no_create': True }"
                             />
                         </group>

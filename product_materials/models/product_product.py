@@ -1,9 +1,9 @@
 from odoo import fields, models
 
 
-class ProductTemplate(models.Model):
+class ProductProduct(models.Model):
 
-    _inherit = "product.template"
+    _inherit = "product.product"
 
     """
     # TODO: consider if this should be enforced
@@ -18,14 +18,14 @@ class ProductTemplate(models.Model):
 
     product_material_compositions = fields.One2many(
         comodel_name="product.material.composition",
-        inverse_name="product_template",
+        inverse_name="product_product_id",
         string="Product Material Compositions",
         domain=[("type", "=", "product")],
     )
 
     product_packaging_material_compositions = fields.One2many(
         comodel_name="product.material.composition",
-        inverse_name="product_template",
+        inverse_name="product_product_id",
         string="Product Packaging Material Compositions",
         domain=[("type", "=", "product_packaging")],
     )
