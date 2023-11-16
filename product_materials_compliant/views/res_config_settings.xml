@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+
+        <record id="res_config_settings_view_form" model="ir.ui.view">
+            <field
+                name="name"
+            >res.config.settings.view.form.inherit.product.material.compliance</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="product.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@id='product_general_settings']" position="after">
+                    <h2>Product Material Compliance Types</h2>
+                    <div
+                        class="row mt16 o_settings_container"
+                        id="product_materials_compliance_settings"
+                    >
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_prod_mat_comp_manage_compliance_chemicals"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_prod_mat_comp_manage_compliance_chemicals"
+                                />
+                                <div
+                                    class="text-muted"
+                                >Check box to show 'Chemicals Compliant' status selection field on product page's Materials tab's lines.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+                                />
+                                <div
+                                    class="text-muted"
+                                >Check box to show 'Conflict Area Minerals Compliant' status selection field on product page's Materials tab's lines.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_prod_mat_comp_manage_compliance_halogens"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_prod_mat_comp_manage_compliance_halogens"
+                                />
+                                <div
+                                    class="text-muted"
+                                >Check box to show 'Halogen Compliant' status selection field on product page's Materials tab's lines.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_prod_mat_comp_manage_compliance_pop"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_prod_mat_comp_manage_compliance_pop"
+                                />
+                                <div
+                                    class="text-muted"
+                                >Check box to show 'POP Compliant' (Persistent Organic Pollutants) status selection field on product page's Materials tab's lines.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_prod_mat_comp_manage_compliance_reach"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_prod_mat_comp_manage_compliance_reach"
+                                />
+                                <div
+                                    class="text-muted"
+                                >Check box to show 'Reach Compliant' status selection field on product page's Materials tab's lines.</div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_prod_mat_comp_manage_compliance_rohs"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_prod_mat_comp_manage_compliance_rohs"
+                                />
+                                <div
+                                    class="text-muted"
+                                >Check box to show 'RoHS Compliant' status selection field on product page's Materials tab's lines.</div>
+                            </div>
+                        </div>
+
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_prod_mat_comp_manage_compliance_scip"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_prod_mat_comp_manage_compliance_scip"
+                                />
+                                <div
+                                    class="text-muted"
+                                >Check box to show 'SCIP Compliant' (Substances of Concern in Products) status selection field on product page's Materials tab's lines.</div>
+                            </div>
+                        </div>
+
+                        <!-- Add a link to the menu where the yes/no etc. allowed values are managed -->
+                        <div
+                            class="col-12 col-lg-6 o_setting_box"
+                            id="product_compliance_values_link_box"
+                        >
+                            <button
+                                name="product_compliant.action_product_compliant_values"
+                                icon="fa-arrow-right"
+                                type="action"
+                                string="Manage Compliance Values"
+                                class="btn-link o_web_settings_access_rights"
+                            />
+                        </div>
+                    </div>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

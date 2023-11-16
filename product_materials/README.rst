@@ -6,30 +6,42 @@
 Product Materials
 =================
 
-* This module adds support for providing information about what materials (e.g. wood, cardboard, copper) either a) the product itself, 
-  or b) the product's packaging consists of. (called "Material Compositions")
-* Supports configuring if you want to keep track of materials for both the product and its packaging, or just one of them
-* Supports configuring if you want to track how much of the material originates from recycled contents
-* Note: the module depends on product_compliant to add additional compliances that are managed at Material Composition level:
+* This module adds support for providing information about what materials (e.g. wood, cardboard, copper) either a) the product variant itself, 
+  or b) the product variant's packaging consists of. (called "Material Compositions")
+* The material hierarchy provided by this module is
 
-  * Halogen Compliant
-  * Conflict Minerals Compliant
+  * Material Class (top level)
+  * Material
+  * Material Sublevel (bottom level)
 
+* Supports configuring if you want to track
+
+  * materials for both the product and its packaging, or just one of them
+  * how much of the material weighs
+  * how much of the material originates from recycled contents
+  * what kind of waste results from each material
+
+* Note: you may also want to install product_material_compliant which adds the possibility to define e.g. REACH, ROHS, Halogen compliances for each Material Composition
 
 Configuration
 =============
 * Enable which material compositions you want to be shown to user by checking the relevant checkboxes in Inventory -> Configuration -> Settings
-* In the same menu, configure if you want to track the amounts of recycled material
-* In the same menu, configure if you want to give the user the option to show material info on sale and picking related printouts
-* In the same menu, configure if you want to track the waste components
+* In the same menu, configure if you want to 
+
+  * track the material weights
+  * track the amounts of recycled contents in materials
+  * track the waste components of materials
+  * give the user the option to show material info on sale and picking related printouts
+
 * Add top level classes for the materials in Inventory -> Configuration -> Product Material Classes
 * Add the materials and whether they are related to products or packaging or both in Inventory -> Configuration -> Product Materials
-* Add top level classes for the waste components in Inventory -> Configuration -> Waste Components Classes
-* Add the individual Waste Components in Inventory -> Configuration -> Waste Components
+* Add the material sublevels in Inventory -> Configuration -> Product Material Sublevels
+* Add the waste endpoints in Inventory -> Configuration -> Waste Components
+* Add the waste components in Inventory -> Configuration -> Waste Components
 
 Usage
 =====
-* Once configuration is done, open a product template page and fill in the appropriate material and waste information
+* Once configuration is done, open a product variant page and fill in the appropriate material and waste information
 * When entering a Sale Order (and the "Show materials on reports" feature is enabled), select on the Sale Order page if the SO's related prints should contain the product material information.
   This will affect the Invoice print and the Delivery Slip print
 

@@ -8,7 +8,7 @@
             <field name="date_order" position="after">
                   <field
                     name="show_materials_with_report"
-                    groups="product_materials.group_product_template_enable_product_materials_on_prints"
+                    groups="product_materials.group_product_product_enable_product_materials_on_prints"
                 />
             </field>
         </field>

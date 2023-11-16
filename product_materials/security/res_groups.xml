@@ -1,19 +1,24 @@
 <odoo>
-    <record id="group_product_template_manage_product_materials" model="res.groups">
+    <record id="group_product_product_manage_product_materials" model="res.groups">
         <field name="name">Manage Material Info for Products</field>
         <field name="category_id" ref="base.module_category_inventory_inventory" />
     </record>
 
     <record
-        id="group_product_template_manage_product_packaging_materials"
+        id="group_product_product_manage_product_packaging_materials"
         model="res.groups"
     >
         <field name="name">Manage Packaging Material Info for Products</field>
         <field name="category_id" ref="base.module_category_inventory_inventory" />
     </record>
 
+    <record id="group_product_product_manage_materials_weights" model="res.groups">
+        <field name="name">Manage Product &amp; Packaging Materials' Weights</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
     <record
-        id="group_product_template_manage_materials_recycling_percentages"
+        id="group_product_product_manage_materials_recycling_percentages"
         model="res.groups"
     >
         <field
@@ -23,36 +28,10 @@
     </record>
 
     <record
-        id="group_product_template_enable_product_materials_on_prints"
+        id="group_product_product_enable_product_materials_on_prints"
         model="res.groups"
     >
         <field name="name">Enable showing Product Materials on prints</field>
-        <field name="category_id" ref="base.module_category_inventory_inventory" />
-    </record>
-
-    <!-- groups for the new compliances -->
-    <record
-        id="group_prod_mat_comp_manage_compliance_conflict_area_minerals"
-        model="res.groups"
-    >
-        <field
-            name="name"
-        >Manage Conflict Area Minerals Compliance Info for Product Materials</field>
-        <field name="category_id" ref="base.module_category_inventory_inventory" />
-    </record>
-
-    <record id="group_prod_mat_comp_manage_compliance_halogens" model="res.groups">
-        <field name="name">Manage Halogen Compliance Info for Product Materials</field>
-        <field name="category_id" ref="base.module_category_inventory_inventory" />
-    </record>
-
-    <record
-        id="group_prod_mat_comp_manage_compliance_packaging_materials"
-        model="res.groups"
-    >
-        <field
-            name="name"
-        >Manage Packaging Materials Checked Info for Product Materials</field>
         <field name="category_id" ref="base.module_category_inventory_inventory" />
     </record>
 </odoo>

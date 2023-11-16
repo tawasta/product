@@ -1,75 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
     <data>
-        <!-- Extend the product compliancy setting menu -->
-        <record id="res_config_settings_view_compliance_form" model="ir.ui.view">
-            <field
-                name="name"
-            >res.config.settings.view.form.inherit.product.compliance</field>
-            <field name="model">res.config.settings</field>
-            <field
-                name="inherit_id"
-                ref="product_compliant.res_config_settings_view_form"
-            />
-            <field name="arch" type="xml">
-                <xpath
-                    expr="//div[@id='product_compliance_settings']/div[@id='product_compliance_values_link_box']"
-                    position="before"
-                >
-
-                    <div class="col-12 col-lg-6 o_setting_box">
-                        <div class="o_setting_left_pane">
-                            <field
-                                name="group_prod_mat_comp_manage_compliance_conflict_area_minerals"
-                            />
-                        </div>
-                        <div class="o_setting_right_pane">
-                            <label
-                                for="group_prod_mat_comp_manage_compliance_conflict_area_minerals"
-                            />
-                            <div
-                                class="text-muted"
-                            >Check box to show 'Conflict Area Minerals Compliant' status selection field on product page's Materials tab's lines.</div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-6 o_setting_box">
-                        <div class="o_setting_left_pane">
-                            <field
-                                name="group_prod_mat_comp_manage_compliance_halogens"
-                            />
-                        </div>
-                        <div class="o_setting_right_pane">
-                            <label
-                                for="group_prod_mat_comp_manage_compliance_halogens"
-                            />
-                            <div
-                                class="text-muted"
-                            >Check box to show 'Halogen Compliant' status selection field on product page's Materials tab's lines.</div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-lg-6 o_setting_box">
-                        <div class="o_setting_left_pane">
-                            <field
-                                name="group_prod_mat_comp_manage_compliance_packaging_materials"
-                            />
-                        </div>
-                        <div class="o_setting_right_pane">
-                            <label
-                                for="group_prod_mat_comp_manage_compliance_packaging_materials"
-                            />
-                            <div
-                                class="text-muted"
-                            >Check box to show 'Packaging Materials Checked' status selection field on product page's Materials tab's lines.</div>
-                        </div>
-                    </div>
-
-                </xpath>
-            </field>
-        </record>
-
-
         <!-- Add the new product material settings menu -->
         <record id="res_config_settings_view_material_form" model="ir.ui.view">
             <field
@@ -91,12 +22,12 @@
                         <div class="col-12 col-lg-6 o_setting_box">
                             <div class="o_setting_left_pane">
                                 <field
-                                    name="group_product_template_manage_product_materials"
+                                    name="group_product_product_manage_product_materials"
                                 />
                             </div>
                             <div class="o_setting_right_pane">
                                 <label
-                                    for="group_product_template_manage_product_materials"
+                                    for="group_product_product_manage_product_materials"
                                 />
                                 <div class="text-muted">
                                     Check box to show 'Product Material Compositions'
@@ -109,12 +40,12 @@
                         <div class="col-12 col-lg-6 o_setting_box">
                             <div class="o_setting_left_pane">
                                 <field
-                                    name="group_product_template_manage_product_packaging_materials"
+                                    name="group_product_product_manage_product_packaging_materials"
                                 />
                             </div>
                             <div class="o_setting_right_pane">
                                 <label
-                                    for="group_product_template_manage_product_packaging_materials"
+                                    for="group_product_product_manage_product_packaging_materials"
                                 />
                                 <div class="text-muted">
                                     Check box to show 'Product Packaging Material Compositions'
@@ -127,12 +58,31 @@
                         <div class="col-12 col-lg-6 o_setting_box">
                             <div class="o_setting_left_pane">
                                 <field
-                                    name="group_product_template_manage_materials_recycling_percentages"
+                                    name="group_product_product_manage_materials_weights"
                                 />
                             </div>
                             <div class="o_setting_right_pane">
                                 <label
-                                    for="group_product_template_manage_materials_recycling_percentages"
+                                    for="group_product_product_manage_materials_weights"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Net Weight' and 'Unit of Measure' fields when adding Product
+                                    Material Compositions and Product Packaging Material Compositions.
+                                    on product page. This enables you to how much each of the individual Materials
+                                    weigh.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_manage_materials_recycling_percentages"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_materials_recycling_percentages"
                                 />
                                 <div class="text-muted">
                                     Check box to show 'Recycled Material %' field when adding Product
@@ -146,12 +96,12 @@
                         <div class="col-12 col-lg-6 o_setting_box">
                             <div class="o_setting_left_pane">
                                 <field
-                                    name="group_product_template_enable_product_materials_on_prints"
+                                    name="group_product_product_enable_product_materials_on_prints"
                                 />
                             </div>
                             <div class="o_setting_right_pane">
                                 <label
-                                    for="group_product_template_enable_product_materials_on_prints"
+                                    for="group_product_product_enable_product_materials_on_prints"
                                 />
                                 <div class="text-muted">
                                     Check box to show 'Show materials on reports' checkbox on Sale Orders.

@@ -7,14 +7,22 @@
         <field name="arch" type="xml">
             <tree string="Material info" multi_edit="1">
                 <field name="name" />
-                <field name="product_material_class" options="{ 'no_create': True }" />
+                <field
+                    name="product_material_class_id"
+                    options="{ 'no_create': True }"
+                />
+                <field
+                    name="product_material_waste_component_id"
+                    options="{ 'no_create': True }"
+                />
+
                 <field
                     name="is_product_material"
-                    groups="product_materials.group_product_template_manage_product_materials"
+                    groups="product_materials.group_product_product_manage_product_materials"
                 />
                 <field
                     name="is_product_packaging_material"
-                    groups="product_materials.group_product_template_manage_product_packaging_materials"
+                    groups="product_materials.group_product_product_manage_product_packaging_materials"
                 />
                 <field name="description" />
             </tree>
@@ -36,22 +44,26 @@
                         </h1>
                         <div name="options">
                             <div
-                                groups="product_materials.group_product_template_manage_product_materials"
+                                groups="product_materials.group_product_product_manage_product_materials"
                             >
                                 <field name="is_product_material" />
                                 <label for="is_product_material" />
                             </div>
                             <div
-                                groups="product_materials.group_product_template_manage_product_packaging_materials"
+                                groups="product_materials.group_product_product_manage_product_packaging_materials"
                             >
                                 <field name="is_product_packaging_material" />
                                 <label for="is_product_packaging_material" />
                             </div>
                         </div>
 
-                        <group name="product_material_class_group">
+                        <group>
                             <field
-                                name="product_material_class"
+                                name="product_material_class_id"
+                                options="{ 'no_create': True }"
+                            />
+                            <field
+                                name="product_material_waste_component_id"
                                 options="{ 'no_create': True }"
                             />
                         </group>

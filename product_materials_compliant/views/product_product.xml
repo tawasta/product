@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.product.materials.compliant</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product_materials.product_normal_form_view" />
+        <field name="arch" type="xml">
+
+
+            <!-- Add fields to Product Material Treeview -->
+            <!-- TODO hide for now to save space, confirm if it's ok to show only on form view
+            <xpath expr="//field[@name='product_material_compositions']/tree/field[@name='description']" position="before">
+
+                <field
+                    name="chemicals_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="conflict_area_minerals_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+                    options="{ 'no_create': True }"
+                />
+                <field
+                    name="halogen_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="pop_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_pop"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="reach_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_reach"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="rohs_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="scip_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_scip"
+                    options="{ 'no_create': True }"
+                />
+            </xpath>
+            -->
+
+            <!-- Add fields to Product Material Formview -->
+            <xpath
+                expr="//field[@name='product_material_compositions']/form//notebook"
+                position="before"
+            >
+
+                <group string="Compliancy" name="compliancy_info">
+                    <field
+                        name="chemicals_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="conflict_area_minerals_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+                        options="{ 'no_create': True }"
+                    />
+                    <field
+                        name="halogen_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="pop_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_pop"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="reach_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_reach"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="rohs_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="scip_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_scip"
+                        options="{ 'no_create': True }"
+                    />
+                </group>
+
+            </xpath>
+
+
+            <!-- Add fields to Product Packaging Material Treeview -->
+            <!-- TODO hide for now to save space, confirm if it's ok to show only on form view
+            <xpath expr="//field[@name='product_packaging_material_compositions']/tree/field[@name='description']" position="before">
+
+                <field
+                    name="chemicals_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="conflict_area_minerals_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+                    options="{ 'no_create': True }"
+                />
+                <field
+                    name="halogen_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="pop_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_pop"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="reach_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_reach"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="rohs_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs"
+                    options="{ 'no_create': True }"
+                />
+
+                <field
+                    name="scip_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_scip"
+                    options="{ 'no_create': True }"
+                />
+            </xpath>
+            -->
+
+            <!-- Add fields to Product Packaging Material Formview -->
+            <xpath
+                expr="//field[@name='product_packaging_material_compositions']/form//notebook"
+                position="before"
+            >
+
+                <group string="Compliancy" name="compliancy_info">
+                    <field
+                        name="chemicals_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="conflict_area_minerals_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+                        options="{ 'no_create': True }"
+                    />
+                    <field
+                        name="halogen_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="pop_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_pop"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="reach_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_reach"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="rohs_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs"
+                        options="{ 'no_create': True }"
+                    />
+
+                    <field
+                        name="scip_compliant"
+                        groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_scip"
+                        options="{ 'no_create': True }"
+                    />
+                </group>
+
+            </xpath>
+
+        </field>
+    </record>
+</odoo>

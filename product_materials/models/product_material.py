@@ -8,8 +8,16 @@ class ProductMaterial(models.Model):
 
     name = fields.Char(string="Name", required=True)
 
-    product_material_class = fields.Many2one(
-        comodel_name="product.material.class", string="Product Material Class"
+    product_material_class_id = fields.Many2one(
+        comodel_name="product.material.class",
+        string="Parent Product Material Class",
+        help="Parent Material Class of this Material",
+    )
+
+    product_material_waste_component_id = fields.Many2one(
+        comodel_name="product.material.waste.component",
+        string="Waste Component",
+        help="The Waste Component that typically results from this material",
     )
 
     is_product_material = fields.Boolean(
