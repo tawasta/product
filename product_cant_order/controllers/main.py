@@ -1,29 +1,23 @@
-# 1. Standard library imports:
-import json
-import logging
-
 from odoo import http
 from odoo.http import request
-
-_logger = logging.getLogger(__name__)
-
-# 2. Known third party imports:
-# 3. Odoo imports (openerp):
-
 
 class CheckProduct(http.Controller):
     @http.route(
         ["/check/product/<int:product_id>"],
-        type="http",
+        type="json",
         auth="public",
         website=True,
         csrf=False,
     )
     def get_product(self, product_id=None, **post):
-        product = (
-            request.env["product.product"].sudo().search([("id", "=", product_id)])
-        )
+        try:
+            product = request.env["product.product"].sudo().search([("id", "=", product_id)], limit=1)
+            if product:
+                values = {"order_status": product.can_not_order}
+            else:
+                values = {"error": "Product not found"}
 
-        values = {"order_status": product.can_not_order}
+        except Exception as e:
+            values = {"error": str(e)}
 
-        return json.dumps(values)
+        return values
