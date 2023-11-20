@@ -25,6 +25,26 @@ odoo.define('product_cant_order.product', function (require) {
             });
     }
 
+    function runCheck() {
+        if ($('.oe_website_sale').length && $('#add_to_cart').length) {
+            var productId = $('.product_id').val();
+            console.log(productId);
+            if (productId) {
+                checkProductAvailability(productId, function(isAvailable) {
+                    // Tee jotain callback-funktion perusteella
+                });
+            }
+        }
+    }
+
+    $(document).ready(runCheck);
+
+    $('.variant_attribute select').on('change', function () {
+        setTimeout(function() {
+            runCheck();
+        }, 100);
+    });
+
     return {
         checkProductAvailability: checkProductAvailability,
     };
