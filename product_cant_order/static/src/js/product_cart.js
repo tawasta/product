@@ -31,7 +31,7 @@ odoo.define('product_cant_order.product', function (require) {
             console.log(productId);
             if (productId) {
                 checkProductAvailability(productId, function(isAvailable) {
-                    // Tee jotain callback-funktion perusteella
+                    // Tässä voi toteuttaa lisätoimintoja riippuen isAvailable-arvosta
                 });
             }
         }
@@ -39,13 +39,19 @@ odoo.define('product_cant_order.product', function (require) {
 
     $(document).ready(runCheck);
 
-    $('.variant_attribute select').on('change', function () {
-        setTimeout(function() {
-            runCheck();
-        }, 220);
+    // Tapahtumankäsittelijä .product_id kentälle
+    $('.product_id').on('change', function() {
+        runCheck();
     });
+
+    // Oletusarvoinen paikka, jossa .product_id kentän arvoa muutetaan ohjelmallisesti
+    // Tämän koodin sijainti riippuu siitä, missä ja milloin arvoa tarvitsee muuttaa
+    function updateProductIdAndTriggerChange(newProductId) {
+        $('.product_id').val(newProductId).trigger('change');
+    }
 
     return {
         checkProductAvailability: checkProductAvailability,
+        updateProductIdAndTriggerChange: updateProductIdAndTriggerChange
     };
 });
