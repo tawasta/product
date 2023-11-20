@@ -28,7 +28,6 @@ odoo.define('product_cant_order.product', function (require) {
     function runCheck() {
         if ($('.oe_website_sale').length && $('#add_to_cart').length) {
             var productId = $('.product_id').val();
-            console.log(productId);
             if (productId) {
                 checkProductAvailability(productId, function(isAvailable) {
                     // Tässä voi toteuttaa lisätoimintoja riippuen isAvailable-arvosta
