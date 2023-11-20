@@ -42,7 +42,7 @@ odoo.define('product_cant_order.product', function (require) {
     $('.variant_attribute select').on('change', function () {
         setTimeout(function() {
             runCheck();
-        }, 200);
+        }, 220);
     });
 
     return {
