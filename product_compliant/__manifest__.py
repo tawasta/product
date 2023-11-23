@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Product Compliant",
+    "name": "Product Compliance",
     "summary": "Add fields for product compliance (REACH, RoHS, Work Safety etc)",
-    "version": "14.0.1.1.2",
+    "version": "14.0.1.2.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",

@@ -56,5 +56,6 @@
         parent="stock.menu_product_in_config_stock"
         sequence="31"
         action="product_material_class_action"
+        groups="product_materials.group_product_product_manage_material_hierarchy"
     />
 </odoo>

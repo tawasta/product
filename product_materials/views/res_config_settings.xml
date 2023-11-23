@@ -58,6 +58,23 @@
                         <div class="col-12 col-lg-6 o_setting_box">
                             <div class="o_setting_left_pane">
                                 <field
+                                    name="group_product_product_manage_material_hierarchy"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_material_hierarchy"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Material Sublevel', 'Material Class' and 'Product or Part Name' fields when adding Product
+                                    Material Compositions and Product Packaging Material Compositions, to classify the material in more detail.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
                                     name="group_product_product_manage_materials_weights"
                                 />
                             </div>
@@ -89,6 +106,25 @@
                                     Material Compositions and Product Packaging Material Compositions.
                                     on product page. This enables you to define what percentage of the
                                     material originates from recycled materials.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_manage_materials_waste"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_materials_waste"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Waste Component' and 'Waste Endpoint' fields when adding Product
+                                    Material Compositions and Product Packaging Material Compositions.
+                                    on product page. This enables you to define what kind of waste results from the material
+                                    and where does the waste end up in.
                                 </div>
                             </div>
                         </div>

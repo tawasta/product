@@ -59,5 +59,6 @@
         parent="stock.menu_product_in_config_stock"
         sequence="33"
         action="product_material_waste_endpoint_action"
+        groups="product_materials.group_product_product_manage_materials_waste"
     />
 </odoo>

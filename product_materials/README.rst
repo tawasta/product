@@ -20,8 +20,10 @@ Product Materials
   * how much of the material weighs
   * how much of the material originates from recycled contents
   * what kind of waste results from each material
+  * a three-level material hierarchy, or just a simple material list
 
-* Note: you may also want to install product_material_compliant which adds the possibility to define e.g. REACH, ROHS, Halogen compliances for each Material Composition
+* If you need material info, but the Odoo installation does not use product variants, install also the module "product_materials_show_on_product_template_form"
+* You may also want to install product_material_compliant which adds the possibility to define e.g. REACH, ROHS, Halogen compliances for each Material Composition
 
 Configuration
 =============
@@ -29,14 +31,15 @@ Configuration
 * In the same menu, configure if you want to 
 
   * track the material weights
+  * track a three-level material hierarchy instead of just a simple material list
   * track the amounts of recycled contents in materials
-  * track the waste components of materials
+  * track the waste components and endpoints of materials
   * give the user the option to show material info on sale and picking related printouts
 
-* Add top level classes for the materials in Inventory -> Configuration -> Product Material Classes
 * Add the materials and whether they are related to products or packaging or both in Inventory -> Configuration -> Product Materials
-* Add the material sublevels in Inventory -> Configuration -> Product Material Sublevels
-* Add the waste endpoints in Inventory -> Configuration -> Waste Components
+* Add hierachy's top classes for the materials in Inventory -> Configuration -> Product Material Classes
+* Add hierachy's bottom sublevels for the materials in Inventory -> Configuration -> Product Material Sublevels
+* Add the waste endpoints in Inventory -> Configuration -> Waste Endpoints
 * Add the waste components in Inventory -> Configuration -> Waste Components
 
 Usage
@@ -47,8 +50,8 @@ Usage
 
 Known issues / Roadmap
 ======================
-* Support toggling off if you want to track and categorize the type of waste components that result from the materials 
-* Print-related features still work-in-progress
+* Consider adding a (toggleable) feature for preventing products that have BOMs from having materials defined
+* Consider making the "Material Sublevel" field visibility configurable separately for Product Material Compositions and Product Packaging Material Compositions
 
 Credits
 =======

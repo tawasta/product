@@ -5,8 +5,12 @@ class ProductCompliant(models.Model):
 
     _name = "product.compliant"
     _description = "Product Compliant"
+    _order = "sequence"
 
     name = fields.Char("Name", required=True)
+
+    sequence = fields.Integer("Sequence", default=100)
+
     description = fields.Text("Description")
 
     selectable_for = fields.Selection(

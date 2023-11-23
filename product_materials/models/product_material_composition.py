@@ -5,68 +5,13 @@ from odoo.exceptions import ValidationError
 class ProductMaterialComposition(models.Model):
 
     _name = "product.material.composition"
-    # _inherit = ["mail.thread", "mail.activity.mixin"]
     _description = "Product Material Composition"
     _rec_name = "product_material_id"
-
-    @api.constrains("recycled_percentage")
-    def _check_percentage(self):
-        for record in self:
-            if record.recycled_percentage < 0 or record.recycled_percentage > 100:
-                raise ValidationError(_("Percentage has to be between 0 and 100"))
-
-    @api.onchange("product_material_class_id")
-    def _onchange_product_material_class_id(self):
-        if self.type == "product":
-            # Top down. If user changes the Material Class, reset the Material also
-            self.product_material_id = False
-
-    @api.onchange("product_material_id")
-    def _onchange_product_material_id(self):
-        if self.type == "product_packaging":
-            # Bottom up. If user changes the Material, set the Material Class
-            self.product_material_class_id = (
-                self.product_material_id.product_material_class_id
-            )
-
-        # Suggest the default waste component
-        self.product_material_waste_component_id = (
-            self.product_material_id.product_material_waste_component_id
-        )
-
-    @api.onchange("product_material_sublevel_id")
-    def _onchange_product_material_sublevel_id(self):
-        if self.type == "product_packaging":
-            # Bottom up. If user changes the Material Sublevel, set the Material
-            self.product_material_id = (
-                self.product_material_sublevel_id.product_material_id
-            )
-
-    @api.onchange("product_material_waste_component_id")
-    def _onchange_product_material_waste_component_id(self):
-        # If user changes the Waste Component, suggest Waste Endpoint
-        self.product_material_waste_endpoint_id = (
-            self.product_material_waste_component_id.product_material_waste_endpoint_id
-        )
 
     @tools.ormcache()
     def _get_default_net_weight_uom_id(self):
         # Suggest grams as default
         return self.env.ref("uom.product_uom_gram")
-
-    def _compute_attachment_ids(self):
-        for rec in self:
-            attachment_ids = (
-                self.env["ir.attachment"]
-                .search(
-                    [
-                        ("res_id", "=", rec.id),
-                        ("res_model", "=", "product.material.composition"),
-                    ]
-                )
-                .ids
-            )
-            rec.attachment_ids = [(6, 0, attachment_ids)]
 
     # This is the variant that the material row is linked to
     product_product_id = fields.Many2one(
@@ -77,7 +22,8 @@ class ProductMaterialComposition(models.Model):
         comodel_name="product.material.class", string="Material Class"
     )
 
-    # TODO confirm if this should be a freetext or a link to product.product
+    # This is an additional info field that becomes available if
+    # the 3-level material classification is turned on
     name = fields.Char(string="Product or Part Name")
 
     product_material_id = fields.Many2one(
@@ -116,7 +62,7 @@ class ProductMaterialComposition(models.Model):
         string="Waste Endpoint",
     )
 
-    description = fields.Text(string="Description")
+    description = fields.Text(string="Notes")
 
     # Defines if the material row is related to product itself's materials or the
     # product's packaging's materials
@@ -125,9 +71,38 @@ class ProductMaterialComposition(models.Model):
         required=True,
     )
 
-    attachment_ids = fields.One2many(
+    attachment_ids = fields.Many2many(
         "ir.attachment",
-        compute="_compute_attachment_ids",
         string="Attachments",
-        help="Product material attachments",
     )
+
+    @api.constrains("recycled_percentage")
+    def _check_percentage(self):
+        for record in self:
+            if record.recycled_percentage < 0 or record.recycled_percentage > 100:
+                raise ValidationError(_("Percentage has to be between 0 and 100"))
+
+    @api.onchange("product_material_sublevel_id")
+    def _onchange_product_material_sublevel_id(self):
+        # If user changes the Material Sublevel, set the Material
+        self.product_material_id = self.product_material_sublevel_id.product_material_id
+
+    @api.onchange("product_material_id")
+    def _onchange_product_material_id(self):
+
+        # If user changes the Material, set the Material Class
+        self.product_material_class_id = (
+            self.product_material_id.product_material_class_id
+        )
+
+        # Suggest also the default waste component
+        self.product_material_waste_component_id = (
+            self.product_material_id.product_material_waste_component_id
+        )
+
+    @api.onchange("product_material_waste_component_id")
+    def _onchange_product_material_waste_component_id(self):
+        # If user changes the Waste Component, suggest Waste Endpoint
+        self.product_material_waste_endpoint_id = (
+            self.product_material_waste_component_id.product_material_waste_endpoint_id
+        )

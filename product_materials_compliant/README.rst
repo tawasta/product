@@ -26,6 +26,7 @@ Configuration
   * Note: pay attention to if you're enabling the compliance type for the Product or the Product Material, as both settings are present in the view
 
 * Add the possible values that should be allowed for selection in Sales -> Configuration -> Product Compliance Values
+* In the same view, drag the Compliance Values into their correct order. The one that is highest up for each "Selectable For" gets suggested as default in material's compliancy dropdowns.
 
 Usage
 =====
@@ -33,7 +34,7 @@ Usage
 
 Known issues / Roadmap
 ======================
-\-
+* Consider making it possible to toggle on/off defaulting to the compliancy with lowest sequence (currently always on) 
 
 Credits
 =======

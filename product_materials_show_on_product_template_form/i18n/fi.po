@@ -1,0 +1,58 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_materials_show_on_product_template_form
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20230925\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-23 07:47+0000\n"
+"PO-Revision-Date: 2023-11-23 07:47+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_materials_show_on_product_template_form
+#: model:ir.model.fields,field_description:product_materials_show_on_product_template_form.field_product_template__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: product_materials_show_on_product_template_form
+#: model:ir.model.fields,field_description:product_materials_show_on_product_template_form.field_product_template__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: product_materials_show_on_product_template_form
+#: model:ir.model.fields,field_description:product_materials_show_on_product_template_form.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: product_materials_show_on_product_template_form
+#: model_terms:ir.ui.view,arch_db:product_materials_show_on_product_template_form.product_template_only_form_view
+msgid "Material Compositions"
+msgstr "Materiaalikoostumukset"
+
+#. module: product_materials_show_on_product_template_form
+#: model_terms:ir.ui.view,arch_db:product_materials_show_on_product_template_form.product_template_only_form_view
+msgid "Materials"
+msgstr "Materiaalit"
+
+#. module: product_materials_show_on_product_template_form
+#: model:ir.model.fields,field_description:product_materials_show_on_product_template_form.field_product_template__product_material_composition_ids
+#: model:ir.model.fields,field_description:product_materials_show_on_product_template_form.field_product_template__product_packaging_material_composition_ids
+#: model_terms:ir.ui.view,arch_db:product_materials_show_on_product_template_form.product_template_only_form_view
+msgid "Product Material Compositions"
+msgstr "Tuotteen materiaalikoostumukset"
+
+#. module: product_materials_show_on_product_template_form
+#: model_terms:ir.ui.view,arch_db:product_materials_show_on_product_template_form.product_template_only_form_view
+msgid "Product Packaging Material Compositions"
+msgstr "Tuotepakkausten materiaalikoostumukset"
+
+#. module: product_materials_show_on_product_template_form
+#: model:ir.model,name:product_materials_show_on_product_template_form.model_product_template
+msgid "Product Template"
+msgstr "Tuotemalli"
