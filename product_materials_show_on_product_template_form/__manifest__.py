@@ -19,20 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Product Materials: compliance support",
-    "summary": "Add fields for product material compliance "
-    "(Conflict Area Minerals, SCIP, etc.)",
-    "version": "14.0.1.0.1",
+    "name": "Product Materials: show on product template form",
+    "summary": "Show Materials on template form (for when variants not in use)",
+    "version": "14.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product_compliant", "product_materials"],
+    "depends": ["product_materials"],
     "data": [
-        "security/res_groups.xml",
-        "views/product_product.xml",
-        "views/res_config_settings.xml",
+        "views/product_template.xml",
     ],
 }

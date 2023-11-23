@@ -1,6 +1,7 @@
 from odoo import http
 from odoo.http import request
 
+
 class CheckProduct(http.Controller):
     @http.route(
         ["/check/product/<int:product_id>"],
@@ -11,7 +12,11 @@ class CheckProduct(http.Controller):
     )
     def get_product(self, product_id=None, **post):
         try:
-            product = request.env["product.product"].sudo().search([("id", "=", product_id)], limit=1)
+            product = (
+                request.env["product.product"]
+                .sudo()
+                .search([("id", "=", product_id)], limit=1)
+            )
             if product:
                 values = {"order_status": product.can_not_order}
             else:

@@ -28,7 +28,7 @@
                                 />
                                 <div
                                     class="text-muted"
-                                >Check box to show 'Chemicals Compliant' status selection field on product page's Materials tab's lines.</div>
+                                >Check box to show 'Chemicals' status selection field on product page's Materials tab's lines.</div>
                             </div>
                         </div>
 
@@ -44,7 +44,7 @@
                                 />
                                 <div
                                     class="text-muted"
-                                >Check box to show 'Conflict Area Minerals Compliant' status selection field on product page's Materials tab's lines.</div>
+                                >Check box to show 'Conflict Area Minerals' status selection field on product page's Materials tab's lines.</div>
                             </div>
                         </div>
 
@@ -60,7 +60,7 @@
                                 />
                                 <div
                                     class="text-muted"
-                                >Check box to show 'Halogen Compliant' status selection field on product page's Materials tab's lines.</div>
+                                >Check box to show 'Halogens' status selection field on product page's Materials tab's lines.</div>
                             </div>
                         </div>
 
@@ -76,7 +76,7 @@
                                 />
                                 <div
                                     class="text-muted"
-                                >Check box to show 'POP Compliant' (Persistent Organic Pollutants) status selection field on product page's Materials tab's lines.</div>
+                                >Check box to show 'POP' (Persistent Organic Pollutants) status selection field on product page's Materials tab's lines.</div>
                             </div>
                         </div>
 
@@ -92,7 +92,7 @@
                                 />
                                 <div
                                     class="text-muted"
-                                >Check box to show 'Reach Compliant' status selection field on product page's Materials tab's lines.</div>
+                                >Check box to show 'REACH' status selection field on product page's Materials tab's lines.</div>
                             </div>
                         </div>
 
@@ -108,7 +108,7 @@
                                 />
                                 <div
                                     class="text-muted"
-                                >Check box to show 'RoHS Compliant' status selection field on product page's Materials tab's lines.</div>
+                                >Check box to show 'RoHS' status selection field on product page's Materials tab's lines.</div>
                             </div>
                         </div>
 
@@ -125,7 +125,7 @@
                                 />
                                 <div
                                     class="text-muted"
-                                >Check box to show 'SCIP Compliant' (Substances of Concern in Products) status selection field on product page's Materials tab's lines.</div>
+                                >Check box to show 'SCIP' (Substances of Concern in Products) status selection field on product page's Materials tab's lines.</div>
                             </div>
                         </div>
 

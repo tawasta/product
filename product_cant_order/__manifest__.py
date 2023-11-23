@@ -21,7 +21,7 @@
 {
     "name": "Product can't order",
     "summary": "Product can't order",
-    "version": "14.0.1.0.2",
+    "version": "14.0.1.0.3",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",

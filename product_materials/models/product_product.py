@@ -7,7 +7,7 @@ class ProductProduct(models.Model):
 
     """
     # TODO: consider if this should be enforced
-    @api.constrains('product_material_compositions')
+    @api.constrains('product_material_composition_ids')
     def _check_product_bom_count(self):
         for product in self:
              if product.bom_ids:
@@ -16,20 +16,16 @@ class ProductProduct(models.Model):
                     "please add them for the raw materials instead.")
     """
 
-    product_material_compositions = fields.One2many(
+    product_material_composition_ids = fields.One2many(
         comodel_name="product.material.composition",
         inverse_name="product_product_id",
         string="Product Material Compositions",
         domain=[("type", "=", "product")],
     )
 
-    product_packaging_material_compositions = fields.One2many(
+    product_packaging_material_composition_ids = fields.One2many(
         comodel_name="product.material.composition",
         inverse_name="product_product_id",
         string="Product Packaging Material Compositions",
         domain=[("type", "=", "product_packaging")],
     )
-
-    # material_purchase = fields.Many2many(
-    #    related="product_tmpl_id.material_purchase", string="Material"
-    # )

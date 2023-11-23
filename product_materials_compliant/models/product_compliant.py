@@ -13,7 +13,7 @@ class ProductCompliant(models.Model):
         selection_add=[
             ("chemicals", "Chemicals Compliant"),
             ("conflict_area_minerals", "Conflict Area Minerals Compliant"),
-            ("halogens", "Halogen Free Compliant"),
+            ("halogens", "Halogen Compliant"),
             ("pop", "POP (Persistent Organic Pollutants) Compliant"),
             ("scip", "SCIP (Substances of Concern in Products) Compliant"),
         ]

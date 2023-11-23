@@ -1,0 +1,283 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_materials_compliant
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20230925\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-11-23 06:56+0000\n"
+"PO-Revision-Date: 2023-11-23 06:56+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'Chemicals' status selection field on product page's "
+"Materials tab's lines."
+msgstr "Rastita näyttääksesi 'Kemikaalit' -valintakenttä tuotesivun materiaalikoostumusriveillä"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'Conflict Area Minerals' status selection field on product"
+" page's Materials tab's lines."
+msgstr "Rastita näyttääksesi 'Konfliktimineraalit' -valintakenttä tuotesivun materiaalikoostumusriveillä"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'Halogens' status selection field on product page's "
+"Materials tab's lines."
+msgstr "Rastita näyttääksesi 'Halogeenit' -valintakenttä tuotesivun materiaalikoostumusriveillä"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'POP' (Persistent Organic Pollutants) status selection "
+"field on product page's Materials tab's lines."
+msgstr "Rastita näyttääksesi 'POP' -valintakenttä (Persistent Organic Pollutants, pysyvät orgaaniset yhdisteet) tuotesivun materiaalikoostumusriveillä"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'REACH' status selection field on product page's Materials"
+" tab's lines."
+msgstr "Rastita näyttääksesi 'REACH' -valintakenttä tuotesivun materiaalikoostumusriveillä"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'RoHS' status selection field on product page's Materials "
+"tab's lines."
+msgstr "Rastita näyttääksesi 'RoHS' -valintakenttä tuotesivun materiaalikoostumusriveillä"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid ""
+"Check box to show 'SCIP' (Substances of Concern in Products) status "
+"selection field on product page's Materials tab's lines."
+msgstr "Rastita näyttääksesi 'SCIP' -valintakenttä (Substances of Concern in Products, erityistä huolta aiheuttavat aineet) tuotesivun materiaalikoostumusriveillä"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__chemicals_compliant
+msgid "Chemicals"
+msgstr "Kemikaalit"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields.selection,name:product_materials_compliant.selection__product_compliant__selectable_for__chemicals
+msgid "Chemicals Compliant"
+msgstr "Kemikaalit"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.product_normal_form_view
+msgid "Compliancy"
+msgstr "Vaatimustenmukaisuus"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__conflict_area_minerals_compliant
+msgid "Conflict Area Minerals"
+msgstr "Konfliktimineraalit"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields.selection,name:product_materials_compliant.selection__product_compliant__selectable_for__conflict_area_minerals
+msgid "Conflict Area Minerals Compliant"
+msgstr "Konfliktimineraalit"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_compliant__display_name
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__display_name
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields.selection,name:product_materials_compliant.selection__product_compliant__selectable_for__halogens
+msgid "Halogen Compliant"
+msgstr "Halogeenit"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__halogen_compliant
+msgid "Halogens"
+msgstr "Halogeenit"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_compliant__id
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__id
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__id
+msgid "ID"
+msgstr ""
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,help:product_materials_compliant.field_product_material_composition__chemicals_compliant
+msgid "Is this material Chemical compliant?"
+msgstr "Onko materiaali kemikaalivaatimusten mukainen"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,help:product_materials_compliant.field_product_material_composition__conflict_area_minerals_compliant
+msgid "Is this material Conflict Area Minerals compliant?"
+msgstr "Onko materiaali konfliktimineraalivaatimusten mukainen"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,help:product_materials_compliant.field_product_material_composition__halogen_compliant
+msgid "Is this material Halogen compliant?"
+msgstr "Onko materiaali halogeenivaatimusten mukainen"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,help:product_materials_compliant.field_product_material_composition__pop_compliant
+msgid "Is this material POP (Persistant Organic Pollutants) compliant?"
+msgstr "Onko materiaali POP-vaatimusten mukainen (pysyvät orgaaniset yhdisteet)"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,help:product_materials_compliant.field_product_material_composition__reach_compliant
+msgid "Is this material REACH compliant?"
+msgstr "Onko materiaali REACH-vaatimusten mukainen"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,help:product_materials_compliant.field_product_material_composition__rohs_compliant
+msgid "Is this material RoHS compliant"
+msgstr "Onko materiaali RoHS-vaatimusten mukainen"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,help:product_materials_compliant.field_product_material_composition__scip_compliant
+msgid "Is this material SCIP (Substances of Concern In Products) compliant?"
+msgstr "Onko materiaali SCIP-vaatimusten mukainen (erityistä hbuolta aiheuttavat aineet)"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_compliant____last_update
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition____last_update
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: product_materials_compliant
+#: model:res.groups,name:product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals
+msgid "Manage Chemical Compliance Info for Product Materials"
+msgstr "Hallinnoi kemikaalien vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__group_prod_mat_comp_manage_compliance_chemicals
+msgid "Manage Chemicals Compliance Info for Product Materials"
+msgstr "Hallinnoi kemikaalien vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid "Manage Compliance Values"
+msgstr "Hallinnoi vaatimustenmukaisuuden arvolistaa"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__group_prod_mat_comp_manage_compliance_conflict_area_minerals
+#: model:res.groups,name:product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals
+msgid "Manage Conflict Area Minerals Compliance Info for Product Materials"
+msgstr "Hallinnoi konfliktimineraalien vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__group_prod_mat_comp_manage_compliance_halogens
+#: model:res.groups,name:product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens
+msgid "Manage Halogen Compliance Info for Product Materials"
+msgstr "Hallinnoi halogeenien vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__group_prod_mat_comp_manage_compliance_pop
+msgid ""
+"Manage POP (Persistent Organic Pollutants) Compliance Info for Product "
+"Materials"
+msgstr "Hallinnoi POP-vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:res.groups,name:product_materials_compliant.group_prod_mat_comp_manage_compliance_pop
+msgid "Manage POP Compliance Info for Product Materials"
+msgstr "Hallinnoi POP-vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__group_prod_mat_comp_manage_compliance_reach
+#: model:res.groups,name:product_materials_compliant.group_prod_mat_comp_manage_compliance_reach
+msgid "Manage REACH Compliance Info for Product Materials"
+msgstr "Hallinnoi REACH-vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__group_prod_mat_comp_manage_compliance_rohs
+#: model:res.groups,name:product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs
+msgid "Manage RoHS Compliance Info for Product Materials"
+msgstr "Hallinnoi RoHS-vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_res_config_settings__group_prod_mat_comp_manage_compliance_scip
+msgid ""
+"Manage SCIP (Substances of Concern In Products) Compliance Info for Product "
+"Materials"
+msgstr "Hallinnoi SCIP-vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:res.groups,name:product_materials_compliant.group_prod_mat_comp_manage_compliance_scip
+msgid "Manage SCIP Compliance Info for Product Materials"
+msgstr "Hallinnoi SCIP-vaatimustenmukaisuustietoa materiaalikoostumuksilla"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__pop_compliant
+msgid "POP"
+msgstr "POP"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields.selection,name:product_materials_compliant.selection__product_compliant__selectable_for__pop
+msgid "POP (Persistent Organic Pollutants) Compliant"
+msgstr "POP"
+
+#. module: product_materials_compliant
+#: model:ir.model,name:product_materials_compliant.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr ""
+
+#. module: product_materials_compliant
+#: model:ir.model,name:product_materials_compliant.model_product_compliant
+msgid "Product Compliant"
+msgstr "Vaatimustenmukaisuus"
+
+#. module: product_materials_compliant
+#: model_terms:ir.ui.view,arch_db:product_materials_compliant.res_config_settings_view_form
+msgid "Product Material Compliance Types"
+msgstr "Vaatimustenmukaisuuden tyypit"
+
+#. module: product_materials_compliant
+#: model:ir.model,name:product_materials_compliant.model_product_material_composition
+msgid "Product Material Composition"
+msgstr "Materiaalikoostumus"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__reach_compliant
+msgid "REACH"
+msgstr "REACH"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__rohs_compliant
+msgid "RoHS "
+msgstr "RoHS"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_material_composition__scip_compliant
+msgid "SCIP"
+msgstr "SCIP"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields.selection,name:product_materials_compliant.selection__product_compliant__selectable_for__scip
+msgid "SCIP (Substances of Concern in Products) Compliant"
+msgstr "SCIP"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,field_description:product_materials_compliant.field_product_compliant__selectable_for
+msgid "Selectable For"
+msgstr "Valittavissa kentille"
+
+#. module: product_materials_compliant
+#: model:ir.model.fields,help:product_materials_compliant.field_product_compliant__selectable_for
+msgid ""
+"When left empty, the value can be used for any of the Product Compliance. A "
+"selection can be made if the compliance term is specific to e.g. just REACH "
+"and should not be available for others."
+msgstr "Jos jätetty tyhjäksi, termiä voi käyttää kaikkiin vaatimustenmukaisuuksiin. Tee valinta, "
+"jos haluat käyttää termiä vain esimerkiksi REACHiin eikä muihin vaatimustenmukaisuuksiin"

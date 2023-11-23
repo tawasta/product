@@ -16,15 +16,16 @@ addon | version | maintainers | summary
 [product_archive_product_archive_mrp_parameter](product_archive_product_archive_mrp_parameter/) | 14.0.1.0.0 |  | Archive Product and archive its MRP area parameter
 [product_atex](product_atex/) | 14.0.1.0.0 |  | Add a field for product ATEX compliancy
 [product_auditlog_rules](product_auditlog_rules/) | 14.0.1.1.0 |  | Audit log rules for product.product, product.template and product.category
-[product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
+[product_cant_order](product_cant_order/) | 14.0.1.0.3 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
-[product_compliant](product_compliant/) | 14.0.1.1.2 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
+[product_compliant](product_compliant/) | 14.0.1.2.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
 [product_default_location](product_default_location/) | 14.0.1.0.0 |  | Product Default Location
 [product_dimension_convert_unit](product_dimension_convert_unit/) | 14.0.1.0.1 |  | Convert the computed volume of a product by its volume UoM
 [product_margin_ignore](product_margin_ignore/) | 14.0.1.0.0 |  | Helper field for customizing margin calculation
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
-[product_materials](product_materials/) | 14.0.3.0.0 |  | Product Materials info for products and their packaging
-[product_materials_compliant](product_materials_compliant/) | 14.0.1.0.0 |  | Add fields for product material compliance (Conflict Are Minerals, SCIP, etc.)
+[product_materials](product_materials/) | 14.0.3.1.0 |  | Product Materials info for products and their packaging
+[product_materials_compliant](product_materials_compliant/) | 14.0.1.0.1 |  | Add fields for product material compliance (Conflict Area Minerals, SCIP, etc.)
+[product_materials_show_on_product_template_form](product_materials_show_on_product_template_form/) | 14.0.1.0.0 |  | Show Materials on template form (for when variants not in use)
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
 [product_name_with_uom](product_name_with_uom/) | 14.0.1.0.1 |  | Shows product name with sale UOM
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
