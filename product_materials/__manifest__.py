@@ -21,7 +21,7 @@
 {
     "name": "Product Materials",
     "summary": "Product Materials info for products and their packaging",
-    "version": "14.0.3.1.0",
+    "version": "14.0.3.1.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
@@ -30,8 +30,8 @@
     "installable": True,
     "depends": ["stock", "sale", "account_invoice_related_sale_order"],
     "data": [
-        "security/ir.model.access.csv",
         "security/res_groups.xml",
+        "security/ir.model.access.csv",
         "report/invoice_report.xml",
         "report/stock_report.xml",
         "views/product_material.xml",
