@@ -16,7 +16,7 @@ addon | version | maintainers | summary
 [product_archive_product_archive_mrp_parameter](product_archive_product_archive_mrp_parameter/) | 14.0.1.0.0 |  | Archive Product and archive its MRP area parameter
 [product_atex](product_atex/) | 14.0.1.0.0 |  | Add a field for product ATEX compliancy
 [product_auditlog_rules](product_auditlog_rules/) | 14.0.1.1.0 |  | Audit log rules for product.product, product.template and product.category
-[product_cant_order](product_cant_order/) | 14.0.1.0.2 |  | Product can't order
+[product_cant_order](product_cant_order/) | 14.0.1.0.3 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_compliant](product_compliant/) | 14.0.1.0.0 |  | Add a fields for product compliancy
 [product_default_location](product_default_location/) | 14.0.1.0.0 |  | Product Default Location
