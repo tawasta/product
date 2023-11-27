@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
     <record id="view_order_form" model="ir.ui.view">
-        <field name="name">sale.order.form.material</field>
+        <field name="name">sale.order.form.product.materials</field>
         <field name="model">sale.order</field>
         <field name="inherit_id" ref="sale.view_order_form" />
         <field name="arch" type="xml">
             <field name="date_order" position="after">
-                  <field name="show_materials_with_report" />
+                  <field
+                    name="show_materials_with_report"
+                    groups="product_materials.group_product_product_enable_product_materials_on_prints"
+                />
             </field>
         </field>
     </record>

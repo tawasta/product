@@ -1,5 +1,3 @@
-import logging
-
 from odoo import models
 
 
@@ -27,11 +25,17 @@ class StockMoveLine(models.Model):
             materials = (
                 self.env["product.material"]
                 .sudo()
-                .search([("id", "in", move_line.move_id.product_id.material.ids)])
+                .search(
+                    [
+                        (
+                            "id",
+                            "in",
+                            move_line.move_id.product_id.product_material_composition_ids.product_material_id.ids,  # noqa: B950
+                        )
+                    ]
+                )
             )
-            logging.info("=====MATERIALS======")
-            logging.info(materials)
-            # T64403
+
             show_materials = (
                 move_line.move_id.sale_line_id.order_id.show_materials_with_report
             )

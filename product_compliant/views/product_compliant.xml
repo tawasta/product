@@ -6,10 +6,11 @@
             <field name="name">product.compliant.tree</field>
             <field name="model">product.compliant</field>
             <field name="arch" type="xml">
-                <tree>
+                <tree multi_edit="1">
+                    <field name="sequence" widget="handle" />
                     <field name="name" />
+                    <field name="selectable_for" />
                     <field name="description" />
-                    <!-- Add other fields here -->
                 </tree>
             </field>
         </record>
@@ -22,25 +23,53 @@
                 <form>
                     <group>
                         <field name="name" />
+                        <field name="selectable_for" />
                         <field name="description" />
-                        <!-- Add other fields here -->
                     </group>
                 </form>
             </field>
         </record>
 
-        <!-- Create an action to open the view -->
-        <record id="action_product_compliant" model="ir.actions.act_window">
-            <field name="name">Product Compliant</field>
+        <!-- Create an action to open the tree/form view -->
+        <record id="action_product_compliant_values" model="ir.actions.act_window">
+            <field name="name">Product Compliance Values</field>
             <field name="res_model">product.compliant</field>
             <field name="view_mode">tree,form</field>
         </record>
 
+        <!-- Create an action to jump to the settings view to set which
+        compliance types are in use-->
+        <record
+            id="action_product_compliant_res_config_settings"
+            model="ir.actions.act_window"
+        >
+            <field name="res_model">res.config.settings</field>
+            <field name="view_mode">form</field>
+            <field name="target">inline</field>
+        </record>
+
+        <!-- Menuitems are placed under Sale > Configuration -->
         <menuitem
-            id="menu_product_compliant"
-            name="Product Compliant"
-            action="action_product_compliant"
-            parent="sale.product_menu_catalog"
+            id="menu_product_compliant_submenu"
+            parent="sale.menu_sale_config"
+            name="Product Compliance"
         />
+
+        <menuitem
+            id="menu_product_compliant_values"
+            name="Product Compliance Values"
+            parent="menu_product_compliant_submenu"
+            action="action_product_compliant_values"
+            sequence="10"
+        />
+
+        <menuitem
+            id="menu_product_compliant_res_config_settings"
+            name="Product Compliance Types"
+            parent="menu_product_compliant_submenu"
+            action="action_product_compliant_res_config_settings"
+            sequence="20"
+        />
+
     </data>
 </odoo>

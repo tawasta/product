@@ -1,50 +1,96 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <odoo>
+    <!-- Compliance fields are only shown on the template views (not on variant views) -->
     <record id="product_template_only_form_view" model="ir.ui.view">
-        <field name="name">product.template.product.form.atex</field>
+        <field name="name">product.template.form.product.compliant</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_only_form_view" />
         <field name="arch" type="xml">
-            <field name="barcode" position="after">
-                <field name="atex_compliant" options="{'no_create': True}" />
-                <field name="reach_compliant" options="{'no_create': True}" />
-                <field name="rohs_compliant" options="{'no_create': True}" />
-            </field>
+            <notebook position="inside">
+                <page string="Product Compliance" name="product_compliance">
+                    <group name="group_general">
+                        <field
+                            name="atex_compliant"
+                            options="{'no_create': True, 'no_open': True}"
+                            groups="product_compliant.group_product_template_manage_compliance_atex"
+                        />
+
+                        <field
+                            name="reach_compliant"
+                            options="{'no_create': True, 'no_open': True}"
+                            groups="product_compliant.group_product_template_manage_compliance_reach"
+                        />
+
+                        <field
+                            name="rohs_compliant"
+                            options="{'no_create': True, 'no_open': True}"
+                            groups="product_compliant.group_product_template_manage_compliance_rohs"
+                        />
+
+                        <field
+                            name="composition_checked_compliant"
+                            options="{'no_create': True, 'no_open': True}"
+                            groups="product_compliant.group_product_template_manage_compliance_composition_checked"
+                        />
+
+                        <field
+                            name="msds_checked_compliant"
+                            options="{'no_create': True, 'no_open': True}"
+                            groups="product_compliant.group_product_template_manage_compliance_msds_checked"
+                        />
+
+                        <field
+                            name="work_safety_checked_compliant"
+                            options="{'no_create': True, 'no_open': True}"
+                            groups="product_compliant.group_product_template_manage_compliance_work_safety_checked"
+                        />
+                    </group>
+                </page>
+            </notebook>
         </field>
     </record>
+
     <record id="product_template_tree_view" model="ir.ui.view">
-        <field name="name">product.template.product.tree.atex</field>
+        <field name="name">product.template.tree.product.compliant</field>
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_tree_view" />
         <field name="arch" type="xml">
-            <field name="barcode" position="after">
-                <field name="atex_compliant" optional="hide" />
-                <field name="reach_compliant" optional="hide" />
-                <field name="rohs_compliant" optional="hide" />
-            </field>
-        </field>
-    </record>
-    <record id="product_normal_form_view" model="ir.ui.view">
-        <field name="name">product.product.form.atex</field>
-        <field name="model">product.product</field>
-        <field name="inherit_id" ref="product.product_normal_form_view" />
-        <field name="arch" type="xml">
-            <field name="barcode" position="after">
-                <field name="atex_compliant" readonly="1" />
-                <field name="reach_compliant" readonly="1" />
-                <field name="rohs_compliant" readonly="1" />
-            </field>
-        </field>
-    </record>
-    <record id="product_product_tree_view" model="ir.ui.view">
-        <field name="name">product.product.tree.atex</field>
-        <field name="model">product.product</field>
-        <field name="inherit_id" ref="product.product_product_tree_view" />
-        <field name="arch" type="xml">
-            <field name="barcode" position="after">
-                <field name="atex_compliant" optional="hide" readonly="1" />
-                <field name="reach_compliant" optional="hide" readonly="1" />
-                <field name="rohs_compliant" optional="hide" readonly="1" />
+            <field name="uom_id" position="after">
+                <field
+                    name="atex_compliant"
+                    optional="hide"
+                    groups="product_compliant.group_product_template_manage_compliance_atex"
+                />
+
+                <field
+                    name="reach_compliant"
+                    optional="hide"
+                    groups="product_compliant.group_product_template_manage_compliance_reach"
+                />
+
+                <field
+                    name="rohs_compliant"
+                    optional="hide"
+                    groups="product_compliant.group_product_template_manage_compliance_rohs"
+                />
+
+                <field
+                    name="composition_checked_compliant"
+                    optional="hide"
+                    groups="product_compliant.group_product_template_manage_compliance_composition_checked"
+                />
+
+                <field
+                    name="msds_checked_compliant"
+                    optional="hide"
+                    groups="product_compliant.group_product_template_manage_compliance_msds_checked"
+                />
+
+                <field
+                    name="work_safety_checked_compliant"
+                    optional="hide"
+                    groups="product_compliant.group_product_template_manage_compliance_work_safety_checked"
+                />
             </field>
         </field>
     </record>

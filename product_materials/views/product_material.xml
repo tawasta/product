@@ -5,10 +5,27 @@
         <field name="model">product.material</field>
         <field name="priority">10</field>
         <field name="arch" type="xml">
-            <tree string="Material info">
+            <tree string="Material info" multi_edit="1">
                 <field name="name" />
-                <field name="material_info" />
-                <field name="category" />
+                <field
+                    name="product_material_class_id"
+                    options="{ 'no_create': True }"
+                />
+                <field
+                    name="product_material_waste_component_id"
+                    options="{ 'no_create': True }"
+                    groups="product_materials.group_product_product_manage_materials_waste"
+                />
+
+                <field
+                    name="is_product_material"
+                    groups="product_materials.group_product_product_manage_product_materials"
+                />
+                <field
+                    name="is_product_packaging_material"
+                    groups="product_materials.group_product_product_manage_product_packaging_materials"
+                />
+                <field name="description" />
             </tree>
         </field>
     </record>
@@ -20,19 +37,56 @@
         <field name="arch" type="xml">
             <form string="Material info">
                 <sheet>
-                    <group name="product_material_group">
-                        <field name="name" />
-                        <field name="material_info" />
-                        <field name="category" />
-                    </group>
+
+                    <div class="oe_title">
+                        <label class="oe_edit_only" for="name" string="Material Name" />
+                        <h1>
+                            <field name="name" placeholder="Material Name" />
+                        </h1>
+                        <div name="options">
+                            <div
+                                groups="product_materials.group_product_product_manage_product_materials"
+                            >
+                                <field name="is_product_material" />
+                                <label for="is_product_material" />
+                            </div>
+                            <div
+                                groups="product_materials.group_product_product_manage_product_packaging_materials"
+                            >
+                                <field name="is_product_packaging_material" />
+                                <label for="is_product_packaging_material" />
+                            </div>
+                        </div>
+
+                        <group>
+                            <field
+                                name="product_material_class_id"
+                                options="{ 'no_create': True }"
+                                groups="product_materials.group_product_product_manage_material_hierarchy"
+                            />
+                            <field
+                                name="product_material_waste_component_id"
+                                options="{ 'no_create': True }"
+                                groups="product_materials.group_product_product_manage_materials_waste"
+                            />
+                        </group>
+
+                    </div>
+                    <notebook>
+                        <page
+                            string="Product Material Info"
+                            name="product_material_info"
+                        >
+                            <field name="description" />
+                        </page>
+                    </notebook>
                 </sheet>
-                <div class="oe_chatter" />
             </form>
         </field>
     </record>
 
     <record id="product_material_action" model="ir.actions.act_window">
-        <field name="name">Material Info</field>
+        <field name="name">Product Materials</field>
         <field name="res_model">product.material</field>
         <field name="view_mode">form,tree</field>
         <field name="view_id" ref="view_product_material_tree" />

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data>
+        <!-- Add the new product material settings menu -->
+        <record id="res_config_settings_view_material_form" model="ir.ui.view">
+            <field
+                name="name"
+            >res.config.settings.view.form.inherit.product.materials</field>
+            <field name="model">res.config.settings</field>
+            <field name="inherit_id" ref="stock.res_config_settings_view_form" />
+            <field name="arch" type="xml">
+                <xpath
+                    expr="//div[@name='warehouse_setting_container']"
+                    position="after"
+                >
+                    <h2>Product Material Settings</h2>
+                    <div
+                        class="row mt16 o_settings_container"
+                        id="product_material_settings"
+                    >
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_manage_product_materials"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_product_materials"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Product Material Compositions'
+                                    field on product page. This enables you to list what materials
+                                    the product itself consists of.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_manage_product_packaging_materials"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_product_packaging_materials"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Product Packaging Material Compositions'
+                                    field on product page. This enables you to list what materials
+                                    the product's packaging consists of.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_manage_material_hierarchy"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_material_hierarchy"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Material Sublevel', 'Material Class' and 'Product or Part Name' fields when adding Product
+                                    Material Compositions and Product Packaging Material Compositions, to classify the material in more detail.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_manage_materials_weights"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_materials_weights"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Net Weight' and 'Unit of Measure' fields when adding Product
+                                    Material Compositions and Product Packaging Material Compositions.
+                                    on product page. This enables you to how much each of the individual Materials
+                                    weigh.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_manage_materials_recycling_percentages"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_materials_recycling_percentages"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Recycled Material %' field when adding Product
+                                    Material Compositions and Product Packaging Material Compositions.
+                                    on product page. This enables you to define what percentage of the
+                                    material originates from recycled materials.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_manage_materials_waste"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_materials_waste"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Waste Component' and 'Waste Endpoint' fields when adding Product
+                                    Material Compositions and Product Packaging Material Compositions.
+                                    on product page. This enables you to define what kind of waste results from the material
+                                    and where does the waste end up in.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
+                                    name="group_product_product_enable_product_materials_on_prints"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_enable_product_materials_on_prints"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Show materials on reports' checkbox on Sale Orders.
+                                    That checkbox can then be checked to show the list of materials on the
+                                    sale and picking related prints of that SO.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Add a link to the menu where the yes/no etc. allowed values are managed -->
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <button
+                                name="product_materials.product_material_action"
+                                icon="fa-arrow-right"
+                                type="action"
+                                string="Manage the list of Product and Product Packaging Materials"
+                                class="btn-link o_web_settings_access_rights"
+                            />
+                        </div>
+                    </div>
+
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

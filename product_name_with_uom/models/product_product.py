@@ -12,7 +12,7 @@ class ProductProduct(models.Model):
         new_res = list()
         for record in old_res:
             product = self.browse(record[0])
-            product_name = "{} / {}".format(record[1], product.uom_id.name)
+            product_name = "{} / {}".format(record[1], product.sudo().uom_id.name)
 
             new_res.append((record[0], product_name))
 

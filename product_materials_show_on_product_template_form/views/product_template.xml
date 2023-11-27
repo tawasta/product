@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <record id="product_template_only_form_view" model="ir.ui.view">
+        <field name="name">product.template.form.product.materials</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <!-- Show the notebook page only if configuration says materials
+                are managed for products and/or packaging -->
+                <page
+                    string="Materials"
+                    groups="product_materials.group_product_product_manage_product_materials,product_materials.group_product_product_manage_product_packaging_materials"
+                >
+                    <group
+                        string="Product Material Compositions"
+                        groups="product_materials.group_product_product_manage_product_materials"
+                    >
+                        <field
+                            name="product_material_composition_ids"
+                            context="{'default_type': 'product'}"
+                            nolabel="1"
+                        >
+                            <!-- Currently only treeview is supported. Consider enabling formview
+                            if more fields get added and/or access to the attachments field is needed  -->
+                            <tree string="Material Compositions" editable="bottom">
+
+                                <!-- consider making this configurable. currently hidden,
+                                as in the current use case, the third level of materials is only needed
+                                for packaging materials -->
+                                <field
+                                    name="product_material_sublevel_id"
+                                    options="{ 'no_create': True }"
+                                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                                    invisible="1"
+                                />
+
+                                <field
+                                    name="product_material_id"
+                                    domain="[('is_product_material', '=', True)]"
+                                    options="{ 'no_create': True }"
+                                />
+
+                                <field
+                                    name="product_material_class_id"
+                                    options="{ 'no_create': True }"
+                                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                                />
+
+                                <field
+                                    name="name"
+                                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                                />
+
+                                <field
+                                    name="net_weight"
+                                    groups="product_materials.group_product_product_manage_materials_weights"
+                                />
+                                <field
+                                    name="net_weight_uom_id"
+                                    groups="product_materials.group_product_product_manage_materials_weights"
+                                />
+
+                                <field
+                                    name="recycled_percentage"
+                                    groups="product_materials.group_product_product_manage_materials_recycling_percentages"
+                                />
+
+                                <field
+                                    name="product_material_waste_component_id"
+                                    groups="product_materials.group_product_product_manage_materials_waste"
+                                    options="{ 'no_create': True }"
+                                />
+
+                                <field
+                                    name="product_material_waste_endpoint_id"
+                                    groups="product_materials.group_product_product_manage_materials_waste"
+                                    options="{ 'no_create': True }"
+                                />
+
+                                <field name="description" />
+                                <field name="type" invisible="1" />
+
+                            </tree>
+                        </field>
+                    </group>
+
+                    <group
+                        string="Product Packaging Material Compositions"
+                        groups="product_materials.group_product_product_manage_product_packaging_materials"
+                    >
+                        <field
+                            name="product_packaging_material_composition_ids"
+                            context="{'default_type': 'product_packaging'}"
+                            nolabel="1"
+                        >
+                            <tree string="Material Compositions" editable="bottom">
+                                <field
+                                    name="product_material_sublevel_id"
+                                    options="{ 'no_create': True }"
+                                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                                />
+
+                                <field
+                                    name="product_material_id"
+                                    domain="[('is_product_material', '=', True)]"
+                                    options="{ 'no_create': True }"
+                                />
+
+                                <field
+                                    name="product_material_class_id"
+                                    options="{ 'no_create': True }"
+                                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                                />
+
+                                <field
+                                    name="name"
+                                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                                />
+
+                                <field
+                                    name="net_weight"
+                                    groups="product_materials.group_product_product_manage_materials_weights"
+                                />
+                                <field
+                                    name="net_weight_uom_id"
+                                    groups="product_materials.group_product_product_manage_materials_weights"
+                                />
+
+                                <field
+                                    name="recycled_percentage"
+                                    groups="product_materials.group_product_product_manage_materials_recycling_percentages"
+                                />
+
+                                <field
+                                    name="product_material_waste_component_id"
+                                    options="{ 'no_create': True }"
+                                    groups="product_materials.group_product_product_manage_materials_waste"
+                                />
+
+                                <field
+                                    name="product_material_waste_endpoint_id"
+                                    options="{ 'no_create': True }"
+                                    groups="product_materials.group_product_product_manage_materials_waste"
+                                />
+
+                                <field name="description" />
+                                <field name="type" invisible="1" />
+                            </tree>
+                        </field>
+                    </group>
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
