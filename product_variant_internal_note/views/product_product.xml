@@ -5,13 +5,15 @@
         <field name="model">product.product</field>
         <field name="inherit_id" ref="product.product_normal_form_view" />
         <field name="arch" type="xml">
-            <xpath expr="//field[@name='description']/.." position="after">
+            <xpath expr="//group[@name='group_lots_and_weight']" position="after">
                 <group string="Variant Notes">
-                    <field
-                        name="internal_note"
-                        nolabel="1"
-                        placeholder="Notes for a product variant..."
-                    />
+                    <group>
+                        <field
+                            name="internal_note"
+                            nolabel="1"
+                            placeholder="Notes for a product variant..."
+                        />
+                    </group>
                 </group>
             </xpath>
         </field>
