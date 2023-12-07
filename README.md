@@ -50,7 +50,7 @@ addon | version | maintainers | summary
 [product_template_rack](product_template_rack/) | 14.0.1.0.0 |  | Introduces a new field, Rack, to set stable product locations
 [product_template_row](product_template_row/) | 14.0.1.0.0 |  | Introduces a new field, Row, to set stable product locations
 [product_template_tags_analytic_tags](product_template_tags_analytic_tags/) | 14.0.1.0.0 |  | Analytic tags for product template tags
-[product_template_weight](product_template_weight/) | 14.0.1.0.0 |  | Variant weight and volume is managed in related product template
+[product_template_update_variant_volume](product_template_update_variant_volume/) | 14.0.1.0.0 |  | Variant weight and volume is managed in related product template
 [product_translations](product_translations/) | 14.0.1.0.0 |  | Product translations in backend
 [product_tree_description](product_tree_description/) | 14.0.1.0.0 |  | Description field in product tree view
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
