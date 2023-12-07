@@ -6,20 +6,6 @@
         <field name="inherit_id" ref="product.product_template_form_view" />
         <field name="arch" type="xml">
 
-            <field name="weight" position="attributes">
-                <attribute
-                    name="attrs"
-                >{'readonly':[('is_product_variant', '=', True)]}</attribute>
-            </field>
-
-            <xpath expr="//label[@for='weight']" position="attributes">
-                <attribute name="attrs">{}</attribute>
-            </xpath>
-
-            <xpath expr="//div[@name='weight']" position="attributes">
-                <attribute name="attrs">{}</attribute>
-            </xpath>
-
             <field name="volume" position="attributes">
                 <attribute
                     name="attrs"
