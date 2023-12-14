@@ -32,6 +32,7 @@
     "depends": ["product_compliant", "product_materials"],
     "data": [
         "security/res_groups.xml",
+        "views/product_material_composition.xml",
         "views/product_product.xml",
         "views/res_config_settings.xml",
     ],

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <record id="view_product_material_composition_inherited_tree" model="ir.ui.view">
+        <field name="name">product.material.composition.inherited.tree</field>
+        <field name="model">product.material.composition</field>
+        <field name="inherit_id" ref="product_materials.view_product_material_composition_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree" position="inside">
+                <field name="chemicals_compliant"/>
+                <field name="conflict_area_minerals_compliant"/>
+                <field name="halogen_compliant"/>
+                <field name="pop_compliant"/>
+                <field name="reach_compliant"/>
+                <field name="rohs_compliant"/>
+                <field name="scip_compliant"/>
+            </xpath>
+        </field>
+    </record>
+</odoo>

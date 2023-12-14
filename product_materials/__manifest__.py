@@ -36,6 +36,7 @@
         "report/stock_report.xml",
         "views/product_material.xml",
         "views/product_material_class.xml",
+        "views/product_material_composition.xml",
         "views/product_material_sublevel.xml",
         "views/product_material_waste_component.xml",
         "views/product_material_waste_endpoint.xml",
