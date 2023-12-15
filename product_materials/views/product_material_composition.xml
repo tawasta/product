@@ -5,18 +5,18 @@
         <field name="model">product.material.composition</field>
         <field name="arch" type="xml">
             <tree string="Product Material Composition">
-                <field name="product_product_id"/>
-                <field name="name"/>
-                <field name="product_material_class_id"/>
-                <field name="product_material_id"/>
-                <field name="product_material_sublevel_id"/>
-                <field name="net_weight"/>
-                <field name="net_weight_uom_id"/>
-                <field name="recycled_percentage"/>
-                <field name="product_material_waste_component_id"/>
-                <field name="product_material_waste_endpoint_id"/>
-                <field name="description"/>
-                <field name="type"/>
+                <field name="product_product_id" optional="show"/>
+                <field name="name" groups="product_materials.group_product_product_manage_material_hierarchy" optional="show"/>
+                <field name="product_material_class_id" groups="product_materials.group_product_product_manage_material_hierarchy" optional="show"/>
+                <field name="product_material_id" optional="show"/>
+                <field name="product_material_sublevel_id" groups="product_materials.group_product_product_manage_material_hierarchy" optional="show"/>
+                <field name="net_weight" groups="product_materials.group_product_product_manage_materials_weights" optional="show"/>
+                <field name="net_weight_uom_id" groups="product_materials.group_product_product_manage_materials_weights" optional="show"/>
+                <field name="recycled_percentage" groups="product_materials.group_product_product_manage_materials_recycling_percentages" optional="show"/>
+                <field name="product_material_waste_component_id" groups="product_materials.group_product_product_manage_materials_waste" optional="show"/>
+                <field name="product_material_waste_endpoint_id" groups="product_materials.group_product_product_manage_materials_waste" optional="show"/>
+                <field name="description" optional="show"/>
+                <field name="type" optional="show"/>
             </tree>
         </field>
     </record>
