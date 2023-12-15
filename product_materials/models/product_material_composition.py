@@ -6,12 +6,15 @@ class ProductMaterialComposition(models.Model):
 
     _name = "product.material.composition"
     _description = "Product Material Composition"
+    _order = "sequence, id"
     _rec_name = "product_material_id"
 
     @tools.ormcache()
     def _get_default_net_weight_uom_id(self):
         # Suggest grams as default
         return self.env.ref("uom.product_uom_gram")
+
+    sequence = fields.Integer(string="Sequence")
 
     # This is the variant that the material row is linked to
     product_product_id = fields.Many2one(

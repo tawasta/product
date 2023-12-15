@@ -5,7 +5,7 @@
         <field name="model">product.material.composition</field>
         <field name="inherit_id" ref="product_materials.view_product_material_composition_tree"/>
         <field name="arch" type="xml">
-            <xpath expr="//tree" position="inside">
+            <field name="type" position="after">
                 <field name="chemicals_compliant" groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals" optional="show"/>
                 <field name="conflict_area_minerals_compliant" groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals" optional="show"/>
                 <field name="halogen_compliant" groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens" optional="show"/>
@@ -13,7 +13,7 @@
                 <field name="reach_compliant" groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_reach" optional="show"/>
                 <field name="rohs_compliant" groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs" optional="show"/>
                 <field name="scip_compliant" groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_scip" optional="show"/>
-            </xpath>
+            </field>
         </field>
     </record>
 </odoo>

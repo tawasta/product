@@ -5,8 +5,9 @@
         <field name="model">product.material.composition</field>
         <field name="arch" type="xml">
             <tree string="Product Material Composition">
-                <field name="product_product_id" optional="show"/>
+                <field name="sequence" widget="handle" />
                 <field name="name" groups="product_materials.group_product_product_manage_material_hierarchy" optional="show"/>
+                <field name="product_product_id" optional="show"/>
                 <field name="product_material_class_id" groups="product_materials.group_product_product_manage_material_hierarchy" optional="show"/>
                 <field name="product_material_id" optional="show"/>
                 <field name="product_material_sublevel_id" groups="product_materials.group_product_product_manage_material_hierarchy" optional="show"/>
@@ -17,6 +18,7 @@
                 <field name="product_material_waste_endpoint_id" groups="product_materials.group_product_product_manage_materials_waste" optional="show"/>
                 <field name="description" optional="show"/>
                 <field name="type" optional="show"/>
+                <field name="attachment_ids" widget="many2many_binary" optional="show" />
             </tree>
         </field>
     </record>
