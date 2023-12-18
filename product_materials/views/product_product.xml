@@ -201,7 +201,7 @@
                                     groups="product_materials.group_product_product_manage_material_hierarchy"
                                 />
 
-                                
+
 
                                 <field
                                     name="net_weight"

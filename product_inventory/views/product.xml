@@ -4,9 +4,12 @@
     <record model="ir.ui.view" id="product_normal_form_view">
             <field name="name">product.product.custom_date</field>
             <field name="model">product.product</field>
-            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
             <field name="arch" type="xml">
-                <xpath expr="//page[@name='inventory']/group[@name='inventory']" position="inside">
+                <xpath
+                expr="//page[@name='inventory']/group[@name='inventory']"
+                position="inside"
+            >
                     <group string="Extra fields">
                     <field name="inventory_date" />
                     <field name="stock_move_date" />
@@ -18,15 +21,18 @@
     <record model="ir.ui.view" id="product_form_view_inventory_lines_button">
             <field name="name">product.product.inventory_lines</field>
             <field name="model">product.product</field>
-            <field name="inherit_id" ref="product.product_normal_form_view"/>
+            <field name="inherit_id" ref="product.product_normal_form_view" />
             <field name="arch" type="xml">
                 <data>
                     <div name="button_box" position="inside">
-                        <button string="Inventory lines"
-                            type="object"
-                            name= "action_view_inventory_lines"
-                            class="oe_stat_button" icon="fa-exchange"
-                            groups="stock.group_stock_user"/>
+                        <button
+                        string="Inventory lines"
+                        type="object"
+                        name="action_view_inventory_lines"
+                        class="oe_stat_button"
+                        icon="fa-exchange"
+                        groups="stock.group_stock_user"
+                    />
                     </div>
                 </data>
             </field>
