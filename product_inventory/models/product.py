@@ -11,11 +11,24 @@ class ProductProduct(models.Model):
     _inherit="product.product"
 
     inventory_date = fields.Date(compute='_compute_inventory_date', store=True, index=True)
+    stock_move_date = fields.Date(compute='_compute_stock_date', store=True, index=True)
 
     stock_inventory_line_ids = fields.One2many('stock.inventory.line', 'product_id', help='Technical: used to compute lines.')
 
-    @api.depends('stock_move_ids', 'stock_inventory_line_ids')
+    @api.depends('stock_inventory_line_ids')
     def _compute_inventory_date(self):
+        for record in self:
+
+            inventory_lines = self.env['stock.inventory.line'].search([
+                ('product_id', '=', record.id),
+                ('inventory_date', '!=', False)
+            ], limit=1, order='inventory_date DESC')
+
+            dates = [line.inventory_date for line in inventory_lines]
+            record.inventory_date = dates and max(dates) or False
+
+    @api.depends('stock_move_ids')
+    def _compute_stock_date(self):
         for record in self:
 
             move_lines = self.env['stock.move.line'].search([
@@ -23,13 +36,8 @@ class ProductProduct(models.Model):
                 ('date', '!=', False)
             ], limit=1, order='date DESC')
 
-            inventory_lines = self.env['stock.inventory.line'].search([
-                ('product_id', '=', record.id),
-                ('inventory_date', '!=', False)
-            ], limit=1, order='inventory_date DESC')
-
-            dates = [line.date for line in move_lines] + [line.inventory_date for line in inventory_lines]
-            record.inventory_date = dates and max(dates) or False
+            dates = [line.date for line in move_lines]
+            record.stock_move_date = dates and max(dates) or False
 
     def action_view_inventory_lines(self):
         self.ensure_one()

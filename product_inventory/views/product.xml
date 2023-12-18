@@ -9,6 +9,7 @@
                 <xpath expr="//page[@name='inventory']/group[@name='inventory']" position="inside">
                     <group string="Extra fields">
                     <field name="inventory_date" />
+                    <field name="stock_move_date" />
                 </group>
             </xpath>
             </field>
