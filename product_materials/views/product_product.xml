@@ -33,6 +33,10 @@
                                     groups="product_materials.group_product_product_manage_material_hierarchy"
                                     invisible="1"
                                 />
+                                <field
+                                    name="name"
+                                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                                />
 
                                 <field
                                     name="product_material_id"
@@ -43,11 +47,6 @@
                                 <field
                                     name="product_material_class_id"
                                     options="{ 'no_create': True }"
-                                    groups="product_materials.group_product_product_manage_material_hierarchy"
-                                />
-
-                                <field
-                                    name="name"
                                     groups="product_materials.group_product_product_manage_material_hierarchy"
                                 />
 
@@ -181,6 +180,10 @@
                         >
                             <tree string="Material Compositions">
                                 <field
+                                    name="name"
+                                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                                />
+                                <field
                                     name="product_material_sublevel_id"
                                     options="{ 'no_create': True }"
                                     groups="product_materials.group_product_product_manage_material_hierarchy"
@@ -198,10 +201,7 @@
                                     groups="product_materials.group_product_product_manage_material_hierarchy"
                                 />
 
-                                <field
-                                    name="name"
-                                    groups="product_materials.group_product_product_manage_material_hierarchy"
-                                />
+
 
                                 <field
                                     name="net_weight"

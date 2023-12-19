@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_material_composition_tree" model="ir.ui.view">
+        <field name="name">product.material.composition.tree</field>
+        <field name="model">product.material.composition</field>
+        <field name="arch" type="xml">
+            <tree string="Product Material Composition">
+                <field name="sequence" widget="handle" />
+                <field
+                    name="name"
+                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                    optional="show"
+                />
+                <field name="product_product_id" optional="show" />
+                <field
+                    name="product_material_class_id"
+                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                    optional="show"
+                />
+                <field name="product_material_id" optional="show" />
+                <field
+                    name="product_material_sublevel_id"
+                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                    optional="show"
+                />
+                <field
+                    name="net_weight"
+                    groups="product_materials.group_product_product_manage_materials_weights"
+                    optional="show"
+                />
+                <field
+                    name="net_weight_uom_id"
+                    groups="product_materials.group_product_product_manage_materials_weights"
+                    optional="show"
+                />
+                <field
+                    name="recycled_percentage"
+                    groups="product_materials.group_product_product_manage_materials_recycling_percentages"
+                    optional="show"
+                />
+                <field
+                    name="product_material_waste_component_id"
+                    groups="product_materials.group_product_product_manage_materials_waste"
+                    optional="show"
+                />
+                <field
+                    name="product_material_waste_endpoint_id"
+                    groups="product_materials.group_product_product_manage_materials_waste"
+                    optional="show"
+                />
+                <field name="description" optional="show" />
+                <field name="type" optional="show" />
+                <field
+                    name="attachment_ids"
+                    widget="many2many_binary"
+                    optional="show"
+                />
+            </tree>
+        </field>
+    </record>
+
+    <!-- Add this record to the action where you want the tree view to appear -->
+    <record id="action_product_material_composition" model="ir.actions.act_window">
+        <field name="name">Product Material Composition</field>
+        <field name="res_model">product.material.composition</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_product_material_composition_tree" />
+    </record>
+
+    <menuitem
+        id="menu_product_material_composition"
+        parent="stock.menu_product_in_config_stock"
+        sequence="30"
+        action="action_product_material_composition"
+    />
+</odoo>
