@@ -47,6 +47,7 @@ Usage
 * Once configuration is done, open a product variant page and fill in the appropriate material and waste information
 * When entering a Sale Order (and the "Show materials on reports" feature is enabled), select on the Sale Order page if the SO's related prints should contain the product material information.
   This will affect the Invoice print and the Delivery Slip print
+* You can also view Product Material Compositions in a list view via Inventory -> Settings -> Product Material Compositions, which can be useful when importing material data for multiple products
 
 Known issues / Roadmap
 ======================

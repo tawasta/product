@@ -24,7 +24,7 @@ addon | version | maintainers | summary
 [product_inventory](product_inventory/) | 14.0.1.0.0 |  | Product Inventory
 [product_margin_ignore](product_margin_ignore/) | 14.0.1.0.0 |  | Helper field for customizing margin calculation
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
-[product_materials](product_materials/) | 14.0.3.1.2 |  | Product Materials info for products and their packaging
+[product_materials](product_materials/) | 14.0.3.1.3 |  | Product Materials info for products and their packaging
 [product_materials_compliant](product_materials_compliant/) | 14.0.1.0.1 |  | Add fields for product material compliance (Conflict Area Minerals, SCIP, etc.)
 [product_materials_show_on_product_template_form](product_materials_show_on_product_template_form/) | 14.0.1.0.0 |  | Show Materials on template form (for when variants not in use)
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
