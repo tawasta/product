@@ -59,7 +59,16 @@
         </field>
     </record>
 
-    <!-- Add this record to the action where you want the tree view to appear -->
+    <record id="view_product_material_composition_search" model="ir.ui.view">
+        <field name="name">product.material.composition.search</field>
+        <field name="model">product.material.composition</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="product_product_id" />
+            </search>
+        </field>
+    </record>
+
     <record id="action_product_material_composition" model="ir.actions.act_window">
         <field name="name">Product Material Composition</field>
         <field name="res_model">product.material.composition</field>
