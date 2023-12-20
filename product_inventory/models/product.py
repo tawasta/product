@@ -36,7 +36,13 @@ class ProductProduct(models.Model):
         for record in self:
 
             move_lines = self.env["stock.move.line"].search(
-                [("product_id", "=", record.id), ("date", "!=", False)],
+                [
+                    ("product_id", "=", record.id),
+                    ("date", "!=", False),
+                    ("move_id.state", "=", "done"),
+                    ("move_id.location_id.usage", "not in", ["internal", "transit"]),
+                    ("move_id.location_dest_id.usage", "in", ["internal", "transit"]),
+                ],
                 limit=1,
                 order="date DESC",
             )
