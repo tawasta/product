@@ -1,0 +1,73 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_cost_price_editor
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20230629\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-20 12:24+0000\n"
+"PO-Revision-Date: 2023-12-20 14:25+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.1\n"
+
+#. module: product_cost_price_editor
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_procountor_product_product__standard_price_write_date
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_product_product__standard_price_write_date
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_product_template__standard_price_write_date
+msgid "Cost updated"
+msgstr "Kustannus päivitetty"
+
+#. module: product_cost_price_editor
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_product_template__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: product_cost_price_editor
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_product_template__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: product_cost_price_editor
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_product_template____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: product_cost_price_editor
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_procountor_product_product__list_price_write_date
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_product_product__list_price_write_date
+#: model:ir.model.fields,field_description:product_cost_price_editor.field_product_template__list_price_write_date
+msgid "Price updated"
+msgstr "Hinta päivitetty"
+
+#. module: product_cost_price_editor
+#: model_terms:ir.ui.view,arch_db:product_cost_price_editor.product_template_cost_price_tree_view
+msgid "Product"
+msgstr "Tuote"
+
+#. module: product_cost_price_editor
+#: model_terms:ir.ui.view,arch_db:product_cost_price_editor.product_template_cost_price_tree_view
+msgid "Product Name"
+msgstr "Tuotteen nimi"
+
+#. module: product_cost_price_editor
+#: model:ir.model,name:product_cost_price_editor.model_product_template
+msgid "Product Template"
+msgstr "Tuotemalli"
+
+#. module: product_cost_price_editor
+#: model:ir.actions.act_window,name:product_cost_price_editor.product_template_price_action
+#: model:ir.ui.menu,name:product_cost_price_editor.product_product_menu_prices
+msgid "Product prices"
+msgstr "Tuotteiden hinnat"
+
+#. module: product_cost_price_editor
+#: model_terms:ir.ui.view,arch_db:product_cost_price_editor.product_template_cost_price_tree_view
+msgid "Sales Price"
+msgstr "Myyntihinta"
