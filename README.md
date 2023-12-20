@@ -19,6 +19,7 @@ addon | version | maintainers | summary
 [product_cant_order](product_cant_order/) | 14.0.1.0.3 |  | Product can't order
 [product_competitor_alternative](product_competitor_alternative/) | 14.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_compliant](product_compliant/) | 14.0.1.2.1 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
+[product_cost_price_editor](product_cost_price_editor/) | 14.0.1.0.0 |  | Adds a view for editing product cost prices
 [product_default_location](product_default_location/) | 14.0.1.0.0 |  | Product Default Location
 [product_dimension_convert_unit](product_dimension_convert_unit/) | 14.0.1.0.1 |  | Convert the computed volume of a product by its volume UoM
 [product_inventory](product_inventory/) | 14.0.1.0.0 |  | Product Inventory
