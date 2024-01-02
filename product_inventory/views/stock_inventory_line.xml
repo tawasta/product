@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
+    <record model="ir.ui.view" id="stock_inventory_line_tree">
+            <field name="name">stock.inventory.line.date.tree</field>
+            <field name="model">stock.inventory.line</field>
+            <field name="inherit_id" ref="stock.stock_inventory_line_tree" />
+            <field name="arch" type="xml">
+                <field name="inventory_date" position="after">
+                    <field name="adjustment_date" />
+                </field>
+            </field>
+        </record>
+
     <record id="stock_inventory_line_action" model="ir.actions.act_window">
         <field name="name">Inventory Lines</field>
         <field name="type">ir.actions.act_window</field>
