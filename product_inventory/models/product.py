@@ -23,12 +23,12 @@ class ProductProduct(models.Model):
         for record in self:
 
             inventory_lines = self.env["stock.inventory.line"].search(
-                [("product_id", "=", record.id), ("inventory_date", "!=", False)],
+                [("product_id", "=", record.id), ("inventory_id.date", "!=", False)],
                 limit=1,
-                order="inventory_date DESC",
+                order="inventory_id.date DESC",
             )
 
-            dates = [line.inventory_date for line in inventory_lines]
+            dates = [line.inventory_id.date for line in inventory_lines]
             record.inventory_date = dates and max(dates) or False
 
     @api.depends("stock_move_ids")
