@@ -7,7 +7,7 @@
             <field name="inherit_id" ref="stock.stock_inventory_line_tree" />
             <field name="arch" type="xml">
                 <field name="inventory_date" position="after">
-                    <field name="adjustment_date"/>
+                    <field name="adjustment_date" />
                 </field>
             </field>
         </record>
