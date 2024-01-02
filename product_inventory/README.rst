@@ -2,11 +2,11 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=================
-Product Inventory
-=================
+=================================
+Product Inventory Control helpers
+=================================
 
-Default location-field for product.
+Show latest date when product has been received and/or adjusted
 
 Configuration
 =============

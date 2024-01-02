@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Product Inventory",
-    "summary": "Product Inventory",
+    "name": "Product Inventory Control helpers",
+    "summary": "Show latest date when product has been received and/or adjusted",
     "version": "14.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",

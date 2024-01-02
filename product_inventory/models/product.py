@@ -10,10 +10,15 @@ class ProductProduct(models.Model):
     _inherit = "product.product"
 
     inventory_date = fields.Date(
-        compute="_compute_inventory_date", store=True, index=True
+        compute="_compute_inventory_date",
+        index=True,
+        help="Latest product inventory date",
     )
     stock_move_date = fields.Date(
-        string="Stock in date", compute="_compute_stock_date", store=True, index=True
+        string="Stock in date",
+        compute="_compute_stock_date",
+        index=True,
+        help="Latest product receipt from vendor",
     )
 
     stock_inventory_line_ids = fields.One2many(
@@ -22,40 +27,27 @@ class ProductProduct(models.Model):
 
     @api.depends("stock_inventory_line_ids")
     def _compute_inventory_date(self):
+        inventory_line_model = self.env["stock.inventory.line"].sudo()
         for record in self:
-
-            inventory_lines = (
-                self.env["stock.inventory.line"]
-                .sudo()
-                .search(
-                    [("product_id", "=", record.id), ("inventory_id.date", "!=", False)]
-                )
-                .mapped("inventory_id")
+            inventory_line = inventory_line_model.search(
+                [("product_id", "=", record.id), ("inventory_date", "!=", False)],
+                order="inventory_date DESC",
+                limit=1,
             )
 
-            dates = [line.date for line in inventory_lines]
-            record.inventory_date = dates and max(dates) or False
+            record.inventory_date = inventory_line.inventory_date
 
     @api.depends("stock_move_ids")
     def _compute_stock_date(self):
         for record in self:
-
-            move_lines = self.env["stock.move.line"].search(
-                [
-                    ("product_id", "=", record.id),
-                    ("date", "!=", False),
-                    ("move_id.state", "=", "done"),
-                    ("move_id.location_id.usage", "not in", ["internal", "transit"]),
-                    ("move_id.location_dest_id.usage", "in", ["internal", "transit"]),
-                    "|",
-                    ("origin", "=ilike", "PO%"),
-                    ("origin", "ilike", "%PO%"),
-                ],
-                limit=1,
-                order="date DESC",
+            in_moves = record.stock_move_ids.filtered(
+                lambda sm: sm.date
+                and sm.state == "done"
+                and sm.location_id.usage in ["supplier", "transit"]
+                and sm.location_dest_id.usage in ["internal"]
             )
 
-            dates = [line.date for line in move_lines]
+            dates = [move.date for move in in_moves]
             record.stock_move_date = dates and max(dates) or False
 
     def action_view_inventory_lines(self):
