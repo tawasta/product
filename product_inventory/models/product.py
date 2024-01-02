@@ -12,7 +12,9 @@ class ProductProduct(models.Model):
     inventory_date = fields.Date(
         compute="_compute_inventory_date", store=True, index=True
     )
-    stock_move_date = fields.Date(string="Stock in date", compute="_compute_stock_date", store=True, index=True)
+    stock_move_date = fields.Date(
+        string="Stock in date", compute="_compute_stock_date", store=True, index=True
+    )
 
     stock_inventory_line_ids = fields.One2many(
         "stock.inventory.line", "product_id", help="Technical: used to compute lines."
@@ -45,9 +47,9 @@ class ProductProduct(models.Model):
                     ("move_id.state", "=", "done"),
                     ("move_id.location_id.usage", "not in", ["internal", "transit"]),
                     ("move_id.location_dest_id.usage", "in", ["internal", "transit"]),
-                    "|", 
+                    "|",
                     ("origin", "=ilike", "PO%"),
-                    ("origin", "ilike", "%PO%")
+                    ("origin", "ilike", "%PO%"),
                 ],
                 limit=1,
                 order="date DESC",
