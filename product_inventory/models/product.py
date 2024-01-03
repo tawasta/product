@@ -27,15 +27,20 @@ class ProductProduct(models.Model):
 
     @api.depends("stock_inventory_line_ids")
     def _compute_inventory_date(self):
-        inventory_line_model = self.env["stock.inventory.line"].sudo()
         for record in self:
-            inventory_line = inventory_line_model.search(
-                [("product_id", "=", record.id), ("inventory_date", "!=", False)],
-                order="inventory_date DESC",
-                limit=1,
+
+            inventory_lines = (
+                self.env["stock.inventory.line"]
+                .sudo()
+                .search(
+                    [("product_id", "=", record.id), ("inventory_id.date", "!=", False)]
+                )
+                .mapped("inventory_id")
             )
 
-            record.inventory_date = inventory_line.inventory_date
+            dates = [line.date for line in inventory_lines]
+            record.inventory_date = dates and max(dates) or False
+
 
     @api.depends("stock_move_ids")
     def _compute_stock_date(self):
