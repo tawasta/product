@@ -1,4 +1,7 @@
+import logging
 from odoo import api, fields, models
+
+_logger = logging.getLogger(__name__)
 
 
 class ProductTemplate(models.Model):
@@ -43,6 +46,7 @@ class ProductProduct(models.Model):
     @api.depends("stock_move_ids")
     def _compute_stock_date(self):
         for record in self:
+            _logger.info("Computing stock move date for {}".format(record.display_name))
 
             move_lines = self.env["stock.move.line"].search(
                 [
