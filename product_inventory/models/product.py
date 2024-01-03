@@ -29,12 +29,12 @@ class ProductProduct(models.Model):
 
     @api.depends("stock_inventory_line_ids")
     def _compute_inventory_date(self):
+        inventory_line_model = self.env["stock.inventory.line"].sudo()
+
         for record in self:
 
             inventory_lines = (
-                self.env["stock.inventory.line"]
-                .sudo()
-                .search(
+                inventory_line_model.search(
                     [("product_id", "=", record.id), ("inventory_id.date", "!=", False)]
                 )
                 .mapped("inventory_id")
