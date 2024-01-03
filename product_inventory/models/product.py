@@ -43,14 +43,20 @@ class ProductProduct(models.Model):
     @api.depends("stock_move_ids")
     def _compute_stock_date(self):
         for record in self:
-            in_moves = record.stock_move_ids.filtered(
-                lambda sm: sm.date
-                and sm.state == "done"
-                and sm.location_id.usage in ["supplier", "transit"]
-                and sm.location_dest_id.usage in ["internal"]
+
+            move_lines = self.env["stock.move.line"].search(
+                [
+                    ("product_id", "=", record.id),
+                    ("date", "!=", False),
+                    ("move_id.state", "=", "done"),
+                    ("move_id.location_id.usage", "in", ["supplier", "transit"]),
+                    ("move_id.location_dest_id.usage", "in", ["internal"]),
+                ],
+                limit=1,
+                order="date DESC",
             )
 
-            dates = [move.date for move in in_moves]
+            dates = [line.date for line in move_lines]
             record.stock_move_date = dates and max(dates) or False
 
     def action_view_inventory_lines(self):
