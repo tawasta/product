@@ -13,12 +13,14 @@ class ProductProduct(models.Model):
         compute="_compute_inventory_date",
         index=True,
         help="Latest product inventory date",
+        store=True
     )
     stock_move_date = fields.Date(
         string="Stock in date",
         compute="_compute_stock_date",
         index=True,
         help="Latest product receipt from vendor",
+        store=True
     )
 
     stock_inventory_line_ids = fields.One2many(
