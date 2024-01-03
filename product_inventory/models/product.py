@@ -13,14 +13,14 @@ class ProductProduct(models.Model):
         compute="_compute_inventory_date",
         index=True,
         help="Latest product inventory date",
-        store=True
+        store=True,
     )
     stock_move_date = fields.Date(
         string="Stock in date",
         compute="_compute_stock_date",
         index=True,
         help="Latest product receipt from vendor",
-        store=True
+        store=True,
     )
 
     stock_inventory_line_ids = fields.One2many(
@@ -33,16 +33,12 @@ class ProductProduct(models.Model):
 
         for record in self:
 
-            inventory_lines = (
-                inventory_line_model.search(
-                    [("product_id", "=", record.id), ("inventory_id.date", "!=", False)]
-                )
-                .mapped("inventory_id")
-            )
+            inventory_lines = inventory_line_model.search(
+                [("product_id", "=", record.id), ("inventory_id.date", "!=", False)]
+            ).mapped("inventory_id")
 
             dates = [line.date for line in inventory_lines]
             record.inventory_date = dates and max(dates) or False
-
 
     @api.depends("stock_move_ids")
     def _compute_stock_date(self):
