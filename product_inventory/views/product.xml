@@ -10,7 +10,7 @@
                 expr="//page[@name='inventory']/group[@name='inventory']"
                 position="inside"
             >
-                    <group string="Extra fields">
+                    <group string="Inventory control">
                     <field name="inventory_date" />
                     <field name="stock_move_date" />
                 </group>

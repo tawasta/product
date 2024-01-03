@@ -1,4 +1,8 @@
+import logging
+
 from odoo import api, fields, models
+
+_logger = logging.getLogger(__name__)
 
 
 class ProductTemplate(models.Model):
@@ -10,10 +14,17 @@ class ProductProduct(models.Model):
     _inherit = "product.product"
 
     inventory_date = fields.Date(
-        compute="_compute_inventory_date", store=True, index=True
+        compute="_compute_inventory_date",
+        index=True,
+        help="Latest product inventory date",
+        store=True,
     )
     stock_move_date = fields.Date(
-        string="Stock in date", compute="_compute_stock_date", store=True, index=True
+        string="Stock in date",
+        compute="_compute_stock_date",
+        index=True,
+        help="Latest product receipt from vendor",
+        store=True,
     )
 
     stock_inventory_line_ids = fields.One2many(
@@ -22,16 +33,13 @@ class ProductProduct(models.Model):
 
     @api.depends("stock_inventory_line_ids")
     def _compute_inventory_date(self):
+        inventory_line_model = self.env["stock.inventory.line"].sudo()
+
         for record in self:
 
-            inventory_lines = (
-                self.env["stock.inventory.line"]
-                .sudo()
-                .search(
-                    [("product_id", "=", record.id), ("inventory_id.date", "!=", False)]
-                )
-                .mapped("inventory_id")
-            )
+            inventory_lines = inventory_line_model.search(
+                [("product_id", "=", record.id), ("inventory_id.date", "!=", False)]
+            ).mapped("inventory_id")
 
             dates = [line.date for line in inventory_lines]
             record.inventory_date = dates and max(dates) or False
@@ -39,17 +47,15 @@ class ProductProduct(models.Model):
     @api.depends("stock_move_ids")
     def _compute_stock_date(self):
         for record in self:
+            _logger.info("Computing stock move date for {}".format(record.display_name))
 
             move_lines = self.env["stock.move.line"].search(
                 [
                     ("product_id", "=", record.id),
                     ("date", "!=", False),
-                    ("move_id.state", "=", "done"),
-                    ("move_id.location_id.usage", "not in", ["internal", "transit"]),
-                    ("move_id.location_dest_id.usage", "in", ["internal", "transit"]),
-                    "|",
-                    ("origin", "=ilike", "PO%"),
-                    ("origin", "ilike", "%PO%"),
+                    ("state", "=", "done"),
+                    ("location_id.usage", "in", ["supplier", "transit"]),
+                    ("location_dest_id.usage", "in", ["internal"]),
                 ],
                 limit=1,
                 order="date DESC",
