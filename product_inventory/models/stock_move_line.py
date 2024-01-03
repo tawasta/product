@@ -8,6 +8,6 @@ class StockMoveLine(models.Model):
         res = super()._action_done()
 
         for record in self:
-            record.product_id._compute_stock_date()
+            record.sudo().product_id._compute_stock_date()
 
         return res
