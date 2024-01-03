@@ -53,9 +53,9 @@ class ProductProduct(models.Model):
                 [
                     ("product_id", "=", record.id),
                     ("date", "!=", False),
-                    ("move_id.state", "=", "done"),
-                    ("move_id.location_id.usage", "in", ["supplier", "transit"]),
-                    ("move_id.location_dest_id.usage", "in", ["internal"]),
+                    ("state", "=", "done"),
+                    ("location_id.usage", "in", ["supplier", "transit"]),
+                    ("location_dest_id.usage", "in", ["internal"]),
                 ],
                 limit=1,
                 order="date DESC",
