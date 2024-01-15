@@ -1,5 +1,9 @@
+import logging
+
 from odoo import _, api, fields, models, tools
 from odoo.exceptions import ValidationError
+
+_logger = logging.getLogger(__name__)
 
 
 class ProductMaterialComposition(models.Model):
@@ -109,3 +113,33 @@ class ProductMaterialComposition(models.Model):
         self.product_material_waste_endpoint_id = (
             self.product_material_waste_component_id.product_material_waste_endpoint_id
         )
+
+    def _fix_attachment_ownership(self):
+        """
+        If you create a product material composition line AND add an attachment for it
+        on the fly, without saving the line first, the connection between the
+        attachment and the res_id does not get stored properly, and a user who was not
+        the original attachment creator will get access errors when trying to view
+        the attached file.
+
+        For workaround details see:
+        1) https://www.odoo.com/forum/help-1
+        /m2m-attachment-field-issue-in-odoo-16-ce-creator-can-access-but-others-cannot
+        -221283
+        and
+        2) mail/models/mail_template.py
+        """
+        for record in self:
+            record.attachment_ids.write(
+                {"res_model": record._name, "res_id": record.id}
+            )
+        return self
+
+    @api.model_create_multi
+    def create(self, values_list):
+        return super().create(values_list)._fix_attachment_ownership()
+
+    def write(self, vals):
+        super().write(vals)
+        self._fix_attachment_ownership()
+        return True
