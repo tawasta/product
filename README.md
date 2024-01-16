@@ -59,9 +59,9 @@ addon | version | maintainers | summary
 [product_uom_helper](product_uom_helper/) | 14.0.1.0.0 |  | Shows helper fields on product UOM:s
 [product_update_quantity_to_inventory_adjustment](product_update_quantity_to_inventory_adjustment/) | 14.0.1.0.2 |  | Use Inventory Adjustment from Update Quantity functionality
 [product_use_tree_as_default_view](product_use_tree_as_default_view/) | 14.0.1.0.0 |  | Use tree as a default view for products
-[product_variant_company](product_variant_company/) | 14.0.1.0.0 |  | Add varian_company_id for product variant
 [product_variant_internal_note](product_variant_internal_note/) | 14.0.1.0.1 |  | Internal note for product variant
 [product_variant_sequence](product_variant_sequence/) | 14.0.1.0.0 |  | Order Product Variants based on sequence_variant.
+[product_variant_variant_company](product_variant_variant_company/) | 14.0.1.0.0 |  | Add variant_company_id for product variant
 [product_vendor_codes_field](product_vendor_codes_field/) | 14.0.1.0.1 |  | Show all vendor codes in a single field
 [product_vendor_supplier_only](product_vendor_supplier_only/) | 14.0.1.0.0 |  | Only show suppliers in product vendor list
 [uom_auditlog_rules](uom_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for uom.uom and uom.category
