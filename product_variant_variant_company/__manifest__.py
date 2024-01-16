@@ -20,7 +20,7 @@
 
 {
     "name": "Product Variant Company",
-    "summary": "Add varian_company_id for product variant",
+    "summary": "Add variant_company_id for product variant",
     "version": "14.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
