@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_product_compliant_read,access_product_compliant_read,model_product_compliant,base.group_user,1,0,0,0
-access_product_compliant_edit,access_product_compliant_edit,model_product_compliant,sales_team.group_sale_manager,1,1,1,1
