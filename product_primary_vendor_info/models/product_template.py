@@ -17,10 +17,8 @@ class ProductTemplate(models.Model):
             if not p.primary_supplierinfo_id:
                 p.standard_price_from_vendor = 0.00
             else:
-                unit_cost_in_eur = self.env["res.currency"]._compute(
-                    p.primary_supplierinfo_id.currency_id,
-                    p.currency_id,
-                    p.primary_supplierinfo_id.price,
+                unit_cost_in_eur = p.primary_supplierinfo_id.currency_id._convert(
+                    p.primary_supplierinfo_id.price, p.currency_id
                 )
 
                 p.standard_price_from_vendor = p.uom_po_id._compute_price(
