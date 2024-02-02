@@ -20,3 +20,8 @@ class ProductTemplate(models.Model):
         for record in self:
             if "volume" in values:
                 record.product_variant_ids.write({"volume": values["volume"]})
+
+    @api.depends("product_variant_ids", "product_variant_ids.volume")
+    def _compute_volume(self):
+        for template in self:
+            template.volume = template.product_variant_ids[0].volume
