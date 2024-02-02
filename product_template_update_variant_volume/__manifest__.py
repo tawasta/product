@@ -21,7 +21,7 @@
 {
     "name": "Manage Product Weight And Volume From Product Template",
     "summary": "Variant weight and volume is managed in related product template",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
