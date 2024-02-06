@@ -7,7 +7,19 @@
         <field name="inherit_id" ref="product.product_template_only_form_view" />
         <field name="arch" type="xml">
             <notebook position="inside">
-                <page string="Product Compliance" name="product_compliance">
+                <!-- Hide page altogether if none of the compliances are being managed -->
+                <page
+                    string="Product Compliance"
+                    name="product_compliance"
+                    groups="
+                        product_compliant.group_product_template_manage_compliance_atex,
+                        product_compliant.group_product_template_manage_compliance_reach,
+                        product_compliant.group_product_template_manage_compliance_rohs,
+                        product_compliant.group_product_template_manage_compliance_composition_checked,
+                        product_compliant.group_product_template_manage_compliance_msds_checked,
+                        product_compliant.group_product_template_manage_compliance_work_safety_checked
+                    "
+                >
                     <group name="group_general">
                         <field
                             name="atex_compliant"
