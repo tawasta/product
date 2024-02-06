@@ -24,4 +24,6 @@ class ProductTemplate(models.Model):
     @api.depends("product_variant_ids", "product_variant_ids.volume")
     def _compute_volume(self):
         for template in self:
-            template.volume = template.product_variant_ids[0].volume
+            template.volume = (
+                template.product_variant_ids and template.product_variant_ids[0].volume
+            )
