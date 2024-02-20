@@ -4,7 +4,6 @@ from odoo.addons import decimal_precision as dp
 
 
 class ProductTemplate(models.Model):
-
     _inherit = "product.template"
 
     @api.depends("seller_ids")

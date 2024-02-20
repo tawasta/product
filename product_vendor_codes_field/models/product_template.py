@@ -2,7 +2,6 @@ from odoo import api, fields, models
 
 
 class ProductProduct(models.Model):
-
     _inherit = "product.template"
 
     @api.depends("seller_ids", "seller_ids.product_code")
