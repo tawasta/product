@@ -11,7 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[product_internal_comments](product_internal_comments/) | 17.0.1.0.0 |  | New comments field for product
+[product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
 [product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.0 |  | Helper fields for showing primary vendor's info
 [product_vendor_codes_field](product_vendor_codes_field/) | 17.0.1.0.0 |  | Show all vendor codes in a single field
 
