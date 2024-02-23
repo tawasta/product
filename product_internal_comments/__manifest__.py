@@ -21,7 +21,7 @@
 {
     "name": "Internal Comments for Products",
     "summary": "New comments field for product",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",

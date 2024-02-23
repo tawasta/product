@@ -1,20 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<openerp>
-    <data>
-        <record id="product_internal_comments_form" model="ir.ui.view">
-            <field name="name">product.internal.comments.form</field>
-            <field name="model">product.product</field>
-            <field name="inherit_id" ref="product.product_normal_form_view" />
-            <field name="arch" type="xml">
-                <notebook position="inside">
-                    <page string="Internal Comments">
-                        <field
-                            name="internal_comments"
-                            placeholder="Internal comments..."
-                        />
-                    </page>
-                </notebook>
-            </field>
-        </record>
-    </data>
-</openerp>
+<odoo>
+    <record id="product_internal_comments_form" model="ir.ui.view">
+        <field name="name">product.internal.comments.form</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <notebook position="inside">
+                <page string="Internal Comments">
+                    <field
+                        name="internal_comments"
+                        placeholder="Internal comments..."
+                    />
+                </page>
+            </notebook>
+        </field>
+    </record>
+</odoo>
