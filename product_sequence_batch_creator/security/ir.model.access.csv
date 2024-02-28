@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_product_sequence_batch_creator_creator_wizard,access_product_sequence_batch_creator.creator_wizard,model_product_sequence_batch_creator_creator_wizard,stock.group_stock_user,1,1,1,0
