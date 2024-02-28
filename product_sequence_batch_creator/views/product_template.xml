@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <menuitem
+        id="menu_product_batch_create"
+        action="action_product_batch_create"
+        name="Batch Create Products"
+        parent="stock.menu_stock_inventory_control"
+        sequence="50"
+    />
+</odoo>
