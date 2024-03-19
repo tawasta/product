@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="0">
+
+    <record model="auditlog.rule" id="auditlog-rule-product-1">
+        <field name="name">Product Product</field>
+        <field name="model_id" ref="product.model_product_product" />
+        <field name="state">subscribed</field>
+    </record>
+    <record model="auditlog.rule" id="auditlog-rule-product-2">
+        <field name="name">Product Template</field>
+        <field name="model_id" ref="product.model_product_template" />
+        <field name="state">subscribed</field>
+    </record>
+    <record model="auditlog.rule" id="auditlog-rule-product-3">
+        <field name="name">Product Category</field>
+        <field name="model_id" ref="product.model_product_category" />
+        <field name="state">subscribed</field>
+    </record>
+
+</odoo>
