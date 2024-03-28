@@ -47,11 +47,17 @@ class ProductMaterialComposition(models.Model):
 
     net_weight_uom_id = fields.Many2one(
         comodel_name="uom.uom",
-        string="Unit of Measure",
+        string="Net Weight UoM",
         domain=lambda self: [
             ("category_id", "=", self.env.ref("uom.product_uom_categ_kgm").id)
         ],
         default=_get_default_net_weight_uom_id,
+    )
+
+    composition_and_product_informational_uom = fields.Char(
+        compute="_compute_composition_and_product_informational_uom",
+        string="Units",
+        help="Format: <Material Composition UoM> / <Parent Product UoM>",
     )
 
     recycled_percentage = fields.Integer(
@@ -113,6 +119,27 @@ class ProductMaterialComposition(models.Model):
         self.product_material_waste_endpoint_id = (
             self.product_material_waste_component_id.product_material_waste_endpoint_id
         )
+
+    def _compute_composition_and_product_informational_uom(self):
+        """
+        Compute an informational field that shows both the unit of the material
+        composition and product, e.g. "g / kg", to make it clear in the UI that the
+        parent product is not measured in grams, just the material.
+        """
+        for line in self:
+
+            line_uom = line.net_weight_uom_id and line.net_weight_uom_id.name or "-"
+
+            product_uom = (
+                line.product_product_id
+                and line.product_product_id.uom_id
+                and line.product_product_id.uom_id.name
+                or "-"
+            )
+
+            line.composition_and_product_informational_uom = (
+                f"{line_uom} / {product_uom}"
+            )
 
     def _fix_attachment_ownership(self):
         """
