@@ -54,8 +54,10 @@
                                     name="net_weight"
                                     groups="product_materials.group_product_product_manage_materials_weights"
                                 />
+
+                                <!-- show the informational UOM field -->
                                 <field
-                                    name="net_weight_uom_id"
+                                    name="composition_and_product_informational_uom"
                                     groups="product_materials.group_product_product_manage_materials_weights"
                                 />
 
@@ -201,14 +203,14 @@
                                     groups="product_materials.group_product_product_manage_material_hierarchy"
                                 />
 
-
-
                                 <field
                                     name="net_weight"
                                     groups="product_materials.group_product_product_manage_materials_weights"
                                 />
+
+                                <!-- show the informational UOM field -->
                                 <field
-                                    name="net_weight_uom_id"
+                                    name="composition_and_product_informational_uom"
                                     groups="product_materials.group_product_product_manage_materials_weights"
                                 />
 

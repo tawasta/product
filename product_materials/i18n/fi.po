@@ -4,18 +4,16 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 14.0-20230925\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-18 14:33+0000\n"
-"PO-Revision-Date: 2023-12-18 16:37+0200\n"
+"POT-Creation-Date: 2024-03-28 09:30+0000\n"
+"PO-Revision-Date: 2024-03-28 09:30+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Content-Transfer-Encoding: \n"
 "Plural-Forms: \n"
-"X-Generator: Poedit 3.0.1\n"
 
 #. module: product_materials
 #: model_terms:ir.ui.view,arch_db:product_materials.report_delivery_document
@@ -175,6 +173,11 @@ msgstr "Näyttönimi"
 #: model:res.groups,name:product_materials.group_product_product_enable_product_materials_on_prints
 msgid "Enable showing Product Materials on prints"
 msgstr "Tuotemateriaalien näyttö printeillä"
+
+#. module: product_materials
+#: model:ir.model.fields,help:product_materials.field_product_material_composition__composition_and_product_informational_uom
+msgid "Format: <Material Composition UoM> / <Parent Product UoM>"
+msgstr "Formaatti: <materiaalin mittayksikkö> / <ylätuotteen mittayksikkö>"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__id
@@ -355,6 +358,11 @@ msgstr "Materiaalit"
 #: model:ir.model.fields,field_description:product_materials.field_product_material_waste_endpoint__name
 msgid "Name"
 msgstr "Nimi"
+
+#. module: product_materials
+#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__net_weight_uom_id
+msgid "Net Weight UoM"
+msgstr "Osapainon mittayksikkö"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material_composition__net_weight
@@ -595,9 +603,9 @@ msgid "Type"
 msgstr "Tyyppi"
 
 #. module: product_materials
-#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__net_weight_uom_id
-msgid "Unit of Measure"
-msgstr "Mittayksikkö"
+#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__composition_and_product_informational_uom
+msgid "Units"
+msgstr "Mittayksiköt"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_res_config_settings__group_product_product_manage_material_hierarchy
