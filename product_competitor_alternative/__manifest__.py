@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Product Description for form view",
-    "summary": "Adds a  ecommerce desciption field for product template",
-    "version": "17.0.0.1.0",
-    "category": "Product",
+    "name": "Product: Competitor's Alternative Info",
+    "summary": "New field for info about competitor's alternative product",
+    "version": "17.0.1.0.0",
+    "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Oy Tawasta Technologies Ltd.",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["base", "product"],
-    "data": ["views/product_template_desc.xml"],
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["product"],
+    "data": ["views/product_template.xml"],
+    "demo": [],
 }
