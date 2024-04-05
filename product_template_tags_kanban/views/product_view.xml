@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="product_template_kanban_view" model="ir.ui.view">
+		<field name="name">Product.template.product.kanban.tag</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_kanban_view" />
+		<field name="arch" type="xml">
+            <div name="product_lst_price" position="before">
+                <div class="col-5" style="padding-top: 5px; float: right;">
+                    <field name="product_tag_ids" widget="many2many_tags" />
+                </div>
+            </div>
+		</field>
+	</record>
+</odoo>
