@@ -53,7 +53,7 @@
                 <field
                     name="attachment_ids"
                     widget="many2many_binary"
-                    optional="show"
+                    optional="hide"
                 />
             </tree>
         </field>
@@ -73,6 +73,7 @@
         <field name="name">Product Material Composition</field>
         <field name="res_model">product.material.composition</field>
         <field name="view_mode">tree,form</field>
+        <field name="domain">[('product_product_id.active', '=', True)]</field>
         <field name="view_id" ref="view_product_material_composition_tree" />
     </record>
 
