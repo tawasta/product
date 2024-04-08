@@ -22,7 +22,7 @@
     "name": "Product Materials: compliance support",
     "summary": "Add fields for product material compliance "
     "(Conflict Area Minerals, SCIP, etc.)",
-    "version": "14.0.1.0.1",
+    "version": "14.0.1.0.2",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
