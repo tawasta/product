@@ -12,37 +12,37 @@
                 <field
                     name="chemicals_compliant"
                     groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals"
-                    optional="show"
+                    optional="hide"
                 />
                 <field
                     name="conflict_area_minerals_compliant"
                     groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals"
-                    optional="show"
+                    optional="hide"
                 />
                 <field
                     name="halogen_compliant"
                     groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens"
-                    optional="show"
+                    optional="hide"
                 />
                 <field
                     name="pop_compliant"
                     groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_pop"
-                    optional="show"
+                    optional="hide"
                 />
                 <field
                     name="reach_compliant"
                     groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_reach"
-                    optional="show"
+                    optional="hide"
                 />
                 <field
                     name="rohs_compliant"
                     groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs"
-                    optional="show"
+                    optional="hide"
                 />
                 <field
                     name="scip_compliant"
                     groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_scip"
-                    optional="show"
+                    optional="hide"
                 />
             </field>
         </field>
