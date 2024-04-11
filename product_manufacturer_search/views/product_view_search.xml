@@ -5,11 +5,11 @@
         <field name="model">product.template</field>
         <field name="inherit_id" ref="product.product_template_search_view" />
         <field name="arch" type="xml">
-            <field name="product" position="after">
+            <field name="name" position="after">
                 <field
                     name="manufacturer_id"
                     string="Manufacturer"
-                    filter_domain="[('manufacturer_id.name', 'ilike', self)]"
+                    filter_domain="[('manufacturer_id', 'ilike', self)]"
                 />
                 <field name="manufacturer_pname" string="Manufacturer Product Name" />
                 <field name="manufacturer_pref" string="Manufacturer Product Code" />

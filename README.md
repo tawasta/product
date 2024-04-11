@@ -16,7 +16,7 @@ addon | version | maintainers | summary
 [product_competitor_alternative](product_competitor_alternative/) | 17.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_description](product_description/) | 17.0.0.1.0 |  | Adds a ecommerce desciption field for product template
 [product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
-[product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.0 |  | Search products with manufacturer fields
+[product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.1 |  | Search products with manufacturer fields
 [product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.0 |  | Helper fields for showing primary vendor's info
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 17.0.1.0.0 |  | Create a batch of placeholder products
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.0 |  | Variant dimensions are managed centrally in the related product template
