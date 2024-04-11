@@ -21,7 +21,7 @@
 {
     "name": "Search products with manufacturer fields",
     "summary": "Search products with manufacturer fields",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
