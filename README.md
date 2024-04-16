@@ -29,6 +29,7 @@ addon | version | maintainers | summary
 [product_materials](product_materials/) | 14.0.3.1.7 |  | Product Materials info for products and their packaging
 [product_materials_compliant](product_materials_compliant/) | 14.0.1.0.2 |  | Add fields for product material compliance (Conflict Area Minerals, SCIP, etc.)
 [product_materials_show_on_product_template_form](product_materials_show_on_product_template_form/) | 14.0.1.0.0 |  | Show Materials on template form (for when variants not in use)
+[product_materials_upper_category](product_materials_upper_category/) | 14.0.1.0.0 |  | Upper Category for product materials
 [product_name_disable_translate](product_name_disable_translate/) | 14.0.1.0.0 |  | Removes the option to translate product names
 [product_name_with_uom](product_name_with_uom/) | 14.0.1.0.1 |  | Shows product name with sale UOM
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 14.0.1.0.0 |  | Show color if stock belongs to several locations
