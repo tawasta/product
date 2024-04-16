@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_material_composition_tree" model="ir.ui.view">
+        <field name="name">product.material.composition.tree.upper.category</field>
+        <field name="model">product.material.composition</field>
+        <field
+            name="inherit_id"
+            ref="product_materials.view_product_material_composition_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="product_material_sublevel_id" position="after">
+                <field name="product_material_upper_category_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+</odoo>
