@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Product Description for form view",
-    "summary": "Adds a  ecommerce desciption field for product template",
-    "version": "17.0.0.1.0",
-    "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "name": "Audit Log Rules - Uom",
+    "summary": "Adds audit log rules for uom.uom and uom.category",
+    "author": "Tawasta",
     "license": "AGPL-3",
+    "website": "https://gitlab.com/tawasta/odoo/product",
+    "category": "Logging",
     "application": False,
     "installable": True,
-    "depends": ["product", "website_sale"],
-    "data": ["views/product_template_desc.xml"],
+    "version": "17.0.1.0.0",
+    "depends": ["uom", "auditlog"],
+    "data": ["data/rules.xml"],
 }
