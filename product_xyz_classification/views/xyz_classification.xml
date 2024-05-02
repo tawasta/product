@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="xyz_classification_form_view" model="ir.ui.view">
+        <field name="name">xyz.classification.form</field>
+        <field name="model">xyz.classification</field>
+        <field name="arch" type="xml">
+            <form string="XYZ Profile">
+                <sheet>
+                    <group>
+                        <field name="name" />
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="xyz_classification_tree_view" model="ir.ui.view">
+        <field name="name">xyz.classification.tree</field>
+        <field name="model">xyz.classification</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="xyz_classification_action" model="ir.actions.act_window">
+        <field name="name">XYZ Classification Profile</field>
+        <field name="res_model">xyz.classification</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Click to add a new profile.
+            </p>
+            <p>
+                This allows to create an XYZ classification.
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        action="xyz_classification_action"
+        id="menu_xyz_classification_config_stock"
+        parent="stock.menu_product_in_config_stock"
+        sequence="9"
+    />
+</odoo>
