@@ -8,4 +8,5 @@ class ProductProduct(models.Model):
     xyz_classification_id = fields.Many2one(
         "xyz.classification",
         string="XYZ classification",
+        store=True,
     )
