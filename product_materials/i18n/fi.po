@@ -547,7 +547,7 @@ msgstr "Tuotteiden siirrot (Stock Move Line)"
 
 #. module: product_materials
 #: model:ir.model.fields.selection,name:product_materials.selection__product_material_composition__type__product_packaging
-msgid "Product Packaging"
+msgid "Incoming Packaging"
 msgstr "Pakkaus"
 
 #. module: product_materials

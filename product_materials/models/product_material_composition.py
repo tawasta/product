@@ -80,7 +80,7 @@ class ProductMaterialComposition(models.Model):
     # Defines if the material row is related to product itself's materials or the
     # product's packaging's materials
     type = fields.Selection(
-        selection=[("product", "Product"), ("product_packaging", "Product Packaging")],
+        selection=[("product", "Product"), ("product_packaging", "Incoming Packaging")],
         required=True,
     )
 
