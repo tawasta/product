@@ -26,7 +26,7 @@ addon | version | maintainers | summary
 [product_inventory](product_inventory/) | 14.0.1.0.2 |  | Show latest date when product has been received and/or adjusted
 [product_margin_ignore](product_margin_ignore/) | 14.0.1.0.0 |  | Helper field for customizing margin calculation
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
-[product_materials](product_materials/) | 14.0.3.1.7 |  | Product Materials info for products and their packaging
+[product_materials](product_materials/) | 14.0.3.1.8 |  | Product Materials info for products and their packaging
 [product_materials_compliant](product_materials_compliant/) | 14.0.1.0.2 |  | Add fields for product material compliance (Conflict Area Minerals, SCIP, etc.)
 [product_materials_show_on_product_template_form](product_materials_show_on_product_template_form/) | 14.0.1.0.0 |  | Show Materials on template form (for when variants not in use)
 [product_materials_upper_category](product_materials_upper_category/) | 14.0.1.0.0 |  | Upper Category for product materials
