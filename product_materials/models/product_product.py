@@ -29,3 +29,7 @@ class ProductProduct(models.Model):
         string="Product Packaging Material Compositions",
         domain=[("type", "=", "product_packaging")],
     )
+
+    is_delivery_package = fields.Boolean(
+        string="Delivery package", store=True, copy=False
+    )

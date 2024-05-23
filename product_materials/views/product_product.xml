@@ -321,6 +321,10 @@
                             </form>
                         </field>
                     </group>
+
+                    <group name="delivery_package">
+                        <field name="is_delivery_package" />
+                    </group>
                 </page>
             </notebook>
         </field>

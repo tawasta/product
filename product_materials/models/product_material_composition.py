@@ -77,6 +77,10 @@ class ProductMaterialComposition(models.Model):
 
     description = fields.Text(string="Notes")
 
+    is_delivery_package = fields.Boolean(
+        related="product_product_id.is_delivery_package", store=True
+    )
+
     # Defines if the material row is related to product itself's materials or the
     # product's packaging's materials
     type = fields.Selection(
