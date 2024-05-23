@@ -48,6 +48,7 @@
                     groups="product_materials.group_product_product_manage_materials_waste"
                     optional="show"
                 />
+                <field name="is_delivery_package" optional="show" />
                 <field name="description" optional="show" />
                 <field name="type" optional="show" />
                 <field
