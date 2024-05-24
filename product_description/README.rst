@@ -2,11 +2,13 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===========================================
-Product ecommerce Description for form view
-===========================================
+========================================================
+Product ecommerce Description for form view (DEPRECATED)
+========================================================
 
-This module adds a ecommerce description field for product template
+* This module adds a ecommerce description field for product template
+* Deprecated and flagged as uninstallable in 17.0 to avoid clashes from
+  being to edit the data with both frontend and backend editors.
 
 Configuration
 =============
@@ -28,6 +30,7 @@ Contributors
 
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 * Valtteri Lattu <valtteri.lattu@tawasta.fi>
+* Timo Talvitie <timo.talvitie@tawasta.fi>
 
 Maintainer
 ----------
