@@ -19,15 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Product Description for form view",
-    "summary": "Adds a  ecommerce desciption field for product template",
-    "version": "17.0.0.1.0",
+    "name": "Product Description for form view (DEPRECATED)",
+    "summary": "Adds a  ecommerce desciption field for product template (deprecated)",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Oy Tawasta Technologies Ltd.",
     "license": "AGPL-3",
     "application": False,
-    "installable": True,
+    "installable": False,
     "depends": ["product", "website_sale"],
     "data": ["views/product_template_desc.xml"],
 }
