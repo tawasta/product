@@ -78,7 +78,9 @@ class ProductMaterialComposition(models.Model):
     description = fields.Text(string="Notes")
 
     is_delivery_package = fields.Boolean(
-        related="product_product_id.is_delivery_package", store=True
+        compute=lambda self: self._compute_is_delivery_package(),
+        readonly=True,
+        copy=False,
     )
 
     # Defines if the material row is related to product itself's materials or the
@@ -92,6 +94,17 @@ class ProductMaterialComposition(models.Model):
         "ir.attachment",
         string="Attachments",
     )
+
+    @api.depends("product_product_id.is_delivery_package", "type")
+    def _compute_is_delivery_package(self):
+        for mater in self:
+            if (
+                mater.product_product_id.is_delivery_package
+                and mater.type != "product_packaging"
+            ):
+                mater.is_delivery_package = True
+            else:
+                mater.is_delivery_package = False
 
     @api.constrains("recycled_percentage")
     def _check_percentage(self):
