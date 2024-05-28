@@ -81,6 +81,7 @@ class ProductMaterialComposition(models.Model):
         compute=lambda self: self._compute_is_delivery_package(),
         readonly=True,
         copy=False,
+        search="_search_is_delivery_package",
     )
 
     # Defines if the material row is related to product itself's materials or the
@@ -94,6 +95,11 @@ class ProductMaterialComposition(models.Model):
         "ir.attachment",
         string="Attachments",
     )
+
+    def _search_is_delivery_package(self, operator, value):
+        recs = self.search([]).filtered(lambda x: x.is_delivery_package is True)
+        if recs:
+            return [("id", "in", [x.id for x in recs])]
 
     @api.depends("product_product_id.is_delivery_package", "type")
     def _compute_is_delivery_package(self):
