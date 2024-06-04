@@ -153,6 +153,14 @@
                                             options="{ 'no_create': True }"
                                             groups="product_materials.group_product_product_manage_materials_waste"
                                         />
+                                        <field
+                                            name="biogenic_material_weight_percentage"
+                                            groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
+                                        />
+                                        <field
+                                            name="renewable_weight_percentage"
+                                            groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
+                                        />
                                     </group>
                                 </group>
 
@@ -303,6 +311,14 @@
                                             name="product_material_waste_endpoint_id"
                                             options="{ 'no_create': True }"
                                             groups="product_materials.group_product_product_manage_materials_waste"
+                                        />
+                                        <field
+                                            name="biogenic_material_weight_percentage"
+                                            groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
+                                        />
+                                        <field
+                                            name="renewable_weight_percentage"
+                                            groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
                                         />
                                     </group>
                                 </group>

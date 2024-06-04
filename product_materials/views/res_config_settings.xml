@@ -113,6 +113,25 @@
                         <div class="col-12 col-lg-6 o_setting_box">
                             <div class="o_setting_left_pane">
                                 <field
+                                    name="group_product_product_manage_materials_biogenic_and_renewable"
+                                />
+                            </div>
+                            <div class="o_setting_right_pane">
+                                <label
+                                    for="group_product_product_manage_materials_biogenic_and_renewable"
+                                />
+                                <div class="text-muted">
+                                    Check box to show 'Biogenic material weight-%' and 'Renewable weight-%' fields when
+                                    adding Product Material Compositions and Product Packaging Material Compositions.
+                                    on product page. This information is used to define Biogenic and Renewable weight
+                                    percentages for product materials.
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-6 o_setting_box">
+                            <div class="o_setting_left_pane">
+                                <field
                                     name="group_product_product_manage_materials_waste"
                                 />
                             </div>

@@ -46,3 +46,9 @@ class ResConfigSettings(models.TransientModel):
         implied_group="product_materials."
         "group_product_product_enable_product_materials_on_prints",
     )
+
+    group_product_product_manage_materials_biogenic_and_renewable = fields.Boolean(
+        string="Manage Product & Packaging Materials' Biogenic and Renewable Percentages",
+        implied_group="product_materials."
+        "group_product_product_manage_materials_biogenic_and_renewable_percentages",
+    )
