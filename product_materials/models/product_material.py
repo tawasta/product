@@ -35,3 +35,9 @@ class ProductMaterial(models.Model):
     description = fields.Text(
         string="Material info", help="Additional info about the material"
     )
+
+    biogenic_material_weight_percentage = fields.Integer(
+        string="Biogenic material weight-%"
+    )
+
+    renewable_weight_percentage = fields.Integer(string="Renewable weight-%")
