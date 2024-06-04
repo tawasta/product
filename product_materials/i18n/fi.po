@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-23 08:31+0000\n"
-"PO-Revision-Date: 2024-05-23 11:32+0300\n"
+"POT-Creation-Date: 2024-06-04 07:38+0000\n"
+"PO-Revision-Date: 2024-06-04 11:50+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -54,6 +54,25 @@ msgstr "Lisätietoa jätejakeen kohtalosta"
 #: model_terms:ir.ui.view,arch_db:product_materials.product_normal_form_view
 msgid "Attachments"
 msgstr "Liitteet"
+
+#. module: product_materials
+#: model:ir.model.fields,field_description:product_materials.field_product_material__biogenic_material_weight_percentage
+#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__biogenic_material_weight_percentage
+msgid "Biogenic material weight-%"
+msgstr "Biogeeninen materiaalipaino-%"
+
+#. module: product_materials
+#: model_terms:ir.ui.view,arch_db:product_materials.res_config_settings_view_material_form
+msgid ""
+"Check box to show 'Biogenic material weight-%' and 'Renewable weight-%' fields when\n"
+"                                    adding Product Material Compositions and Product Packaging Material Compositions.\n"
+"                                    on product page. This information is used to define Biogenic and Renewable weight\n"
+"                                    percentages for product materials."
+msgstr ""
+"Rastita näyttääksesi 'Biogeeninen materiaalipaino-%' ja 'Uusiutuvuus paino-%' -kentät tuotteiden \n"
+"                                    materiaali- sekä pakkausmateriaalikoostumuksia lisätessä. \n"
+"                                    Tämän avulla voit seurata, paljonko materiaalista on biogeenistä ja\n"
+"                                    uusiutuvaa."
 
 #. module: product_materials
 #: model_terms:ir.ui.view,arch_db:product_materials.res_config_settings_view_material_form
@@ -158,7 +177,6 @@ msgstr "Luotu"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_procountor_product_product__is_delivery_package
-#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__is_delivery_package
 #: model:ir.model.fields,field_description:product_materials.field_product_product__is_delivery_package
 msgid "Delivery package"
 msgstr "Toimituspakkaus"
@@ -206,6 +224,11 @@ msgstr "Tunniste (ID)"
 #: model:ir.model.fields.selection,name:product_materials.selection__product_material_composition__type__product_packaging
 msgid "Incoming Packaging"
 msgstr "Pakkaus"
+
+#. module: product_materials
+#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__is_delivery_package
+msgid "Is Delivery Package"
+msgstr "On toimituspakkaus"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__is_product_packaging_material
@@ -262,6 +285,12 @@ msgstr "Hallinnoi tuotemateriaalitietoa"
 #: model:res.groups,name:product_materials.group_product_product_manage_product_packaging_materials
 msgid "Manage Packaging Material Info for Products"
 msgstr "Hallinnoi tuotepakkausmateriaalitietoa"
+
+#. module: product_materials
+#: model:ir.model.fields,field_description:product_materials.field_res_config_settings__group_product_product_manage_materials_biogenic_and_renewable
+#: model:res.groups,name:product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages
+msgid "Manage Product & Packaging Materials' Biogenic and Renewable Percentages"
+msgstr "Hallinnoi materiaalien biogeenisiä ja uusiutuvia kierrätysprosentteja"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_res_config_settings__group_product_product_manage_materials_recycling_percentages
@@ -580,6 +609,12 @@ msgstr "Kierrätysmateriaali-%"
 #: model_terms:ir.ui.view,arch_db:product_materials.product_normal_form_view
 msgid "Recyling & Waste"
 msgstr "Kierrätys & jäte"
+
+#. module: product_materials
+#: model:ir.model.fields,field_description:product_materials.field_product_material__renewable_weight_percentage
+#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__renewable_weight_percentage
+msgid "Renewable weight-%"
+msgstr "Uusiutuvuus paino-%"
 
 #. module: product_materials
 #: model:ir.model,name:product_materials.model_sale_order
