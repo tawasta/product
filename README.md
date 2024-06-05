@@ -23,6 +23,7 @@ addon | version | maintainers | summary
 [product_cost_price_editor](product_cost_price_editor/) | 14.0.1.0.0 |  | Adds a view for editing product cost prices
 [product_default_location](product_default_location/) | 14.0.1.0.0 |  | Product Default Location
 [product_dimension_convert_unit](product_dimension_convert_unit/) | 14.0.1.0.1 |  | Convert the computed volume of a product by its volume UoM
+[product_gross_weight](product_gross_weight/) | 14.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_inventory](product_inventory/) | 14.0.1.0.2 |  | Show latest date when product has been received and/or adjusted
 [product_margin_ignore](product_margin_ignore/) | 14.0.1.0.0 |  | Helper field for customizing margin calculation
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
