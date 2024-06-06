@@ -1,8 +1,19 @@
 import logging
+import operator as py_operator
 
-from odoo import api, fields, models
+from odoo import _, api, fields, models
+from odoo.exceptions import UserError
 
 _logger = logging.getLogger(__name__)
+
+OPERATORS = {
+    "<": py_operator.lt,
+    ">": py_operator.gt,
+    "<=": py_operator.le,
+    ">=": py_operator.ge,
+    "=": py_operator.eq,
+    "!=": py_operator.ne,
+}
 
 
 class ProductMaterialComposition(models.Model):
@@ -10,13 +21,40 @@ class ProductMaterialComposition(models.Model):
     _inherit = "product.material.composition"
 
     relative_net_weight_percentage = fields.Float(
-        string="Net Weight-%", compute=lambda self: self._compute_relative_net_weight()
+        string="Net Weight-%",
+        compute=lambda self: self._compute_relative_net_weight(),
+        search="_search_relative_net_weight_percentage",
     )
 
     relative_gross_weight_percentage = fields.Float(
         string="Gross Weight-%",
         compute=lambda self: self._compute_relative_net_weight(),
+        search="_search_relative_gross_weight_percentage",
     )
+
+    def _search_relative_net_weight_percentage(self, operator, value):
+        if operator not in ("<", ">", "=", "!=", "<=", ">="):
+            raise UserError(_("Invalid domain operator %s", operator))
+        if not isinstance(value, (float, int)):
+            raise UserError(_("Invalid domain right operand %s", value))
+
+        ids = []
+        for material in self.with_context(prefetch_fields=False).search([], order="id"):
+            if OPERATORS[operator](material["relative_net_weight_percentage"], value):
+                ids.append(material.id)
+        return [("id", "in", ids)]
+
+    def _search_relative_gross_weight_percentage(self, operator, value):
+        if operator not in ("<", ">", "=", "!=", "<=", ">="):
+            raise UserError(_("Invalid domain operator %s", operator))
+        if not isinstance(value, (float, int)):
+            raise UserError(_("Invalid domain right operand %s", value))
+
+        ids = []
+        for material in self.with_context(prefetch_fields=False).search([], order="id"):
+            if OPERATORS[operator](material["relative_gross_weight_percentage"], value):
+                ids.append(material.id)
+        return [("id", "in", ids)]
 
     @api.depends(
         "net_weight",
