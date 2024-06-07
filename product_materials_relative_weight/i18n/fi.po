@@ -1,0 +1,48 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_materials_relative_weight
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-06-05 10:19+0000\n"
+"PO-Revision-Date: 2024-06-05 13:20+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: \n"
+"X-Generator: Poedit 3.0.1\n"
+
+#. module: product_materials_relative_weight
+#: model:ir.model.fields,field_description:product_materials_relative_weight.field_product_material_composition__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: product_materials_relative_weight
+#: model:ir.model.fields,field_description:product_materials_relative_weight.field_product_material_composition__relative_gross_weight_percentage
+msgid "Gross Weight-%"
+msgstr "Bruttopaino-%"
+
+#. module: product_materials_relative_weight
+#: model:ir.model.fields,field_description:product_materials_relative_weight.field_product_material_composition__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: product_materials_relative_weight
+#: model:ir.model.fields,field_description:product_materials_relative_weight.field_product_material_composition____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: product_materials_relative_weight
+#: model:ir.model.fields,field_description:product_materials_relative_weight.field_product_material_composition__relative_net_weight_percentage
+msgid "Net Weight-%"
+msgstr "Nettopaino-%"
+
+#. module: product_materials_relative_weight
+#: model:ir.model,name:product_materials_relative_weight.model_product_material_composition
+msgid "Product Material Composition"
+msgstr "Tuotteen materiaalikoostumus"

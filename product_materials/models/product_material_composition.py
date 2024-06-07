@@ -1,9 +1,15 @@
 import logging
+import operator as py_operator
 
 from odoo import _, api, fields, models, tools
 from odoo.exceptions import ValidationError
 
 _logger = logging.getLogger(__name__)
+
+OPERATORS = {
+    "=": py_operator.eq,
+    "!=": py_operator.ne,
+}
 
 
 class ProductMaterialComposition(models.Model):
@@ -105,9 +111,16 @@ class ProductMaterialComposition(models.Model):
     )
 
     def _search_is_delivery_package(self, operator, value):
-        recs = self.search([]).filtered(lambda x: x.is_delivery_package is True)
-        if recs:
-            return [("id", "in", [x.id for x in recs])]
+        if operator not in ["=", "!="]:
+            raise ValueError(_("This operator is not supported"))
+        if not isinstance(value, bool):
+            raise ValueError(_("Value should be True or False (not %s)"), value)
+
+        ids = []
+        for material in self.with_context(prefetch_fields=False).search([], order="id"):
+            if OPERATORS[operator](material["is_delivery_package"], value):
+                ids.append(material.id)
+        return [("id", "in", ids)]
 
     @api.depends("product_product_id.is_delivery_package", "type")
     def _compute_is_delivery_package(self):

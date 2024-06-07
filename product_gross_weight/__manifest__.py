@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2024 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,29 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Product Materials",
-    "summary": "Product Materials info for products and their packaging",
-    "version": "14.0.3.5.9",
+    "name": "Define Gross weight to a product",
+    "summary": "Adds a new field, Gross Weight, to the products",
+    "version": "14.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock", "sale", "account_invoice_related_sale_order"],
-    "data": [
-        "security/res_groups.xml",
-        "security/ir.model.access.csv",
-        "report/invoice_report.xml",
-        "report/stock_report.xml",
-        "views/product_material.xml",
-        "views/product_material_class.xml",
-        "views/product_material_composition.xml",
-        "views/product_material_sublevel.xml",
-        "views/product_material_waste_component.xml",
-        "views/product_material_waste_endpoint.xml",
-        "views/product_product.xml",
-        "views/res_config_settings.xml",
-        "views/sale_order.xml",
+    "depends": [
+        "product",
     ],
+    "data": ["views/product_view.xml"],
 }
