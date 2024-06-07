@@ -21,7 +21,7 @@
 {
     "name": "Product Materials",
     "summary": "Product Materials info for products and their packaging",
-    "version": "14.0.3.5.8",
+    "version": "14.0.3.5.9",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
