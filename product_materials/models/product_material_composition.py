@@ -49,11 +49,11 @@ class ProductMaterialComposition(models.Model):
         string="Material Sublevel",
     )
 
-    biogenic_material_weight_percentage = fields.Integer(
+    biogenic_material_weight_percentage = fields.Float(
         related="product_material_id.biogenic_material_weight_percentage"
     )
 
-    renewable_weight_percentage = fields.Integer(
+    renewable_weight_percentage = fields.Float(
         related="product_material_id.renewable_weight_percentage"
     )
 
