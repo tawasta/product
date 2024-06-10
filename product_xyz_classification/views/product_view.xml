@@ -9,11 +9,7 @@
                 expr="//page[@name='inventory']/group[@name='inventory']"
                 position="after"
             >
-                <group
-                    string="XYZ Classification"
-                    name="xyz_classification"
-                    attrs="{'invisible':[('product_variant_count', '>', 1)]}"
-                >
+                <group string="XYZ Classification" name="xyz_classification">
                     <field
                         name="xyz_classification_id"
                         groups="sales_team.group_sale_manager"
