@@ -21,7 +21,7 @@
 {
     "name": "Product XYZ classification",
     "summary": "Product XYZ classification",
-    "version": "14.0.1.1.1",
+    "version": "14.0.1.1.2",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",

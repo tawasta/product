@@ -1,3 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 access_xyz_classification_user,xyz.classification.user,model_xyz_classification,base.group_user,1,0,0,0
+access_xyz_classification_inventory_manager,xyz.classification.inventory.manager,model_xyz_classification,stock.group_stock_manager,1,1,1,1
 access_xyz_classification_manager,xyz.classification.manager,model_xyz_classification,base.group_system,1,1,1,1
