@@ -7,6 +7,7 @@ class ProductProduct(models.Model):
 
     xyz_classification_id = fields.Many2one(
         "xyz.classification",
-        string="XYZ classification",
+        related="product_tmpl_id.xyz_classification_id",
+        readonly=True,
         store=True,
     )
