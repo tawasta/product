@@ -7,6 +7,7 @@ class ProductTemplate(models.Model):
 
     xyz_classification_id = fields.Many2one(
         "xyz.classification",
-        related="product_variant_id.xyz_classification_id",
+        string="XYZ classification",
         store=True,
+        copy=False,
     )
