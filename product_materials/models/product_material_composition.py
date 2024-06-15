@@ -92,10 +92,10 @@ class ProductMaterialComposition(models.Model):
     description = fields.Text(string="Notes")
 
     is_delivery_package = fields.Boolean(
-        compute=lambda self: self._compute_is_delivery_package(),
-        readonly=True,
         copy=False,
         search="_search_is_delivery_package",
+        store=True,
+        string="Delivery package",
     )
 
     # Defines if the material row is related to product itself's materials or the
@@ -121,17 +121,6 @@ class ProductMaterialComposition(models.Model):
             if OPERATORS[operator](material["is_delivery_package"], value):
                 ids.append(material.id)
         return [("id", "in", ids)]
-
-    @api.depends("product_product_id.is_delivery_package", "type")
-    def _compute_is_delivery_package(self):
-        for mater in self:
-            if (
-                mater.product_product_id.is_delivery_package
-                and mater.type != "product_packaging"
-            ):
-                mater.is_delivery_package = True
-            else:
-                mater.is_delivery_package = False
 
     @api.constrains("recycled_percentage")
     def _check_percentage(self):
