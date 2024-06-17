@@ -20,6 +20,7 @@ addon | version | maintainers | summary
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 17.0.1.0.0 |  | Create a batch of placeholder products
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.0 |  | Variant dimensions are managed centrally in the related product template
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
+[product_variant_sequence](product_variant_sequence/) | 17.0.1.0.0 |  | Order Product Variants based on sequence_variant. Move products in the tree view to change their order
 [product_vendor_codes_field](product_vendor_codes_field/) | 17.0.1.0.0 |  | Show all vendor codes in a single field
 [uom_auditlog_rules](uom_auditlog_rules/) | 17.0.1.0.0 |  | Adds audit log rules for uom.uom and uom.category
 
