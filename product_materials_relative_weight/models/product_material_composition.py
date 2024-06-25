@@ -81,7 +81,7 @@ class ProductMaterialComposition(models.Model):
             if material.type == "product" and weight_in_grams:
                 material.relative_net_weight_percentage = (
                     material_in_grams / weight_in_grams
-                )
+                ) * 100
             else:
                 material.relative_net_weight_percentage = 0
 
@@ -90,9 +90,9 @@ class ProductMaterialComposition(models.Model):
                 and gross_in_grams
                 and (gross_in_grams - weight_in_grams > 0)
             ):
-                material.relative_gross_weight_percentage = material_in_grams / (
-                    gross_in_grams - weight_in_grams
-                )
+                material.relative_gross_weight_percentage = (
+                    material_in_grams / (gross_in_grams - weight_in_grams)
+                ) * 100
             else:
                 material.relative_gross_weight_percentage = 0
 
