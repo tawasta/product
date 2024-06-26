@@ -24,7 +24,7 @@ addon | version | maintainers | summary
 [product_default_location](product_default_location/) | 14.0.1.0.0 |  | Product Default Location
 [product_dimension_convert_unit](product_dimension_convert_unit/) | 14.0.1.0.1 |  | Convert the computed volume of a product by its volume UoM
 [product_gross_weight](product_gross_weight/) | 14.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
-[product_inventory](product_inventory/) | 14.0.1.0.2 |  | Show latest date when product has been received and/or adjusted
+[product_inventory](product_inventory/) | 14.0.1.0.3 |  | Show latest date when product has been received and/or adjusted
 [product_margin_ignore](product_margin_ignore/) | 14.0.1.0.0 |  | Helper field for customizing margin calculation
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
 [product_materials](product_materials/) | 14.0.3.6.10 |  | Product Materials info for products and their packaging
@@ -68,7 +68,7 @@ addon | version | maintainers | summary
 [product_variant_variant_company](product_variant_variant_company/) | 14.0.1.0.0 |  | Add variant_company_id for product variant
 [product_vendor_codes_field](product_vendor_codes_field/) | 14.0.1.0.1 |  | Show all vendor codes in a single field
 [product_vendor_supplier_only](product_vendor_supplier_only/) | 14.0.1.0.0 |  | Only show suppliers in product vendor list
-[product_xyz_classification](product_xyz_classification/) | 14.0.1.1.2 |  | Product XYZ classification
+[product_xyz_classification](product_xyz_classification/) | 14.0.1.1.3 |  | Product XYZ classification
 [uom_auditlog_rules](uom_auditlog_rules/) | 14.0.1.0.0 |  | Adds audit log rules for uom.uom and uom.category
 [uom_weight](uom_weight/) | 14.0.1.0.0 |  | Helper for calculating different UoM weights
 
