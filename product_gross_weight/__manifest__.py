@@ -30,6 +30,7 @@
     "installable": True,
     "depends": [
         "product",
+        "product_logistics_uom",
     ],
     "data": ["views/product_view.xml"],
 }
