@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <data noupdate="1">
+        <record id="allow_material_edit" model="res.groups">
+            <field name="name">Enable material editing</field>
+        </record>
+    </data>
+</odoo>

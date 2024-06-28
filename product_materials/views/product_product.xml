@@ -12,10 +12,12 @@
                 <page
                     string="Materials"
                     groups="product_materials.group_product_product_manage_product_materials,product_materials.group_product_product_manage_product_packaging_materials"
+                    id="material_page"
                 >
                     <group
                         string="Product Material Compositions"
                         groups="product_materials.group_product_product_manage_product_materials"
+                        id="material_compositions"
                     >
                         <field
                             name="product_material_composition_ids"
