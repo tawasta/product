@@ -9,7 +9,9 @@ class ProductMaterialComposition(models.Model):
     def write(self, vals):
         allow_material_edit = self.product_product_id.allow_material_edit
 
-        if allow_material_edit:
+        edit_delivery_package = vals.get("is_delivery_package", False)
+
+        if allow_material_edit or edit_delivery_package:
             return super().write(vals)
         else:
             raise ValidationError(
