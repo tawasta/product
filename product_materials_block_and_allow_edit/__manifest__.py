@@ -21,7 +21,7 @@
 {
     "name": "Block and Allow editing materials from Products",
     "summary": "Disable editing materials by default and allow it to some users",
-    "version": "14.0.1.1.0",
+    "version": "14.0.1.2.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
@@ -30,6 +30,7 @@
     "installable": True,
     "depends": [
         "product_materials",
+        "product_materials_upper_category",
     ],
     "data": [
         "views/product_view.xml",
