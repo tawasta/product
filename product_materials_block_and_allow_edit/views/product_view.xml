@@ -6,10 +6,7 @@
         <field name="inherit_id" ref="product.product_normal_form_view" />
         <field name="arch" type="xml">
             <group id="material_compositions" position="before">
-                <group
-                    id="allow_edit"
-                    groups="product_materials_block_and_allow_edit.allow_material_edit"
-                >
+                <group id="allow_edit" invisible="1">
                     <field name="allow_material_edit" widget="boolean_toggle" />
                 </group>
             </group>
