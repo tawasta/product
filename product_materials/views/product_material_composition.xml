@@ -4,7 +4,7 @@
         <field name="name">product.material.composition.tree</field>
         <field name="model">product.material.composition</field>
         <field name="arch" type="xml">
-            <tree string="Product Material Composition">
+            <tree string="Product Material Composition" multi_edit="1">
                 <field name="sequence" widget="handle" />
                 <field name="product_product_id" optional="show" />
                 <field

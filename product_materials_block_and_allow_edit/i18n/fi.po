@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-28 10:12+0000\n"
-"PO-Revision-Date: 2024-06-28 13:21+0300\n"
+"POT-Creation-Date: 2024-07-10 05:51+0000\n"
+"PO-Revision-Date: 2024-07-10 08:54+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -42,8 +42,8 @@ msgstr ""
 #. module: product_materials_block_and_allow_edit
 #: code:addons/product_materials_block_and_allow_edit/models/product_material_composition.py:0
 #, python-format
-msgid "Editing materials is not enabled from its product"
-msgstr "Materiaalitietojen muokkaus ei ole sallittu tällä tuotteella"
+msgid "Editing materials is not enabled for your user"
+msgstr "Materiaalitietojen muokkaus ei ole sallittu käyttäjällesi"
 
 #. module: product_materials_block_and_allow_edit
 #: model:res.groups,name:product_materials_block_and_allow_edit.allow_material_edit
