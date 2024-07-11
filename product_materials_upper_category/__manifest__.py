@@ -21,7 +21,7 @@
 {
     "name": "Upper Category for product materials",
     "summary": "Upper Category for product materials",
-    "version": "14.0.1.0.0",
+    "version": "14.0.1.1.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
@@ -35,5 +35,6 @@
         "security/ir.model.access.csv",
         "views/product_material_composition_view.xml",
         "views/product_material_upper_category.xml",
+        "views/product_view.xml",
     ],
 }
