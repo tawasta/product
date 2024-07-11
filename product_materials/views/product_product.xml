@@ -63,6 +63,8 @@
                                     groups="product_materials.group_product_product_manage_materials_weights"
                                 />
 
+                                <field name="is_delivery_package" optional="show" />
+
                                 <field
                                     name="recycled_percentage"
                                     groups="product_materials.group_product_product_manage_materials_recycling_percentages"
@@ -133,6 +135,7 @@
                                             options="{ 'no_create': True }"
                                             groups="product_materials.group_product_product_manage_material_hierarchy"
                                         />
+                                        <field name="is_delivery_package" />
                                     </group>
                                 </group>
 
@@ -224,6 +227,8 @@
                                     groups="product_materials.group_product_product_manage_materials_weights"
                                 />
 
+                                <field name="is_delivery_package" optional="hide" />
+
                                 <field
                                     name="recycled_percentage"
                                     groups="product_materials.group_product_product_manage_materials_recycling_percentages"
@@ -290,6 +295,7 @@
                                             options="{ 'no_create': True }"
                                             groups="product_materials.group_product_product_manage_material_hierarchy"
                                         />
+                                        <field name="is_delivery_package" />
                                     </group>
                                 </group>
 
