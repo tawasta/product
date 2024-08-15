@@ -21,7 +21,7 @@
 {
     "name": "Product Primary Vendor Info",
     "summary": "Helper fields for showing primary vendor's info",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Inventory",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",

@@ -35,7 +35,7 @@ class ProductTemplate(models.Model):
     )
 
     primary_supplierinfo_id = fields.Many2one(
-        compute=lambda self: self._compute_primary_supplierinfo(),
+        compute="_compute_primary_supplierinfo",
         comodel_name="product.supplierinfo",
         string="Primary Vendor Info",
         store=True,
