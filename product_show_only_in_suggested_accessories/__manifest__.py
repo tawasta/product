@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2021- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,17 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Product Primary Vendor Info",
-    "summary": "Helper fields for showing primary vendor's info",
+    "name": "Product Show only in Suggested accessories",
+    "summary": "Product Show only in Suggested accessories",
     "version": "17.0.1.0.1",
-    "category": "Inventory",
+    "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["product"],
-    "data": ["views/product_template.xml"],
-    "demo": [],
+    "depends": ["product", "website_sale"],
+    "data": ["views/product_views.xml"],
 }

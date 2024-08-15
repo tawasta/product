@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2023- Oy Tawasta OS Technologies Ltd. (http://www.tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -17,19 +17,16 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
-
 {
-    "name": "Product Primary Vendor Info",
-    "summary": "Helper fields for showing primary vendor's info",
-    "version": "17.0.1.0.1",
-    "category": "Inventory",
+    "name": "Coupon Product Set Company",
+    "version": "17.0.1.0.0",
+    "category": "Sales",
+    "summary": "Sets company field for coupon product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["product"],
-    "data": ["views/product_template.xml"],
-    "demo": [],
+    "depends": ["loyalty"],
+    "data": [],
 }

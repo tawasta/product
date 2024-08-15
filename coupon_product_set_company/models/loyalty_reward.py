@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2023- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -18,18 +18,38 @@
 #
 ##############################################################################
 
-{
-    "name": "Product Primary Vendor Info",
-    "summary": "Helper fields for showing primary vendor's info",
-    "version": "17.0.1.0.1",
-    "category": "Inventory",
-    "website": "https://gitlab.com/tawasta/odoo/product",
-    "author": "Tawasta",
-    "license": "AGPL-3",
-    "application": False,
-    "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["product"],
-    "data": ["views/product_template.xml"],
-    "demo": [],
-}
+# 1. Standard library imports:
+
+# 2. Known third party imports:
+
+# 3. Odoo imports (openerp):
+from odoo import models
+
+# 4. Imports from Odoo modules:
+
+# 5. Local imports in the relative form:
+
+# 6. Unknown third party imports:
+
+
+class LoyaltyReward(models.Model):
+    # 1. Private attributes
+    _inherit = "loyalty.reward"
+
+    # 2. Fields declaration
+
+    # 3. Default methods
+
+    # 4. Compute and search fields, in the same order that fields declaration
+
+    # 5. Constraints and onchanges
+
+    # 6. CRUD methods
+
+    # 7. Action methods
+
+    # 8. Business methods
+    def _get_discount_product_values(self):
+        res = super(LoyaltyReward, self)._get_discount_product_values()
+        res["company_id"] = self.company_id.id
+        return res
