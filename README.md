@@ -11,14 +11,16 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
+[coupon_product_set_company](coupon_product_set_company/) | 17.0.1.0.0 |  | Sets company field for coupon product
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.0.0 |  | Audit log rules for product.product, product.template and product.category
 [product_competitor_alternative](product_competitor_alternative/) | 17.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
 [product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.1 |  | Search products with manufacturer fields
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
-[product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.0 |  | Helper fields for showing primary vendor's info
+[product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.1 |  | Helper fields for showing primary vendor's info
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 17.0.1.0.0 |  | Create a batch of placeholder products
+[product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 17.0.1.0.1 |  | Product Show only in Suggested accessories
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.0 |  | Variant dimensions are managed centrally in the related product template
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
 [product_variant_sequence](product_variant_sequence/) | 17.0.1.0.0 |  | Order Product Variants based on sequence_variant. Move products in the tree view to change their order
