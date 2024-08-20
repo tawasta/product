@@ -20,8 +20,8 @@
 
 {
     "name": "Hide product sale price",
-    "summary": "Hide sale price from users that not belonging to sales group",
-    "version": "17.0.1.0.0",
+    "summary": "Hide sale price and taxes from users that not belonging to sales group",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
@@ -29,6 +29,7 @@
     "application": False,
     "installable": True,
     "depends": [
+        "account",
         "product",
         "sale",
     ],
