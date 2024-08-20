@@ -6,7 +6,7 @@
 Hide product sale price
 =======================
 
-Hide sale price from users that not belonging to sales group
+Hide sale price and sale taxes from users that not belonging to sales group
 
 Configuration
 =============
