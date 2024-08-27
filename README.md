@@ -26,6 +26,7 @@ addon | version | maintainers | summary
 [product_gross_weight](product_gross_weight/) | 14.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_inventory](product_inventory/) | 14.0.1.0.3 |  | Show latest date when product has been received and/or adjusted
 [product_margin_ignore](product_margin_ignore/) | 14.0.1.0.0 |  | Helper field for customizing margin calculation
+[product_mass_update_taxes](product_mass_update_taxes/) | 14.0.1.0.0 |  | Modify taxes for multiple products at once
 [product_material_info_text](product_material_info_text/) | 14.0.1.0.0 |  | Enables writing text to material info field
 [product_materials](product_materials/) | 14.0.3.7.11 |  | Product Materials info for products and their packaging
 [product_materials_block_and_allow_edit](product_materials_block_and_allow_edit/) | 14.0.2.2.0 |  | Disable editing materials by default and allow it to some users
