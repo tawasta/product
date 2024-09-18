@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_view_search" model="ir.ui.view">
+        <field name="name">product.supplierinfo.for.customer.code.field.search</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field
+                    name="customer_codes"
+                    string="Customer's Code"
+                    filter_domain="[('customer_codes','ilike',self)]"
+                />
+            </field>
+        </field>
+    </record>
+</odoo>
