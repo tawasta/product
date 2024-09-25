@@ -19,6 +19,7 @@ addon | version | maintainers | summary
 [product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
 [product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.1 |  | Search products with manufacturer fields
 [product_name_disable_translate](product_name_disable_translate/) | 17.0.1.0.0 |  | Removes the option to translate product names
+[product_pricelist](product_pricelist/) | 17.0.1.0.0 |  | Add a pricelist information to product
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.1 |  | Helper fields for showing primary vendor's info
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 17.0.1.0.0 |  | Create a batch of placeholder products
