@@ -2,35 +2,35 @@
 <odoo>
     <template id="report_invoice_document" inherit_id="account.report_invoice_document">
         <xpath expr="//table[@name='invoice_line_table']/tbody/t/tr" position="after">
-                <t
-                t-if="line.product_id.product_material_composition_ids and o.sale_id.show_materials_with_report"
+            <t
+                t-if="line.sudo().product_id.product_material_composition_ids and o.sale_id.show_materials_with_report"
             >
-                    <tr>
-                        <td><span>Materials:</span>
-                            <t
-                            t-if="len(line.product_id.product_material_composition_ids) > 1"
+                <tr>
+                    <td><span>Materials:</span>
+                        <t
+                            t-if="len(line.sudo().product_id.product_material_composition_ids) &gt; 1"
                         >
-                                <t
-                                t-foreach="line.product_id.product_material_composition_ids"
+                            <t
+                                t-foreach="line.sudo().product_id.product_material_composition_ids"
                                 t-as="m"
                             >
-                                    <span t-field="m.product_material_id.name" />,
-                                </t>
+                                <span t-field="m.sudo().product_material_id.name" />,
                             </t>
-                            <t t-else="">
-                                <t
-                                t-foreach="line.product_id.product_material_composition_ids"
+                        </t>
+                        <t t-else="">
+                            <t
+                                t-foreach="line.sudo().product_id.product_material_composition_ids"
                                 t-as="m"
                             >
-                                    <span t-field="m.product_material_id.name" />
-                                </t>
+                                <span t-field="m.sudo().product_material_id.name" />
                             </t>
-                        </td>
-                        <td />
-                        <td />
-                        <td />
-                    </tr>
-                </t>
+                        </t>
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                </tr>
+            </t>
         </xpath>
     </template>
 </odoo>
