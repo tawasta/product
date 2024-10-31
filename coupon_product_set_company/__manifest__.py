@@ -19,7 +19,7 @@
 ##############################################################################
 {
     "name": "Coupon Product Set Company",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Sales",
     "summary": "Sets company field for coupon product",
     "website": "https://gitlab.com/tawasta/odoo/product",

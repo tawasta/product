@@ -5,7 +5,7 @@
 ==========================
 Coupon Product Set Company
 ==========================
-* Sets company field for coupon product 
+* Sets company field for coupon product
 
 Configuration
 =============
@@ -26,6 +26,7 @@ Contributors
 ------------
 
 * Miika Nissi <miika.nissi@tawasta.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------
