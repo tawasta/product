@@ -11,7 +11,7 @@ Available addons
 ----------------
 addon | version | maintainers | summary
 --- | --- | --- | ---
-[coupon_product_set_company](coupon_product_set_company/) | 17.0.1.0.0 |  | Sets company field for coupon product
+[coupon_product_set_company](coupon_product_set_company/) | 17.0.1.1.0 |  | Sets company field for coupon product
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.0.0 |  | Audit log rules for product.product, product.template and product.category
 [product_competitor_alternative](product_competitor_alternative/) | 17.0.1.0.0 |  | New field for info about competitor's alternative product
