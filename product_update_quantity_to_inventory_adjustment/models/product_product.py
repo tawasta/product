@@ -6,7 +6,7 @@ class ProductProduct(models.Model):
     _inherit = "product.product"
 
     def action_update_quantity_to_inventory_adjustment(self):
-        company = self.env.user.company_id
+        company = self.env.company
 
         # Search based on Warehouse's address information
         stock_warehouse = (
