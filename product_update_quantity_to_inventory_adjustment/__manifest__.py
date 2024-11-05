@@ -21,7 +21,7 @@
 {
     "name": "Direct to Invetory Adjustment from Update Quantity",
     "summary": "Use Inventory Adjustment from Update Quantity functionality",
-    "version": "14.0.1.0.2",
+    "version": "14.0.1.1.2",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
