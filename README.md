@@ -63,7 +63,7 @@ addon | version | maintainers | summary
 [product_tree_description](product_tree_description/) | 14.0.1.0.0 |  | Description field in product tree view
 [product_unspsc](product_unspsc/) | 14.0.1.0.0 |  | New field for UNSPSC Code
 [product_uom_helper](product_uom_helper/) | 14.0.1.0.0 |  | Shows helper fields on product UOM:s
-[product_update_quantity_to_inventory_adjustment](product_update_quantity_to_inventory_adjustment/) | 14.0.1.1.2 |  | Use Inventory Adjustment from Update Quantity functionality
+[product_update_quantity_to_inventory_adjustment](product_update_quantity_to_inventory_adjustment/) | 14.0.1.1.3 |  | Use Inventory Adjustment from Update Quantity functionality
 [product_use_tree_as_default_view](product_use_tree_as_default_view/) | 14.0.1.0.0 |  | Use tree as a default view for products
 [product_variant_internal_note](product_variant_internal_note/) | 14.0.1.0.1 |  | Internal note for product variant
 [product_variant_sequence](product_variant_sequence/) | 14.0.1.0.0 |  | Order Product Variants based on sequence_variant.
