@@ -15,8 +15,10 @@ class ProductTemplate(models.Model):
             .search(
                 [
                     "|",
+                    "|",
                     ("partner_id", "=", company.partner_id.id),
                     ("partner_id", "=", False),
+                    ("company_id", "=", company.id),
                 ],
                 limit=1,
             )
