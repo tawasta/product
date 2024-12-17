@@ -1,0 +1,26 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_form_template_or_variant_info_text
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0-20230925\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-12-17 10:48+0000\n"
+"PO-Revision-Date: 2024-12-17 10:48+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_form_template_or_variant_info_text
+#: model_terms:ir.ui.view,arch_db:product_form_template_or_variant_info_text.product_template_only_form_view
+msgid "Currently viewing Product Template."
+msgstr "Katselet tuotetta."
+
+#. module: product_form_template_or_variant_info_text
+#: model_terms:ir.ui.view,arch_db:product_form_template_or_variant_info_text.product_normal_form_view
+msgid "Currently viewing Product Variant."
+msgstr "Katselet tuotevariaatiota."
