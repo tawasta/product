@@ -1,0 +1,99 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_mass_update_taxes
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-08-27 09:19+0000\n"
+"PO-Revision-Date: 2024-08-27 12:21+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.3\n"
+
+#. module: product_mass_update_taxes
+#: model_terms:ir.ui.view,arch_db:product_mass_update_taxes.product_mass_update_taxes_wizard
+msgid "Cancel"
+msgstr "Peru"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes__create_uid
+msgid "Created by"
+msgstr "Luonut"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes__create_date
+msgid "Created on"
+msgstr "Luotu"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes__taxes_id
+msgid "Customer Taxes"
+msgstr "Asiakasverot"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,help:product_mass_update_taxes.field_product_mass_update_taxes__supplier_taxes_id
+msgid "Default taxes used when buying the product."
+msgstr "Oletusverot, joita käytetään tuotteen ostamisessa."
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,help:product_mass_update_taxes.field_product_mass_update_taxes__taxes_id
+msgid "Default taxes used when selling the product."
+msgstr "Oletusverot, joita käytetään tuotteen myymisessä."
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes__id
+msgid "ID"
+msgstr "Tunniste (ID)"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes____last_update
+msgid "Last Modified on"
+msgstr "Viimeksi muokattu"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes__write_uid
+msgid "Last Updated by"
+msgstr "Viimeksi päivittänyt"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes__write_date
+msgid "Last Updated on"
+msgstr "Viimeksi päivitetty"
+
+#. module: product_mass_update_taxes
+#: model:ir.model,name:product_mass_update_taxes.model_product_mass_update_taxes
+msgid "Mass update product taxes"
+msgstr "Tuoteverojen massapäivitys"
+
+#. module: product_mass_update_taxes
+#: model:ir.actions.act_window,name:product_mass_update_taxes.action_product_mass_update_taxes
+#: model_terms:ir.ui.view,arch_db:product_mass_update_taxes.product_mass_update_taxes_wizard
+msgid "Update taxes"
+msgstr "Päivitä veroja"
+
+#. module: product_mass_update_taxes
+#: model_terms:ir.ui.view,arch_db:product_mass_update_taxes.product_mass_update_taxes_wizard
+msgid "Update taxes for selected products"
+msgstr "Päivitä veroja valituille tuotteille"
+
+#. module: product_mass_update_taxes
+#: model:ir.model.fields,field_description:product_mass_update_taxes.field_product_mass_update_taxes__supplier_taxes_id
+msgid "Vendor Taxes"
+msgstr "Toimittajaverot"
+
+#. module: product_mass_update_taxes
+#: model_terms:ir.ui.view,arch_db:product_mass_update_taxes.product_mass_update_taxes_wizard
+msgid "or"
+msgstr "tai"
