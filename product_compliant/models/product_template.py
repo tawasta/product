@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ProductTemplate(models.Model):
-
     _inherit = "product.template"
 
     atex_compliant = fields.Many2one(

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
-    <data>
         <!-- Tree view -->
         <record id="view_product_compliant_tree" model="ir.ui.view">
             <field name="name">product.compliant.tree</field>
@@ -40,9 +39,9 @@
         <!-- Create an action to jump to the settings view to set which
         compliance types are in use-->
         <record
-            id="action_product_compliant_res_config_settings"
-            model="ir.actions.act_window"
-        >
+        id="action_product_compliant_res_config_settings"
+        model="ir.actions.act_window"
+    >
             <field name="res_model">res.config.settings</field>
             <field name="view_mode">form</field>
             <field name="target">inline</field>
@@ -50,26 +49,25 @@
 
         <!-- Menuitems are placed under Sale > Configuration -->
         <menuitem
-            id="menu_product_compliant_submenu"
-            parent="sale.menu_sale_config"
-            name="Product Compliance"
-        />
+        id="menu_product_compliant_submenu"
+        parent="sale.menu_sale_config"
+        name="Product Compliance"
+    />
 
         <menuitem
-            id="menu_product_compliant_values"
-            name="Product Compliance Values"
-            parent="menu_product_compliant_submenu"
-            action="action_product_compliant_values"
-            sequence="10"
-        />
+        id="menu_product_compliant_values"
+        name="Product Compliance Values"
+        parent="menu_product_compliant_submenu"
+        action="action_product_compliant_values"
+        sequence="10"
+    />
 
         <menuitem
-            id="menu_product_compliant_res_config_settings"
-            name="Product Compliance Types"
-            parent="menu_product_compliant_submenu"
-            action="action_product_compliant_res_config_settings"
-            sequence="20"
-        />
+        id="menu_product_compliant_res_config_settings"
+        name="Product Compliance Types"
+        parent="menu_product_compliant_submenu"
+        action="action_product_compliant_res_config_settings"
+        sequence="20"
+    />
 
-    </data>
 </odoo>
