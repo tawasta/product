@@ -29,6 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["product", "stock"],
-    "data": [
-    ],
+    "data": [],
 }
