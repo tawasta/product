@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_variant_easy_edit_view" model="ir.ui.view">
+        <field name="name">product.product.view.form.easy.gross.weight</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_variant_easy_edit_view" />
+        <field name="arch" type="xml">
+            <label for="weight" position="before">
+                <label for="gross_weight" />
+                <div class="o_row" name="gross_weight">
+                    <field name="gross_weight" />
+                    <span><field name="weight_uom_id" /></span>
+                </div>
+            </label>
+        </field>
+    </record>
+
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.gross.weight</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <label for="weight" position="before">
+                <label for="gross_weight" />
+                <div class="o_row" name="gross_weight">
+                    <field name="gross_weight" />
+                    <span><field name="weight_uom_id" /></span>
+                </div>
+
+                <label for="gross_weight_product" invisible="1" />
+                <div class="o_row" name="gross_weight_product" invisible="1">
+                    <field name="gross_weight_product" readonly="1" />
+                    <span><field name="weight_uom_id" readonly="1" /></span>
+                </div>
+
+                <label for="weight" />
+                <div class="o_row" name="weight">
+                    <field name="weight" />
+                    <span><field name="weight_uom_name" /></span>
+                </div>
+            </label>
+        </field>
+    </record>
+
+    <record id="product_template_form_view" model="ir.ui.view">
+        <field name="name">product.template.view.form.easy.hide.weight</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <label for="weight" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </label>
+
+            <div name="weight" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </div>
+        </field>
+    </record>
+</odoo>
