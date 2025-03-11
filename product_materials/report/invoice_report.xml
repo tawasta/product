@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <template id="report_invoice_document" inherit_id="account.report_invoice_document">
+        <xpath expr="//table[@name='invoice_line_table']/tbody/t/tr" position="after">
+            <t
+                t-if="line.sudo().product_id.product_material_composition_ids and o.sale_id.show_materials_with_report"
+            >
+                <tr>
+                    <td><span>Materials:</span>
+                        <t
+                            t-if="len(line.sudo().product_id.product_material_composition_ids) &gt; 1"
+                        >
+                            <t
+                                t-foreach="line.sudo().product_id.product_material_composition_ids"
+                                t-as="m"
+                            >
+                                <span t-field="m.sudo().product_material_id.name" />,
+                            </t>
+                        </t>
+                        <t t-else="">
+                            <t
+                                t-foreach="line.sudo().product_id.product_material_composition_ids"
+                                t-as="m"
+                            >
+                                <span t-field="m.sudo().product_material_id.name" />
+                            </t>
+                        </t>
+                    </td>
+                    <td />
+                    <td />
+                    <td />
+                </tr>
+            </t>
+        </xpath>
+    </template>
+</odoo>

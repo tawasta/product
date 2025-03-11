@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_material_waste_component_tree" model="ir.ui.view">
+        <field name="name">product.material.waste.component.tree</field>
+        <field name="model">product.material.waste.component</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <tree string="Product Material Waste Component Info" multi_edit="1">
+                <field name="name" />
+                <field
+                    name="product_material_waste_endpoint_id"
+                    options="{ 'no_create': True }"
+                />
+                <field name="description" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_product_material_waste_component_form" model="ir.ui.view">
+        <field name="name">product.material.waste.component.form</field>
+        <field name="model">product.material.waste.component</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <form string="Product Material Waste Component Info">
+                <sheet>
+
+                    <div class="oe_title">
+                        <label
+                            class="oe_edit_only"
+                            for="name"
+                            string="Product Material Waste Component Name"
+                        />
+                        <h1>
+                            <field
+                                name="name"
+                                placeholder="Product Material Waste Component Name"
+                            />
+                        </h1>
+
+                        <group>
+                            <field
+                                name="product_material_waste_endpoint_id"
+                                options="{ 'no_create': True }"
+                            />
+                        </group>
+
+                    </div>
+                    <notebook>
+                        <page
+                            string="Product Material Waste Component Info"
+                            name="product_material_waste_component_info"
+                        >
+                            <field name="description" />
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_material_waste_component_action" model="ir.actions.act_window">
+        <field name="name">Product Material Waste Components</field>
+        <field name="res_model">product.material.waste.component</field>
+        <field name="view_mode">form,tree</field>
+        <field name="view_id" ref="view_product_material_waste_component_tree" />
+    </record>
+
+    <menuitem
+        id="menu_product_material_waste_components"
+        parent="stock.menu_product_in_config_stock"
+        sequence="32"
+        action="product_material_waste_component_action"
+        groups="product_materials.group_product_product_manage_materials_waste"
+    />
+</odoo>
