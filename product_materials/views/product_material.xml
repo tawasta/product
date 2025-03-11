@@ -5,7 +5,7 @@
         <field name="model">product.material</field>
         <field name="priority">10</field>
         <field name="arch" type="xml">
-            <tree string="Material info" multi_edit="1">
+            <tree multi_edit="1">
                 <field name="name" />
                 <field
                     name="product_material_class_id"

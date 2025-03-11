@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ProductMaterialWasteComponent(models.Model):
-
     _name = "product.material.waste.component"
     _description = "Product Material Waste Component"
 

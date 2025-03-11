@@ -24,7 +24,7 @@
                             context="{'default_type': 'product'}"
                             nolabel="1"
                         >
-                            <tree string="Material Compositions">
+                            <tree>
 
                                 <!-- consider making this configurable. currently hidden,
                                 as in the current use case, the third level of materials is only needed
@@ -33,7 +33,8 @@
                                     name="product_material_sublevel_id"
                                     options="{ 'no_create': True }"
                                     groups="product_materials.group_product_product_manage_material_hierarchy"
-                                    column_invisible="True"/>
+                                    column_invisible="True"
+                                />
                                 <field
                                     name="name"
                                     groups="product_materials.group_product_product_manage_material_hierarchy"
@@ -192,7 +193,7 @@
                             context="{'default_type': 'product_packaging'}"
                             nolabel="1"
                         >
-                            <tree string="Material Compositions">
+                            <tree>
                                 <field
                                     name="name"
                                     groups="product_materials.group_product_product_manage_material_hierarchy"

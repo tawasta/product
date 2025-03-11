@@ -13,7 +13,6 @@ OPERATORS = {
 
 
 class ProductMaterialComposition(models.Model):
-
     _name = "product.material.composition"
     _description = "Product Material Composition"
     _order = "sequence, id"
@@ -135,7 +134,6 @@ class ProductMaterialComposition(models.Model):
 
     @api.onchange("product_material_id")
     def _onchange_product_material_id(self):
-
         # If user changes the Material, set the Material Class
         self.product_material_class_id = (
             self.product_material_id.product_material_class_id
@@ -160,7 +158,6 @@ class ProductMaterialComposition(models.Model):
         parent product is not measured in grams, just the material.
         """
         for line in self:
-
             line_uom = line.net_weight_uom_id and line.net_weight_uom_id.name or "-"
 
             product_uom = (

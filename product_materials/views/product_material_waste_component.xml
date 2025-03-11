@@ -5,7 +5,7 @@
         <field name="model">product.material.waste.component</field>
         <field name="priority">10</field>
         <field name="arch" type="xml">
-            <tree string="Product Material Waste Component Info" multi_edit="1">
+            <tree multi_edit="1">
                 <field name="name" />
                 <field
                     name="product_material_waste_endpoint_id"

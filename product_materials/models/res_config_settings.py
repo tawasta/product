@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ResConfigSettings(models.TransientModel):
-
     _inherit = "res.config.settings"
 
     group_product_product_manage_product_materials = fields.Boolean(

@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ProductMaterialClass(models.Model):
-
     _name = "product.material.class"
     _description = "Product Material Class"
 

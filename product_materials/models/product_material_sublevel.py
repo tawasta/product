@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ProductMaterialSublevel(models.Model):
-
     _name = "product.material.sublevel"
     _description = "Product Material Sublevel"
 

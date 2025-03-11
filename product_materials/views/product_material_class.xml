@@ -5,7 +5,7 @@
         <field name="model">product.material.class</field>
         <field name="priority">10</field>
         <field name="arch" type="xml">
-            <tree string="Product Material Class info">
+            <tree>
                 <field name="name" />
                 <field name="description" />
             </tree>
