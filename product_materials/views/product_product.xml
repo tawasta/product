@@ -18,7 +18,10 @@
                         string="Product Material Compositions"
                         groups="product_materials.group_product_product_manage_product_materials"
                         id="material_compositions"
+                        style="color: firebrick;"
                     >
+                    <br/>
+                    </group>
                         <field
                             name="product_material_composition_ids"
                             context="{'default_type': 'product'}"
@@ -182,12 +185,14 @@
                                 </notebook>
                             </form>
                         </field>
-                    </group>
 
                     <group
                         string="Product Packaging Material Compositions"
                         groups="product_materials.group_product_product_manage_product_packaging_materials"
+                        style="color: sandybrown;"
                     >
+                    <br/>
+                    </group>
                         <field
                             name="product_packaging_material_composition_ids"
                             context="{'default_type': 'product_packaging'}"
@@ -345,7 +350,6 @@
                                 </notebook>
                             </form>
                         </field>
-                    </group>
 
                     <group name="delivery_package" invisible="1">
                         <field name="is_delivery_package" />
