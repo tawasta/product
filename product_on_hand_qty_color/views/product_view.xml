@@ -8,7 +8,10 @@
             ref="stock.product_template_form_view_procurement_button"
         />
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='action_update_quantity_on_hand']" position="inside">
+            <xpath
+                expr="//button[@name='action_update_quantity_on_hand']"
+                position="inside"
+            >
                 <field name="has_stock_on_several_locations" invisible="1" />
             </xpath>
         </field>
@@ -19,7 +22,10 @@
         <field name="model">product.product</field>
         <field name="inherit_id" ref="stock.product_form_view_procurement_button" />
         <field name="arch" type="xml">
-            <xpath expr="//button[@name='action_update_quantity_on_hand']" position="inside">
+            <xpath
+                expr="//button[@name='action_update_quantity_on_hand']"
+                position="inside"
+            >
                 <field name="has_stock_on_several_locations" invisible="1" />
             </xpath>
         </field>

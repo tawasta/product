@@ -2,7 +2,6 @@ from odoo import api, fields, models
 
 
 class ProductProduct(models.Model):
-
     _inherit = "product.product"
 
     has_stock_on_several_locations = fields.Boolean(

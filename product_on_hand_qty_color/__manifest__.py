@@ -29,7 +29,9 @@
     "application": False,
     "installable": True,
     "depends": ["product", "stock", "web"],
-    "data": ["views/product_view.xml",],
+    "data": [
+        "views/product_view.xml",
+    ],
     "assets": {
         "web.assets_backend": [
             "product_on_hand_qty_color/static/src/js/web_on_hand.esm.js",
