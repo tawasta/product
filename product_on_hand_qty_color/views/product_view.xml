@@ -9,10 +9,16 @@
         />
         <field name="arch" type="xml">
             <xpath
-                expr="//button[@name='action_update_quantity_on_hand']"
+                expr="//button[@name='action_update_quantity_on_hand'][@icon='fa-cubes']"
                 position="inside"
             >
                 <field name="has_stock_on_several_locations" invisible="1" />
+            </xpath>
+            <xpath
+                expr="//button[@name='action_update_quantity_on_hand'][@icon='fa-cubes']"
+                position="attributes"
+            >
+                <attribute name="class">on_hand_button oe_stat_button</attribute>
             </xpath>
         </field>
     </record>
@@ -23,10 +29,16 @@
         <field name="inherit_id" ref="stock.product_form_view_procurement_button" />
         <field name="arch" type="xml">
             <xpath
-                expr="//button[@name='action_update_quantity_on_hand']"
+                expr="//button[@name='action_update_quantity_on_hand'][@icon='fa-cubes']"
                 position="inside"
             >
                 <field name="has_stock_on_several_locations" invisible="1" />
+            </xpath>
+            <xpath
+                expr="//button[@name='action_update_quantity_on_hand'][@icon='fa-cubes']"
+                position="attributes"
+            >
+                <attribute name="class">on_hand_button oe_stat_button</attribute>
             </xpath>
         </field>
     </record>

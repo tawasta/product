@@ -6,8 +6,12 @@
 Product On Hand Quantity - Show color
 =====================================
 
-Show color at the "On Hand"-button, if a product has stock
-in several locations. This is calculated automatically.
+This module enhances the **"On Hand"** button in Odoo by changing its color when a product has stock in multiple locations. The stock locations are checked automatically, providing a **visual cue** for users managing inventory.
+
+Features
+========
+Automatically checks if a product is stored in multiple locations  
+Changes the **background color** of the "On Hand" button when applicable  
 
 Configuration
 =============
