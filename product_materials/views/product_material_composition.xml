@@ -108,10 +108,7 @@
                             <field name="description" />
                             <field name="type" />
                             <field name="sequence" />
-                            <field
-                                name="attachment_ids"
-                                widget="many2many_binary"
-                            />
+                            <field name="attachment_ids" widget="many2many_binary" />
                         </group>
                     </group>
                 </sheet>
@@ -126,10 +123,14 @@
             <search>
                 <field name="product_product_id" />
                 <field name="product_material_id" />
-                <field name="product_material_class_id"
-                    groups="product_materials.group_product_product_manage_material_hierarchy" />
-                <field name="net_weight"
-                    groups="product_materials.group_product_product_manage_materials_weights" />
+                <field
+                    name="product_material_class_id"
+                    groups="product_materials.group_product_product_manage_material_hierarchy"
+                />
+                <field
+                    name="net_weight"
+                    groups="product_materials.group_product_product_manage_materials_weights"
+                />
                 <field
                     name="recycled_percentage"
                     groups="product_materials.group_product_product_manage_materials_recycling_percentages"

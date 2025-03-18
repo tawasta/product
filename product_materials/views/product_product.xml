@@ -20,70 +20,70 @@
                         id="material_compositions"
                         style="color: firebrick;"
                     >
-                    <br/>
+                    <br />
                     </group>
                         <field
-                            name="product_material_composition_ids"
-                            context="{'default_type': 'product'}"
-                            nolabel="1"
-                        >
+                        name="product_material_composition_ids"
+                        context="{'default_type': 'product'}"
+                        nolabel="1"
+                    >
                             <tree>
 
                                 <!-- consider making this configurable. currently hidden,
                                 as in the current use case, the third level of materials is only needed
                                 for packaging materials -->
                                 <field
-                                    name="product_material_sublevel_id"
-                                    options="{ 'no_create': True }"
-                                    groups="product_materials.group_product_product_manage_material_hierarchy"
-                                    column_invisible="True"
-                                />
+                                name="product_material_sublevel_id"
+                                options="{ 'no_create': True }"
+                                groups="product_materials.group_product_product_manage_material_hierarchy"
+                                column_invisible="True"
+                            />
                                 <field
-                                    name="name"
-                                    groups="product_materials.group_product_product_manage_material_hierarchy"
-                                />
+                                name="name"
+                                groups="product_materials.group_product_product_manage_material_hierarchy"
+                            />
 
                                 <field
-                                    name="product_material_id"
-                                    domain="[('is_product_material', '=', True)]"
-                                    options="{ 'no_create': True }"
-                                />
+                                name="product_material_id"
+                                domain="[('is_product_material', '=', True)]"
+                                options="{ 'no_create': True }"
+                            />
 
                                 <field
-                                    name="product_material_class_id"
-                                    options="{ 'no_create': True }"
-                                    groups="product_materials.group_product_product_manage_material_hierarchy"
-                                />
+                                name="product_material_class_id"
+                                options="{ 'no_create': True }"
+                                groups="product_materials.group_product_product_manage_material_hierarchy"
+                            />
 
                                 <field
-                                    name="net_weight"
-                                    groups="product_materials.group_product_product_manage_materials_weights"
-                                />
+                                name="net_weight"
+                                groups="product_materials.group_product_product_manage_materials_weights"
+                            />
 
                                 <!-- show the informational UOM field -->
                                 <field
-                                    name="composition_and_product_informational_uom"
-                                    groups="product_materials.group_product_product_manage_materials_weights"
-                                />
+                                name="composition_and_product_informational_uom"
+                                groups="product_materials.group_product_product_manage_materials_weights"
+                            />
 
                                 <field name="is_delivery_package" optional="show" />
 
                                 <field
-                                    name="recycled_percentage"
-                                    groups="product_materials.group_product_product_manage_materials_recycling_percentages"
-                                />
+                                name="recycled_percentage"
+                                groups="product_materials.group_product_product_manage_materials_recycling_percentages"
+                            />
 
                                 <field
-                                    name="product_material_waste_component_id"
-                                    groups="product_materials.group_product_product_manage_materials_waste"
-                                    options="{ 'no_create': True }"
-                                />
+                                name="product_material_waste_component_id"
+                                groups="product_materials.group_product_product_manage_materials_waste"
+                                options="{ 'no_create': True }"
+                            />
 
                                 <field
-                                    name="product_material_waste_endpoint_id"
-                                    groups="product_materials.group_product_product_manage_materials_waste"
-                                    options="{ 'no_create': True }"
-                                />
+                                name="product_material_waste_endpoint_id"
+                                groups="product_materials.group_product_product_manage_materials_waste"
+                                options="{ 'no_create': True }"
+                            />
 
                                 <field name="description" />
                                 <field name="type" column_invisible="True" />
@@ -93,82 +93,82 @@
                             <form string="Material Composition">
                                 <group>
                                     <group
-                                        string="Material Basic Information"
-                                        name="material_info"
-                                    >
+                                    string="Material Basic Information"
+                                    name="material_info"
+                                >
 
                                         <field
-                                            name="name"
-                                            groups="product_materials.group_product_product_manage_material_hierarchy"
-                                        />
+                                        name="name"
+                                        groups="product_materials.group_product_product_manage_material_hierarchy"
+                                    />
                                         <field
-                                            name="net_weight"
-                                            groups="product_materials.group_product_product_manage_materials_weights"
-                                        />
+                                        name="net_weight"
+                                        groups="product_materials.group_product_product_manage_materials_weights"
+                                    />
                                         <field
-                                            name="net_weight_uom_id"
-                                            groups="product_materials.group_product_product_manage_materials_weights"
-                                        />
+                                        name="net_weight_uom_id"
+                                        groups="product_materials.group_product_product_manage_materials_weights"
+                                    />
 
                                         <field name="type" invisible="1" />
                                     </group>
 
                                     <group
-                                        string="Material Classification"
-                                        name="material_classification"
-                                    >
+                                    string="Material Classification"
+                                    name="material_classification"
+                                >
                                         <!-- consider making this configurable. currently hidden,
                                         as in the current use case, the third level of materials is only needed
                                         for packaging materials -->
                                         <field
-                                            name="product_material_sublevel_id"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_material_hierarchy"
-                                            invisible="1"
-                                        />
+                                        name="product_material_sublevel_id"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_material_hierarchy"
+                                        invisible="1"
+                                    />
 
                                         <field
-                                            name="product_material_id"
-                                            domain="[('is_product_material', '=', True)]"
-                                            options="{ 'no_create': True }"
-                                        />
+                                        name="product_material_id"
+                                        domain="[('is_product_material', '=', True)]"
+                                        options="{ 'no_create': True }"
+                                    />
 
                                         <field
-                                            name="product_material_class_id"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_material_hierarchy"
-                                        />
+                                        name="product_material_class_id"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_material_hierarchy"
+                                    />
                                         <field name="is_delivery_package" />
                                     </group>
                                 </group>
 
                                 <group>
                                     <group
-                                        string="Recyling &amp; Waste"
-                                        name="recycling_and_waste_info"
-                                    >
+                                    string="Recyling &amp; Waste"
+                                    name="recycling_and_waste_info"
+                                >
                                         <field
-                                            name="recycled_percentage"
-                                            groups="product_materials.group_product_product_manage_materials_recycling_percentages"
-                                        />
+                                        name="recycled_percentage"
+                                        groups="product_materials.group_product_product_manage_materials_recycling_percentages"
+                                    />
                                         <field
-                                            name="product_material_waste_component_id"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_materials_waste"
-                                        />
+                                        name="product_material_waste_component_id"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_materials_waste"
+                                    />
                                         <field
-                                            name="product_material_waste_endpoint_id"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_materials_waste"
-                                        />
+                                        name="product_material_waste_endpoint_id"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_materials_waste"
+                                    />
                                         <field
-                                            name="biogenic_material_weight_percentage"
-                                            groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
-                                        />
+                                        name="biogenic_material_weight_percentage"
+                                        groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
+                                    />
                                         <field
-                                            name="renewable_weight_percentage"
-                                            groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
-                                        />
+                                        name="renewable_weight_percentage"
+                                        groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
+                                    />
                                     </group>
                                 </group>
 
@@ -178,9 +178,9 @@
                                     </page>
                                     <page string="Attachments">
                                         <field
-                                            name="attachment_ids"
-                                            widget="many2many_binary"
-                                        />
+                                        name="attachment_ids"
+                                        widget="many2many_binary"
+                                    />
                                     </page>
                                 </notebook>
                             </form>
@@ -191,65 +191,65 @@
                         groups="product_materials.group_product_product_manage_product_packaging_materials"
                         style="color: sandybrown;"
                     >
-                    <br/>
+                    <br />
                     </group>
                         <field
-                            name="product_packaging_material_composition_ids"
-                            context="{'default_type': 'product_packaging'}"
-                            nolabel="1"
-                        >
+                        name="product_packaging_material_composition_ids"
+                        context="{'default_type': 'product_packaging'}"
+                        nolabel="1"
+                    >
                             <tree>
                                 <field
-                                    name="name"
-                                    groups="product_materials.group_product_product_manage_material_hierarchy"
-                                />
+                                name="name"
+                                groups="product_materials.group_product_product_manage_material_hierarchy"
+                            />
                                 <field
-                                    name="product_material_sublevel_id"
-                                    options="{ 'no_create': True }"
-                                    groups="product_materials.group_product_product_manage_material_hierarchy"
-                                />
+                                name="product_material_sublevel_id"
+                                options="{ 'no_create': True }"
+                                groups="product_materials.group_product_product_manage_material_hierarchy"
+                            />
 
                                 <field
-                                    name="product_material_id"
-                                    domain="[('is_product_material', '=', True)]"
-                                    options="{ 'no_create': True }"
-                                />
+                                name="product_material_id"
+                                domain="[('is_product_material', '=', True)]"
+                                options="{ 'no_create': True }"
+                            />
 
                                 <field
-                                    name="product_material_class_id"
-                                    options="{ 'no_create': True }"
-                                    groups="product_materials.group_product_product_manage_material_hierarchy"
-                                />
+                                name="product_material_class_id"
+                                options="{ 'no_create': True }"
+                                groups="product_materials.group_product_product_manage_material_hierarchy"
+                            />
 
                                 <field
-                                    name="net_weight"
-                                    groups="product_materials.group_product_product_manage_materials_weights"
-                                />
+                                name="net_weight"
+                                groups="product_materials.group_product_product_manage_materials_weights"
+                            />
 
                                 <!-- show the informational UOM field -->
                                 <field
-                                    name="composition_and_product_informational_uom"
-                                    groups="product_materials.group_product_product_manage_materials_weights"
-                                />
+                                name="composition_and_product_informational_uom"
+                                groups="product_materials.group_product_product_manage_materials_weights"
+                            />
 
                                 <field name="is_delivery_package" optional="hide" />
 
                                 <field
-                                    name="recycled_percentage"
-                                    groups="product_materials.group_product_product_manage_materials_recycling_percentages"
-                                />
+                                name="recycled_percentage"
+                                groups="product_materials.group_product_product_manage_materials_recycling_percentages"
+                            />
 
                                 <field
-                                    name="product_material_waste_component_id"
-                                    options="{ 'no_create': True }"
-                                    groups="product_materials.group_product_product_manage_materials_waste"
-                                />
+                                name="product_material_waste_component_id"
+                                options="{ 'no_create': True }"
+                                groups="product_materials.group_product_product_manage_materials_waste"
+                            />
 
                                 <field
-                                    name="product_material_waste_endpoint_id"
-                                    options="{ 'no_create': True }"
-                                    groups="product_materials.group_product_product_manage_materials_waste"
-                                />
+                                name="product_material_waste_endpoint_id"
+                                options="{ 'no_create': True }"
+                                groups="product_materials.group_product_product_manage_materials_waste"
+                            />
 
                                 <field name="description" />
                                 <field name="type" column_invisible="True" />
@@ -259,81 +259,81 @@
                             <form string="Material Composition">
                                 <group>
                                     <group
-                                        string="Material Basic Information"
-                                        name="material_info"
-                                    >
+                                    string="Material Basic Information"
+                                    name="material_info"
+                                >
 
                                         <field
-                                            name="name"
-                                            groups="product_materials.group_product_product_manage_material_hierarchy"
-                                        />
+                                        name="name"
+                                        groups="product_materials.group_product_product_manage_material_hierarchy"
+                                    />
                                         <field
-                                            name="net_weight"
-                                            groups="product_materials.group_product_product_manage_materials_weights"
-                                        />
+                                        name="net_weight"
+                                        groups="product_materials.group_product_product_manage_materials_weights"
+                                    />
                                         <field
-                                            name="net_weight_uom_id"
-                                            groups="product_materials.group_product_product_manage_materials_weights"
-                                        />
+                                        name="net_weight_uom_id"
+                                        groups="product_materials.group_product_product_manage_materials_weights"
+                                    />
 
                                         <field name="type" invisible="1" />
                                     </group>
 
                                     <group
-                                        string="Material Classification"
-                                        name="material_classification"
-                                    >
+                                    string="Material Classification"
+                                    name="material_classification"
+                                >
                                         <field
-                                            name="product_material_sublevel_id"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_material_hierarchy"
-                                        />
+                                        name="product_material_sublevel_id"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_material_hierarchy"
+                                    />
 
                                         <field
-                                            name="product_material_id"
-                                            domain="[('product_material_class_id', '=', product_material_class_id)]"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_material_hierarchy"
-                                        />
+                                        name="product_material_id"
+                                        domain="[('product_material_class_id', '=', product_material_class_id)]"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_material_hierarchy"
+                                    />
 
                                         <field
-                                            name="product_material_class_id"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_material_hierarchy"
-                                        />
+                                        name="product_material_class_id"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_material_hierarchy"
+                                    />
                                         <field name="is_delivery_package" />
                                     </group>
                                 </group>
 
                                 <group>
                                     <group
-                                        string="Recyling &amp; Waste"
-                                        name="recycling_and_waste_info"
-                                    >
+                                    string="Recyling &amp; Waste"
+                                    name="recycling_and_waste_info"
+                                >
                                         <field
-                                            name="recycled_percentage"
-                                            groups="product_materials.group_product_product_manage_materials_recycling_percentages"
-                                        />
+                                        name="recycled_percentage"
+                                        groups="product_materials.group_product_product_manage_materials_recycling_percentages"
+                                    />
 
                                         <field
-                                            name="product_material_waste_component_id"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_materials_waste"
-                                        />
+                                        name="product_material_waste_component_id"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_materials_waste"
+                                    />
 
                                         <field
-                                            name="product_material_waste_endpoint_id"
-                                            options="{ 'no_create': True }"
-                                            groups="product_materials.group_product_product_manage_materials_waste"
-                                        />
+                                        name="product_material_waste_endpoint_id"
+                                        options="{ 'no_create': True }"
+                                        groups="product_materials.group_product_product_manage_materials_waste"
+                                    />
                                         <field
-                                            name="biogenic_material_weight_percentage"
-                                            groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
-                                        />
+                                        name="biogenic_material_weight_percentage"
+                                        groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
+                                    />
                                         <field
-                                            name="renewable_weight_percentage"
-                                            groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
-                                        />
+                                        name="renewable_weight_percentage"
+                                        groups="product_materials.group_product_product_manage_materials_biogenic_and_renewable_percentages"
+                                    />
                                     </group>
                                 </group>
 
@@ -343,9 +343,9 @@
                                     </page>
                                     <page string="Attachments">
                                         <field
-                                            name="attachment_ids"
-                                            widget="many2many_binary"
-                                        />
+                                        name="attachment_ids"
+                                        widget="many2many_binary"
+                                    />
                                     </page>
                                 </notebook>
                             </form>

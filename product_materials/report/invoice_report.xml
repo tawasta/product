@@ -7,6 +7,7 @@
             >
                 <tr>
                     <td><span>Materials:</span>
+                        <t t-set="line_number" t-value="0" />
                         <t
                             t-if="len(line.sudo().product_id.product_material_composition_ids) &gt; 1"
                         >
@@ -14,7 +15,18 @@
                                 t-foreach="line.sudo().product_id.product_material_composition_ids"
                                 t-as="m"
                             >
-                                <span t-field="m.sudo().product_material_id.name" />,
+                                <t t-set="line_number" t-value="line_number + 1" />
+
+                                <t
+                                    t-if="len(line.sudo().product_id.product_material_composition_ids.ids) == line_number"
+                                >
+                                    <span t-field="m.sudo().product_material_id.name" />
+                                </t>
+                                <t t-else="">
+                                    <span
+                                        t-field="m.sudo().product_material_id.name"
+                                    /><strong> | </strong>
+                                </t>
                             </t>
                         </t>
                         <t t-else="">

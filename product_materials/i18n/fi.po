@@ -4,18 +4,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 14.0\n"
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-06-04 07:38+0000\n"
-"PO-Revision-Date: 2024-06-04 11:50+0300\n"
+"POT-Creation-Date: 2025-03-18 07:35+0000\n"
+"PO-Revision-Date: 2025-03-18 09:37+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: \n"
-"X-Generator: Poedit 3.0.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.5\n"
 
 #. module: product_materials
 #: model_terms:ir.ui.view,arch_db:product_materials.report_delivery_document
@@ -23,6 +23,13 @@ msgstr ""
 #: model_terms:ir.ui.view,arch_db:product_materials.stock_report_delivery_aggregated_move_lines
 msgid "<span>Materials:</span>"
 msgstr "<span>Materiaalit:</span>"
+
+#. module: product_materials
+#: model_terms:ir.ui.view,arch_db:product_materials.report_delivery_document
+#: model_terms:ir.ui.view,arch_db:product_materials.report_invoice_document
+#: model_terms:ir.ui.view,arch_db:product_materials.stock_report_delivery_aggregated_move_lines
+msgid "<strong> | </strong>"
+msgstr ""
 
 #. module: product_materials
 #: model:ir.model.fields,help:product_materials.field_product_material__description
@@ -156,6 +163,11 @@ msgid "Check this box if you want this material to be selectable as a material f
 msgstr "Rastita, jos tämä materiaali on käytettävissä tuotteen pakkausten materiaaliksi"
 
 #. module: product_materials
+#: model:ir.model,name:product_materials.model_res_config_settings
+msgid "Config Settings"
+msgstr "Asetukset"
+
+#. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__create_uid
 #: model:ir.model.fields,field_description:product_materials.field_product_material_class__create_uid
 #: model:ir.model.fields,field_description:product_materials.field_product_material_composition__create_uid
@@ -176,10 +188,10 @@ msgid "Created on"
 msgstr "Luotu"
 
 #. module: product_materials
-#: model:ir.model.fields,field_description:product_materials.field_procountor_product_product__is_delivery_package
+#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__is_delivery_package
 #: model:ir.model.fields,field_description:product_materials.field_product_product__is_delivery_package
 msgid "Delivery package"
-msgstr "Toimituspakkaus"
+msgstr "On toimituspakkaus"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__display_name
@@ -188,10 +200,6 @@ msgstr "Toimituspakkaus"
 #: model:ir.model.fields,field_description:product_materials.field_product_material_sublevel__display_name
 #: model:ir.model.fields,field_description:product_materials.field_product_material_waste_component__display_name
 #: model:ir.model.fields,field_description:product_materials.field_product_material_waste_endpoint__display_name
-#: model:ir.model.fields,field_description:product_materials.field_product_product__display_name
-#: model:ir.model.fields,field_description:product_materials.field_res_config_settings__display_name
-#: model:ir.model.fields,field_description:product_materials.field_sale_order__display_name
-#: model:ir.model.fields,field_description:product_materials.field_stock_move_line__display_name
 msgid "Display Name"
 msgstr "Näyttönimi"
 
@@ -213,10 +221,6 @@ msgstr "Formaatti: <materiaalin mittayksikkö> / <ylätuotteen mittayksikkö>"
 #: model:ir.model.fields,field_description:product_materials.field_product_material_sublevel__id
 #: model:ir.model.fields,field_description:product_materials.field_product_material_waste_component__id
 #: model:ir.model.fields,field_description:product_materials.field_product_material_waste_endpoint__id
-#: model:ir.model.fields,field_description:product_materials.field_product_product__id
-#: model:ir.model.fields,field_description:product_materials.field_res_config_settings__id
-#: model:ir.model.fields,field_description:product_materials.field_sale_order__id
-#: model:ir.model.fields,field_description:product_materials.field_stock_move_line__id
 msgid "ID"
 msgstr "Tunniste (ID)"
 
@@ -224,11 +228,6 @@ msgstr "Tunniste (ID)"
 #: model:ir.model.fields.selection,name:product_materials.selection__product_material_composition__type__product_packaging
 msgid "Incoming Packaging"
 msgstr "Pakkaus"
-
-#. module: product_materials
-#: model:ir.model.fields,field_description:product_materials.field_product_material_composition__is_delivery_package
-msgid "Is Delivery Package"
-msgstr "On toimituspakkaus"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__is_product_packaging_material
@@ -239,20 +238,6 @@ msgstr "On tuotepakkausmateriaali"
 #: model:ir.model.fields,field_description:product_materials.field_product_material__is_product_material
 msgid "Is a Material for Products"
 msgstr "On tuotemateriaali"
-
-#. module: product_materials
-#: model:ir.model.fields,field_description:product_materials.field_product_material____last_update
-#: model:ir.model.fields,field_description:product_materials.field_product_material_class____last_update
-#: model:ir.model.fields,field_description:product_materials.field_product_material_composition____last_update
-#: model:ir.model.fields,field_description:product_materials.field_product_material_sublevel____last_update
-#: model:ir.model.fields,field_description:product_materials.field_product_material_waste_component____last_update
-#: model:ir.model.fields,field_description:product_materials.field_product_material_waste_endpoint____last_update
-#: model:ir.model.fields,field_description:product_materials.field_product_product____last_update
-#: model:ir.model.fields,field_description:product_materials.field_res_config_settings____last_update
-#: model:ir.model.fields,field_description:product_materials.field_sale_order____last_update
-#: model:ir.model.fields,field_description:product_materials.field_stock_move_line____last_update
-msgid "Last Modified on"
-msgstr "Viimeksi muokattu"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__write_uid
@@ -355,11 +340,6 @@ msgid "Material Composition"
 msgstr "Materiaalikoostumus"
 
 #. module: product_materials
-#: model_terms:ir.ui.view,arch_db:product_materials.product_normal_form_view
-msgid "Material Compositions"
-msgstr "Materiaalikoostumukset"
-
-#. module: product_materials
 #: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_class_form
 #: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_form
 #: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_sublevel_form
@@ -384,7 +364,6 @@ msgstr "Pakkausmateriaalin nimi"
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__description
 #: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_form
-#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_tree
 msgid "Material info"
 msgstr "Materiaalitieto"
 
@@ -441,18 +420,13 @@ msgid "Parent Product Material Class"
 msgstr "Ylätason materiaaliluokka"
 
 #. module: product_materials
+#. odoo-python
 #: code:addons/product_materials/models/product_material_composition.py:0
 #, python-format
 msgid "Percentage has to be between 0 and 100"
 msgstr "Prosentin pitää olla välillä 0-100"
 
 #. module: product_materials
-#: model:ir.model,name:product_materials.model_res_config_settings
-msgid "Procurement purchase grouping settings"
-msgstr ""
-
-#. module: product_materials
-#: model:ir.model,name:product_materials.model_product_product
 #: model:ir.model.fields,field_description:product_materials.field_product_material_composition__product_product_id
 #: model:ir.model.fields.selection,name:product_materials.selection__product_material_composition__type__product
 msgid "Product"
@@ -474,11 +448,6 @@ msgid "Product Material Class Info"
 msgstr "Materiaaliluokan tiedot"
 
 #. module: product_materials
-#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_class_tree
-msgid "Product Material Class info"
-msgstr "Materiaaliluokan tiedot"
-
-#. module: product_materials
 #: model:ir.actions.act_window,name:product_materials.product_material_class_action
 #: model:ir.ui.menu,name:product_materials.menu_product_material_class
 msgid "Product Material Classes"
@@ -488,12 +457,10 @@ msgstr "Materiaaliluokat"
 #: model:ir.actions.act_window,name:product_materials.action_product_material_composition
 #: model:ir.model,name:product_materials.model_product_material_composition
 #: model:ir.ui.menu,name:product_materials.menu_product_material_composition
-#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_composition_tree
 msgid "Product Material Composition"
 msgstr "Tuotteen materiaalikoostumus"
 
 #. module: product_materials
-#: model:ir.model.fields,field_description:product_materials.field_procountor_product_product__product_material_composition_ids
 #: model:ir.model.fields,field_description:product_materials.field_product_product__product_material_composition_ids
 #: model_terms:ir.ui.view,arch_db:product_materials.product_normal_form_view
 msgid "Product Material Compositions"
@@ -520,11 +487,6 @@ msgid "Product Material Sublevel Info"
 msgstr "Pakkausmateriaalin tiedot"
 
 #. module: product_materials
-#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_sublevel_tree
-msgid "Product Material Sublevel info"
-msgstr "Pakkausmateriaalin tiedot"
-
-#. module: product_materials
 #: model:ir.actions.act_window,name:product_materials.product_material_sublevel_action
 #: model:ir.ui.menu,name:product_materials.menu_product_material_sublevel
 msgid "Product Material Sublevels"
@@ -537,7 +499,6 @@ msgstr "Materiaalin jätejae"
 
 #. module: product_materials
 #: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_waste_component_form
-#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_waste_component_tree
 msgid "Product Material Waste Component Info"
 msgstr "Materiaalin jätejakeen tiedot"
 
@@ -574,11 +535,6 @@ msgid "Product Material Waste Endpoints"
 msgstr "Jätejakeiden kohtalot"
 
 #. module: product_materials
-#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_waste_endpoint_tree
-msgid "Product Material Waste endpoint info"
-msgstr "Jätejakeen kohtalon tiedot"
-
-#. module: product_materials
 #: model:ir.actions.act_window,name:product_materials.product_material_action model:ir.ui.menu,name:product_materials.menu_product_material
 msgid "Product Materials"
 msgstr "Materiaalit"
@@ -589,11 +545,15 @@ msgid "Product Moves (Stock Move Line)"
 msgstr "Tuotteiden siirrot (Stock Move Line)"
 
 #. module: product_materials
-#: model:ir.model.fields,field_description:product_materials.field_procountor_product_product__product_packaging_material_composition_ids
 #: model:ir.model.fields,field_description:product_materials.field_product_product__product_packaging_material_composition_ids
 #: model_terms:ir.ui.view,arch_db:product_materials.product_normal_form_view
 msgid "Product Packaging Material Compositions"
 msgstr "Tuotepakkausten materiaalikoostumukset"
+
+#. module: product_materials
+#: model:ir.model,name:product_materials.model_product_product
+msgid "Product Variant"
+msgstr "Tuotevariaatio"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material_composition__name
@@ -642,6 +602,13 @@ msgid "The Waste Component that typically results from this material"
 msgstr "Jätejae, jota tästä materiaalista tyypillisesti syntyy"
 
 #. module: product_materials
+#. odoo-python
+#: code:addons/product_materials/models/product_material_composition.py:0
+#, python-format
+msgid "This operator is not supported"
+msgstr ""
+
+#. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material_composition__type
 msgid "Type"
 msgstr "Tyyppi"
@@ -656,6 +623,13 @@ msgstr "Mittayksiköt"
 #: model:res.groups,name:product_materials.group_product_product_manage_material_hierarchy
 msgid "Use three-level Material Hierarchy"
 msgstr "Käytä kolmitasoista materiaalihierarkiaa"
+
+#. module: product_materials
+#. odoo-python
+#: code:addons/product_materials/models/product_material_composition.py:0
+#, python-format
+msgid "Value should be True or False (not %s)"
+msgstr ""
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__product_material_waste_component_id
