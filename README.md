@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [product_mass_update_taxes](product_mass_update_taxes/) | 17.0.1.0.0 |  | Modify taxes for multiple products at once
 [product_materials](product_materials/) | 17.0.1.0.0 |  | Product Materials info for products and their packaging
 [product_name_disable_translate](product_name_disable_translate/) | 17.0.1.0.0 |  | Removes the option to translate product names
+[product_on_hand_qty_color](product_on_hand_qty_color/) | 17.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist](product_pricelist/) | 17.0.1.0.0 |  | Add a pricelist information to product
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.1 |  | Helper fields for showing primary vendor's info
