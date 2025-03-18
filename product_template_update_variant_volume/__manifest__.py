@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Product default type: product",
-    "summary": "Product default type: product",
+    "name": "Manage Product Weight And Volume From Product Template",
+    "summary": "Variant weight and volume is managed in related product template",
     "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
@@ -28,6 +28,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "stock"],
-    "data": [],
+    "depends": ["product"],
+    "data": ["views/product_product.xml", "views/product_template.xml"],
 }

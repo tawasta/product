@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,15 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Product default type: product",
-    "summary": "Product default type: product",
+    "name": "Use tree as a default view",
+    "summary": "Use tree as a default view for products",
     "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "stock"],
-    "data": [],
+    "depends": ["purchase", "sale", "stock"],
+    "data": [
+        "views/purchase.xml",
+        "views/sale.xml",
+        "views/stock.xml",
+    ],
 }

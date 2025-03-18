@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Copyright 2024 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Product default type: product",
-    "summary": "Product default type: product",
+    "name": "Define Gross weight to a product",
+    "summary": "Adds a new field, Gross Weight, to the products",
     "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
@@ -28,6 +28,9 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "stock"],
-    "data": [],
+    "depends": [
+        "product",
+        "product_logistics_uom",
+    ],
+    "data": ["views/product_view.xml"],
 }
