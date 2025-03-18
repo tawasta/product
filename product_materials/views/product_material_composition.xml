@@ -123,6 +123,7 @@
             <search>
                 <field name="product_product_id" />
                 <field name="product_material_id" />
+                <field name="net_weight" />
                 <field
                     name="product_material_class_id"
                     groups="product_materials.group_product_product_manage_material_hierarchy"
@@ -143,6 +144,21 @@
                     name="product_material_waste_endpoint_id"
                     groups="product_materials.group_product_product_manage_materials_waste"
                 />
+
+                <group expand="0" string="Group By">
+                    <filter
+                        string="Product"
+                        name="product_product_id"
+                        domain="[]"
+                        context="{'group_by': 'product_product_id'}"
+                    />
+                    <filter
+                        string="Material"
+                        name="product_material_id"
+                        domain="[]"
+                        context="{'group_by': 'product_material_id'}"
+                    />
+                </group>
             </search>
         </field>
     </record>

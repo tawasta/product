@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.materials.upper.category</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product_materials.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='product_material_composition_ids']//tree//field[@name='composition_and_product_informational_uom']"
+                position="after"
+            >
+                <field name="product_material_upper_category_id" optional="show" />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='product_material_composition_ids']//form//group[@name='material_classification']//field[last()]"
+                position="after"
+            >
+                <field name="product_material_upper_category_id" />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='product_packaging_material_composition_ids']//tree//field[@name='composition_and_product_informational_uom']"
+                position="after"
+            >
+                <field name="product_material_upper_category_id" optional="show" />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='product_packaging_material_composition_ids']//form//group[@name='material_classification']//field[last()]"
+                position="after"
+            >
+                <field name="product_material_upper_category_id" />
+            </xpath>
+        </field>
+    </record>
+</odoo>
