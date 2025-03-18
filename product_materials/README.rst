@@ -6,7 +6,7 @@
 Product Materials
 =================
 
-* This module adds support for providing information about what materials (e.g. wood, cardboard, copper) either a) the product variant itself, 
+* This module adds support for providing information about what materials (e.g. wood, cardboard, copper) either a) the product variant itself,
   or b) the product variant's packaging consists of. (called "Material Compositions")
 * The material hierarchy provided by this module is
 
@@ -28,7 +28,7 @@ Product Materials
 Configuration
 =============
 * Enable which material compositions you want to be shown to user by checking the relevant checkboxes in Inventory -> Configuration -> Settings
-* In the same menu, configure if you want to 
+* In the same menu, configure if you want to
 
   * track the material weights
   * track a three-level material hierarchy instead of just a simple material list
@@ -61,6 +61,7 @@ Contributors
 ------------
 * Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 * Timo Talvitie <timo.talvitie@tawasta.fi>
+* Valtteri Lattu <valtteri.lattu@tawasta.fi>
 
 Maintainer
 ----------
