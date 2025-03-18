@@ -22,7 +22,8 @@ addon | version | maintainers | summary
 [product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
 [product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.1 |  | Search products with manufacturer fields
 [product_mass_update_taxes](product_mass_update_taxes/) | 17.0.1.0.0 |  | Modify taxes for multiple products at once
-[product_materials](product_materials/) | 17.0.1.0.0 |  | Product Materials info for products and their packaging
+[product_materials](product_materials/) | 17.0.1.0.1 |  | Product Materials info for products and their packaging
+[product_materials_upper_category](product_materials_upper_category/) | 17.0.1.0.0 |  | Upper Category for product materials
 [product_name_disable_translate](product_name_disable_translate/) | 17.0.1.0.0 |  | Removes the option to translate product names
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 17.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_pricelist](product_pricelist/) | 17.0.1.0.0 |  | Add a pricelist information to product

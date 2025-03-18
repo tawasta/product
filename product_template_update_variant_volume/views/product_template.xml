@@ -11,11 +11,11 @@
             </field>
 
             <xpath expr="//label[@for='volume']" position="attributes">
-                <attribute name="invisible"/>
+                <attribute name="invisible" />
                 </xpath>
 
             <xpath expr="//div[@name='volume']" position="attributes">
-                <attribute name="invisible"/>
+                <attribute name="invisible" />
                 </xpath>
 
         </field>
