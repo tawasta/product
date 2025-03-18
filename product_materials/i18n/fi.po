@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-18 07:35+0000\n"
-"PO-Revision-Date: 2025-03-18 09:37+0200\n"
+"POT-Creation-Date: 2025-03-18 13:16+0000\n"
+"PO-Revision-Date: 2025-03-18 15:17+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -215,6 +215,11 @@ msgid "Format: <Material Composition UoM> / <Parent Product UoM>"
 msgstr "Formaatti: <materiaalin mittayksikkö> / <ylätuotteen mittayksikkö>"
 
 #. module: product_materials
+#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_composition_search
+msgid "Group By"
+msgstr "Ryhmittele"
+
+#. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material__id
 #: model:ir.model.fields,field_description:product_materials.field_product_material_class__id
 #: model:ir.model.fields,field_description:product_materials.field_product_material_composition__id
@@ -306,6 +311,7 @@ msgstr "Hallinnoi materiaalilistaa"
 
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material_composition__product_material_id
+#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_composition_search
 msgid "Material"
 msgstr "Materiaali"
 
@@ -429,6 +435,7 @@ msgstr "Prosentin pitää olla välillä 0-100"
 #. module: product_materials
 #: model:ir.model.fields,field_description:product_materials.field_product_material_composition__product_product_id
 #: model:ir.model.fields.selection,name:product_materials.selection__product_material_composition__type__product
+#: model_terms:ir.ui.view,arch_db:product_materials.view_product_material_composition_search
 msgid "Product"
 msgstr "Tuote"
 
