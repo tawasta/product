@@ -3,7 +3,6 @@ from odoo.exceptions import ValidationError
 
 
 class ProductMaterialComposition(models.Model):
-
     _inherit = "product.material.composition"
 
     def write(self, vals):

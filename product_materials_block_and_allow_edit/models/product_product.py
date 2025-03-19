@@ -2,7 +2,6 @@ from odoo import fields, models
 
 
 class ProductProduct(models.Model):
-
     _inherit = "product.product"
 
     allow_material_edit = fields.Boolean(
