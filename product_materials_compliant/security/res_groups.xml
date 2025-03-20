@@ -1,0 +1,41 @@
+<odoo>
+    <record id="group_prod_mat_comp_manage_compliance_chemicals" model="res.groups">
+        <field name="name">Manage Chemical Compliance Info for Product Materials</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record
+        id="group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+        model="res.groups"
+    >
+        <field
+            name="name"
+        >Manage Conflict Area Minerals Compliance Info for Product Materials</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record id="group_prod_mat_comp_manage_compliance_halogens" model="res.groups">
+        <field name="name">Manage Halogen Compliance Info for Product Materials</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record id="group_prod_mat_comp_manage_compliance_pop" model="res.groups">
+        <field name="name">Manage POP Compliance Info for Product Materials</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record id="group_prod_mat_comp_manage_compliance_reach" model="res.groups">
+        <field name="name">Manage REACH Compliance Info for Product Materials</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record id="group_prod_mat_comp_manage_compliance_rohs" model="res.groups">
+        <field name="name">Manage RoHS Compliance Info for Product Materials</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+
+    <record id="group_prod_mat_comp_manage_compliance_scip" model="res.groups">
+        <field name="name">Manage SCIP Compliance Info for Product Materials</field>
+        <field name="category_id" ref="base.module_category_inventory_inventory" />
+    </record>
+</odoo>

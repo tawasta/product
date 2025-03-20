@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_material_composition_inherited_tree" model="ir.ui.view">
+        <field name="name">product.material.composition.inherited.tree</field>
+        <field name="model">product.material.composition</field>
+        <field
+            name="inherit_id"
+            ref="product_materials.view_product_material_composition_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="type" position="after">
+                <field
+                    name="chemicals_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals"
+                    optional="hide"
+                />
+                <field
+                    name="conflict_area_minerals_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+                    optional="hide"
+                />
+                <field
+                    name="halogen_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens"
+                    optional="hide"
+                />
+                <field
+                    name="pop_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_pop"
+                    optional="hide"
+                />
+                <field
+                    name="reach_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_reach"
+                    optional="hide"
+                />
+                <field
+                    name="rohs_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs"
+                    optional="hide"
+                />
+                <field
+                    name="scip_compliant"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_scip"
+                    optional="hide"
+                />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_product_material_composition_form" model="ir.ui.view">
+        <field name="name">product.material.composition.form.compliant</field>
+        <field name="model">product.material.composition</field>
+        <field
+            name="inherit_id"
+            ref="product_materials.view_product_material_composition_form"
+        />
+        <field name="arch" type="xml">
+            <group name="materials" position="after">
+                <group
+                    string="Product Material Compliance"
+                    style="color: sandybrown;"
+                    groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals,
+                        product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals,
+                        product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens,
+                        product_materials_compliant.group_prod_mat_comp_manage_compliance_pop,
+                        product_materials_compliant.group_prod_mat_comp_manage_compliance_reach,
+                        product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs,
+                        product_materials_compliant.group_prod_mat_comp_manage_compliance_scip"
+                >
+                <br />
+                </group>
+                <group name="materials_compliant">
+                    <group>
+                        <field
+                            name="chemicals_compliant"
+                            groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_chemicals"
+                        />
+                        <field
+                            name="conflict_area_minerals_compliant"
+                            groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_conflict_area_minerals"
+                        />
+                        <field
+                            name="halogen_compliant"
+                            groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_halogens"
+                        />
+                        <field
+                            name="pop_compliant"
+                            groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_pop"
+                        />
+                    </group>
+
+                    <group>
+                        <field
+                            name="reach_compliant"
+                            groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_reach"
+                        />
+                        <field
+                            name="rohs_compliant"
+                            groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_rohs"
+                        />
+                        <field
+                            name="scip_compliant"
+                            groups="product_materials_compliant.group_prod_mat_comp_manage_compliance_scip"
+                        />
+                    </group>
+                </group>
+            </group>
+        </field>
+    </record>
+</odoo>

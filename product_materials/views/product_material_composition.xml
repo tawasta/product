@@ -66,7 +66,14 @@
         <field name="arch" type="xml">
             <form>
                 <sheet>
-                    <group>
+                    <group
+                        string="Product Material Compositions"
+                        groups="product_materials.group_product_product_manage_product_materials"
+                        style="color: firebrick;"
+                    >
+                    <br />
+                    </group>
+                    <group name="materials">
                         <group>
                             <field name="product_product_id" />
                             <field
