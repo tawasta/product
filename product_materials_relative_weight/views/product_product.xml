@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.materials.relative.weight</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product_materials.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//field[@name='product_material_composition_ids']//group[@name='material_info']/field[@name='net_weight_uom_id']"
+                position="after"
+            >
+                <field
+                    name="relative_net_weight_percentage"
+                    groups="product_materials.group_product_product_manage_materials_weights"
+                />
+            </xpath>
+
+            <xpath
+                expr="//field[@name='product_packaging_material_composition_ids']//group[@name='material_info']/field[@name='net_weight_uom_id']"
+                position="after"
+            >
+                <field
+                    name="relative_gross_weight_percentage"
+                    groups="product_materials.group_product_product_manage_materials_weights"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>
