@@ -34,6 +34,7 @@ addon | version | maintainers | summary
 [product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.1 |  | Helper fields for showing primary vendor's info
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 17.0.1.0.0 |  | Create a batch of placeholder products
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 17.0.1.0.1 |  | Product Show only in Suggested accessories
+[product_storage_card](product_storage_card/) | 17.0.1.0.0 |  | Printable product info card with storage, vendor and reordering info
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 17.0.1.0.0 |  | Show all customer codes in a single field
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.0 |  | Variant dimensions are managed centrally in the related product template
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
