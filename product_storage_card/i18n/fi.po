@@ -18,7 +18,7 @@ msgstr ""
 #. module: product_storage_card
 #: model:ir.actions.report,print_report_name:product_storage_card.product_template_storage_card_report
 msgid "'Storage Card - %s' % (object.name)"
-msgstr ""
+msgstr "'Tuotekortti - %s' % (object.name)"
 
 #. module: product_storage_card
 #: model_terms:ir.ui.view,arch_db:product_storage_card.product_storage_card_document
