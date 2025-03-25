@@ -23,7 +23,7 @@ addon | version | maintainers | summary
 [product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.1 |  | Search products with manufacturer fields
 [product_mass_update_taxes](product_mass_update_taxes/) | 17.0.1.0.0 |  | Modify taxes for multiple products at once
 [product_materials](product_materials/) | 17.0.1.0.2 |  | Product Materials info for products and their packaging
-[product_materials_block_and_allow_edit](product_materials_block_and_allow_edit/) | 17.0.1.0.0 |  | Disable editing materials by default and allow it to some users
+[product_materials_block_and_allow_edit](product_materials_block_and_allow_edit/) | 17.0.1.1.0 |  | Disable editing materials by default and allow it to some users
 [product_materials_compliant](product_materials_compliant/) | 17.0.1.0.0 |  | Add fields for product material compliance (Conflict Area Minerals, SCIP, etc.)
 [product_materials_relative_weight](product_materials_relative_weight/) | 17.0.1.0.0 |  | Adds computed fields of relative weights of product materials
 [product_materials_upper_category](product_materials_upper_category/) | 17.0.1.0.0 |  | Upper Category for product materials
