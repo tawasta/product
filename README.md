@@ -37,6 +37,7 @@ addon | version | maintainers | summary
 [product_storage_card](product_storage_card/) | 17.0.1.0.0 |  | Printable product info card with storage, vendor and reordering info
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 17.0.1.0.0 |  | Show all customer codes in a single field
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.0 |  | Variant dimensions are managed centrally in the related product template
+[product_template_hide_sh_tags](product_template_hide_sh_tags/) | 17.0.1.0.0 |  | Hide SH tags from product template
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
 [product_template_update_variant_volume](product_template_update_variant_volume/) | 17.0.1.0.0 |  | Variant weight and volume is managed in related product template
 [product_unspsc](product_unspsc/) | 17.0.1.0.0 |  | New field for UNSPSC Code

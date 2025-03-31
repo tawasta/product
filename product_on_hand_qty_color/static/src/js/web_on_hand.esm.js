@@ -1,8 +1,8 @@
 /** @odoo-module **/
 
+import {FormRenderer} from "@web/views/form/form_renderer";
 import {patch} from "@web/core/utils/patch";
 import {useEffect} from "@odoo/owl";
-import {FormRenderer} from "@web/views/form/form_renderer";
 
 patch(FormRenderer.prototype, {
     setup() {
@@ -21,8 +21,10 @@ patch(FormRenderer.prototype, {
             );
             buttons.forEach((button) => {
                 if (this.props.record.data.has_stock_on_several_locations) {
-                    button.style.backgroundColor = "rgba(165, 42, 42, 0.14)"; // Ruskea tausta, 14% opacity
-                    button.style.border = "1px solid rgba(165, 42, 42, 0.5)"; // Kevyt reuna
+                    // Ruskea tausta, 14% opacity
+                    button.style.backgroundColor = "rgba(165, 42, 42, 0.14)";
+                    // Kevyt reuna
+                    button.style.border = "1px solid rgba(165, 42, 42, 0.5)";
                 }
             });
         }, 500);
