@@ -1,0 +1,51 @@
+from odoo import fields, models
+
+
+class ProductProduct(models.Model):
+    _inherit = "product.product"
+
+    def action_update_quantity_to_inventory_adjustment(self):
+        company = self.env.company
+
+        # Search based on Warehouse's address information
+        stock_warehouse = (
+            self.env["stock.warehouse"]
+            .sudo()
+            .search(
+                [
+                    "|",
+                    "|",
+                    ("partner_id", "=", company.partner_id.id),
+                    ("partner_id", "=", False),
+                    ("company_id", "=", company.id),
+                ],
+                limit=1,
+            )
+        )
+
+        # Get Location Stock from warehouse
+        location = stock_warehouse.lot_stock_id
+
+        now_date = fields.Datetime.now().date()
+        disp_name = self.display_name
+
+        inv_vals = {
+            "product_ids": [(6, 0, [self.id])],
+            "location_ids": [(6, 0, [location.id])],
+            "company_id": company.id,
+            "product_selection": "one",
+            "name": "{}/{}/{}".format("Adjustment", disp_name, now_date),
+        }
+
+        # Inventory is created
+        adjustment = self.env["stock.inventory"].create(inv_vals)
+
+        # Returns Inventory's form view on top of the product form view
+        return {
+            "type": "ir.actions.act_window",
+            "res_model": "stock.inventory",
+            "view_type": "form",
+            "view_mode": "form",
+            "res_id": adjustment.id,
+            "target": "current",
+        }
