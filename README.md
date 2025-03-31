@@ -41,6 +41,7 @@ addon | version | maintainers | summary
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
 [product_template_update_variant_volume](product_template_update_variant_volume/) | 17.0.1.0.0 |  | Variant weight and volume is managed in related product template
 [product_unspsc](product_unspsc/) | 17.0.1.0.0 |  | New field for UNSPSC Code
+[product_update_quantity_to_inventory_adjustment](product_update_quantity_to_inventory_adjustment/) | 17.0.1.0.0 |  | Use Inventory Adjustment from Update Quantity functionality
 [product_use_tree_as_default_view](product_use_tree_as_default_view/) | 17.0.1.0.0 |  | Use tree as a default view for products
 [product_variant_internal_note](product_variant_internal_note/) | 17.0.1.0.0 |  | Internal note for product variant
 [product_variant_sequence](product_variant_sequence/) | 17.0.1.0.0 |  | Order Product Variants based on sequence_variant. Move products in the tree view to change their order
