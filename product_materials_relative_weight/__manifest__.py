@@ -21,7 +21,7 @@
 {
     "name": "Relative weights of Product materials",
     "summary": "Adds computed fields of relative weights of product materials",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
