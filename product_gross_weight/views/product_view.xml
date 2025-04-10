@@ -27,12 +27,6 @@
                     <span><field name="weight_uom_id" /></span>
                 </div>
 
-                <label for="gross_weight_product" invisible="1" />
-                <div class="o_row" name="gross_weight_product" invisible="1">
-                    <field name="gross_weight_product" readonly="1" />
-                    <span><field name="weight_uom_id" readonly="1" /></span>
-                </div>
-
                 <label for="weight" />
                 <div class="o_row" name="weight">
                     <field name="weight" />
