@@ -15,7 +15,7 @@ addon | version | maintainers | summary
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.0.0 |  | Audit log rules for product.product, product.template and product.category
 [product_competitor_alternative](product_competitor_alternative/) | 17.0.1.0.0 |  | New field for info about competitor's alternative product
-[product_compliant](product_compliant/) | 17.0.1.0.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
+[product_compliant](product_compliant/) | 17.0.1.1.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
 [product_default_type_product](product_default_type_product/) | 17.0.1.0.0 |  | Product default type: product
 [product_gross_weight](product_gross_weight/) | 17.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_hide_sale_price](product_hide_sale_price/) | 17.0.1.0.1 |  | Hide sale price and taxes from users that not belonging to sales group

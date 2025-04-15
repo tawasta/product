@@ -4,16 +4,18 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0-20240711\n"
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-03-11 08:12+0000\n"
-"PO-Revision-Date: 2025-03-11 08:12+0000\n"
+"POT-Creation-Date: 2025-04-15 07:22+0000\n"
+"PO-Revision-Date: 2025-04-15 10:23+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
 
 #. module: product_compliant
 #: model:ir.model.fields,field_description:product_compliant.field_product_product__atex_compliant
@@ -27,7 +29,8 @@ msgstr "ATEX"
 msgid ""
 "Check box to show 'ATEX Compliant' status selection field on product page."
 msgstr ""
-"Rastita näyttääksesi 'ATEX-vaatimusten mukainen' -valintakenttä tuotesivulla."
+"Rastita näyttääksesi 'ATEX-vaatimusten mukainen' -valintakenttä "
+"tuotesivulla."
 
 #. module: product_compliant
 #: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
@@ -43,22 +46,24 @@ msgid ""
 "Check box to show 'MSDS (Material Safety Data Sheet) Checked' status "
 "selection field on product page."
 msgstr ""
-"Rastita näyttääksesi 'KTT (Käyttöturvallisuustiedote) tarkistettu' "
-"-valintakenttä tuotesivulla."
+"Rastita näyttääksesi 'KTT (Käyttöturvallisuustiedote) tarkistettu' -"
+"valintakenttä tuotesivulla."
 
 #. module: product_compliant
 #: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
 msgid ""
 "Check box to show 'Reach Compliant' status selection field on product page."
 msgstr ""
-"Rastita näyttääksesi 'REACH-vaatimusten mukainen' -valintakenttä tuotesivulla."
+"Rastita näyttääksesi 'REACH-vaatimusten mukainen' -valintakenttä "
+"tuotesivulla."
 
 #. module: product_compliant
 #: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
 msgid ""
 "Check box to show 'RoHS Compliant' status selection field on product page."
 msgstr ""
-"Rastita näyttääksesi 'RoHS-vaatimusten mukainen' -valintakenttä tuotesivulla."
+"Rastita näyttääksesi 'RoHS-vaatimusten mukainen' -valintakenttä "
+"tuotesivulla."
 
 #. module: product_compliant
 #: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
@@ -75,12 +80,6 @@ msgstr ""
 #: model:ir.model.fields.selection,name:product_compliant.selection__product_compliant__selectable_for__composition
 msgid "Composition Checked"
 msgstr "Materiaalit listattu"
-
-#. module: product_compliant
-#: model:ir.actions.act_window,name:product_compliant.action_product_compliant_res_config_settings
-#: model:ir.model,name:product_compliant.model_res_config_settings
-msgid "Config Settings"
-msgstr ""
 
 #. module: product_compliant
 #: model:ir.model.fields,field_description:product_compliant.field_product_compliant__create_uid
@@ -140,7 +139,8 @@ msgstr "Hallinnoi materiaalien listauksen statusta tuotteilla"
 #: model:ir.model.fields,field_description:product_compliant.field_res_config_settings__group_product_template_manage_compliance_msds_checked
 #: model:res.groups,name:product_compliant.group_product_template_manage_compliance_msds_checked
 msgid "Manage MSDS (Material Safety Data Sheet) Checked Info for Products"
-msgstr "Hallinnoi käyttöturvallisuustiedotteen tarkistuksen statusta tuotteilla"
+msgstr ""
+"Hallinnoi käyttöturvallisuustiedotteen tarkistuksen statusta tuotteilla"
 
 #. module: product_compliant
 #: model_terms:ir.ui.view,arch_db:product_compliant.res_config_settings_view_form
@@ -169,6 +169,12 @@ msgstr "Hallitse työturvallisuuden tarkistuksen statusta tuotteilla"
 #: model:ir.model.fields,field_description:product_compliant.field_product_compliant__name
 msgid "Name"
 msgstr "Nimi"
+
+#. module: product_compliant
+#: model:ir.actions.act_window,name:product_compliant.action_product_compliant_res_config_settings
+#: model:ir.model,name:product_compliant.model_res_config_settings
+msgid "Procurement purchase grouping settings"
+msgstr "Asetukset"
 
 #. module: product_compliant
 #: model:ir.model,name:product_compliant.model_product_template
@@ -254,8 +260,10 @@ msgid ""
 "When left empty, the value can be used for any of the Product Compliance. A "
 "selection can be made if the compliance term is specific to e.g. just REACH "
 "and should not be available for others."
-msgstr "Jos jätetty tyhjäksi, termiä voi käyttää kaikkiin vaatimustenmukaisuuksiin. Tee valinta, 
-"jos haluat käyttää termiä vain esimerkiksi REACHiin eikä muihin vaatimustenmukaisuuksiin"
+msgstr ""
+"Jos jätetty tyhjäksi, termiä voi käyttää kaikkiin vaatimustenmukaisuuksiin. "
+"Tee valintajos haluat käyttää termiä vain esimerkiksi REACHiin eikä muihin "
+"vaatimustenmukaisuuksiin"
 
 #. module: product_compliant
 #: model:ir.model.fields,field_description:product_compliant.field_product_product__work_safety_checked_compliant
