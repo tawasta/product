@@ -15,6 +15,7 @@ OPERATORS = {
 class ProductMaterialComposition(models.Model):
     _name = "product.material.composition"
     _description = "Product Material Composition"
+    _inherit = ["mail.thread", "mail.activity.mixin"]
     _order = "sequence, id"
     _rec_name = "product_material_id"
 
@@ -27,7 +28,7 @@ class ProductMaterialComposition(models.Model):
 
     # This is the variant that the material row is linked to
     product_product_id = fields.Many2one(
-        comodel_name="product.product", string="Product"
+        comodel_name="product.product", string="Product", tracking=True
     )
 
     product_material_class_id = fields.Many2one(
@@ -41,6 +42,7 @@ class ProductMaterialComposition(models.Model):
     product_material_id = fields.Many2one(
         comodel_name="product.material",
         string="Material",
+        tracking=True,
     )
 
     product_material_sublevel_id = fields.Many2one(
@@ -56,7 +58,7 @@ class ProductMaterialComposition(models.Model):
         related="product_material_id.renewable_weight_percentage"
     )
 
-    net_weight = fields.Float(string="Net weight")
+    net_weight = fields.Float(string="Net weight", tracking=True)
 
     net_weight_uom_id = fields.Many2one(
         comodel_name="uom.uom",
@@ -76,16 +78,19 @@ class ProductMaterialComposition(models.Model):
     recycled_percentage = fields.Integer(
         string="Recycled Material %",
         help="What percentage originates from recycled materials",
+        tracking=True,
     )
 
     product_material_waste_component_id = fields.Many2one(
         comodel_name="product.material.waste.component",
         string="Waste Component",
+        tracking=True,
     )
 
     product_material_waste_endpoint_id = fields.Many2one(
         comodel_name="product.material.waste.endpoint",
         string="Waste Endpoint",
+        tracking=True,
     )
 
     description = fields.Text(string="Notes")
@@ -95,6 +100,7 @@ class ProductMaterialComposition(models.Model):
         search="_search_is_delivery_package",
         store=True,
         string="Delivery package",
+        tracking=True,
     )
 
     # Defines if the material row is related to product itself's materials or the
@@ -102,6 +108,7 @@ class ProductMaterialComposition(models.Model):
     type = fields.Selection(
         selection=[("product", "Product"), ("product_packaging", "Incoming Packaging")],
         required=True,
+        tracking=True,
     )
 
     attachment_ids = fields.Many2many(
