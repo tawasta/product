@@ -21,14 +21,14 @@
 {
     "name": "Product Materials",
     "summary": "Product Materials info for products and their packaging",
-    "version": "17.0.1.0.2",
+    "version": "17.0.1.1.2",
     "category": "Product",
     "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Tawasta",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["stock", "sale", "account_invoice_related_sale_order"],
+    "depends": ["mail", "stock", "sale", "account_invoice_related_sale_order"],
     "data": [
         "security/res_groups.xml",
         "security/ir.model.access.csv",

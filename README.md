@@ -15,14 +15,14 @@ addon | version | maintainers | summary
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.0.0 |  | Audit log rules for product.product, product.template and product.category
 [product_competitor_alternative](product_competitor_alternative/) | 17.0.1.0.0 |  | New field for info about competitor's alternative product
-[product_compliant](product_compliant/) | 17.0.1.0.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
+[product_compliant](product_compliant/) | 17.0.1.1.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
 [product_default_type_product](product_default_type_product/) | 17.0.1.0.0 |  | Product default type: product
 [product_gross_weight](product_gross_weight/) | 17.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_hide_sale_price](product_hide_sale_price/) | 17.0.1.0.1 |  | Hide sale price and taxes from users that not belonging to sales group
 [product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
 [product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.1 |  | Search products with manufacturer fields
 [product_mass_update_taxes](product_mass_update_taxes/) | 17.0.1.0.0 |  | Modify taxes for multiple products at once
-[product_materials](product_materials/) | 17.0.1.0.2 |  | Product Materials info for products and their packaging
+[product_materials](product_materials/) | 17.0.1.1.2 |  | Product Materials info for products and their packaging
 [product_materials_block_and_allow_edit](product_materials_block_and_allow_edit/) | 17.0.1.1.1 |  | Disable editing materials by default and allow it to some users
 [product_materials_compliant](product_materials_compliant/) | 17.0.1.0.0 |  | Add fields for product material compliance (Conflict Area Minerals, SCIP, etc.)
 [product_materials_relative_weight](product_materials_relative_weight/) | 17.0.1.0.1 |  | Adds computed fields of relative weights of product materials
@@ -36,7 +36,7 @@ addon | version | maintainers | summary
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 17.0.1.0.1 |  | Product Show only in Suggested accessories
 [product_storage_card](product_storage_card/) | 17.0.1.0.0 |  | Printable product info card with storage, vendor and reordering info
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 17.0.1.0.0 |  | Show all customer codes in a single field
-[product_template_dimension](product_template_dimension/) | 17.0.1.0.0 |  | Variant dimensions are managed centrally in the related product template
+[product_template_dimension](product_template_dimension/) | 17.0.1.0.1 |  | Variant dimensions are managed centrally in the related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 17.0.1.0.0 |  | Hide SH tags from product template
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
 [product_template_update_variant_volume](product_template_update_variant_volume/) | 17.0.1.0.0 |  | Variant weight and volume is managed in related product template
