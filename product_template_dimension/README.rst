@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-===============================================
-Manage Product Dimensions from Product Template
-===============================================
+================================================
+Product: Manage Dimensions from Product Template
+================================================
 
 * Variant dimensions are managed centrally in the related product template
 * Variant form's variant-specific dimensions are changed to readonly fields

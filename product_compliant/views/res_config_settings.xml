@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="res_config_settings_view_form" model="ir.ui.view">
+        <field
+            name="name"
+        >res.config.settings.view.form.inherit.product.compliance</field>
+        <field name="model">res.config.settings</field>
+        <field name="inherit_id" ref="product.res_config_settings_view_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//block[@id='product_general_settings']" position="after">
+                <block
+                    title="Product Compliance Types"
+                    name="product_compliance_settings"
+                >
+                    <setting
+                        id="group_product_template_manage_compliance_atex"
+                        help="Check box to show 'ATEX Compliant' status selection field on product page."
+                    >
+                        <field name="group_product_template_manage_compliance_atex" />
+                    </setting>
+
+                    <setting
+                        id="group_product_template_manage_compliance_reach"
+                        help="Check box to show 'Reach Compliant' status selection field on product page."
+                    >
+                        <field name="group_product_template_manage_compliance_reach" />
+                    </setting>
+
+                    <setting
+                        id="group_product_template_manage_compliance_rohs"
+                        help="Check box to show 'RoHS Compliant' status selection field on product page."
+                    >
+                        <field name="group_product_template_manage_compliance_rohs" />
+                    </setting>
+
+                    <setting
+                        id="group_product_template_manage_compliance_composition_checked"
+                        help="Check box to show 'Composition Checked' status selection field on product page."
+                    >
+                        <field
+                            name="group_product_template_manage_compliance_composition_checked"
+                        />
+                    </setting>
+
+                    <setting
+                        id="group_product_template_manage_compliance_msds_checked"
+                        help="Check box to show 'MSDS (Material Safety Data Sheet) Checked' status selection field on product page."
+                    >
+                        <field
+                            name="group_product_template_manage_compliance_msds_checked"
+                        />
+                    </setting>
+
+                    <setting
+                        id="group_product_template_manage_compliance_work_safety_checked"
+                        help="Check box to show 'Work Safety Checked' status selection field on product page."
+                    >
+                        <field
+                            name="group_product_template_manage_compliance_work_safety_checked"
+                        />
+                    </setting>
+
+                    <!-- Add a link to the menu where the yes/no etc. allowed values are managed -->
+                    <div
+                        class="col-12 col-lg-6 o_setting_box"
+                        id="product_compliance_values_link_box"
+                    >
+                        <button
+                            name="product_compliant.action_product_compliant_values"
+                            icon="fa-arrow-right"
+                            type="action"
+                            string="Manage Product Compliance Values"
+                            class="btn-link o_web_settings_access_rights"
+                        />
+                    </div>
+                </block>
+            </xpath>
+        </field>
+    </record>
+</odoo>

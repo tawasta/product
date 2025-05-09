@@ -51,5 +51,6 @@ class LoyaltyReward(models.Model):
     # 8. Business methods
     def _get_discount_product_values(self):
         res = super(LoyaltyReward, self)._get_discount_product_values()
-        res["company_id"] = self.company_id.id
+        for reward in res:
+            reward["company_id"] = self.company_id.id
         return res

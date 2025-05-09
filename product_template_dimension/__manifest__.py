@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Manage Product Dimensions from Product Template",
+    "name": "Product: Manage Dimensions from Product Template",
     "summary": "Variant dimensions are managed centrally in the related product template",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
@@ -29,8 +29,5 @@
     "application": False,
     "installable": True,
     "depends": ["product_dimension"],
-    "data": [
-        "views/product_product.xml",
-        # "views/product_template.xml"
-    ],
+    "data": ["views/product_product.xml", "views/product_template.xml"],
 }

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_material_composition_tree" model="ir.ui.view">
+        <field name="name">product.material.composition.tree.upper.category</field>
+        <field name="model">product.material.composition</field>
+        <field
+            name="inherit_id"
+            ref="product_materials.view_product_material_composition_tree"
+        />
+        <field name="arch" type="xml">
+            <field name="product_material_sublevel_id" position="after">
+                <field name="product_material_upper_category_id" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_product_material_composition_form" model="ir.ui.view">
+        <field name="name">product.material.composition.form.upper.category</field>
+        <field name="model">product.material.composition</field>
+        <field
+            name="inherit_id"
+            ref="product_materials.view_product_material_composition_form"
+        />
+        <field name="arch" type="xml">
+            <field name="net_weight_uom_id" position="after">
+                <field name="product_material_upper_category_id" />
+            </field>
+        </field>
+    </record>
+
+    <record id="view_product_material_composition_search" model="ir.ui.view">
+        <field name="name">product.material.composition.search.upper.category</field>
+        <field name="model">product.material.composition</field>
+        <field
+            name="inherit_id"
+            ref="product_materials.view_product_material_composition_search"
+        />
+        <field name="arch" type="xml">
+            <field name="product_material_waste_endpoint_id" position="after">
+                <field name="product_material_upper_category_id" />
+            </field>
+
+            <group expand="0" string="Group By">
+                <filter
+                    string="Upper category"
+                    name="upper_category_id"
+                    domain="[]"
+                    context="{'group_by': 'product_material_upper_category_id'}"
+                />
+            </group>
+        </field>
+    </record>
+</odoo>

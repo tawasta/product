@@ -26,6 +26,7 @@ Contributors
 ------------
 
 * Miika Nissi <miika.nissi@futural.fi>
+* Timo Kekäläinen <timo.kekalainen@futural.fi>
 
 Maintainer
 ----------
