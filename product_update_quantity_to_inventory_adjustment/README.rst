@@ -37,5 +37,5 @@ Maintainer
 .. image:: https://futural.fi/templates/tawastrap/images/logo.png
    :alt: Futural Oy
    :target: https://futural.fi/
-
+   
 This module is maintained by Futural Oy
