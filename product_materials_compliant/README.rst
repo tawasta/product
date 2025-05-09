@@ -7,7 +7,7 @@ Product Materials Compliance
 ============================
 
 * A module for managing various types of compliance for Product Material Compositions
-* Extends the functionality of product_compliant module that provides the concept of Compliance values (e.g. REACH Certified = yes) and enables linking them to Products. 
+* Extends the functionality of product_compliant module that provides the concept of Compliance values (e.g. REACH Certified = yes) and enables linking them to Products.
   Install this module only if you need to go to a more specific level and link the Compliance values to invididual Product Material Compositions.
 * Currently supported compliance types for materials:
 
@@ -22,7 +22,7 @@ Product Materials Compliance
 Configuration
 =============
 * Enable which of the above compliance types you want to be shown to user by checking the relevant checkboxes in Sales -> Configuration -> Product Compliance Types
-  
+
   * Note: pay attention to if you're enabling the compliance type for the Product or the Product Material, as both settings are present in the view
 
 * Add the possible values that should be allowed for selection in Sales -> Configuration -> Product Compliance Values
@@ -34,20 +34,20 @@ Usage
 
 Known issues / Roadmap
 ======================
-* Consider making it possible to toggle on/off defaulting to the compliancy with lowest sequence (currently always on) 
+* Consider making it possible to toggle on/off defaulting to the compliancy with lowest sequence (currently always on)
 
 Credits
 =======
 
 Contributors
 ------------
-* Timo Talvitie <timo.talvitie@tawasta.fi>
+* Timo Talvitie <timo.talvitie@futural.fi>
 
 Maintainer
 ----------
 
-.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: https://tawasta.fi/
+.. image:: https://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: https://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy

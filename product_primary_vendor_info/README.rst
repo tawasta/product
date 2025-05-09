@@ -13,7 +13,7 @@ Product Primary Vendor Info
   (e.g. purchase request lines or BOM lines)
 * Also adds an informational "Cost Price (vendor based)" field to product form
   that converts the primary vendor's price to the default currency, and does
-  conversion from purchase UoM to product's own UoM. I.e. it tells what does 
+  conversion from purchase UoM to product's own UoM. I.e. it tells what does
   it cost in company currency to buy one <UoM> of the product. This does not
   affect stock valuation, and is only additional information
 
@@ -34,13 +34,13 @@ Credits
 
 Contributors
 ------------
-* Timo Talvitie <timo.talvitie@tawasta.fi>
+* Timo Talvitie <timo.talvitie@futural.fi>
 
 Maintainer
 ----------
 
-.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: https://tawasta.fi/
+.. image:: https://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: https://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy
