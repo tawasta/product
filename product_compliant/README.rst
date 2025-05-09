@@ -7,7 +7,7 @@ Product Compliance
 ==================
 
 * A module for managing various types of compliance for product templates
-* Compliance types by default share the same possible values, which can be added/configured in settings (e.g. "Yes", "No", "Not Applicable"). You can also set 
+* Compliance types by default share the same possible values, which can be added/configured in settings (e.g. "Yes", "No", "Not Applicable"). You can also set
   a value to be specific to only for a single compliance (e.g. REACH)
 * You can also configure in settings which of the supported compliance type fields should be shown and which are irrelevant and can be hidden from users altogether
 * Currently supported compliance types:
@@ -26,7 +26,7 @@ Configuration
 
 Usage
 =====
-* Once configuration is done, open a product template's page and fill in the appropriate compliance values 
+* Once configuration is done, open a product template's page and fill in the appropriate compliance values
 
 Known issues / Roadmap
 ======================
@@ -38,16 +38,16 @@ Credits
 Contributors
 ------------
 
-* Jarmo Kortetjärvi <jarmo.kortetjarvi@tawasta.fi>
-* Miika Nissi <miika.nissi@tawasta.fi>
-* Valtteri Lattu <valtteri.lattu@tawasta.fi>
-* Timo Talvitie <timo.talvitie@tawasta.fi>
+* Jarmo Kortetjärvi <jarmo.kortetjarvi@futural.fi>
+* Miika Nissi <miika.nissi@futural.fi>
+* Valtteri Lattu <valtteri.lattu@futural.fi>
+* Timo Talvitie <timo.talvitie@futural.fi>
 
 Maintainer
 ----------
 
-.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: https://tawasta.fi/
+.. image:: https://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: https://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy
