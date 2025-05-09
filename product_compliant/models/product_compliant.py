@@ -6,14 +6,13 @@ class ProductCompliant(models.Model):
     _description = "Product Compliant"
     _order = "sequence"
 
-    name = fields.Char("Name", required=True)
+    name = fields.Char(required=True)
 
-    sequence = fields.Integer("Sequence", default=100)
+    sequence = fields.Integer(default=100)
 
-    description = fields.Text("Description")
+    description = fields.Text()
 
     selectable_for = fields.Selection(
-        string="Selectable For",
         selection=[
             ("atex", "ATEX Compliant"),
             ("reach", "REACH Compliant"),
