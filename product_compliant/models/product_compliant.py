@@ -21,7 +21,7 @@ class ProductCompliant(models.Model):
             ("msds", "MSDS (Material Safety Data Sheet) Checked"),
             ("work_safety", "Work Safety Checked"),
         ],
-        help="When left empty, the value can be used for any of the Product Compliance. "
+        help="If left empty, the value can be used for any of the Product Compliance. "
         "A selection can be made if the compliance term is specific to e.g. just REACH "
         "and should not be available for others.",
     )

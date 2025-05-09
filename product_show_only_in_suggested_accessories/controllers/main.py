@@ -4,9 +4,11 @@ from odoo.addons.website_sale.controllers.main import WebsiteSale
 class WebsiteSale(WebsiteSale):
     def _shop_lookup_products(self, attrib_set, options, post, search, website):
         # Kutsu alkuperäistä funktiota
-        fuzzy_search_term, product_count, search_product = super(
-            WebsiteSale, self
-        )._shop_lookup_products(attrib_set, options, post, search, website)
+        (
+            fuzzy_search_term,
+            product_count,
+            search_product,
+        ) = super()._shop_lookup_products(attrib_set, options, post, search, website)
 
         # Lisää tuotteiden suodatus
         search_product = search_product.filtered(

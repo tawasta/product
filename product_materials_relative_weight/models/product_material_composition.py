@@ -34,7 +34,7 @@ class ProductMaterialComposition(models.Model):
     def _search_relative_net_weight_percentage(self, operator, value):
         if operator not in ("<", ">", "=", "!=", "<=", ">="):
             raise UserError(_("Invalid domain operator %s", operator))
-        if not isinstance(value, (float, int)):
+        if not isinstance(value, float | int):
             raise UserError(_("Invalid domain right operand %s", value))
 
         ids = []
@@ -46,7 +46,7 @@ class ProductMaterialComposition(models.Model):
     def _search_relative_gross_weight_percentage(self, operator, value):
         if operator not in ("<", ">", "=", "!=", "<=", ">="):
             raise UserError(_("Invalid domain operator %s", operator))
-        if not isinstance(value, (float, int)):
+        if not isinstance(value, float | int):
             raise UserError(_("Invalid domain right operand %s", value))
 
         ids = []

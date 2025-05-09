@@ -20,7 +20,7 @@
 
 {
     "name": "Product: Manage Dimensions from Product Template",
-    "summary": "Variant dimensions are managed centrally in the related product template",
+    "summary": "Variant dimensions are managed in the related product template",
     "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",

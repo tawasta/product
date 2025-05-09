@@ -20,7 +20,7 @@
 
 {
     "name": "Audit Log Rules - Product",
-    "summary": "Audit log rules for product.product, product.template and product.category",
+    "summary": "Audit log rules for product, product template and product category",
     "author": "Futural",
     "license": "AGPL-3",
     "website": "https://github.com/tawasta/product",
