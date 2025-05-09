@@ -12,7 +12,7 @@ class ProductBatchCreatorWizard(models.TransientModel):
         product_model = self.env["product.template"]
 
         for i in range(0, self.qty):
-            product_model.create({"name": "{} {}".format(self.prefix, i + 1)})
+            product_model.create({"name": f"{self.prefix} {i + 1}"})
 
     def _get_default_prefix(self):
         return _("Reserved Code {} - ").format(

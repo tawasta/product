@@ -23,7 +23,7 @@
     "summary": "Add fields for product compliance (REACH, RoHS, Work Safety etc)",
     "version": "17.0.1.1.0",
     "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

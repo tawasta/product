@@ -18,6 +18,4 @@ class ProductTemplate(models.Model):
                 or ""
             )
 
-    customer_codes = fields.Char(
-        compute="_compute_customer_codes", string="Customer Codes", store=True
-    )
+    customer_codes = fields.Char(compute="_compute_customer_codes", store=True)

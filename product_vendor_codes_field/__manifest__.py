@@ -23,7 +23,7 @@
     "summary": "Show all vendor codes in a single field",
     "version": "17.0.1.0.0",
     "category": "Inventory",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

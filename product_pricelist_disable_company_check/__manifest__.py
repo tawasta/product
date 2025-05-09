@@ -23,7 +23,7 @@
     "summary": "Don't force using same company for product and product pricelist",
     "version": "17.0.1.0.0",
     "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

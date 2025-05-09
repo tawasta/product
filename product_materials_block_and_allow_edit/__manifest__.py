@@ -23,7 +23,7 @@
     "summary": "Disable editing materials by default and allow it to some users",
     "version": "17.0.1.1.1",
     "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

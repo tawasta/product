@@ -23,7 +23,7 @@
     "summary": "Helper fields for showing primary vendor's info",
     "version": "17.0.1.0.1",
     "category": "Inventory",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

@@ -23,7 +23,7 @@
     "summary": "Search products with manufacturer fields",
     "version": "17.0.1.0.1",
     "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

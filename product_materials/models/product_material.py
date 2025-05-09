@@ -5,7 +5,7 @@ class ProductMaterial(models.Model):
     _name = "product.material"
     _description = "Product Material"
 
-    name = fields.Char(string="Name", required=True, translate=True)
+    name = fields.Char(required=True, translate=True)
 
     product_material_class_id = fields.Many2one(
         comodel_name="product.material.class",

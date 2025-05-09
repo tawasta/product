@@ -24,7 +24,7 @@
                Move products in the tree view to change their order""",
     "version": "17.0.1.0.0",
     "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

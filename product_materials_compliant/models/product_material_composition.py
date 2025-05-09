@@ -14,7 +14,8 @@ class ProductMaterialComposition(models.Model):
     _ROHS_DOMAIN = [("selectable_for", "in", [False, "rohs"])]
     _SCIP_DOMAIN = [("selectable_for", "in", [False, "scip"])]
 
-    # Suggest defaults for each compliancy based on what allowed option has the lowest secuence.
+    # Suggest defaults for each compliancy based on
+    # what allowed option has the lowest sequence.
     def _get_default_chemicals_compliant(self):
         return self.env["product.compliant"].search(self._CHEMICALS_DOMAIN, limit=1).id
 

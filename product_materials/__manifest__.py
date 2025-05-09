@@ -23,7 +23,7 @@
     "summary": "Product Materials info for products and their packaging",
     "version": "17.0.1.1.2",
     "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,

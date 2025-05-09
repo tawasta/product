@@ -20,10 +20,10 @@
 
 {
     "name": "Audit Log Rules - Product",
-    "summary": "Audit log rules for product.product, product.template and product.category",
+    "summary": "Audit log rules for product, product template and product category",
     "author": "Futural",
     "license": "AGPL-3",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "category": "Logging",
     "application": False,
     "installable": True,

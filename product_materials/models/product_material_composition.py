@@ -24,7 +24,7 @@ class ProductMaterialComposition(models.Model):
         # Suggest grams as default
         return self.env.ref("uom.product_uom_gram")
 
-    sequence = fields.Integer(string="Sequence")
+    sequence = fields.Integer()
 
     # This is the variant that the material row is linked to
     product_product_id = fields.Many2one(

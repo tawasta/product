@@ -22,7 +22,7 @@
     "version": "17.0.1.1.0",
     "category": "Sales",
     "summary": "Sets company field for coupon product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
