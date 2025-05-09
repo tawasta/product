@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2022 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2022 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -21,9 +21,9 @@
 {
     "name": "Audit Log Rules - Uom",
     "summary": "Adds audit log rules for uom.uom and uom.category",
-    "author": "Tawasta",
+    "author": "Futural",
     "license": "AGPL-3",
-    "website": "https://gitlab.com/tawasta/odoo/product",
+    "website": "https://github.com/tawasta/product",
     "category": "Logging",
     "application": False,
     "installable": True,

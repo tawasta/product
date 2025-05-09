@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2019 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2019 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,8 +23,8 @@
     "summary": "Adds a  ecommerce desciption field for product template (deprecated)",
     "version": "17.0.1.0.1",
     "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "website": "https://github.com/tawasta/product",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": False,

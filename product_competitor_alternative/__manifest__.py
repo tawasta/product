@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2018 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2018 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,8 +23,8 @@
     "summary": "New field for info about competitor's alternative product",
     "version": "17.0.1.0.0",
     "category": "Inventory",
-    "website": "https://gitlab.com/tawasta/odoo/product",
-    "author": "Oy Tawasta Technologies Ltd.",
+    "website": "https://github.com/tawasta/product",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

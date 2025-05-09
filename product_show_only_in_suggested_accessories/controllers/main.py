@@ -1,5 +1,4 @@
 from odoo.addons.website_sale.controllers.main import WebsiteSale
-from odoo.http import request, route
 
 
 class WebsiteSale(WebsiteSale):
