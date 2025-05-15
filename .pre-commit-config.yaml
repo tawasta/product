@@ -55,7 +55,7 @@ repos:
           - --addons-dir=.
           - --branch=17.0
           - --org-name=Tawasta
-          - --repo-name=project
+          - --repo-name=product
           - --if-source-changed
           - --keep-source-digest
           - --convert-fragments-to-markdown
