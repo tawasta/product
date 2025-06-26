@@ -21,7 +21,7 @@
 {
     "name": "Product tree view – Download attachment button",
     "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "version": "18.0.1.1.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
@@ -32,6 +32,7 @@
         "product",
     ],
     "data": [
+        "views/product_form_view.xml",
         "views/product_tree_view.xml",
     ],
 }

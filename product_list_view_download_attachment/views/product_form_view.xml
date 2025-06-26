@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="product_template_only_form_view" model="ir.ui.view">
+		<field name="name">product.template.form.main.attachment</field>
+		<field name="model">product.template</field>
+		<field name="inherit_id" ref="product.product_template_only_form_view" />
+		<field name="arch" type="xml">
+            <field name="type" position="after">
+                <field name="attachment_ids" invisible="1" />
+                <field name="main_attachment_id" invisible="not attachment_ids" />
+		    </field>
+		</field>
+	</record>
+</odoo>

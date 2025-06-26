@@ -6,14 +6,16 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 18.0-20250520\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-06-26 06:56+0000\n"
-"PO-Revision-Date: 2025-06-26 06:56+0000\n"
+"POT-Creation-Date: 2025-06-26 09:26+0000\n"
+"PO-Revision-Date: 2025-06-26 12:27+0300\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fi\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: \n"
-"Plural-Forms: \n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.6\n"
 
 #. module: product_list_view_download_attachment
 #: model_terms:ir.ui.view,arch_db:product_list_view_download_attachment.product_template_tree_view
@@ -25,6 +27,12 @@ msgstr "Liite"
 #: model:ir.model.fields,field_description:product_list_view_download_attachment.field_product_template__attachment_ids
 msgid "Attachments"
 msgstr "Liitteet"
+
+#. module: product_list_view_download_attachment
+#: model:ir.model.fields,field_description:product_list_view_download_attachment.field_product_product__main_attachment_id
+#: model:ir.model.fields,field_description:product_list_view_download_attachment.field_product_template__main_attachment_id
+msgid "Main attachment"
+msgstr "Pääliite"
 
 #. module: product_list_view_download_attachment
 #: model:ir.model,name:product_list_view_download_attachment.model_product_template
