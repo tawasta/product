@@ -1,24 +1,23 @@
-
 from odoo import api, fields, models
 
 
 class ProductTemplate(models.Model):
+    _inherit = "product.template"
 
-    _inherit = 'product.template'
+    attachment_ids = fields.One2many(
+        comodel_name="ir.attachment",
+        inverse_name="res_id",
+        string="Attachments",
+        domain=[("res_model", "=", "product.template")],
+    )
 
     def download_attachment(self):
-        for product in self:
-
-            attach = self.env['ir.attachment'].search([
-                ('res_model', '=',  'product.template'),
-                ('res_id', '=', product.id),
-            ])
-
-            if attach:
-                return {
-                    "type": "ir.actions.act_url",
-                    "url": "/web/content/{}?download=true".format(
-                        attach.id
-                    ),
-                    "target": "self",
-                }
+        self.ensure_one()
+        if self.attachment_ids:
+            return {
+                "type": "ir.actions.act_url",
+                "url": "/web/content/{}?download=true".format(
+                    self.attachment_ids[0].id
+                ),
+                "target": "self",
+            }

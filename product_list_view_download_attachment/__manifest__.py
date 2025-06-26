@@ -19,19 +19,19 @@
 ##############################################################################
 
 {
-    'name': 'Product tree view – Download attachment button',
-    'summary': 'Product tree view – Download attachment button',
-    'version': '18.0.1.0.0',
-    'category': 'Product',
-    'website': 'https://tawasta.fi',
-    'author': 'Futural',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'product',
+    "name": "Product tree view – Download attachment button",
+    "summary": "Product tree view – Download attachment button",
+    "version": "18.0.1.0.0",
+    "category": "Product",
+    "website": "https://gitlab.com/tawasta/odoo/product",
+    "author": "Futural",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "product",
     ],
-    'data': [
-        'views/product_tree_view.xml',
+    "data": [
+        "views/product_tree_view.xml",
     ],
 }
