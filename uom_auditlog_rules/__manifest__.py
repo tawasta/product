@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2022 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,19 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
-    "category": "Product",
-    "website": "https://github.com/tawasta/product",
+    "name": "Audit Log Rules - Uom",
+    "summary": "Adds audit log rules for uom.uom and uom.category",
     "author": "Futural",
     "license": "AGPL-3",
+    "website": "https://github.com/tawasta/product",
+    "category": "Logging",
     "application": False,
     "installable": True,
-    "depends": [
-        "product",
-    ],
-    "data": [
-        "views/product_tree_view.xml",
-    ],
+    "version": "17.0.1.0.0",
+    "depends": ["uom", "auditlog"],
+    "data": ["data/rules.xml"],
 }

@@ -2,23 +2,23 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============================================
-Product tree view – Download attachment button
-==============================================
+=====================================
+Relative weights of Product materials
+=====================================
 
-Download products' attachments in their tree view
+Show relative net weight and gross weight of different product materials.
+They are computed based on the product's weight and gross weight.
 
 Configuration
 =============
-None needed
 
 Usage
 =====
-Go to product tree view and click Download -button
+See the computed related material weights of products on their
+material form views.
 
 Known issues / Roadmap
 ======================
-\-
 
 Credits
 =======
@@ -26,12 +26,7 @@ Credits
 Contributors
 ------------
 
-<<<<<<< HEAD:product_list_view_download_attachment/README.rst
-* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-=======
 * Timo Kekäläinen <timo.kekalainen@futural.fi>
-* Timo Talvitie <timo.talvitie@futural.fi>
->>>>>>> origin/18.0:product_template_hide_sh_tags/README.rst
 
 Maintainer
 ----------

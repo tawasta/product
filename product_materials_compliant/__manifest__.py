@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2023 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,19 +19,21 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Product Materials: compliance support",
+    "summary": "Add fields for product material compliance "
+    "(Conflict Area Minerals, SCIP, etc.)",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "product",
-    ],
+    "depends": ["product_compliant", "product_materials"],
     "data": [
-        "views/product_tree_view.xml",
+        "security/res_groups.xml",
+        "views/product_material_composition.xml",
+        "views/product_product.xml",
+        "views/res_config_settings.xml",
     ],
 }

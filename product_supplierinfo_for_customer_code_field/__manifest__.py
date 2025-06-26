@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2019 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,19 +19,17 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
-    "category": "Product",
+    "name": "Customer Codes Field for Product",
+    "summary": "Show all customer codes in a single field",
+    "version": "17.0.1.0.0",
+    "category": "Inventory",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "product",
-    ],
-    "data": [
-        "views/product_tree_view.xml",
-    ],
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["product_supplierinfo_for_customer"],
+    "data": ["views/product_template.xml"],
+    "demo": [],
 }

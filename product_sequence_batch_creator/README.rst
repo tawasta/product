@@ -2,19 +2,24 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============================================
-Product tree view – Download attachment button
-==============================================
+=====================
+Product Batch Creator
+=====================
 
-Download products' attachments in their tree view
+* Adds a new wizard for creating a batch of placeholder products whose details
+  can be filled in later
+* Intended for situations where automatic product numbering is used (provided
+  by the required OCA module product_sequence) and a user wants to reserve a
+  continuous number range for certain use
 
 Configuration
 =============
-None needed
+\-
 
 Usage
 =====
-Go to product tree view and click Download -button
+* Launch the batch create wizard from Inventory menu, and select how large
+  a batch you wish to create.
 
 Known issues / Roadmap
 ======================
@@ -25,13 +30,7 @@ Credits
 
 Contributors
 ------------
-
-<<<<<<< HEAD:product_list_view_download_attachment/README.rst
-* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-=======
-* Timo Kekäläinen <timo.kekalainen@futural.fi>
 * Timo Talvitie <timo.talvitie@futural.fi>
->>>>>>> origin/18.0:product_template_hide_sh_tags/README.rst
 
 Maintainer
 ----------

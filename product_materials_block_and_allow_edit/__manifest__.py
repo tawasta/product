@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2024 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Block and Allow editing materials from Products",
+    "summary": "Disable editing materials by default and allow it to some users",
+    "version": "17.0.1.1.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
@@ -29,9 +29,10 @@
     "application": False,
     "installable": True,
     "depends": [
-        "product",
+        "product_materials",
+        "product_materials_upper_category",
     ],
     "data": [
-        "views/product_tree_view.xml",
+        "security/allow_edit_group.xml",
     ],
 }

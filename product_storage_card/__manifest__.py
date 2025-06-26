@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2018 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,19 +19,24 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Product - Storage Card Print",
+    "summary": "Printable product info card with storage, vendor and reordering info",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "product",
-    ],
+    "external_dependencies": {"python": [], "bin": []},
+    "depends": ["product", "stock", "purchase_stock", "mrp_multi_level"],
     "data": [
-        "views/product_tree_view.xml",
+        "report/paperformat.xml",
+        "report/product_storage_card.xml",
     ],
+    "assets": {
+        "web.report_assets_common": [
+            "product_storage_card/static/src/scss/product_storage_card.scss",
+        ],
+    },
 }

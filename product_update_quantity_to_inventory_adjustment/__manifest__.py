@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2022 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Direct to Invetory Adjustment from Update Quantity",
+    "summary": "Use Inventory Adjustment from Update Quantity functionality",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
@@ -30,8 +30,7 @@
     "installable": True,
     "depends": [
         "product",
+        "stock_inventory",
     ],
-    "data": [
-        "views/product_tree_view.xml",
-    ],
+    "data": ["views/product_view.xml"],
 }

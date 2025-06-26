@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2022 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,19 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Use tree as a default view",
+    "summary": "Use tree as a default view for products",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "product",
-    ],
+    "depends": ["purchase", "sale", "stock"],
     "data": [
-        "views/product_tree_view.xml",
+        "views/purchase.xml",
+        "views/sale.xml",
+        "views/stock.xml",
     ],
 }

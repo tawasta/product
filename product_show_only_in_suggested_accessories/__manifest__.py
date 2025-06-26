@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2021- Futural Oy (http://www.futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,19 +19,15 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Product Show only in Suggested accessories",
+    "summary": "Product Show only in Suggested accessories",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "product",
-    ],
-    "data": [
-        "views/product_tree_view.xml",
-    ],
+    "depends": ["product", "website_sale"],
+    "data": ["views/product_views.xml"],
 }

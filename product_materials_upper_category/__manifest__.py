@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2024 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Upper Category for product materials",
+    "summary": "Upper Category for product materials",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
@@ -29,9 +29,12 @@
     "application": False,
     "installable": True,
     "depends": [
-        "product",
+        "product_materials",
     ],
     "data": [
-        "views/product_tree_view.xml",
+        "security/ir.model.access.csv",
+        "views/product_material_composition_view.xml",
+        "views/product_material_upper_category.xml",
+        "views/product_view.xml",
     ],
 }

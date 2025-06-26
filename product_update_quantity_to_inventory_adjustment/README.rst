@@ -2,19 +2,22 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-==============================================
-Product tree view – Download attachment button
-==============================================
+==================================================
+Direct to Invetory Adjustment from Update Quantity
+==================================================
 
-Download products' attachments in their tree view
+With this module, a user is directed to a inventory adjustment form-view upon
+clicking on Update Quantity button in the product form-view.
+
+OCA's stock_inventory module is used in the 17 version of this module.
 
 Configuration
 =============
-None needed
+\-
 
 Usage
 =====
-Go to product tree view and click Download -button
+* Install this Module from Apps
 
 Known issues / Roadmap
 ======================
@@ -26,12 +29,7 @@ Credits
 Contributors
 ------------
 
-<<<<<<< HEAD:product_list_view_download_attachment/README.rst
-* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
-=======
 * Timo Kekäläinen <timo.kekalainen@futural.fi>
-* Timo Talvitie <timo.talvitie@futural.fi>
->>>>>>> origin/18.0:product_template_hide_sh_tags/README.rst
 
 Maintainer
 ----------
@@ -39,5 +37,5 @@ Maintainer
 .. image:: https://futural.fi/templates/tawastrap/images/logo.png
    :alt: Futural Oy
    :target: https://futural.fi/
-
+   
 This module is maintained by Futural Oy

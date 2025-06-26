@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2024 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Mass update product taxes",
+    "summary": "Modify taxes for multiple products at once",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
@@ -29,9 +29,12 @@
     "application": False,
     "installable": True,
     "depends": [
+        "account",
         "product",
     ],
     "data": [
-        "views/product_tree_view.xml",
+        "security/ir_model_access.xml",
+        "views/product_template.xml",
+        "wizard/product_mass_update_taxes.xml",
     ],
 }

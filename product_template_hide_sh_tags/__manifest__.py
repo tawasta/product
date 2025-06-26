@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2025 Futural Oy (https://futural.fi)
+#    Copyright 2022 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,9 +19,9 @@
 ##############################################################################
 
 {
-    "name": "Product tree view – Download attachment button",
-    "summary": "Product tree view – Download attachment button",
-    "version": "18.0.1.0.0",
+    "name": "Hide SH tags from product template",
+    "summary": "Hide SH tags from product template",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
@@ -29,9 +29,7 @@
     "application": False,
     "installable": True,
     "depends": [
-        "product",
+        "sh_product_variant_tags",
     ],
-    "data": [
-        "views/product_tree_view.xml",
-    ],
+    "data": ["views/product_template.xml"],
 }
