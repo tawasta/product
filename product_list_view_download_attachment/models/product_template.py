@@ -11,11 +11,19 @@ class ProductTemplate(models.Model):
         domain=[("res_model", "=", "product.template")],
     )
 
+    main_attachment_id = fields.Many2one(
+        comodel_name="ir.attachment",
+        string="Main attachment",
+        domain="[('id', 'in', attachment_ids)]",
+    )
+
     def download_attachment(self):
         self.ensure_one()
         if self.attachment_ids:
+            attachment = self.main_attachment_id or self.attachment_ids[0]
+
             return {
                 "type": "ir.actions.act_url",
-                "url": f"/web/content/{self.attachment_ids[0].id}?download=true",
+                "url": f"/web/content/{attachment.id}?download=true",
                 "target": "self",
             }
