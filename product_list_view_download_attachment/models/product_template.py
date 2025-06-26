@@ -1,4 +1,4 @@
-from odoo import api, fields, models
+from odoo import fields, models
 
 
 class ProductTemplate(models.Model):
@@ -16,8 +16,6 @@ class ProductTemplate(models.Model):
         if self.attachment_ids:
             return {
                 "type": "ir.actions.act_url",
-                "url": "/web/content/{}?download=true".format(
-                    self.attachment_ids[0].id
-                ),
+                "url": f"/web/content/{self.attachment_ids[0].id}?download=true",
                 "target": "self",
             }
