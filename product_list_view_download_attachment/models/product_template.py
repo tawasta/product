@@ -9,12 +9,15 @@ class ProductTemplate(models.Model):
         inverse_name="res_id",
         string="Attachments",
         domain=[("res_model", "=", "product.template")],
+        copy=False,
     )
 
     main_attachment_id = fields.Many2one(
         comodel_name="ir.attachment",
         string="Main attachment",
         domain="[('id', 'in', attachment_ids)]",
+        copy=False,
+        store=True,
     )
 
     def download_attachment(self):
