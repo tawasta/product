@@ -21,6 +21,7 @@ addon | version | maintainers | summary
 [product_gross_weight](product_gross_weight/) | 17.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_hide_sale_price](product_hide_sale_price/) | 17.0.1.0.1 |  | Hide sale price and taxes from users that not belonging to sales group
 [product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
+[product_item_code_label](product_item_code_label/) | 17.0.1.0.0 |  | Product Item Code Label
 [product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.1 |  | Search products with manufacturer fields
 [product_mass_update_taxes](product_mass_update_taxes/) | 17.0.1.0.0 |  | Modify taxes for multiple products at once
 [product_materials](product_materials/) | 17.0.1.1.2 |  | Product Materials info for products and their packaging

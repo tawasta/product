@@ -23,7 +23,7 @@
     "summary": "Product Item Code Label",
     "version": "17.0.1.0.0",
     "category": "Product",
-    "website": "https://github.com/tawasta/product",
+    "website": "https://gitlab.com/tawasta/odoo/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
