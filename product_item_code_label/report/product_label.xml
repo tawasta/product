@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- 2x7 label -->
+    <template id="report_simple_label2x7_inherit_item_code" inherit_id="product.report_simple_label2x7">
+        <xpath expr="//t[@t-if='barcode']" position="after">
+            <div t-if="product.item_code" style="font-size:10px;">
+                <span t-esc="product.item_code"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- 4x7 label -->
+    <template id="report_simple_label4x7_inherit_item_code" inherit_id="product.report_simple_label4x7">
+        <xpath expr="//t[@t-if='barcode']" position="after">
+            <div t-if="product.item_code" style="font-size:10px;">
+                <span t-esc="product.item_code"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- 4x12 label -->
+    <template id="report_simple_label4x12_inherit_item_code" inherit_id="product.report_simple_label4x12">
+        <xpath expr="//t[@t-if='barcode']" position="after">
+            <div t-if="product.item_code" style="font-size:10px;">
+                <span t-esc="product.item_code"/>
+            </div>
+        </xpath>
+    </template>
+
+    <!-- 4x12 no price label -->
+    <template id="report_simple_label4x12_no_price_inherit_item_code" inherit_id="product.report_simple_label4x12_no_price">
+        <xpath expr="//t[@t-if='barcode']" position="after">
+            <div t-if="product.item_code" style="font-size:10px;">
+                <span t-esc="product.item_code"/>
+            </div>
+        </xpath>
+    </template>
+</odoo>
