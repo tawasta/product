@@ -28,7 +28,9 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product",],
+    "depends": [
+        "product",
+    ],
     "data": [
         "report/product_label.xml",
         "views/product_product.xml",
