@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2020 Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2020 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -20,11 +20,11 @@
 
 {
     "name": "Product: Manage Dimensions from Product Template",
-    "summary": "Variant dimensions are managed centrally in the related product template",
+    "summary": "Variant dimensions are managed in the related product template",
     "version": "17.0.1.0.1",
     "category": "Product",
-    "website": "https://gitlab.com/tawasta/odoo/product",
-    "author": "Tawasta",
+    "website": "https://github.com/tawasta/product",
+    "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,

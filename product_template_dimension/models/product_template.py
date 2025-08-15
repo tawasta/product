@@ -6,12 +6,12 @@ class ProductTemplate(models.Model):
 
     @api.model
     def create(self, values):
-        res = super(ProductTemplate, self).create(values)
+        res = super().create(values)
         res._update_variant_dimensions(values)
         return res
 
     def write(self, values):
-        res = super(ProductTemplate, self).write(values)
+        res = super().write(values)
         self._update_variant_dimensions(values)
         return res
 

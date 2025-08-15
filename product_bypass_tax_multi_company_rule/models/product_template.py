@@ -1,5 +1,6 @@
-from odoo import fields, models
 from datetime import timedelta
+
+from odoo import fields, models
 
 
 class ProductTemplate(models.Model):
@@ -9,7 +10,7 @@ class ProductTemplate(models.Model):
         tax_rule = self.env.ref("account.tax_comp_rule").sudo()
         tax_rule.write({"active": False})
 
-        result = super(ProductTemplate, self).write(vals)
+        result = super().write(vals)
 
         self._schedule_tax_rule_reactivation()
         return result

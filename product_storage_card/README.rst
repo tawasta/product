@@ -28,15 +28,15 @@ Credits
 Contributors
 ------------
 
-* Joona Isoaho <joona.isoaho@tawasta.fi>
-* Miika Nissi <miika.nissi@tawasta.fi>
+* Joona Isoaho <joona.isoaho@futural.fi>
+* Miika Nissi <miika.nissi@futural.fi>
 * Timo Talvitie <timo.talvitie@futural.fi>
 
 Maintainer
 ----------
 
-.. image:: https://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: https://tawasta.fi/
+.. image:: https://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: https://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy

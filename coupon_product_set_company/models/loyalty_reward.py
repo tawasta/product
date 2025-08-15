@@ -1,7 +1,7 @@
 ##############################################################################
 #
-#    Author: Oy Tawasta OS Technologies Ltd.
-#    Copyright 2023- Oy Tawasta OS Technologies Ltd. (https://tawasta.fi)
+#    Author: Futural Oy
+#    Copyright 2023- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -50,7 +50,7 @@ class LoyaltyReward(models.Model):
 
     # 8. Business methods
     def _get_discount_product_values(self):
-        res = super(LoyaltyReward, self)._get_discount_product_values()
+        res = super()._get_discount_product_values()
         for reward in res:
             reward["company_id"] = self.company_id.id
         return res

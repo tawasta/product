@@ -5,7 +5,7 @@ class ProductMaterialSublevel(models.Model):
     _name = "product.material.sublevel"
     _description = "Product Material Sublevel"
 
-    name = fields.Char(string="Name", required=True)
+    name = fields.Char(required=True)
 
     product_material_id = fields.Many2one(
         comodel_name="product.material",
