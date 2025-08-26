@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+  <!-- API-käyttäjä -->
+  <record id="product_reports_api_user" model="res.users" context="{'no_reset_password': True}">
+    <field name="name">Product Reports API User</field>
+    <field name="login">product_reports_api_user</field>
+    <field name="groups_id" eval="[(6, 0, [])]"/>
+  </record>
+
+  <!-- Ryhmä, jolla oikeus kutsua endpointia -->
+  <record id="fastapi_product_reports_group" model="res.groups">
+    <field name="name">Product Reports FastAPI Group</field>
+    <field name="users" eval="[(4, ref('product_reports_api_user'))]"/>
+  </record>
+
+  <!-- FastAPI endpoint -tietue -->
+  <record id="product_reports_fastapi_endpoint" model="fastapi.endpoint">
+    <field name="name">Product Reports Endpoint</field>
+    <field name="app">product_reports</field>
+    <field name="root_path">/product_rest_api</field>
+    <field name="user_id" ref="product_reports_api_user"/>
+  </record>
+</odoo>
