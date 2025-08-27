@@ -20,7 +20,7 @@
 
 {
     "name": "Product API (FastAPI)",
-    "summary": "FastAPI product.product",
+    "summary": "FastAPI endpoint for product reporting (product.product)",
     "version": "17.0.1.0.0",
     "category": "Reporting",
     "website": "https://github.com/tawasta/product",
