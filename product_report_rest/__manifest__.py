@@ -28,6 +28,7 @@
     "license": "AGPL-3",
     "data": [
         "data/fastapi_endpoint_data.xml",
+        "views/product_category.xml",
     ],
     "depends": [
         "fastapi",

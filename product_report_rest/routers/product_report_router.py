@@ -23,12 +23,15 @@ class ReportResponse(BaseModel):
     count: int
     rows: list[dict]
     secondary_on_hand: float
+    secondary_rows: list[dict]
 
 
 def _is_secondary(product) -> bool:
-    name_l = (product.display_name or product.name or "").lower()
-    categ_l = (product.categ_id.complete_name or product.categ_id.name or "").lower()
-    return ("ii-laatu" in name_l) or ("sekundat" in categ_l)
+    cat = product.categ_id
+    if not cat:
+        return False
+    return bool(cat.is_secondary or (cat.parent_id and cat.parent_id.is_secondary))
+
 
 
 @router.get("/product/report", response_model=ReportResponse)
@@ -36,25 +39,43 @@ async def product_report_min(
     env: Annotated[Environment, Depends(odoo_env)],
     limit: int = Query(500, ge=1, le=5000),
     offset: int = Query(0, ge=0),
+    category: Optional[int] = Query(None, description="Rajaa tuoteryhmään (id). Sisältää myös alikategoriat."),
 ):
     """
-    Kaikki product.product -rivit (ei domain-suodatuksia):
+    Palauttaa product.product -rivit (domain: vapaaehtoinen category):
     {id, name, default_code, tags:[{id,name}], standard_price, qty_available, is_secondary}
-    Lisäksi: secondary_on_hand = sekundatuotteiden tämänhetkinen varastosumma.
+
+    Lisäksi:
+      - secondary_on_hand: summa VAIN tästä products-joukosta (limit/offset) niille, joilla is_secondary
+      - secondary_rows: lista näistä sekundatuotteista (nimi + qty, mukana myös id & default_code)
     """
-    _logger.info("Generating product report (ALL products) + secondary_on_hand")
+    _logger.info("Generating product report (products domain by category if given)")
 
     Product = env["product.product"].sudo().with_context(active_test=False)
-    total = Product.search_count([])
-    products = Product.search([], limit=limit, offset=offset, order="id asc")
+
+    domain = []
+    if category is not None:
+        domain.append(("categ_id", "child_of", category))  # sisältää myös alikategoriat
+
+    total = Product.search_count(domain)
+    products = Product.search(domain, limit=limit, offset=offset, order="id asc")
 
     secondary_total = 0.0
+    secondary_rows = []
     rows = []
+
     for p in products:
         is_sec = _is_secondary(p)
         qty = float(p.qty_available or 0.0)
+
         if is_sec:
             secondary_total += qty
+            secondary_rows.append({
+                "id": p.id,
+                "name": p.display_name or p.name or "",
+                "default_code": p.default_code or "",
+                "qty_available": qty,
+            })
 
         rows.append(
             {
@@ -69,9 +90,15 @@ async def product_report_min(
         )
 
     _logger.info(
-        "Product report generated: %d rows (total=%d). secondary_on_hand=%.2f",
-        len(rows), total, secondary_total
+        "Product report generated: %d rows (total=%d, domain=%s). secondary_on_hand=%.2f, secondary_rows=%d",
+        len(rows), total, domain, secondary_total, len(secondary_rows)
     )
-    return {"count": total, "rows": rows, "secondary_on_hand": secondary_total}
+    return {
+        "count": total,
+        "rows": rows,
+        "secondary_on_hand": secondary_total,
+        "secondary_rows": secondary_rows,
+    }
+
 
 
