@@ -74,6 +74,7 @@ async def product_report_min(
                 "id": p.id,
                 "name": p.display_name or p.name or "",
                 "default_code": p.default_code or "",
+                "category": p.categ_id.name or "",
                 "qty_available": qty,
             })
 
@@ -82,6 +83,7 @@ async def product_report_min(
                 "id": p.id,
                 "name": p.display_name or p.name or "",
                 "default_code": p.default_code or "",
+                "category": p.categ_id.name or "",
                 "tags": [{"id": t.id, "name": t.name} for t in p.sh_product_tag_ids] or [{"id": 0, "name": ""}],
                 "standard_price": p.standard_price or 0.0,
                 "qty_available": qty,
