@@ -6,8 +6,16 @@ class ProductProduct(models.Model):
 
     _inherit = 'product.product'
 
-    version_code_ids = fields.One2many('product.code.version', 'product_id', string="Code versions", copy=False)
-    version_code_count = fields.Integer(string="Version code Count", compute='_compute_product_version_code_count')
+    version_code_ids = fields.One2many(
+        'product.code.version',
+        'product_id',
+        string="Code versions",
+        copy=False
+    )
+    version_code_count = fields.Integer(
+        string="Version code Count",
+        compute='_compute_product_version_code_count'
+    )
 
     def _compute_product_version_code_count(self):
         for product in self:
