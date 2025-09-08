@@ -1,28 +1,36 @@
-
 from odoo import api, exceptions, fields, models
 
 
 class ProductCodeVersion(models.Model):
-
-    _name = 'product.code.version'
-    _description = 'Product code version'
+    _name = "product.code.version"
+    _description = "Product code version"
     _order = "sequence, id"
 
     name = fields.Char(string="Code version", copy=False, required=True)
     product_id = fields.Many2one(
-        'product.product',
+        "product.product",
         string="Related product",
         domain="[('product_tmpl_id', '=', product_tmpl_id)]",
     )
-    product_tmpl_id = fields.Many2one('product.template', string="Related product template", required=True)
-    sequence = fields.Integer('Sequence')
+    product_tmpl_id = fields.Many2one(
+        "product.template",
+        string="Related product template",
+        required=True,
+    )
+    sequence = fields.Integer("Sequence")
+    remarks = fields.Text(string="Remarks", copy=False)
 
     @api.onchange("name")
-    def search_duplicate_code_version_name(self):
-        duplicate_code_name = self.env["product.code.version"].search([
-            ("name", "=", self.name),
-            ("product_tmpl_id", "=", self.product_tmpl_id.id),
-        ])
+    def onchange_name(self):
+        """Search duplicate code version name. Also note a user if a product code
+        does not exist in odoo, but the user tries to write it as 'Code version'."""
+
+        duplicate_code_name = self.env["product.code.version"].search(
+            [
+                ("name", "=", self.name),
+                ("product_tmpl_id", "=", self.product_tmpl_id.id),
+            ]
+        )
 
         if duplicate_code_name:
             msg = (
@@ -31,18 +39,21 @@ class ProductCodeVersion(models.Model):
             ) % self.name
             raise exceptions.UserError(msg)
 
- #   @api.model
- #   def default_get(self, fields_list):
- #       values = super().default_get(fields_list)
+        code = self.name
 
- #       print("DEFAULT VALUES", values)
- #       print("FIELDS LIST", fields_list)
+        code_exists = code and (
+            self.env["product.product"].search([("default_code", "=", code)])
+            or self.env["product.template"].search([("default_code", "=", code)])
+        )
 
- #       product_id = values.get('product_id', False)
-
- #       if "product_id" in fields_list and self.env["product.product"].sudo().browse(
- #           False
- #           #product_id
- #       ):
-
- #       return values
+        if code and not code_exists:
+            message = (
+                f"There is no product with code {code}. Are you sure you want "
+                "to create this version code?"
+            )
+            return {
+                "warning": {
+                    "title": "No existing product code found",
+                    "message": message,
+                }
+            }

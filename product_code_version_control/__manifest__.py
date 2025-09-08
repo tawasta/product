@@ -19,22 +19,30 @@
 ##############################################################################
 
 {
-    'name': 'Control version codes of a product',
-    'summary': 'Define and search version codes of products',
-    'version': '18.0.1.0.0',
-    'category': 'Product',
-    'website': 'https://tawasta.fi',
-    'author': 'Futural',
-    'license': 'AGPL-3',
-    'application': False,
-    'installable': True,
-    'depends': [
-        'product',
-        'stock',
+    "name": "Control version codes of a product",
+    "summary": "Define and search version codes of products",
+    "version": "18.0.1.0.0",
+    "category": "Product",
+    "website": "https://github.com/tawasta/product",
+    "author": "Futural",
+    "license": "AGPL-3",
+    "application": False,
+    "installable": True,
+    "depends": [
+        "product",
+        "sale",
+        "stock",
+        "web",
     ],
-    'data': [
+    "data": [
         "security/ir.model.access.csv",
-        'views/product_code_version.xml',
-        'views/product_view.xml',
+        "views/product_code_version.xml",
+        "views/product_view.xml",
+        "views/sale_view.xml",
     ],
+    "assets": {
+        "web.assets_backend": [
+            "product_code_version_control/static/src/js/search.js",
+        ],
+    },
 }

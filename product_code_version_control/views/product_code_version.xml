@@ -15,6 +15,7 @@
                         <field name="product_tmpl_id"/>
                         <field name="product_id" groups="product.group_product_variant" context="{'default_detailed_type': 'product'}"/>
                         <field name="product_id" groups="!product.group_product_variant" invisible="1"/>
+                        <field name="remarks"/>
                     </group>
                     <group string="History" groups="base.group_no_one" invisible="not create_date">
                         <label for="create_uid" string="Creation"/>
@@ -35,6 +36,7 @@
             <list editable="top" multi_edit="true">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>
+                <field name="remarks"/>
                 <field name="product_tmpl_id"/>
                 <field name="product_id" groups="product.group_product_variant" context="{'default_detailed_type': 'product'}"/>
                 <field name="product_id" groups="!product.group_product_variant" column_invisible="1"/>
@@ -57,10 +59,16 @@
         <field name="model">product.code.version</field>
         <field name="arch" type="xml">
             <kanban>
-                <field name="name"/>
-                <field name="product_tmpl_id"/>
-                <field name="product_id" groups="product.group_product_variant" context="{'default_detailed_type': 'product'}"/>
-                <field name="product_id" groups="!product.group_product_variant" invisible="1"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="o_kanban_record">
+                            <field name="name"/>
+                            <field name="product_tmpl_id"/>
+                            <field name="product_id" groups="product.group_product_variant" />
+                            <field name="product_id" groups="!product.group_product_variant" invisible="1"/>
+                        </div>
+                    </t>
+                </templates>
             </kanban>
         </field>
     </record>

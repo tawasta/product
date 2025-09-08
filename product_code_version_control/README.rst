@@ -6,38 +6,32 @@
 Control version codes of a product
 ==================================
 
-Define and search version codes of products
+Create version control codes for a product. This module is meant to be used
+to refer earlier version codes and this functionality is used in searching
+products with possible old product codes.
 
-_________________
-_________________
-_________________
-_________________
-_________________
-
---- What is the main functionality of this module? ---
---- Why was it created and does it solve a specific problem? ---
---- Consider adding additional information here to make it easier to explain
-the module's main features ---
+At this moment the module works in sales and in product views.
 
 Configuration
 =============
---- Does the module require some configuring within the module,
-in other modules or outside Odoo? ---
---- Are some special access rights required? ---
---- Does the module add new configurable fields? Where are what? ---
+No special configuration is required, but version code records are needed
+to be created to use this module. Do this after installing the module.
 
 Usage
 =====
---- How a user can find the new possible features if one wants to
-test the module? ---
+Select a product and click on "Version codes" button. Begin creating a version
+control record and try to refer to an existing product code. Write this to Code
+version -field. Different checks are in use to prevent creating a duplicate
+version control record. Also the user is noted if a product which is meant to
+be referenced does not exist with the particular code.
+
+Go then to product tree view and search products with added Code version information.
+The product with the created version control record is shown on that list. The similar
+behaviour happend in sale order form.
 
 Known issues / Roadmap
 ======================
---- Are there some limitations with the functionalities of the module
-which a user should know about? ---
---- Are there any possible conflicts with other modules? ---
---- Does a developer have some additional features in mind, which
-could be added later? ---
+There are no known issues with this module.
 
 Credits
 =======
