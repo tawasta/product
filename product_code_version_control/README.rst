@@ -12,6 +12,9 @@ products with possible old product codes.
 
 At this moment the module works in sales and in product views.
 
+In sales form the written search term is added to "Searched code" field with
+JavaScript code.
+
 Configuration
 =============
 No special configuration is required, but version code records are needed
