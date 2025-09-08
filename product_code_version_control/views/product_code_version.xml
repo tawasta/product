@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+    <record id="product_code_version_form" model="ir.ui.view">
+        <field name="name">product.code.version.form</field>
+        <field name="model">product.code.version</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <label for="name"/>
+                    <h1>
+                        <field name="name"/>
+                    </h1>
+                    <group>
+                        <field name="product_tmpl_id"/>
+                        <field name="product_id" groups="product.group_product_variant" context="{'default_detailed_type': 'product'}"/>
+                        <field name="product_id" groups="!product.group_product_variant" invisible="1"/>
+                        <field name="remarks"/>
+                    </group>
+                    <group string="History" groups="base.group_no_one" invisible="not create_date">
+                        <label for="create_uid" string="Creation"/>
+                        <div name="creation_div">
+                            <field name="create_uid" readonly="1" class="oe_inline"/> on
+                            <field name="create_date" readonly="1" class="oe_inline"/>
+                        </div>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_code_version_list" model="ir.ui.view">
+        <field name="name">product.code.version.list</field>
+        <field name="model">product.code.version</field>
+        <field name="arch" type="xml">
+            <list editable="top" multi_edit="true">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>
+                <field name="remarks"/>
+                <field name="product_tmpl_id"/>
+                <field name="product_id" groups="product.group_product_variant" context="{'default_detailed_type': 'product'}"/>
+                <field name="product_id" groups="!product.group_product_variant" column_invisible="1"/>
+            </list>
+        </field>
+    </record>
+
+    <record id="product_code_version_action_form" model="ir.actions.act_window">
+        <field name="name">Product Code versions</field>
+        <field name="res_model">product.code.version</field>
+        <field name="view_id" ref="product_code_version_list"/>
+    </record>
+
+    <menuitem action="product_code_version_control.product_code_version_action_form"
+        id="menu_product_code_version_config_stock"
+        parent="stock.menu_product_in_config_stock" sequence="5"/>
+
+    <record id="product_code_version_kanban" model="ir.ui.view">
+        <field name="name">product.code.version.kanban</field>
+        <field name="model">product.code.version</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div class="o_kanban_record">
+                            <field name="name"/>
+                            <field name="product_tmpl_id"/>
+                            <field name="product_id" groups="product.group_product_variant" />
+                            <field name="product_id" groups="!product.group_product_variant" invisible="1"/>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+
+    <record id="product_code_version_search" model="ir.ui.view">
+        <field name="name">product.code.version.search</field>
+        <field name="model">product.code.version</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="product_tmpl_id"/>
+                <field name="product_id"/>
+<!--                 <filter -->
+<!--                     string="Codes of this variant" -->
+<!--                     name="context_variant" -->
+<!--                     domain="[('product_id', '=', context.get('default_product_id'))]" -->
+<!--                     invisible="1" -->
+<!--                 /> -->
+                <group expand="0" string="Group By...">
+                    <filter string="Product" name="product" domain="[]" context="{'group_by': 'product_tmpl_id'}"/>
+               </group>
+            </search>
+        </field>
+    </record>
+</odoo>
