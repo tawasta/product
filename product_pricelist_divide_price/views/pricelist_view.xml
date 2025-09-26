@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="product_pricelist_item_form_view" model="ir.ui.view">
+		<field name="name">product.pricelist.item.form.divide.by</field>
+		<field name="model">product.pricelist.item</field>
+		<field name="inherit_id" ref="product.product_pricelist_item_form_view" />
+		<field name="arch" type="xml">
+            <label for="price_discount" position="before">
+                <label
+                    for="divide_by"
+                    string="Divide By"
+                    invisible="compute_price != 'formula'"
+                />
+                <div class="o_row" invisible="compute_price != 'formula'">
+                    <field name="divide_by" />
+                </div>
+            </label>
+		</field>
+	</record>
+</odoo>
