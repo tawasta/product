@@ -1,7 +1,9 @@
 from odoo import fields, models
+
 from ..routers import product_report_router
 
 APP_NAME = "product_reports"
+
 
 class FastapiEndpoint(models.Model):
     _inherit = "fastapi.endpoint"

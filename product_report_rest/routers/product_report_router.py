@@ -1,11 +1,10 @@
 import logging
 from datetime import datetime
-from typing import Annotated, Optional
+from typing import Annotated
 
 from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel
 
-from odoo import fields
 from odoo.api import Environment
 from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
 
@@ -33,21 +32,26 @@ def _is_secondary(product) -> bool:
     return bool(cat.is_secondary or (cat.parent_id and cat.parent_id.is_secondary))
 
 
-
 @router.get("/product/report", response_model=ReportResponse)
 async def product_report_min(
     env: Annotated[Environment, Depends(odoo_env)],
     limit: int = Query(500, ge=1, le=5000),
     offset: int = Query(0, ge=0),
-    category: Optional[int] = Query(None, description="Rajaa tuoteryhmään (id). Sisältää myös alikategoriat."),
+    category: int | None = Query(
+        None,
+        description="Rajaa tuoteryhmään (id). Sisältää myös alikategoriat.",
+    ),
 ):
     """
     Palauttaa product.product -rivit (domain: vapaaehtoinen category):
-    {id, name, default_code, tags:[{id,name}], standard_price, qty_available, is_secondary}
+    {id, name, default_code, tags:[{id,name}],
+    standard_price, qty_available, is_secondary}
 
     Lisäksi:
-      - secondary_on_hand: summa VAIN tästä products-joukosta (limit/offset) niille, joilla is_secondary
-      - secondary_rows: lista näistä sekundatuotteista (nimi + qty, mukana myös id & default_code)
+      - secondary_on_hand: summa VAIN tästä products-joukosta (limit/offset)
+      - niille, joilla is_secondary
+      - secondary_rows: lista näistä sekundatuotteista
+      - (nimi + qty, mukana myös id & default_code)
     """
     _logger.info("Generating product report (products domain by category if given)")
 
@@ -70,13 +74,15 @@ async def product_report_min(
 
         if is_sec:
             secondary_total += qty
-            secondary_rows.append({
-                "id": p.id,
-                "name": p.display_name or p.name or "",
-                "default_code": p.default_code or "",
-                "category": p.categ_id.name or "",
-                "qty_available": qty,
-            })
+            secondary_rows.append(
+                {
+                    "id": p.id,
+                    "name": p.display_name or p.name or "",
+                    "default_code": p.default_code or "",
+                    "category": p.categ_id.name or "",
+                    "qty_available": qty,
+                }
+            )
 
         rows.append(
             {
@@ -84,23 +90,17 @@ async def product_report_min(
                 "name": p.display_name or p.name or "",
                 "default_code": p.default_code or "",
                 "category": p.categ_id.name or "",
-                "tags": [{"id": t.id, "name": t.name} for t in p.sh_product_tag_ids] or [{"id": 0, "name": ""}],
+                "tags": [{"id": t.id, "name": t.name} for t in p.sh_product_tag_ids]
+                or [{"id": 0, "name": ""}],
                 "standard_price": p.standard_price or 0.0,
                 "qty_available": qty,
                 "is_secondary": is_sec,
             }
         )
 
-    _logger.info(
-        "Product report generated: %d rows (total=%d, domain=%s). secondary_on_hand=%.2f, secondary_rows=%d",
-        len(rows), total, domain, secondary_total, len(secondary_rows)
-    )
     return {
         "count": total,
         "rows": rows,
         "secondary_on_hand": secondary_total,
         "secondary_rows": secondary_rows,
     }
-
-
-
