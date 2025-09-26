@@ -1,0 +1,51 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_pricelist_divide_price
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-09-26 08:25+0000\n"
+"PO-Revision-Date: 2025-09-26 11:25+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.7\n"
+
+#. module: product_pricelist_divide_price
+#. odoo-python
+#: code:addons/product_pricelist_divide_price/models/product_pricelist_item.py:0
+#, python-format
+msgid ""
+"%(base)s with a %(discount)s %% discount and %(surcharge)s extra fee\n"
+"Example: %(amount)s / %(divide_by)s * %(discount_charge)s + %(price_surcharge)s → %(total_amount)s"
+msgstr ""
+"%(base)s %(discount)s %% alennuksella ja %(surcharge)s lisämaksulla\n"
+"Esimerkki: %(amount)s / %(divide_by)s * %(discount_charge)s + %(price_surcharge)s → %(total_amount)s"
+
+#. module: product_pricelist_divide_price
+#. odoo-python
+#: code:addons/product_pricelist_divide_price/models/product_pricelist_item.py:0
+#, python-format
+msgid "%(percentage)s %% discount, %(price)s surcharge and %(divide_by)s division"
+msgstr "%(percentage)s %% alennuksella, %(price)s lisämaksulla ja %(divide_by)s jaolla"
+
+#. module: product_pricelist_divide_price
+#: model_terms:ir.ui.view,arch_db:product_pricelist_divide_price.product_pricelist_item_form_view
+msgid "Divide By"
+msgstr "Jakaja"
+
+#. module: product_pricelist_divide_price
+#: model:ir.model.fields,field_description:product_pricelist_divide_price.field_product_pricelist_item__divide_by
+msgid "Divide by"
+msgstr "Jakaja"
+
+#. module: product_pricelist_divide_price
+#: model:ir.model,name:product_pricelist_divide_price.model_product_pricelist_item
+msgid "Pricelist Rule"
+msgstr "Hinnastosääntö"
