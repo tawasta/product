@@ -12,7 +12,7 @@ class ProductPricelistItem(models.Model):
         )
 
         if self.compute_price == "formula":
-            price = price / self.divide_by
+            price = price / self.divide_by if self.divide_by else price
 
         return price
 
