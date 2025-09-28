@@ -21,7 +21,7 @@
 {
     "name": "Divide the result in pricelist rule",
     "summary": "Divide the result in pricelist rule with Divide by -field",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
