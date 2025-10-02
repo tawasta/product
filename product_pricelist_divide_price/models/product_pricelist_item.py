@@ -4,7 +4,7 @@ from odoo import _, api, fields, models, tools
 class ProductPricelistItem(models.Model):
     _inherit = "product.pricelist.item"
 
-    divide_by = fields.Float(string="Divide by", copy=False)
+    divide_by = fields.Float(string="Divide by", copy=False, digits=(16, 4))
 
     def _compute_price(self, product, quantity, uom, date, currency=None):
         price = super()._compute_price(
