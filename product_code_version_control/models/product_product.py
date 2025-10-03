@@ -31,8 +31,9 @@ class ProductProduct(models.Model):
 
         codes = ("version_code_ids", "ilike", name)
         searched_ids = self.env["product.product"].search([codes]).ids
-        searched_ids = list(set(search_result + searched_ids))
-        domain = [("id", "in", searched_ids)]
+        if isinstance(searched_ids, list) and isinstance(search_result, list):
+            searched_ids = list(set(search_result + searched_ids))
+            domain = [("id", "in", searched_ids)]
 
         return super()._name_search("", domain, "ilike", limit, order)
 

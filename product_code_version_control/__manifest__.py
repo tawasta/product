@@ -21,7 +21,7 @@
 {
     "name": "Control version codes of a product",
     "summary": "Define and search version codes of products",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
