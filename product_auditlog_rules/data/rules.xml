@@ -5,16 +5,19 @@
         <field name="name">Product Product</field>
         <field name="model_id" ref="product.model_product_product" />
         <field name="state">subscribed</field>
+        <field name="log_type">fast</field>
     </record>
     <record model="auditlog.rule" id="auditlog-rule-product-2">
         <field name="name">Product Template</field>
         <field name="model_id" ref="product.model_product_template" />
         <field name="state">subscribed</field>
+        <field name="log_type">fast</field>
     </record>
     <record model="auditlog.rule" id="auditlog-rule-product-3">
         <field name="name">Product Category</field>
         <field name="model_id" ref="product.model_product_category" />
         <field name="state">subscribed</field>
+        <field name="log_type">fast</field>
     </record>
 
 </odoo>
