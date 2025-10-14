@@ -54,10 +54,14 @@ class ProductPricelistItem(models.Model):
 
     @api.depends_context("lang")
     @api.depends(
-        "compute_price", "price_discount", "price_surcharge", "base", "price_round"
+        "compute_price",
+        "price_discount",
+        "price_surcharge",
+        "base",
+        "price_round",
+        "divide_by",
     )
     def _compute_rule_tip(self):
-        res = super()._compute_rule_tip()
         base_selection_vals = {
             elem[0]: elem[1]
             for elem in self._fields["base"]._description_selection(self.env)
@@ -97,4 +101,5 @@ class ProductPricelistItem(models.Model):
                         item.currency_id,
                     ),
                 )
-        return res
+            else:
+                return super(ProductPricelistItem, item)._compute_rule_tip()
