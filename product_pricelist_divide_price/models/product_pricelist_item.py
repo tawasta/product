@@ -52,6 +52,7 @@ class ProductPricelistItem(models.Model):
                 )
         return res
 
+    # pylint: disable=W8110
     @api.depends_context("lang")
     @api.depends(
         "compute_price",
@@ -102,4 +103,4 @@ class ProductPricelistItem(models.Model):
                     ),
                 )
             else:
-                return super(ProductPricelistItem, item)._compute_rule_tip()
+                super(ProductPricelistItem, item)._compute_rule_tip()
