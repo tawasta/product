@@ -1,0 +1,56 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_number_of_users
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-24 07:34+0000\n"
+"PO-Revision-Date: 2025-11-24 07:34+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_number_of_users
+#: model:ir.model.fields,help:product_number_of_users.field_procountor_product_product__number_of_users_max
+#: model:ir.model.fields,help:product_number_of_users.field_procountor_product_product__number_of_users_min
+#: model:ir.model.fields,help:product_number_of_users.field_product_product__number_of_users_max
+#: model:ir.model.fields,help:product_number_of_users.field_product_product__number_of_users_min
+#: model:ir.model.fields,help:product_number_of_users.field_product_template__number_of_users_max
+#: model:ir.model.fields,help:product_number_of_users.field_product_template__number_of_users_min
+msgid "How many persons can use this product at the same time"
+msgstr "Montako henkilöä voi käyttää tuotetta samanaikaisesti"
+
+#. module: product_number_of_users
+#: model_terms:ir.ui.view,arch_db:product_number_of_users.product_normal_form_view
+#: model_terms:ir.ui.view,arch_db:product_number_of_users.product_template_only_form_view
+msgid "Number of Users"
+msgstr "Kuinka monelle sopii"
+
+#. module: product_number_of_users
+#: model:ir.model.fields,field_description:product_number_of_users.field_procountor_product_product__number_of_users_max
+#: model:ir.model.fields,field_description:product_number_of_users.field_product_product__number_of_users_max
+#: model:ir.model.fields,field_description:product_number_of_users.field_product_template__number_of_users_max
+msgid "Number of Users (max.)"
+msgstr "Kuinka monelle sopii (max)"
+
+#. module: product_number_of_users
+#: model:ir.model.fields,field_description:product_number_of_users.field_procountor_product_product__number_of_users_min
+#: model:ir.model.fields,field_description:product_number_of_users.field_product_product__number_of_users_min
+#: model:ir.model.fields,field_description:product_number_of_users.field_product_template__number_of_users_min
+msgid "Number of Users (min.)"
+msgstr "Kuinka monelle sopii (min)"
+
+#. module: product_number_of_users
+#: model:ir.model,name:product_number_of_users.model_product_template
+msgid "Product"
+msgstr "Tuotemalli"
+
+#. module: product_number_of_users
+#: model:ir.model,name:product_number_of_users.model_product_product
+msgid "Product Variant"
+msgstr "Tuote"
