@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_template_only_form_view" model="ir.ui.view">
+        <field name="name">product.template.form.inherit.number.of.users</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <field name="product_tag_ids" position="after">
+                <label for="number_of_users_min" string="Number of Users" />
+                <div>
+                    <field
+                        name="number_of_users_min"
+                        class="oe_inline"
+                        style="vertical-align:baseline"
+                    /> -
+                    <field
+                        name="number_of_users_max"
+                        class="oe_inline"
+                        style="vertical-align:baseline"
+                    />
+                </div>
+            </field>
+        </field>
+    </record>
+</odoo>
