@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_fall_height
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-20 15:04+0000\n"
+"PO-Revision-Date: 2025-11-20 15:04+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_fall_height
+#: model:ir.model.fields,field_description:product_fall_height.field_product_product__fall_height
+#: model:ir.model.fields,field_description:product_fall_height.field_product_template__fall_height
+msgid "Fall Height"
+msgstr "Pudotuskorkeus"
+
+#. module: product_fall_height
+#: model:ir.model,name:product_fall_height.model_product_template
+msgid "Product"
+msgstr "Tuotemalli"
+
+#. module: product_fall_height
+#: model:ir.model,name:product_fall_height.model_product_product
+msgid "Product Variant"
+msgstr "Tuote"
+
+#. module: product_fall_height
+#: model:ir.model.fields,help:product_fall_height.field_product_product__fall_height
+#: model:ir.model.fields,help:product_fall_height.field_product_template__fall_height
+msgid "The greatest height the person using this product can fall from"
+msgstr "Suurin korkeus, jolta tätä tuotetta käyttävä henkilö voi pudota"
