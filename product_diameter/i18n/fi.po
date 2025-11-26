@@ -1,0 +1,33 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_diameter
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-11-26 11:37+0000\n"
+"PO-Revision-Date: 2025-11-26 11:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_diameter
+#: model:ir.model.fields,field_description:product_diameter.field_procountor_product_product__diameter
+#: model:ir.model.fields,field_description:product_diameter.field_product_product__diameter
+#: model:ir.model.fields,field_description:product_diameter.field_product_template__diameter
+msgid "Diameter"
+msgstr "Halkaisija"
+
+#. module: product_diameter
+#: model:ir.model,name:product_diameter.model_product_template
+msgid "Product"
+msgstr "Tuotemalli"
+
+#. module: product_diameter
+#: model:ir.model,name:product_diameter.model_product_product
+msgid "Product Variant"
+msgstr "Tuote"
