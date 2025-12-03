@@ -13,6 +13,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [coupon_product_set_company](coupon_product_set_company/) | 17.0.1.1.0 |  | Sets company field for coupon product
+[product_age_limit](product_age_limit/) | 17.0.1.0.0 |  | Adds a new field, Age Limit, to the product variants and templates
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.1.0 |  | Audit log rules for product, product template and product category
 [product_bypass_tax_multi_company_rule](product_bypass_tax_multi_company_rule/) | 17.0.1.0.0 |  | Bypass tax multi-company rule when creating a new product
@@ -20,6 +21,8 @@ addon | version | maintainers | summary
 [product_competitor_alternative](product_competitor_alternative/) | 17.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_compliant](product_compliant/) | 17.0.1.1.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
 [product_default_type_product](product_default_type_product/) | 17.0.1.0.0 |  | Product default type: product
+[product_diameter](product_diameter/) | 17.0.1.0.0 |  | Adds a new field, Diameter, to the product variants and templates
+[product_fall_height](product_fall_height/) | 17.0.1.0.0 |  | Adds a new field, Fall Height, to the product variants and templates
 [product_gross_weight](product_gross_weight/) | 17.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_hide_sale_price](product_hide_sale_price/) | 17.0.1.0.1 |  | Hide sale price and taxes from users that not belonging to sales group
 [product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
@@ -32,7 +35,9 @@ addon | version | maintainers | summary
 [product_materials_relative_weight](product_materials_relative_weight/) | 17.0.1.0.1 |  | Adds computed fields of relative weights of product materials
 [product_materials_upper_category](product_materials_upper_category/) | 17.0.1.0.0 |  | Upper Category for product materials
 [product_name_disable_translate](product_name_disable_translate/) | 17.0.1.0.0 |  | Removes the option to translate product names
+[product_number_of_users](product_number_of_users/) | 17.0.1.0.0 |  | Adds new fields for defining Number of Users to products
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 17.0.1.0.0 |  | Show color if stock belongs to several locations
+[product_parse_gs1_barcode](product_parse_gs1_barcode/) | 17.0.1.0.0 |  | Extract information to product barcode while reading a barcode
 [product_pricelist](product_pricelist/) | 17.0.1.0.0 |  | Add a pricelist information to product
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_pricelist_divide_price](product_pricelist_divide_price/) | 17.0.1.0.4 |  | Divide the result in pricelist rule with Divide by -field
