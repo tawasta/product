@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_template_search_view" model="ir.ui.view">
+        <field name="name">product.template.search.product.class</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_search_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//group" position="inside">
+                <filter
+                    string="Class"
+                    name="product_class"
+                    context="{'group_by':'product_class'}"
+                />
+                <filter
+                    string="Subclass"
+                    name="product_subclass"
+                    context="{'group_by':'product_subclass'}"
+                />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_template_tree_view" model="ir.ui.view">
+        <field name="name">product.template.tree.product.class</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_tree_view" />
+        <field name="arch" type="xml">
+            <field name="categ_id" position="after">
+                <field name="product_class" optional="hide" />
+                <field name="product_subclass" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record id="product_product_tree_view" model="ir.ui.view">
+        <field name="name">product.product.tree.product.class</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_product_tree_view" />
+        <field name="arch" type="xml">
+            <field name="categ_id" position="after">
+                <field name="product_class" optional="hide" />
+                <field name="product_subclass" optional="hide" />
+            </field>
+        </field>
+    </record>
+
+    <record id="product_template_only_form_view" model="ir.ui.view">
+        <field name="name">product.template.form.product.class</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_only_form_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='inventory']/group[@name='inventory']"
+                position="after"
+            >
+                <group string="Class information" name="product_class_information">
+                    <field name="product_class" />
+                    <field name="product_subclass" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.product.class</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='inventory']/group[@name='inventory']"
+                position="inside"
+            >
+                <group string="Class information" name="product_class_information">
+                    <field name="product_class" />
+                    <field name="product_subclass" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
