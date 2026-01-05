@@ -29,7 +29,7 @@
     "application": False,
     "installable": True,
     "external_dependencies": {"python": [], "bin": []},
-    "depends": ["product_sequence"],
+    "depends": ["product_sequence", "stock"],
     "data": [
         "security/ir.model.access.csv",
         "wizards/batch_creator.xml",
