@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2018 Futural Oy (https://futural.fi)
+#    Copyright 2026 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,21 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Product Batch Creator",
-    "summary": "Create a batch of placeholder products",
+    "name": "Description log from import",
+    "summary": "Imported description change data",
     "version": "17.0.1.0.0",
-    "category": "Inventory",
+    "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
-    "depends": ["product_sequence", "stock"],
-    "data": [
-        "security/ir.model.access.csv",
-        "wizards/batch_creator.xml",
-        "views/product_template.xml",
+    "depends": [
+        "product",
     ],
-    "demo": [],
+    "data": [
+        "views/product_view.xml",
+    ],
 }
