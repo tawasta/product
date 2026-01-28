@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_normal_form_view" model="ir.ui.view">
+        <field name="name">product.product.form.profile.info</field>
+        <field name="model">product.product</field>
+        <field name="inherit_id" ref="product.product_normal_form_view" />
+        <field name="arch" type="xml">
+            <xpath
+                expr="//page[@name='inventory']/group[@name='inventory']"
+                position="inside"
+            >
+                <group string="Profile info" name="profile_info">
+                    <field name="profile_info_type" />
+                    <field name="profile_info_id" />
+                    <field name="profile_info_result" />
+                </group>
+            </xpath>
+        </field>
+    </record>
+</odoo>
