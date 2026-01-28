@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+	<record id="produce_profile_formula_form" model="ir.ui.view">
+		<field name="name">product.profile.formula.form</field>
+		<field name="model">product.profile.formula</field>
+		<field name="arch" type="xml">
+            <form string="Profile formula" id="profile_formula">
+                <sheet name="profile_formula">
+                    <group>
+                        <field name="product_id" />
+                        <field name="profile_type" />
+                        <field name="show_diameter" />
+                        <field name="show_length" />
+                        <field name="show_height" />
+                        <field name="show_width" />
+                        <field name="multiply_first" />
+                        <field name="multiply_second" />
+                        <field name="multiply_third" />
+                        <field name="symbol_first" />
+                        <field name="symbol_second" />
+                        <field name="symbol_third" />
+<!--                         <field name="info_result" /> -->
+<!--                         <div class="alert alert-info" role="alert" style="white-space: pre;"> -->
+<!--                             <field name="info_result" /> -->
+<!--                         </div> -->
+                    </group>
+                </sheet>
+            </form>
+		</field>
+	</record>
+
+    <record id="produce_profile_formula_tree" model="ir.ui.view">
+        <field name="name">product.profile.formula.tree</field>
+        <field name="model">product.profile.formula</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="product_id" />
+                <field name="profile_type" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="produce_profile_formula_action" model="ir.actions.act_window">
+        <field name="name">Product Profile formula</field>
+        <field name="res_model">product.profile.formula</field>
+        <field name="view_id" ref="produce_profile_formula_tree" />
+    </record>
+
+    <menuitem
+        action="product_profile_dimension_text.produce_profile_formula_action"
+        id="menu_produce_profile_formula"
+        parent="stock.menu_product_in_config_stock"
+        sequence="10"
+    />
+</odoo>
