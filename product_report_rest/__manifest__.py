@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Product API (FastAPI)",
-    "summary": "FastAPI endpoint for product reporting (product.product)",
+    "name": "Product Report REST (FastAPI)",
+    "summary": "FastAPI endpoint for product reporting (API key protected)",
     "version": "17.0.1.0.0",
     "category": "Reporting",
     "website": "https://github.com/tawasta/product",
@@ -32,14 +32,14 @@
     ],
     "depends": [
         "fastapi",
+        "fastapi_auth_api_key",
+        "auth_api_key",
         "product",
     ],
     "external_dependencies": {
-        "python": [
-            "fastapi",
-            "pydantic",
-        ]
+        "python": ["fastapi", "pydantic"]
     },
     "application": False,
     "installable": True,
 }
+

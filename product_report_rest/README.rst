@@ -6,43 +6,67 @@
 Product API (FastAPI)
 =====================
 An Odoo 17 module that provides a lightweight **FastAPI-based reporting API**
-for products (``product.product``).  
+for products (``product.product``).
+
+The API is **secured using API key authentication** and is **not publicly accessible**.
+All requests must include a valid API key in the HTTP headers.
+
 The module also extends product categories with a field ``is_secondary`` and
 the API report includes a dedicated summary for secondary products.
 
 Key Features
 ============
 * **FastAPI endpoint** for product reporting
+* **API key authentication** using ``fastapi_auth_api_key``
+* **Endpoint-level access control** via API key groups
 * **Category filtering** (using ``child_of`` to include subcategories)
 * **Secondary products support** (``product.category.is_secondary``, inherited from parent category)
 * **Summary** of stock quantities for secondary products and a separate list of those product rows
-* Automatically creates an **API user**, **group**, and **FastAPI endpoint** at installation
+* Automatically creates an **API user**, **API key group**, and **FastAPI endpoint** at installation
 
 Installation
 ============
 
 1. Install dependencies::
 
-   - Odoo modules: ``fastapi``, ``product``
+   - Odoo modules: ``fastapi``, ``product``, ``auth_api_key``, ``fastapi_auth_api_key``
    - Python packages: ``fastapi``, ``pydantic`` (if not already available in your environment)
 
 2. Install this module in Odoo (Apps → Install).
 
 3. The data file automatically creates:
-   - User: **Product Reports API User**  
-     (login: ``product_reports_api_user`` — set a password in Odoo)  
-   - Group: **Product Reports FastAPI Group**  
-   - FastAPI endpoint with root path: ``/product_rest_api``  
+
+   - User: **Product Reports API User**
+     (login: ``product_reports_api_user``)
+   - API key group: **Product Reports API Keys**
+   - FastAPI endpoint with root path: ``/product_rest_api``
 
 Configuration
 =============
-* **Secondary products**: Go to *Products → Configuration → Product Categories* and
-  tick ``Is Secondary`` for categories considered as secondary.  
+
+* **API key authentication**
+
+  To access the API, create an API key in Odoo:
+
+  - Go to *Settings → Technical → API Keys*
+  - User: **Product Reports API User**
+  - API Key Group: **Product Reports API Keys**
+
+  The generated key must be sent in all requests using the HTTP header::
+
+      HTTP-API-KEY: <your_api_key>
+
+* **Secondary products**
+
+  Go to *Products → Configuration → Product Categories* and tick
+  ``Is Secondary`` for categories considered secondary.
   The flag also applies to subcategories.
 
-* **Access rights**: The endpoint can be called by users who belong to the
-  *Product Reports FastAPI Group*.  
-  The provided API user is added automatically; additional users can be added if needed.
+* **Access control**
+
+  Only API keys belonging to the configured API key group are allowed to
+  access the endpoint. Requests without a valid API key or with a key
+  outside the group will return ``401 Unauthorized``.
 
 Endpoints
 =========
@@ -79,16 +103,20 @@ Example response::
         ],
         "secondary_on_hand": 42.0,
         "secondary_rows": [
-            {"id": 12, "name": "Secondary Item", "default_code": "SEC-12", "category": "All / Secondary", "qty_available": 10.0},
+            {
+                "id": 12,
+                "name": "Secondary Item",
+                "default_code": "SEC-12",
+                "category": "All / Secondary",
+                "qty_available": 10.0
+            },
             ...
         ]
     }
 
 Known Issues / Roadmap
 ======================
-
-* Currently supports only read access
-* More endpoints and filtering options may be added in future
+\-
 
 Credits
 =======

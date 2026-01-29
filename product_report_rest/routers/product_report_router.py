@@ -1,6 +1,6 @@
 import logging
 from datetime import datetime
-from typing import Annotated
+from typing import Annotated, Optional
 
 from fastapi import APIRouter, Depends, Query
 from pydantic import BaseModel
@@ -8,9 +8,11 @@ from pydantic import BaseModel
 from odoo.api import Environment
 from odoo.tools import DEFAULT_SERVER_DATE_FORMAT
 
-from odoo.addons.fastapi.dependencies import odoo_env
+from odoo.addons.fastapi_auth_api_key.dependencies import (
+    authenticated_env_by_auth_api_key,
+)
 
-router = APIRouter()
+router = APIRouter(dependencies=[Depends(authenticated_env_by_auth_api_key)])
 _logger = logging.getLogger(__name__)
 
 
@@ -34,10 +36,10 @@ def _is_secondary(product) -> bool:
 
 @router.get("/product/report", response_model=ReportResponse)
 async def product_report_min(
-    env: Annotated[Environment, Depends(odoo_env)],
+    env: Annotated[Environment, Depends(authenticated_env_by_auth_api_key)],
     limit: int = Query(500, ge=1, le=5000),
     offset: int = Query(0, ge=0),
-    category: int | None = Query(
+    category: Optional[int] = Query(
         None,
         description="Rajaa tuoteryhmään (id). Sisältää myös alikategoriat.",
     ),
@@ -55,11 +57,11 @@ async def product_report_min(
     """
     _logger.info("Generating product report (products domain by category if given)")
 
-    Product = env["product.product"].sudo().with_context(active_test=False)
+    Product = env["product.product"].with_context(active_test=False)
 
     domain = []
     if category is not None:
-        domain.append(("categ_id", "child_of", category))  # sisältää myös alikategoriat
+        domain.append(("categ_id", "child_of", category))
 
     total = Product.search_count(domain)
     products = Product.search(domain, limit=limit, offset=offset, order="id asc")
@@ -90,7 +92,7 @@ async def product_report_min(
                 "name": p.display_name or p.name or "",
                 "default_code": p.default_code or "",
                 "category": p.categ_id.name or "",
-                "tags": [{"id": t.id, "name": t.name} for t in p.sh_product_tag_ids]
+                "tags": [{"id": t.id, "name": t.name} for t in getattr(p, "sh_product_tag_ids", [])]
                 or [{"id": 0, "name": ""}],
                 "standard_price": p.standard_price or 0.0,
                 "qty_available": qty,
