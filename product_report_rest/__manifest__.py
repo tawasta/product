@@ -36,10 +36,7 @@
         "auth_api_key",
         "product",
     ],
-    "external_dependencies": {
-        "python": ["fastapi", "pydantic"]
-    },
+    "external_dependencies": {"python": ["fastapi", "pydantic"]},
     "application": False,
     "installable": True,
 }
-

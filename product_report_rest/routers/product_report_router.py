@@ -39,7 +39,7 @@ async def product_report_min(
     env: Annotated[Environment, Depends(authenticated_env_by_auth_api_key)],
     limit: int = Query(500, ge=1, le=5000),
     offset: int = Query(0, ge=0),
-    category: Optional[int] = Query(
+    category: Optional[int] = Query(  # noqa UP007
         None,
         description="Rajaa tuoteryhmään (id). Sisältää myös alikategoriat.",
     ),
@@ -92,7 +92,10 @@ async def product_report_min(
                 "name": p.display_name or p.name or "",
                 "default_code": p.default_code or "",
                 "category": p.categ_id.name or "",
-                "tags": [{"id": t.id, "name": t.name} for t in getattr(p, "sh_product_tag_ids", [])]
+                "tags": [
+                    {"id": t.id, "name": t.name}
+                    for t in getattr(p, "sh_product_tag_ids", [])
+                ]
                 or [{"id": 0, "name": ""}],
                 "standard_price": p.standard_price or 0.0,
                 "qty_available": qty,
