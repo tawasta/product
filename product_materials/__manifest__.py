@@ -21,7 +21,7 @@
 {
     "name": "Product Materials",
     "summary": "Product Materials info for products and their packaging",
-    "version": "17.0.1.1.2",
+    "version": "17.0.1.1.3",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
