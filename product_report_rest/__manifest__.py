@@ -35,6 +35,7 @@
         "fastapi_auth_api_key",
         "auth_api_key",
         "product",
+        "fastapi_rest_log",
     ],
     "external_dependencies": {"python": ["fastapi", "pydantic"]},
     "application": False,
