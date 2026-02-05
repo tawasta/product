@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Product Profile – show formula text",
-    "summary": "Adds formula text based on the profile of a product",
+    "name": "Product Profile info fields",
+    "summary": "Adds profile info fields to products",
     "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
@@ -28,12 +28,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [
-        "product_diameter",
-    ],
-    "data": [
-        "security/ir.model.access.csv",
-        "views/product_view.xml",
-        "views/profile_view.xml",
-    ],
+    "depends": ["product"],
+    "data": ["views/product_view.xml"],
 }

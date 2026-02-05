@@ -19,10 +19,6 @@
                         <field name="symbol_first" />
                         <field name="symbol_second" />
                         <field name="symbol_third" />
-<!--                         <field name="info_result" /> -->
-<!--                         <div class="alert alert-info" role="alert" style="white-space: pre;"> -->
-<!--                             <field name="info_result" /> -->
-<!--                         </div> -->
                     </group>
                 </sheet>
             </form>
@@ -47,7 +43,7 @@
     </record>
 
     <menuitem
-        action="product_profile_dimension_text.produce_profile_formula_action"
+        action="product_profile_dimension_result.produce_profile_formula_action"
         id="menu_produce_profile_formula"
         parent="stock.menu_product_in_config_stock"
         sequence="10"
