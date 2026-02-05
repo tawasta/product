@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2018 Futural Oy (https://futural.fi)
+#    Copyright 2026 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,16 +19,22 @@
 ##############################################################################
 
 {
-    "name": "Vendor Codes Field for Product",
-    "summary": "Show all vendor codes in a single field",
+    "name": "Product Profile – show formula text",
+    "summary": "Adds formula text based on the profile of a product",
     "version": "17.0.1.0.0",
-    "category": "Inventory",
+    "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product"],
-    "data": ["views/product_template.xml"],
-    "demo": [],
+    "depends": [
+        "product_diameter",
+        "product_profile_dimension_info_text",
+    ],
+    "data": [
+        "security/ir.model.access.csv",
+        "views/product_view.xml",
+        "views/profile_view.xml",
+    ],
 }
