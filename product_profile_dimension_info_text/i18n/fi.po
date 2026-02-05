@@ -1,0 +1,38 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_profile_dimension_info_text
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-02-05 12:09+0000\n"
+"PO-Revision-Date: 2026-02-05 14:10+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.8\n"
+
+#. module: product_profile_dimension_info_text
+#: model:ir.model,name:product_profile_dimension_info_text.model_product_product
+msgid "Product Variant"
+msgstr "Tuotevariaatio"
+
+#. module: product_profile_dimension_info_text
+#: model:ir.model.fields,field_description:product_profile_dimension_info_text.field_product_product__profile_info_text
+msgid "Profile Info Text"
+msgstr "Profiilitieto teksti"
+
+#. module: product_profile_dimension_info_text
+#: model:ir.model.fields,field_description:product_profile_dimension_info_text.field_product_product__profile_info_type
+msgid "Profile Info Type"
+msgstr "Profiilitieto tyyppi"
+
+#. module: product_profile_dimension_info_text
+#: model_terms:ir.ui.view,arch_db:product_profile_dimension_info_text.product_normal_form_view
+msgid "Profile info"
+msgstr "Profiilitieto"
