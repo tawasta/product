@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-product_profile_formula_access_user,product_profile_formula_access_user,model_product_profile_formula,mrp.group_mrp_user,1,1,0,0
-product_profile_formula_access_admin,product_profile_formula_access_admin,model_product_profile_formula,base.group_system,1,1,1,1
