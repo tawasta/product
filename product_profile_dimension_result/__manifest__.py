@@ -30,6 +30,7 @@
     "installable": True,
     "depends": [
         "product_diameter",
+        "product_profile_dimension_info_text",
     ],
     "data": [
         "security/ir.model.access.csv",

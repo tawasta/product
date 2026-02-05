@@ -4,7 +4,6 @@ from odoo import fields, models
 class ProductProduct(models.Model):
     _inherit = "product.product"
 
-    profile_info_type = fields.Char(copy=False)
     profile_info_id = fields.Many2one("product.profile.formula", copy=False)
     profile_info_result = fields.Text(compute=lambda self: self._compute_info_result())
 
