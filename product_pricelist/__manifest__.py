@@ -28,7 +28,6 @@
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "external_dependencies": {"python": [], "bin": []},
     "depends": ["product"],
     "data": ["views/product_template_view.xml"],
     "demo": [],
