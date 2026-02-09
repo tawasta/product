@@ -29,7 +29,7 @@ addon | version | maintainers | summary
 [product_hide_sale_price](product_hide_sale_price/) | 17.0.1.0.1 |  | Hide sale price and taxes from users that not belonging to sales group
 [product_internal_comments](product_internal_comments/) | 17.0.1.0.1 |  | New comments field for product
 [product_last_year_sales_in_tree](product_last_year_sales_in_tree/) | 17.0.1.0.0 |  | Sales of last year in product list view
-[product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.1 |  | Search products with manufacturer fields
+[product_manufacturer_search](product_manufacturer_search/) | 17.0.1.0.2 |  | Search products with manufacturer fields
 [product_mass_update_taxes](product_mass_update_taxes/) | 17.0.1.0.0 |  | Modify taxes for multiple products at once
 [product_materials](product_materials/) | 17.0.1.1.3 |  | Product Materials info for products and their packaging
 [product_materials_block_and_allow_edit](product_materials_block_and_allow_edit/) | 17.0.1.1.1 |  | Disable editing materials by default and allow it to some users

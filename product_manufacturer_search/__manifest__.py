@@ -21,7 +21,7 @@
 {
     "name": "Search products with manufacturer fields",
     "summary": "Search products with manufacturer fields",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
