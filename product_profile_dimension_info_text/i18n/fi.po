@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 17.0-20250131\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-05 12:09+0000\n"
-"PO-Revision-Date: 2026-02-05 14:10+0200\n"
+"POT-Creation-Date: 2026-02-23 11:51+0000\n"
+"PO-Revision-Date: 2026-02-23 13:52+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fi\n"
@@ -18,14 +18,14 @@ msgstr ""
 "X-Generator: Poedit 3.8\n"
 
 #. module: product_profile_dimension_info_text
+#: model:ir.model.fields,field_description:product_profile_dimension_info_text.field_product_product__dimension_text
+msgid "Dimensions info"
+msgstr "Dimensio info"
+
+#. module: product_profile_dimension_info_text
 #: model:ir.model,name:product_profile_dimension_info_text.model_product_product
 msgid "Product Variant"
 msgstr "Tuotevariaatio"
-
-#. module: product_profile_dimension_info_text
-#: model:ir.model.fields,field_description:product_profile_dimension_info_text.field_product_product__profile_info_text
-msgid "Profile Info Text"
-msgstr "Profiilitieto teksti"
 
 #. module: product_profile_dimension_info_text
 #: model:ir.model.fields,field_description:product_profile_dimension_info_text.field_product_product__profile_info_type
