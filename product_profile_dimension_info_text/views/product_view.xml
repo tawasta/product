@@ -11,7 +11,7 @@
             >
                 <group string="Profile info" name="profile_info">
                     <field name="profile_info_type" />
-                    <field name="profile_info_text" />
+                    <field name="dimension_text" />
                 </group>
             </xpath>
         </field>
