@@ -1,0 +1,29 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_template_revision_code
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-03-18 07:33+0000\n"
+"PO-Revision-Date: 2026-03-18 09:34+0200\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+#. module: product_template_revision_code
+#: model:ir.model,name:product_template_revision_code.model_product_template
+msgid "Product"
+msgstr "Tuote"
+
+#. module: product_template_revision_code
+#: model:ir.model.fields,field_description:product_template_revision_code.field_product_product__revision_code
+#: model:ir.model.fields,field_description:product_template_revision_code.field_product_template__revision_code
+msgid "Revision Code"
+msgstr "Revisiokoodi"
