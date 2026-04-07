@@ -1,0 +1,47 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_exclude_from_sale_invoice
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-07 11:36+0000\n"
+"PO-Revision-Date: 2026-04-07 11:36+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: product_exclude_from_sale_invoice
+#: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_product__exclude_from_sale_invoice
+#: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_template__exclude_from_sale_invoice
+msgid "Exclude From Sale Invoice"
+msgstr "Tuotetta ei lisätä myyntilaskulle"
+
+#. module: product_exclude_from_sale_invoice
+#: model_terms:ir.ui.view,arch_db:product_exclude_from_sale_invoice.product_template_only_form_view
+msgid "Exclude from Invoice"
+msgstr "Laskulta pois jättäminen"
+
+#. module: product_exclude_from_sale_invoice
+#: model:ir.model.fields,help:product_exclude_from_sale_invoice.field_product_product__exclude_from_sale_invoice
+#: model:ir.model.fields,help:product_exclude_from_sale_invoice.field_product_template__exclude_from_sale_invoice
+msgid ""
+"If checked, sale order lines for this product will remain on the sale order "
+"but will be skipped when creating invoices."
+msgstr ""
+"Jos asetettu, tätä tuotetta sisältäviä myyntitilausrivejä ei oteta mukaan, "
+"kun myyntitilauksesta luodaan myyntilaskua."
+
+#. module: product_exclude_from_sale_invoice
+#: model:ir.model,name:product_exclude_from_sale_invoice.model_product_template
+msgid "Product"
+msgstr "Tuote"
+
+#. module: product_exclude_from_sale_invoice
+#: model:ir.model,name:product_exclude_from_sale_invoice.model_sale_order_line
+msgid "Sales Order Line"
+msgstr "Myyntitilausrivi"
