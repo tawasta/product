@@ -30,7 +30,7 @@ class ProductSaleInvoiceExclusionRule(models.Model):
 
     @api.depends("detailed_type", "tax_ids")
     def _compute_name(self):
-        # fields_get returns translated labels for the current user's language
+        # Fields_get returns translated labels for the current user's language
         type_labels = dict(
             self.env["product.template"].fields_get(["detailed_type"])["detailed_type"][
                 "selection"
