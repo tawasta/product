@@ -8,11 +8,26 @@ Product: Exclude from Sale Invoice
 
 * Adds a new field to products, enabling to always exclude 
   them from invoices when sale orders get invoiced.
+* Supports either manual configuration for each product, or configuring
+  rules for product type + customer tax combinations
+* Company-specific rules are supported in multicompany setups
 
 Configuration
 =============
-* Set the "Exclude from Sale Invoices" toggle on the product 
-  templates of your choice
+* Optionally: Create product type / tax combination rules via 
+  Invoicing - Configuration - Sale Invoice Exclusion Rules
+  to define the combinations where products should not be 
+  invoiced from Sale Orders. 
+
+  * If this is done, product templates' 'Exclude from Sale Invoices'
+    field gets toggled on/off automatically based on the rules
+    without any manual control from user.
+  * If this is NOT done, you will manage all product templates' 
+    'Exclude from Sale Invoices' fields manually
+* Note that when setting rules, each rule looks for an exact match,
+  so if you happen to have multiple taxes defined for a product,
+  also the rule should have them defined.
+* A simple example combination could be e.g.  "Event Ticket" / "25,5% VAT".
 
 Usage
 =====
