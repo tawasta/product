@@ -11,8 +11,32 @@
                 <group
                     string="Exclude from Invoice"
                     name="group_exclude_from_sale_invoice"
+                    col="2"
                 >
-                    <field name="exclude_from_sale_invoice" widget="boolean_toggle" />
+                    <!-- helper to define whether editing the toggle is allowed-->
+                    <field name="exclude_from_sale_invoice_readonly" invisible="1" />
+                    <field
+                        name="exclude_from_sale_invoice"
+                        readonly="exclude_from_sale_invoice_readonly"
+                        widget="boolean_toggle"
+                        colspan="2"
+                    />
+                    <div
+                        invisible="not exclude_from_sale_invoice_readonly"
+                        class="text-muted fst-italic"
+                        colspan="2"
+                    >
+                        Invoicing exclusions are managed by rules
+
+                            <a
+                            href="#"
+                            class="oe_link"
+                            type="action"
+                            name="%(product_exclude_from_sale_invoice.product_sale_invoice_exclusion_rule_action)d"
+                        >
+                            ⇒ Manage Rules
+                        </a>.
+                    </div>
                 </group>
             </group>
         </field>
