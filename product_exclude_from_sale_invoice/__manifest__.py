@@ -31,8 +31,8 @@
     "installable": True,
     "depends": ["product", "sale"],
     "data": [
-        "views/product_template.xml",
         "views/product_sale_invoice_exclusion_rule.xml",
+        "views/product_template.xml",
         "security/ir_model_access.xml",
     ],
 }
