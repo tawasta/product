@@ -21,7 +21,7 @@
 {
     "name": "Product: Exclude from Sale Invoice",
     "summary": "Adds a new field to products, enabling to always exclude them from "
-    "sale invoices.",
+    "sale invoices",
     "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
