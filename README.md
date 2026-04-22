@@ -13,6 +13,7 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [coupon_product_set_company](coupon_product_set_company/) | 17.0.1.1.0 |  | Sets company field for coupon product
+[product_abc_classification_related_abc](product_abc_classification_related_abc/) | 17.0.1.0.0 |  | ABC fields are related on product variant from template
 [product_age_limit](product_age_limit/) | 17.0.1.0.0 |  | Adds a new field, Age Limit, to the product variants and templates
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.1.0 |  | Audit log rules for product, product template and product category
