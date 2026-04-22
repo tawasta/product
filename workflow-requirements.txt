@@ -1,1 +1,1 @@
-https://github.com/tawasta/account-invoicing/archive/refs/heads/19.0.zip#subdirectory=account_invoice_related_sale_order
+https://github.com/tawasta/account-invoicing/archive/refs/heads/17.0.zip#subdirectory=account_invoice_related_sale_order
