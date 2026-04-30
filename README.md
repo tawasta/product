@@ -24,6 +24,7 @@ addon | version | maintainers | summary
 [product_competitor_alternative](product_competitor_alternative/) | 17.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_compliant](product_compliant/) | 17.0.1.1.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
 [product_default_type_product](product_default_type_product/) | 17.0.1.0.0 |  | Product default type: product
+[product_designer_commission](product_designer_commission/) | 17.0.1.0.0 |  | Adds designer and commission fields to products and partners.
 [product_diameter](product_diameter/) | 17.0.1.0.0 |  | Adds a new field, Diameter, to the product variants and templates
 [product_exclude_from_sale_invoice](product_exclude_from_sale_invoice/) | 17.0.1.0.0 |  | Adds a new field to products, enabling to always exclude them from sale invoices
 [product_fall_height](product_fall_height/) | 17.0.1.0.0 |  | Adds a new field, Fall Height, to the product variants and templates

@@ -1,16 +1,16 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
     <record id="view_partner_form_inherit_designer_commission" model="ir.ui.view">
         <field name="name">res.partner.form.inherit.designer.commission</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="inherit_id" ref="base.view_partner_form" />
         <field name="arch" type="xml">
 
             <xpath expr="//sheet//group" position="inside">
                 <group string="Designer">
-                    <field name="is_a_designer"/>
-                    <field name="provision"/>
+                    <field name="is_a_designer" />
+                    <field name="provision" />
                 </group>
             </xpath>
 
@@ -20,7 +20,7 @@
     <record id="view_partner_filter_inherit_designer_commission" model="ir.ui.view">
         <field name="name">res.partner.search.inherit.designer.commission</field>
         <field name="model">res.partner</field>
-        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="inherit_id" ref="base.view_res_partner_filter" />
         <field name="arch" type="xml">
 
             <xpath expr="//filter[@name='type_company']" position="after">
