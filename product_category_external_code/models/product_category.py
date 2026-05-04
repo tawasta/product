@@ -6,4 +6,6 @@ class ProductCategory(models.Model):
 
     external_code = fields.Char(
         help="External code for the product category",
+        copy=False,
+        store=True,
     )

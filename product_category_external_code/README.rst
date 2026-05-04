@@ -6,7 +6,7 @@
 Product category external code
 =================================================
 
-Adds external code field to product categories
+Adds external code field to product categories and products.
 
 Configuration
 =============
