@@ -6,7 +6,8 @@
 Product category external code
 =================================================
 
-Adds external code field to product categories and products.
+Adds editable external code field to product categories and related fields 
+to products and product variants.
 
 Configuration
 =============

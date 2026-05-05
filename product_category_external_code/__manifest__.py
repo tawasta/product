@@ -34,5 +34,6 @@
     "data": [
         "views/product_category.xml",
         "views/product_template.xml",
+        "views/product_variant.xml",
     ],
 }

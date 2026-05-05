@@ -1,1 +1,1 @@
-from . import product_category, product
+from . import product_category, product, product_variant
