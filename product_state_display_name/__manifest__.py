@@ -21,7 +21,7 @@
 {
     "name": "Product state display name",
     "summary": "Functionality to display custom names for product states",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
