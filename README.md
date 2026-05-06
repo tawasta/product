@@ -78,3 +78,4 @@ addon | version | maintainers | summary
 [product_description](product_description/) | 17.0.1.0.1 (unported) |  | Adds a ecommerce desciption field for product template (deprecated)
 
 [//]: # (end addons)
+
