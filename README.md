@@ -13,10 +13,12 @@ Available addons
 addon | version | maintainers | summary
 --- | --- | --- | ---
 [coupon_product_set_company](coupon_product_set_company/) | 17.0.1.1.0 |  | Sets company field for coupon product
+[product_abc_classification_related_abc](product_abc_classification_related_abc/) | 17.0.1.0.0 |  | ABC fields are related on product variant from template
 [product_age_limit](product_age_limit/) | 17.0.1.0.0 |  | Adds a new field, Age Limit, to the product variants and templates
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.1.0 |  | Audit log rules for product, product template and product category
 [product_bypass_tax_multi_company_rule](product_bypass_tax_multi_company_rule/) | 17.0.1.0.0 |  | Bypass tax multi-company rule when creating a new product
+[product_category_external_code](product_category_external_code/) | 17.0.1.0.1 |  | Functionality to add external code for product categories
 [product_change_description](product_change_description/) | 17.0.1.0.0 |  | Imported description change data
 [product_class_and_subclass](product_class_and_subclass/) | 17.0.1.0.0 |  | Enable to set a class and a subclass to a product
 [product_code_version_control](product_code_version_control/) | 17.0.1.0.1 |  | Define and search version codes of products
@@ -24,7 +26,7 @@ addon | version | maintainers | summary
 [product_compliant](product_compliant/) | 17.0.1.1.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
 [product_default_type_product](product_default_type_product/) | 17.0.1.0.0 |  | Product default type: product
 [product_diameter](product_diameter/) | 17.0.1.0.0 |  | Adds a new field, Diameter, to the product variants and templates
-[product_exclude_from_sale_invoice](product_exclude_from_sale_invoice/) | 17.0.1.0.0 |  | Adds a new field to products, enabling to always exclude them from sale invoices.
+[product_exclude_from_sale_invoice](product_exclude_from_sale_invoice/) | 17.0.1.0.0 |  | Adds a new field to products, enabling to always exclude them from sale invoices
 [product_fall_height](product_fall_height/) | 17.0.1.0.0 |  | Adds a new field, Fall Height, to the product variants and templates
 [product_gross_weight](product_gross_weight/) | 17.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_hide_sale_price](product_hide_sale_price/) | 17.0.1.0.1 |  | Hide sale price and taxes from users that not belonging to sales group
