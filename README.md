@@ -54,10 +54,12 @@ addon | version | maintainers | summary
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 17.0.1.0.0 |  | Create a batch of placeholder products
 [product_show_only_in_suggested_accessories](product_show_only_in_suggested_accessories/) | 17.0.1.0.1 |  | Product Show only in Suggested accessories
 [product_show_pricelist_item_price](product_show_pricelist_item_price/) | 17.0.1.0.0 |  | Show price from a related pricelist on products
+[product_state_display_name](product_state_display_name/) | 17.0.1.0.2 |  | Functionality to display custom names for product states
 [product_storage_card](product_storage_card/) | 17.0.1.0.0 |  | Printable product info card with storage, vendor and reordering info
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 17.0.1.0.0 |  | Show all customer codes in a single field
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.1 |  | Variant dimensions are managed in the related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 17.0.1.0.0 |  | Hide SH tags from product template
+[product_template_materials](product_template_materials/) | 17.0.1.0.0 |  | Product Materials on Product template
 [product_template_revision_code](product_template_revision_code/) | 17.0.1.0.0 |  | Add Revision Code -field to product template
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
 [product_template_update_variant_volume](product_template_update_variant_volume/) | 17.0.1.0.0 |  | Variant weight and volume is managed in related product template

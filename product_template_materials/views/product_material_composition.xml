@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_product_material_composition_tree" model="ir.ui.view">
+        <field name="name">product.material.composition.tree.template</field>
+        <field name="model">product.material.composition</field>
+        <field
+            name="inherit_id"
+            ref="product_materials.view_product_material_composition_tree"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//tree//field[@name='product_product_id']" position="after">
+                <field name="product_tmpl_id" optional="show" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="view_product_material_composition_form" model="ir.ui.view">
+        <field name="name">product.material.composition.form.template</field>
+        <field name="model">product.material.composition</field>
+        <field
+            name="inherit_id"
+            ref="product_materials.view_product_material_composition_form"
+        />
+        <field name="arch" type="xml">
+            <xpath expr="//form//field[@name='product_product_id']" position="after">
+                <field name="product_tmpl_id" />
+            </xpath>
+        </field>
+    </record>
+
+    <record
+        id="product_materials.action_product_material_composition"
+        model="ir.actions.act_window"
+    >
+        <field
+            name="domain"
+        >['|', ('product_tmpl_id.active', '=', True), ('product_product_id.active', '=', True)]</field>
+    </record>
+</odoo>
