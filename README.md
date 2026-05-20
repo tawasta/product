@@ -49,7 +49,7 @@ addon | version | maintainers | summary
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_pricelist_divide_price](product_pricelist_divide_price/) | 17.0.1.0.4 |  | Divide the result in pricelist rule with Divide by -field
 [product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.1 |  | Helper fields for showing primary vendor's info
-[product_profile_dimension_info_text](product_profile_dimension_info_text/) | 17.0.1.1.0 |  | Adds profile info fields to products
+[product_profile_dimension_info_text](product_profile_dimension_info_text/) | 17.0.1.2.0 |  | Adds profile info fields to products
 [product_profile_dimension_result](product_profile_dimension_result/) | 17.0.1.0.0 |  | Adds formula text based on the profile of a product
 [product_select_seller_ignore_quantity](product_select_seller_ignore_quantity/) | 17.0.1.0.0 |  | Ignore minimium quantity when choosing a vendor from a product
 [product_sequence_batch_creator](product_sequence_batch_creator/) | 17.0.1.0.0 |  | Create a batch of placeholder products
