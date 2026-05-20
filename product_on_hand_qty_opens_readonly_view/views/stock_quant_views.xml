@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+    <!--
+        Non-editable, non-inherited treeview of stock.quant for
+        the read-only functionality.
+    -->
+    <record id="view_stock_quant_tree_readonly" model="ir.ui.view">
+        <field name="name">stock.quant.tree.readonly</field>
+        <field name="model">stock.quant</field>
+        <field name="arch" type="xml">
+            <tree create="false" edit="false" delete="false">
+
+                <field name="create_date" column_invisible="True" />
+                <field name="write_date" column_invisible="True" />
+                <field name="id" column_invisible="True" />
+                <field name="tracking" column_invisible="True" />
+                <field name="company_id" column_invisible="True" />
+                <field
+                    name="location_id"
+                    column_invisible="context.get('hide_location', False)"
+                    readonly="1"
+                    options="{'no_create': True}"
+                />
+                <field name="storage_category_id" optional="hide" />
+                <field
+                    name="product_id"
+                    readonly="1"
+                    options="{'no_create': True}"
+                    widget="many2one"
+                />
+                <field name="product_categ_id" optional="hide" />
+                <field
+                    name="company_id"
+                    groups="base.group_multi_company"
+                    optional="hidden"
+                />
+                <field
+                    name="package_id"
+                    groups="stock.group_tracking_lot"
+                    readonly="1"
+                />
+                <field
+                    name="lot_id"
+                    groups="stock.group_production_lot"
+                    column_invisible="context.get('hide_lot', False)"
+                    readonly="1"
+                />
+                <field
+                    name="owner_id"
+                    groups="stock.group_tracking_owner"
+                    readonly="1"
+                    options="{'no_create': True}"
+                />
+
+                <field
+                    name="inventory_quantity_auto_apply"
+                    string="On Hand Quantity"
+                    readonly="1"
+                    sum="Total On Hand"
+                />
+
+                <field name="reserved_quantity" optional="show" sum="Total Reserved" />
+                <field name="product_uom_id" string="Unit" groups="uom.group_uom" />
+                <field name="lot_properties" optional="hide" />
+                <button
+                    name="action_view_stock_moves"
+                    string="History"
+                    type="object"
+                    class="btn-link"
+                    icon="fa-history"
+                />
+            </tree>
+        </field>
+    </record>
+
+</odoo>

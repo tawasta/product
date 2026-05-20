@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo noupdate="1">
+
+        <!--
+           Add also module-specific category so the group shows up cleanly in
+            Settings > Users & Companies > Groups.
+        -->
+        <record id="module_category_product_on_hand_qty" model="ir.module.category">
+            <field name="name">Inventory: On Hand Quantity</field>
+            <field
+            name="description"
+        >Controls who may access the updating of on-hand quantities directly from the product form.</field>
+            <field name="sequence">20</field>
+        </record>
+
+        <record id="group_allow_update_on_hand_qty" model="res.groups">
+            <field name="name">Allow Updating On Hand Quantity from Product View</field>
+            <field name="category_id" ref="module_category_product_on_hand_qty" />
+            <field
+            name="comment"
+        >Users in this group see the standard "On Hand" button on the product form, which opens the editable inventory view. Users not in this group see a button that opens a read-only view instead.</field>
+        </record>
+</odoo>
