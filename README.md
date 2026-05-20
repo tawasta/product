@@ -43,6 +43,7 @@ addon | version | maintainers | summary
 [product_name_disable_translate](product_name_disable_translate/) | 17.0.1.0.0 |  | Removes the option to translate product names
 [product_number_of_users](product_number_of_users/) | 17.0.1.0.0 |  | Adds new fields for defining Number of Users to products
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 17.0.1.0.0 |  | Show color if stock belongs to several locations
+[product_on_hand_qty_opens_readonly_view](product_on_hand_qty_opens_readonly_view/) | 17.0.1.0.0 |  | Only users in a specific access group see the editable list view
 [product_parse_gs1_barcode](product_parse_gs1_barcode/) | 17.0.1.0.0 |  | Extract information to product barcode while reading a barcode
 [product_pricelist](product_pricelist/) | 17.0.1.0.0 |  | Add a pricelist information to product
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
