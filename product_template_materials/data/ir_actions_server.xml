@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="action_update_product_template" model="ir.actions.server">
+        <field name="name">Update Product Template</field>
+        <field
+            name="model_id"
+            ref="product_materials.model_product_material_composition"
+        />
+        <field name="groups_id" eval="[(4, ref('base.group_system'))]" />
+        <field
+            name="binding_model_id"
+            ref="product_materials.model_product_material_composition"
+        />
+        <field name="state">code</field>
+        <field name="code">records.set_product_tmpl_id()</field>
+    </record>
+</odoo>
