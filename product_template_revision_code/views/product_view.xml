@@ -7,6 +7,8 @@
         <field name="arch" type="xml">
             <field name="barcode" position="after">
                 <field name="revision_code" groups="stock.group_stock_manager" />
+                <field name="revision_note" groups="stock.group_stock_manager" />
+                <field name="revision_date" groups="stock.group_stock_manager" />
             </field>
         </field>
     </record>
