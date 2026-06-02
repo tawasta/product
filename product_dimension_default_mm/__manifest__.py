@@ -32,6 +32,5 @@
         "product",
         "product_dimension",
     ],
-    "data": [
-    ],
+    "data": [],
 }
