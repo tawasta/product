@@ -15,3 +15,9 @@ class ProductProduct(models.Model):
         readonly=True,
         store=True,
     )
+
+    product_secondary_subclass = fields.Char(
+        related="product_tmpl_id.product_secondary_subclass",
+        readonly=True,
+        store=True,
+    )
