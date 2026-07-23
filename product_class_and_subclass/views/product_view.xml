@@ -16,6 +16,11 @@
                     name="product_subclass"
                     context="{'group_by':'product_subclass'}"
                 />
+                <filter
+                    string="Secondary Subclass"
+                    name="product_secondary_subclass"
+                    context="{'group_by':'product_secondary_subclass'}"
+                />
             </xpath>
         </field>
     </record>
@@ -28,6 +33,7 @@
             <field name="categ_id" position="after">
                 <field name="product_class" optional="hide" />
                 <field name="product_subclass" optional="hide" />
+                <field name="product_secondary_subclass" optional="hide" />
             </field>
         </field>
     </record>
@@ -40,6 +46,7 @@
             <field name="categ_id" position="after">
                 <field name="product_class" optional="hide" />
                 <field name="product_subclass" optional="hide" />
+                <field name="product_secondary_subclass" optional="hide" />
             </field>
         </field>
     </record>
@@ -56,6 +63,7 @@
                 <group string="Class information" name="product_class_information">
                     <field name="product_class" />
                     <field name="product_subclass" />
+                    <field name="product_secondary_subclass" />
                 </group>
             </xpath>
         </field>
@@ -73,6 +81,7 @@
                 <group string="Class information" name="product_class_information">
                     <field name="product_class" />
                     <field name="product_subclass" />
+                    <field name="product_secondary_subclass" />
                 </group>
             </xpath>
         </field>
