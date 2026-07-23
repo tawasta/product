@@ -21,7 +21,7 @@
 {
     "name": "Set a class and a subclass to a product",
     "summary": "Enable to set a class and a subclass to a product",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.1.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",

@@ -11,3 +11,10 @@ class ProductTemplate(models.Model):
     product_subclass = fields.Char(
         string="Subclass", store=True, copy=False, help="Assigned subclass of a product"
     )
+
+    product_secondary_subclass = fields.Char(
+        string="Secondary Subclass",
+        store=True,
+        copy=False,
+        help="Assigned secondary subclass of a product",
+    )
