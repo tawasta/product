@@ -20,8 +20,9 @@
 
 {
     "name": "Set a class, subclass and secondary sublcass to a product",
-    "summary": "Enable to set a class, subclass and secondary subclass to a product",
-    "version": "17.0.1.1.0",
+    "summary": """Enable to set a class, subclass
+                  and secondary subclass to a product""",
+    "version": "17.0.1.1.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
