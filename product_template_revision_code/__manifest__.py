@@ -21,7 +21,7 @@
 {
     "name": "Revision Code of product template",
     "summary": "Add Revision Code -field to product template",
-    "version": "17.0.1.0.1",
+    "version": "17.0.1.0.2",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
