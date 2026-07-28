@@ -20,7 +20,7 @@ addon | version | maintainers | summary
 [product_bypass_tax_multi_company_rule](product_bypass_tax_multi_company_rule/) | 17.0.1.0.0 |  | Bypass tax multi-company rule when creating a new product
 [product_category_external_code](product_category_external_code/) | 17.0.1.0.1 |  | Functionality to add external code for product categories
 [product_change_description](product_change_description/) | 17.0.1.0.0 |  | Imported description change data
-[product_class_and_subclass](product_class_and_subclass/) | 17.0.1.1.0 |  | Enable to set a class and a subclass to a product
+[product_class_and_subclass](product_class_and_subclass/) | 17.0.1.1.1 |  | Enable to set a class, subclass and secondary subclass to a product
 [product_code_version_control](product_code_version_control/) | 17.0.1.0.1 |  | Define and search version codes of products
 [product_competitor_alternative](product_competitor_alternative/) | 17.0.1.0.0 |  | New field for info about competitor's alternative product
 [product_compliant](product_compliant/) | 17.0.1.1.0 |  | Add fields for product compliance (REACH, RoHS, Work Safety etc)
