@@ -4,4 +4,4 @@ from odoo import fields, models
 class ProductTemplate(models.Model):
     _inherit = "product.template"
 
-    name = fields.Char(translate=False)
+    name = fields.Char(translate=False, store=True, required=True, index=True)
