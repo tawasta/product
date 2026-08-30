@@ -17,7 +17,7 @@ Usage
 
 Known issues / Roadmap
 ======================
-* During porting to v19 added trigram index to name field to improve search performance
+\-
 
 Credits
 =======
