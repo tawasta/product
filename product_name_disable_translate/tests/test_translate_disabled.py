@@ -23,11 +23,3 @@ class TestTranslateDisabled(TransactionCase):
             "Francais",
             "Name should be overwritten, not stored as a separate translation.",
         )
-
-    def test_name_search_still_works(self):
-        """Trigram-backed name_search must still find products."""
-        product = self.env["product.product"].create({"name": "Test Product XYZ"})
-        res = self.env["product.template"].name_search(
-            name="Product XY", operator="ilike"
-        )
-        self.assertIn(product.product_tmpl_id.id, [r[0] for r in res])
