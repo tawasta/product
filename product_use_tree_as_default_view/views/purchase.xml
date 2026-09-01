@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <record id="purchase.product_normal_action_puchased" model="ir.actions.act_window">
+    <field
+      name="view_ids"
+      eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'list', 'view_id': ref('account.product_template_list_view_purchasable_inherit')}),
+            (0, 0, {'view_mode': 'kanban'}),
+            (0, 0, {'view_mode': 'form'}),
+            (0, 0, {'view_mode': 'activity'})]"
+    />
+  </record>
+</odoo>
