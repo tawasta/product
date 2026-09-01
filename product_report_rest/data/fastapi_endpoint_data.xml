@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+
+  <record
+        id="product_report_rest_api_user"
+        model="res.users"
+        context="{'no_reset_password': True}"
+    >
+    <field name="name">Product Report REST API User</field>
+    <field name="login">product_report_rest_api_user</field>
+    <field name="groups_id" eval="[(6, 0, [])]" />
+    <field name="active">True</field>
+  </record>
+
+  <record id="fastapi_product_reports_group" model="res.groups">
+    <field name="name">Product Reports FastAPI Group</field>
+    <field
+            name="users"
+            eval="[(4, ref('product_report_rest.product_report_rest_api_user'))]"
+        />
+  </record>
+
+  <record id="product_report_rest_auth_api_key_group" model="auth.api.key.group">
+    <field name="name">Product Report REST API Keys</field>
+    <field name="code">product_report_rest</field>
+  </record>
+
+  <record id="product_report_rest_fastapi_endpoint" model="fastapi.endpoint">
+    <field name="name">Product Report REST Endpoint</field>
+    <field name="app">product_reports</field>
+    <field name="root_path">/product_rest_api</field>
+    <field name="user_id" ref="product_report_rest.product_report_rest_api_user" />
+    <field
+            name="auth_api_key_group_id"
+            ref="product_report_rest.product_report_rest_auth_api_key_group"
+        />
+  </record>
+
+</odoo>
