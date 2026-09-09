@@ -50,6 +50,7 @@ addon | version | maintainers | summary
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_pricelist_divide_price](product_pricelist_divide_price/) | 17.0.1.0.4 |  | Divide the result in pricelist rule with Divide by -field
 [product_primary_vendor_info](product_primary_vendor_info/) | 17.0.1.0.1 |  | Helper fields for showing primary vendor's info
+[product_print_custom_label](product_print_custom_label/) | 17.0.1.0.0 |  | Add A4 landscape custom label format to product labels
 [product_profile_dimension_info_text](product_profile_dimension_info_text/) | 17.0.1.2.0 |  | Adds profile info fields to products
 [product_profile_dimension_result](product_profile_dimension_result/) | 17.0.1.0.0 |  | Adds formula text based on the profile of a product
 [product_select_seller_ignore_quantity](product_select_seller_ignore_quantity/) | 17.0.1.0.0 |  | Ignore minimium quantity when choosing a vendor from a product
@@ -59,6 +60,7 @@ addon | version | maintainers | summary
 [product_state_display_name](product_state_display_name/) | 17.0.1.0.2 |  | Functionality to display custom names for product states
 [product_storage_card](product_storage_card/) | 17.0.1.0.0 |  | Printable product info card with storage, vendor and reordering info
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 17.0.1.0.0 |  | Show all customer codes in a single field
+[product_template_attribute_value_image](product_template_attribute_value_image/) | 17.0.1.0.0 |  | Upload one image per attribute value on the product template, and resolve a variant's image from it
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.1 |  | Variant dimensions are managed in the related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 17.0.1.0.0 |  | Hide SH tags from product template
 [product_template_materials](product_template_materials/) | 17.0.1.0.0 |  | Product Materials on Product template

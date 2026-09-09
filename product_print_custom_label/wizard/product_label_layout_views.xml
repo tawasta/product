@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="product_label_layout_form_inherit_custom_a4" model="ir.ui.view">
+        <field name="name">product.label.layout.form.inherit.custom.a4</field>
+        <field name="model">product.label.layout</field>
+        <field name="inherit_id" ref="product.product_label_layout_form" />
+        <field name="arch" type="xml">
+            <field name="pricelist_id" position="attributes">
+                <attribute name="invisible">print_format == 'custom_a4'</attribute>
+            </field>
+            <field name="extra_html" position="after">
+                <field name="pallet_amount" invisible="print_format != 'custom_a4'" />
+            </field>
+            <field name="extra_html" position="after">
+                <field
+                    name="display_quantity"
+                    invisible="print_format != 'custom_a4'"
+                />
+            </field>
+
+        </field>
+    </record>
+</odoo>
