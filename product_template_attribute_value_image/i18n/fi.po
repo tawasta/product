@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 17.0-20260908\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-09-09 00:00+0000\n"
-"PO-Revision-Date: 2026-09-09 00:00+0000\n"
+"POT-Creation-Date: 2026-09-09 09:00+0000\n"
+"PO-Revision-Date: 2026-09-09 09:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -16,24 +16,16 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: product_template_attribute_value_image
-#: model:ir.model,name:product_template_attribute_value_image.model_product_template_attribute_image
-msgid "Product Template Attribute Image"
-msgstr "Tuotemallin attribuutin kuva"
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__allowed_attribute_value_ids
+msgid "Allowed Attribute Value"
+msgstr "Sallittu attribuutin arvo"
 
 #. module: product_template_attribute_value_image
-#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__name
-msgid "Name"
-msgstr "Nimi"
-
-#. module: product_template_attribute_value_image
-#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__sequence
-msgid "Sequence"
-msgstr "Järjestys"
-
-#. module: product_template_attribute_value_image
-#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__product_tmpl_id
-msgid "Product Template"
-msgstr "Tuotemalli"
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_product__attribute_image_ids
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template__attribute_image_ids
+#: model_terms:ir.ui.view,arch_db:product_template_attribute_value_image.product_template_view_form_attribute_image
+msgid "Attribute Images"
+msgstr "Attribuuttien kuvat"
 
 #. module: product_template_attribute_value_image
 #: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__product_attribute_value_id
@@ -41,27 +33,24 @@ msgid "Attribute Value"
 msgstr "Attribuutin arvo"
 
 #. module: product_template_attribute_value_image
-#: model:ir.model.fields,help:product_template_attribute_value_image.field_product_template_attribute_image__product_attribute_value_id
-msgid ""
-"Variants of this product template whose combination includes this "
-"attribute value (e.g. a lampshade color) will use this image."
-msgstr ""
-"Tämän tuotemallin variantit, joiden yhdistelmä sisältää tämän "
-"attribuutin arvon (esim. varjostimen väri), käyttävät tätä kuvaa."
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__create_uid
+msgid "Created by"
+msgstr "Luonut"
 
 #. module: product_template_attribute_value_image
-#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__allowed_attribute_value_ids
-msgid "Allowed Attribute Value"
-msgstr "Sallittu attribuutin arvo"
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__create_date
+msgid "Created on"
+msgstr "Luotu"
 
 #. module: product_template_attribute_value_image
-#: model:ir.model.fields,help:product_template_attribute_value_image.field_product_template_attribute_image__allowed_attribute_value_ids
-msgid ""
-"Technical field limiting the attribute value selection to the values "
-"actually used on this product template."
-msgstr ""
-"Tekninen kenttä, joka rajaa attribuutin arvon valinnan vain tällä "
-"tuotemallilla oikeasti käytössä oleviin arvoihin."
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__display_name
+msgid "Display Name"
+msgstr "Näyttönimi"
+
+#. module: product_template_attribute_value_image
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__id
+msgid "ID"
+msgstr "ID"
 
 #. module: product_template_attribute_value_image
 #: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__image_1920
@@ -74,27 +63,80 @@ msgid "Image Filename"
 msgstr "Kuvan tiedostonimi"
 
 #. module: product_template_attribute_value_image
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__write_uid
+msgid "Last Updated by"
+msgstr "Päivittänyt"
+
+#. module: product_template_attribute_value_image
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__write_date
+msgid "Last Updated on"
+msgstr "Päivitetty"
+
+#. module: product_template_attribute_value_image
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__name
+msgid "Name"
+msgstr "Nimi"
+
+#. module: product_template_attribute_value_image
 #: model:ir.model.constraint,message:product_template_attribute_value_image.constraint_product_template_attribute_image_product_tmpl_attribute_value_uniq
 msgid ""
-"Only one image can be set per attribute value for a given product "
-"template."
+"Only one image can be set per attribute value for a given product template."
 msgstr ""
-"Yhdelle tuotemallille voi asettaa vain yhden kuvan per attribuutin "
-"arvo."
+"Yhdelle tuotemallille voi asettaa vain yhden kuvan per attribuutin arvo."
 
 #. module: product_template_attribute_value_image
-#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template__attribute_image_ids
-#: model_terms:ir.ui.view,arch_db:product_template_attribute_value_image.product_template_view_form_attribute_image
-msgid "Attribute Images"
-msgstr "Attribuuttien kuvat"
+#: model:ir.model,name:product_template_attribute_value_image.model_product_template
+msgid "Product"
+msgstr "Tuote"
+
+#. module: product_template_attribute_value_image
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__product_tmpl_id
+msgid "Product Template"
+msgstr "Tuotemalli"
+
+#. module: product_template_attribute_value_image
+#: model:ir.model,name:product_template_attribute_value_image.model_product_template_attribute_image
+msgid "Product Template Attribute Image"
+msgstr "Tuotemallin attribuutin kuva"
+
+#. module: product_template_attribute_value_image
+#: model:ir.model,name:product_template_attribute_value_image.model_product_product
+msgid "Product Variant"
+msgstr "Tuotevariaatio"
+
+#. module: product_template_attribute_value_image
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__sequence
+msgid "Sequence"
+msgstr "Järjestys"
+
+#. module: product_template_attribute_value_image
+#: model:ir.model.fields,help:product_template_attribute_value_image.field_product_template_attribute_image__allowed_attribute_value_ids
+msgid ""
+"Technical field limiting the attribute value selection to the values "
+"actually used on this product template."
+msgstr ""
+"Tekninen kenttä, joka rajaa attribuutin arvon valinnan vain tällä "
+"tuotemallilla oikeasti käytössä oleviin arvoihin."
 
 #. module: product_template_attribute_value_image
 #: model_terms:ir.ui.view,arch_db:product_template_attribute_value_image.product_template_view_form_attribute_image
 msgid ""
-"Upload one image per attribute value (e.g. per lampshade color) "
-"instead of one per variant. A variant's image is resolved from its "
-"own attribute values."
+"Upload one image per attribute value (e.g. per\n"
+"                        lampshade color) instead of one per variant. A\n"
+"                        variant's image is resolved from its own attribute\n"
+"                        values."
 msgstr ""
-"Lataa yksi kuva per attribuutin arvo (esim. per varjostimen väri) "
-"sen sijaan että ladattaisiin kuva jokaiselle variantille erikseen. "
-"Variantin kuva selvitetään sen omien attribuuttiarvojen perusteella."
+"Lataa yksi kuva per attribuutin arvo (esim. per\n"
+"                        varjostimen väri) sen sijaan että ladattaisiin "
+"kuva jokaiselle variantille erikseen. Variantin\n"
+"                        kuva selvitetään sen omien attribuuttiarvojen\n"
+"                        perusteella."
+
+#. module: product_template_attribute_value_image
+#: model:ir.model.fields,help:product_template_attribute_value_image.field_product_template_attribute_image__product_attribute_value_id
+msgid ""
+"Variants of this product template whose combination includes this attribute "
+"value (e.g. a lampshade color) will use this image."
+msgstr ""
+"Tämän tuotemallin variantit, joiden yhdistelmä sisältää tämän attribuutin "
+"arvon (esim. varjostimen väri), käyttävät tätä kuvaa."
