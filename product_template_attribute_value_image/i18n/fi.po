@@ -69,6 +69,11 @@ msgid "Image"
 msgstr "Kuva"
 
 #. module: product_template_attribute_value_image
+#: model:ir.model.fields,field_description:product_template_attribute_value_image.field_product_template_attribute_image__image_1920_filename
+msgid "Image Filename"
+msgstr "Kuvan tiedostonimi"
+
+#. module: product_template_attribute_value_image
 #: model:ir.model.constraint,message:product_template_attribute_value_image.constraint_product_template_attribute_image_product_tmpl_attribute_value_uniq
 msgid ""
 "Only one image can be set per attribute value for a given product "
