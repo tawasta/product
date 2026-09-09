@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_template_view_form_attribute_image" model="ir.ui.view">
+        <field name="name">product.template.view.form.attribute.image</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                <page string="Attribute Images" name="attribute_images">
+                    <div class="text-muted mb-2">
+                        Upload one image per attribute value (e.g. per
+                        lampshade color) instead of one per variant. A
+                        variant's image is resolved from its own attribute
+                        values.
+                    </div>
+                    <field name="attribute_image_ids" widget="one2many">
+                        <tree editable="bottom">
+                            <field name="sequence" widget="handle" />
+                            <field
+                                name="allowed_attribute_value_ids"
+                                column_invisible="True"
+                            />
+                            <field
+                                name="image_1920"
+                                widget="image"
+                                options="{'size': [40, 40]}"
+                            />
+                            <field
+                                name="product_attribute_value_id"
+                                domain="[('id', 'in', allowed_attribute_value_ids)]"
+                                required="True"
+                            />
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
