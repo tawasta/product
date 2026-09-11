@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [product_abc_classification_related_abc](product_abc_classification_related_abc/) | 17.0.1.0.0 |  | ABC fields are related on product variant from template
 [product_age_limit](product_age_limit/) | 17.0.1.0.0 |  | Adds a new field, Age Limit, to the product variants and templates
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
+[product_analytic_tags](product_analytic_tags/) | 17.0.1.0.0 |  | Analytic tags for products and categories
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.1.0 |  | Audit log rules for product, product template and product category
 [product_bypass_tax_multi_company_rule](product_bypass_tax_multi_company_rule/) | 17.0.1.0.0 |  | Bypass tax multi-company rule when creating a new product
 [product_category_external_code](product_category_external_code/) | 17.0.1.0.1 |  | Functionality to add external code for product categories
