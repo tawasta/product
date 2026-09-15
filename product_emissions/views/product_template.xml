@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="product_emissions_template_form_view" model="ir.ui.view">
+        <field name="name">product_emissions.product_template.form.emissions</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view" />
+        <field name="arch" type="xml">
+            <xpath expr="//notebook" position="inside">
+                 <page string="Emissions" name="emissions">
+                     <field name="co2_emissions" />
+                 </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
