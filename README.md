@@ -29,7 +29,7 @@ addon | version | maintainers | summary
 [product_designer_commission](product_designer_commission/) | 17.0.1.0.0 |  | Adds designer and commission fields to products and partners.
 [product_diameter](product_diameter/) | 17.0.1.0.0 |  | Adds a new field, Diameter, to the product variants and templates
 [product_dimension_default_mm](product_dimension_default_mm/) | 17.0.1.0.0 |  | Product Dimension Default Millimeter
-[product_exclude_from_sale_invoice](product_exclude_from_sale_invoice/) | 17.0.1.0.0 |  | Adds a new field to products, enabling to always exclude them from sale invoices
+[product_exclude_from_sale_invoice](product_exclude_from_sale_invoice/) | 17.0.1.1.0 |  | Adds a new field to products, enabling to always exclude them from sale invoices
 [product_fall_height](product_fall_height/) | 17.0.1.0.0 |  | Adds a new field, Fall Height, to the product variants and templates
 [product_gross_weight](product_gross_weight/) | 17.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_hide_sale_price](product_hide_sale_price/) | 17.0.1.0.1 |  | Hide sale price and taxes from users that not belonging to sales group

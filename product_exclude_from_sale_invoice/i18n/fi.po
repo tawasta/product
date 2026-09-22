@@ -78,12 +78,6 @@ msgid "Exclude from Invoice"
 msgstr "Laskulta pois jättäminen"
 
 #. module: product_exclude_from_sale_invoice
-#: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_product__exclude_from_sale_invoice_readonly
-#: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_template__exclude_from_sale_invoice_readonly
-msgid "Exclusion Managed by Rules"
-msgstr "Pois jättämistä hallinnoidaan säännöillä"
-
-#. module: product_exclude_from_sale_invoice
 #: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_sale_invoice_exclusion_rule__id
 msgid "ID"
 msgstr ""
