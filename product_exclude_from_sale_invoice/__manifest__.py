@@ -33,6 +33,7 @@
     "data": [
         "views/product_sale_invoice_exclusion_rule.xml",
         "views/product_template.xml",
+        "views/sale_order.xml",
         "security/ir_model_access.xml",
     ],
 }
