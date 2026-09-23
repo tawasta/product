@@ -6,28 +6,35 @@
 Product: Exclude from Sale Invoice
 ==================================
 
-* Adds a new field to products, enabling to always exclude 
+* Adds a new computed field to products, enabling to always exclude 
   them from invoices when sale orders get invoiced.
-* Supports either manual configuration for each product, or configuring
-  rules for product type + customer tax combinations
+* The field is managed by rules for product type + customer tax combinations
 * Company-specific rules are supported in multicompany setups
+* Intended for a specific use case where event tickets that are sold 
+  with tax are processed entirely separately from those that are sold without
+  tax. The module is probably not useful in very many situations in general.
+  
+  * VAT-less tickets' sales of organization/yhdistys are handled and invoiced as usual in Odoo
+  * Ticket sales with VAT do not get invoices nor get processed in Accounting. A simple 
+    summary export report is created of them from the related Sale Orders (not by this module)
 
 Configuration
 =============
-* Optionally: Create product type / tax combination rules via 
+* Create product type / tax combination rules via
   Invoicing - Configuration - Sale Invoice Exclusion Rules
-  to define the combinations where products should not be 
-  invoiced from Sale Orders. 
+  to define the combinations where products should not be
+  invoiced from Sale Orders.
 
-  * If this is done, product templates' 'Exclude from Sale Invoices'
-    field gets toggled on/off automatically based on the rules
-    without any manual control from user.
-  * If this is NOT done, you will manage all product templates' 
-    'Exclude from Sale Invoices' fields manually
+  * For example: Event Tickets with VAT 25.5%
+
 * Note that when setting rules, each rule looks for an exact match,
   so if you happen to have multiple taxes defined for a product,
   also the rule should have them defined.
-* A simple example combination could be e.g.  "Event Ticket" / "25,5% VAT".
+* Product templates' 'Exclude from Sale Invoices' field gets
+    toggled on/off automatically based on the rules. 
+* Sale order lines store the product's exclusion when the line is
+  created (or its product is changed). Changing rules affects only
+  sale order lines created afterwards.
 
 Usage
 =====
@@ -37,10 +44,7 @@ Usage
 
 Known issues / Roadmap
 ======================
-* The module is created for a very specific use case where you 
-  want e.g. an event ticket to show up with full price on 
-  website, but not have it get invoiced. It is probably not
-  useful in very many situations in general.
+\-
 
 Credits
 =======

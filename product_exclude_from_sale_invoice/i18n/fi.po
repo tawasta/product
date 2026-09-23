@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0-20250428\n"
+"Project-Id-Version: Odoo Server 17.0-20260908\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-04-14 10:38+0000\n"
-"PO-Revision-Date: 2026-04-14 10:38+0000\n"
+"POT-Creation-Date: 2026-09-22 13:56+0000\n"
+"PO-Revision-Date: 2026-09-22 13:56+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -69,6 +69,7 @@ msgstr "Näyttönimi"
 #. module: product_exclude_from_sale_invoice
 #: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_product__exclude_from_sale_invoice
 #: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_template__exclude_from_sale_invoice
+#: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_sale_order_line__exclude_from_sale_invoice
 msgid "Exclude From Sale Invoice"
 msgstr "Jätä pois myynniltä luodulta laskulta"
 
@@ -78,15 +79,14 @@ msgid "Exclude from Invoice"
 msgstr "Laskulta pois jättäminen"
 
 #. module: product_exclude_from_sale_invoice
-#: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_product__exclude_from_sale_invoice_readonly
-#: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_template__exclude_from_sale_invoice_readonly
-msgid "Exclusion Managed by Rules"
-msgstr "Pois jättämistä hallinnoidaan säännöillä"
+#: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_sale_order__has_lines_excluded_from_sale_invoice
+msgid "Has Lines Excluded From Sale Invoice"
+msgstr "Sisältää rivejä jotka jäävät pois myyntilaskulta"
 
 #. module: product_exclude_from_sale_invoice
 #: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_sale_invoice_exclusion_rule__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: product_exclude_from_sale_invoice
 #: model:ir.model.fields,help:product_exclude_from_sale_invoice.field_product_product__exclude_from_sale_invoice
@@ -121,9 +121,20 @@ msgstr "Nimi"
 #. module: product_exclude_from_sale_invoice
 #. odoo-python
 #: code:addons/product_exclude_from_sale_invoice/models/product_sale_invoice_exclusion_rule.py:0
+#: code:addons/product_exclude_from_sale_invoice/models/product_sale_invoice_exclusion_rule.py:0
 #, python-format
 msgid "No taxes"
 msgstr "Ei veroja"
+
+#. module: product_exclude_from_sale_invoice
+#: model:ir.model.fields,help:product_exclude_from_sale_invoice.field_product_sale_invoice_exclusion_rule__tax_ids
+msgid ""
+"Note that if you add multiple taxes, the rule will match only those products"
+" that have all of the same taxes set."
+msgstr ""
+"Huomaa että jos lisäät useamman veron, sääntö täsmää vain niihin tuotteisiin, joilla on kaikki "
+"samat verot asetettuina."
+
 
 #. module: product_exclude_from_sale_invoice
 #: model:ir.model,name:product_exclude_from_sale_invoice.model_product_template
@@ -152,6 +163,11 @@ msgid "Sale Invoice Exclusion Rules"
 msgstr "Säännöt tuotteen jättämiseen pois myyntilaskulta"
 
 #. module: product_exclude_from_sale_invoice
+#: model:ir.model,name:product_exclude_from_sale_invoice.model_sale_order
+msgid "Sales Order"
+msgstr "Myyntitilaus"
+
+#. module: product_exclude_from_sale_invoice
 #: model:ir.model,name:product_exclude_from_sale_invoice.model_sale_order_line
 msgid "Sales Order Line"
 msgstr "Myyntitilausrivi"
@@ -160,6 +176,14 @@ msgstr "Myyntitilausrivi"
 #: model:ir.model.fields,field_description:product_exclude_from_sale_invoice.field_product_sale_invoice_exclusion_rule__sequence
 msgid "Sequence"
 msgstr "Järjestys"
+
+#. module: product_exclude_from_sale_invoice
+#: model_terms:ir.ui.view,arch_db:product_exclude_from_sale_invoice.view_order_form
+msgid ""
+"This order contains products that are excluded from invoicing.\n"
+"                    Their lines will not be included on invoices."
+msgstr ""
+"Myyntitilaus sisältää tuotteita, jotka on konfiguroitu jätettäväksi pois myyntilaskuilta."
 
 #. module: product_exclude_from_sale_invoice
 #: model_terms:ir.ui.view,arch_db:product_exclude_from_sale_invoice.product_template_only_form_view
