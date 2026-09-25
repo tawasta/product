@@ -61,6 +61,7 @@ addon | version | maintainers | summary
 [product_state_display_name](product_state_display_name/) | 17.0.1.0.2 |  | Functionality to display custom names for product states
 [product_storage_card](product_storage_card/) | 17.0.1.0.0 |  | Printable product info card with storage, vendor and reordering info
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 17.0.1.0.0 |  | Show all customer codes in a single field
+[product_tag_sequence](product_tag_sequence/) | 17.0.1.0.0 |  | Order Product Tags by sequence
 [product_template_attribute_value_image](product_template_attribute_value_image/) | 17.0.1.0.0 |  | Upload one image per attribute value on the product template, and resolve a variant's image from it
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.1 |  | Variant dimensions are managed in the related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 17.0.1.0.0 |  | Hide SH tags from product template
