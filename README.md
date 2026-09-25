@@ -16,6 +16,7 @@ addon | version | maintainers | summary
 [product_abc_classification_related_abc](product_abc_classification_related_abc/) | 17.0.1.0.0 |  | ABC fields are related on product variant from template
 [product_age_limit](product_age_limit/) | 17.0.1.0.0 |  | Adds a new field, Age Limit, to the product variants and templates
 [product_analytic_account_field](product_analytic_account_field/) | 17.0.1.0.0 |  | Analytic account field for products
+[product_analytic_tags](product_analytic_tags/) | 17.0.1.0.0 |  | Analytic tags for products and categories
 [product_auditlog_rules](product_auditlog_rules/) | 17.0.1.1.0 |  | Audit log rules for product, product template and product category
 [product_bypass_tax_multi_company_rule](product_bypass_tax_multi_company_rule/) | 17.0.1.0.0 |  | Bypass tax multi-company rule when creating a new product
 [product_category_external_code](product_category_external_code/) | 17.0.1.0.1 |  | Functionality to add external code for product categories
@@ -28,7 +29,7 @@ addon | version | maintainers | summary
 [product_designer_commission](product_designer_commission/) | 17.0.1.0.0 |  | Adds designer and commission fields to products and partners.
 [product_diameter](product_diameter/) | 17.0.1.0.0 |  | Adds a new field, Diameter, to the product variants and templates
 [product_dimension_default_mm](product_dimension_default_mm/) | 17.0.1.0.0 |  | Product Dimension Default Millimeter
-[product_exclude_from_sale_invoice](product_exclude_from_sale_invoice/) | 17.0.1.0.0 |  | Adds a new field to products, enabling to always exclude them from sale invoices
+[product_exclude_from_sale_invoice](product_exclude_from_sale_invoice/) | 17.0.1.1.0 |  | Adds a new field to products, enabling to always exclude them from sale invoices
 [product_fall_height](product_fall_height/) | 17.0.1.0.0 |  | Adds a new field, Fall Height, to the product variants and templates
 [product_gross_weight](product_gross_weight/) | 17.0.1.0.0 |  | Adds a new field, Gross Weight, to the products
 [product_hide_sale_price](product_hide_sale_price/) | 17.0.1.0.1 |  | Hide sale price and taxes from users that not belonging to sales group
@@ -60,6 +61,7 @@ addon | version | maintainers | summary
 [product_state_display_name](product_state_display_name/) | 17.0.1.0.2 |  | Functionality to display custom names for product states
 [product_storage_card](product_storage_card/) | 17.0.1.0.0 |  | Printable product info card with storage, vendor and reordering info
 [product_supplierinfo_for_customer_code_field](product_supplierinfo_for_customer_code_field/) | 17.0.1.0.0 |  | Show all customer codes in a single field
+[product_tag_sequence](product_tag_sequence/) | 17.0.1.0.0 |  | Order Product Tags by sequence
 [product_template_attribute_value_image](product_template_attribute_value_image/) | 17.0.1.0.0 |  | Upload one image per attribute value on the product template, and resolve a variant's image from it
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.1 |  | Variant dimensions are managed in the related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 17.0.1.0.0 |  | Hide SH tags from product template

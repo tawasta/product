@@ -10,6 +10,7 @@ class ProductSaleInvoiceExclusionRule(models.Model):
     name = fields.Char(compute="_compute_name")
     active = fields.Boolean(default=True)
     sequence = fields.Integer(default=10)
+
     detailed_type = fields.Selection(
         selection="_get_detailed_type_selection",
         string="Product Type",
@@ -54,29 +55,33 @@ class ProductSaleInvoiceExclusionRule(models.Model):
     @api.model_create_multi
     def create(self, vals_list):
         rules = super().create(vals_list)
-        self._reevaluate_all_products()
+        self._recompute_product_exclusions()
         return rules
 
     def write(self, vals):
         res = super().write(vals)
-        self._reevaluate_all_products()
+        self._recompute_product_exclusions()
         return res
 
     def unlink(self):
         res = super().unlink()
-        self._reevaluate_all_products()
+        self._recompute_product_exclusions()
         return res
 
-    def _reevaluate_all_products(self):
-        """Re-evaluate 'exclude_from_sale_invoice' field of every product template
-        against the current set of active rules."""
-        active_rules = self.sudo().search([("active", "=", True)])
-        products = self.env["product.template"].sudo().search([])
-        for product in products:
-            product.exclude_from_sale_invoice = self._product_matches_any_rule(
-                product,
-                active_rules,
-            )
+    @api.model
+    def _recompute_product_exclusions(self):
+        """Re-evaluate 'exclude_from_sale_invoice' of all product templates
+        (including archived ones) against the current set of active rules.
+
+        Existing sale order lines keep their own snapshot of the value, so rule
+        changes only affect lines created afterwards."""
+        all_products = (
+            self.env["product.template"]
+            .sudo()
+            .with_context(active_test=False)
+            .search([])
+        )
+        all_products._compute_exclude_from_sale_invoice()
 
     @api.model
     def _product_matches_any_rule(self, product, rules):

@@ -17,23 +17,16 @@
 #    along with this program. If not, see http://www.gnu.org/licenses/agpl.html
 #
 ##############################################################################
-
 {
-    "name": "Product: Exclude from Sale Invoice",
-    "summary": "Adds a new field to products, enabling to always exclude them from "
-    "sale invoices",
-    "version": "17.0.1.1.0",
+    "name": "Product Tag Sequence",
+    "version": "17.0.1.0.0",
     "category": "Product",
+    "summary": "Order Product Tags by sequence",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "sale"],
-    "data": [
-        "views/product_sale_invoice_exclusion_rule.xml",
-        "views/product_template.xml",
-        "views/sale_order.xml",
-        "security/ir_model_access.xml",
-    ],
+    "depends": ["website_sale", "product"],
+    "data": ["views/product_tag_views.xml"],
 }

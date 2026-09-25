@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="view_order_form" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit.exclude.from.sale.invoice</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form" />
+        <field name="arch" type="xml">
+            <sheet position="before">
+                <field name="has_lines_excluded_from_sale_invoice" invisible="1" />
+                <div
+                    class="alert alert-info"
+                    role="alert"
+                    invisible="not has_lines_excluded_from_sale_invoice"
+                >
+                    This order contains products that are excluded from invoicing.
+                    Their lines will not be included on invoices.
+                </div>
+            </sheet>
+            <xpath
+                expr="//field[@name='order_line']/tree/field[@name='qty_invoiced']"
+                position="after"
+            >
+                <field
+                    name="exclude_from_sale_invoice"
+                    invisible="display_type"
+                    optional="hide"
+                />
+            </xpath>
+        </field>
+    </record>
+</odoo>

@@ -13,19 +13,12 @@
                     name="group_exclude_from_sale_invoice"
                     col="2"
                 >
-                    <!-- helper to define whether editing the toggle is allowed-->
-                    <field name="exclude_from_sale_invoice_readonly" invisible="1" />
                     <field
                         name="exclude_from_sale_invoice"
-                        readonly="exclude_from_sale_invoice_readonly"
                         widget="boolean_toggle"
                         colspan="2"
                     />
-                    <div
-                        invisible="not exclude_from_sale_invoice_readonly"
-                        class="text-muted fst-italic"
-                        colspan="2"
-                    >
+                    <div class="text-muted fst-italic" colspan="2">
                         Invoicing exclusions are managed by rules
 
                             <a
