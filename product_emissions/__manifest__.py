@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2026 Futural Oy (https://futural.fi)
+#    Copyright 2026- Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -23,12 +23,12 @@
     "summary": "Adds emissions into purchase pricelist and product",
     "version": "17.0.1.0.0",
     "category": "Purchases",
-    "website": "https://github.com/tawasta/purchase",
+    "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": [ "product" ],
+    "depends": ["product"],
     "data": [
         "views/product_template.xml",
         "views/product_supplierinfo.xml",

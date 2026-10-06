@@ -7,7 +7,9 @@
         <field name="arch" type="xml">
             <xpath expr="//notebook" position="inside">
                  <page string="Emissions" name="emissions">
-                     <field name="co2_emissions" />
+                     <group>
+                        <field name="co2_emissions" />
+                    </group>
                  </page>
             </xpath>
         </field>
