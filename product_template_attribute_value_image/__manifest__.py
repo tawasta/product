@@ -1,7 +1,7 @@
 ##############################################################################
 #
 #    Author: Futural Oy
-#    Copyright 2026- Futural Oy (https://futural.fi)
+#    Copyright 2026 Futural Oy (https://futural.fi)
 #
 #    This program is free software: you can redistribute it and/or modify
 #    it under the terms of the GNU Affero General Public License as
@@ -19,21 +19,21 @@
 ##############################################################################
 
 {
-    "name": "Product: Exclude from Sale Invoice",
-    "summary": "Adds a new field to products, enabling to always exclude them from "
-    "sale invoices",
-    "version": "17.0.1.1.0",
+    "name": "Product Template Attribute Value Image",
+    "summary": "Upload one image per attribute value on the product "
+    "template, and resolve a variant's image from it",
+    "version": "17.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "sale"],
+    "depends": [
+        "product",
+    ],
     "data": [
-        "views/product_sale_invoice_exclusion_rule.xml",
-        "views/product_template.xml",
-        "views/sale_order.xml",
-        "security/ir_model_access.xml",
+        "security/ir.model.access.csv",
+        "views/product_template_views.xml",
     ],
 }
