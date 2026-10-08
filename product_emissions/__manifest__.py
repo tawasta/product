@@ -19,21 +19,19 @@
 ##############################################################################
 
 {
-    "name": "Product: Exclude from Sale Invoice",
-    "summary": "Adds a new field to products, enabling to always exclude them from "
-    "sale invoices",
-    "version": "17.0.1.1.0",
-    "category": "Product",
+    "name": "Product emissions",
+    "summary": "Adds emissions into purchase pricelist and product",
+    "version": "17.0.1.0.0",
+    "category": "Purchases",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
     "license": "AGPL-3",
     "application": False,
     "installable": True,
-    "depends": ["product", "sale"],
+    "depends": ["product"],
     "data": [
-        "views/product_sale_invoice_exclusion_rule.xml",
         "views/product_template.xml",
-        "views/sale_order.xml",
-        "security/ir_model_access.xml",
+        "views/product_supplierinfo.xml",
     ],
+    "demo": [],
 }
