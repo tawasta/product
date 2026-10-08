@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo noupdate="1">
+    <record id="ir_cron_archive_old_revision_product" model="ir.cron">
+        <field name="name">Archive Old revision products</field>
+        <field name="model_id" ref="model_product_template" />
+        <field name="state">code</field>
+        <field name="code">model.archive_old_revision_product()</field>
+        <field name="user_id" ref="base.user_root" />
+        <field name="interval_number" eval="1" />
+        <field name="interval_type">days</field>
+        <field name="numbercall" eval="-1" />
+        <field name="priority" eval="5" />
+        <field name="doall" eval="0" />
+        <field name="active" eval="0" />
+    </record>
+</odoo>
