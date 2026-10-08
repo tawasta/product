@@ -52,7 +52,12 @@ class ProductTemplate(models.Model):
                 split_values = product.default_code.split()
                 if len(split_values) == 2:
                     code, revision = split_values
-                    if len(code) == 5 and code.isdigit() and not revision.isnumeric():
+                    if (
+                        len(code) == 5
+                        and code.isdigit()
+                        and not revision.isnumeric()
+                        and len(revision) == 1
+                    ):
                         code_group[code] = [revision] + code_group.get(code, [])
                         code_group[code].sort(reverse=True)
 

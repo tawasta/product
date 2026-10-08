@@ -67,7 +67,7 @@ addon | version | maintainers | summary
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.1 |  | Variant dimensions are managed in the related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 17.0.1.0.0 |  | Hide SH tags from product template
 [product_template_materials](product_template_materials/) | 17.0.1.0.0 |  | Product Materials on Product template
-[product_template_revision_archive_and_link](product_template_revision_archive_and_link/) | 17.0.1.0.0 |  | Archive old Revision Products and link them to the new Revision
+[product_template_revision_archive_and_link](product_template_revision_archive_and_link/) | 17.0.1.0.1 |  | Archive old Revision Products and link them to the new Revision
 [product_template_revision_code](product_template_revision_code/) | 17.0.1.0.2 |  | Add Revision Code -field to product template
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
 [product_template_update_variant_volume](product_template_update_variant_volume/) | 17.0.1.0.0 |  | Variant weight and volume is managed in related product template
