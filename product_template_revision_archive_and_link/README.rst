@@ -21,6 +21,9 @@ Archive old Revision Products and link them to the new Revision
     These can be seen in product template form view with
     Revision smart button.
 
+    The previous revision copies its vendor pricelist to the
+    newest product revision.
+
 Configuration
 =============
 ::

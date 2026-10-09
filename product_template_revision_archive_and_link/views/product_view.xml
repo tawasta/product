@@ -21,6 +21,14 @@
                     />
                 </button>
             </div>
+
+            <field name="barcode" position="after">
+                <field
+                    name="product_tmpl_revision_id"
+                    groups="stock.group_stock_manager"
+                    invisible="not product_tmpl_revision_id"
+                />
+		    </field>
 		</field>
 	</record>
 </odoo>
