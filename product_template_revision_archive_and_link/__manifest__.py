@@ -21,7 +21,7 @@
 {
     "name": "Product Template – Archive old revision products",
     "summary": "Archive old Revision Products and link them to the new Revision",
-    "version": "17.0.1.1.1",
+    "version": "17.0.1.1.2",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",

@@ -92,46 +92,9 @@ class ProductTemplate(models.Model):
                         archived_products |= old_products
 
                 if archived_products:
-                    supplier_pricelists_to_copy = self.env[
-                        "product.supplierinfo"
-                    ].search([("product_tmpl_id", "=", archived_products[0].id)])
-
-                    pricelists = []
-                    deduplicate_vendor_pricelists = self.env["product.supplierinfo"]
-
-                    active_product_pricelists = self.env["product.supplierinfo"].search(
-                        [("product_tmpl_id", "=", active_product_id.id)]
+                    self.copy_revision_pricelist_to_active_product(
+                        archived_products, active_product_id
                     )
-
-                    if active_product_pricelists:
-                        active_values = [
-                            (s.partner_id, s.price, s.min_qty)
-                            for s in active_product_pricelists
-                        ]
-                    else:
-                        active_values = []
-
-                    if supplier_pricelists_to_copy:
-                        for sup_pricelist in supplier_pricelists_to_copy:
-                            if (
-                                sup_pricelist.partner_id,
-                                sup_pricelist.price,
-                                sup_pricelist.min_qty,
-                            ) not in pricelists + active_values:
-                                pricelists.append(
-                                    (
-                                        sup_pricelist.partner_id,
-                                        sup_pricelist.price,
-                                        sup_pricelist.min_qty,
-                                    )
-                                )
-                                deduplicate_vendor_pricelists |= sup_pricelist
-
-                        if deduplicate_vendor_pricelists:
-                            copied_pricelists = deduplicate_vendor_pricelists.copy()
-                            copied_pricelists.write(
-                                {"product_tmpl_id": active_product_id.id}
-                            )
 
                     active_product_id.write(
                         {"revision_product_tmpl_ids": [(6, 0, archived_products.ids)]}
@@ -141,6 +104,52 @@ class ProductTemplate(models.Model):
                             archived_products.ids
                         )
                     )
+
+    def copy_revision_pricelist_to_active_product(
+        self, archived_products, active_product_id
+    ):
+        supplier_pricelists_to_copy = self.env["product.supplierinfo"].search(
+            [("product_tmpl_id", "=", archived_products[0].id)]
+        )
+
+        pricelists = []
+        deduplicate_vendor_pricelists = self.env["product.supplierinfo"]
+
+        active_product_pricelists = self.env["product.supplierinfo"].search(
+            [("product_tmpl_id", "=", active_product_id.id)]
+        )
+
+        if active_product_pricelists:
+            active_values = [
+                (s.partner_id, s.price, s.min_qty) for s in active_product_pricelists
+            ]
+        else:
+            active_values = []
+
+        if supplier_pricelists_to_copy:
+            for sup_pricelist in supplier_pricelists_to_copy:
+                if (
+                    sup_pricelist.partner_id,
+                    sup_pricelist.price,
+                    sup_pricelist.min_qty,
+                ) not in pricelists + active_values:
+                    pricelists.append(
+                        (
+                            sup_pricelist.partner_id,
+                            sup_pricelist.price,
+                            sup_pricelist.min_qty,
+                        )
+                    )
+                    deduplicate_vendor_pricelists |= sup_pricelist
+
+            copied_pricelists = self.env["product.supplierinfo"]
+
+            if deduplicate_vendor_pricelists:
+                for dedup_pricelist in deduplicate_vendor_pricelists:
+                    copied_pricelists |= dedup_pricelist.copy()
+
+            if copied_pricelists:
+                copied_pricelists.write({"product_tmpl_id": active_product_id.id})
 
     def action_open_revision_products(self):
         self.ensure_one()
