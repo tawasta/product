@@ -81,6 +81,10 @@ class ProductTemplate(models.Model):
                         and code.isdigit()
                         and not revision.isnumeric()
                         and len(revision.split(".")) < 3
+                        and (
+                            revision in list_abc.keys()
+                            or revision.split(".")[0] in list_abc.keys()
+                        )
                     ):
                         code_group[code] = [revision] + code_group.get(code, [])
                         code_group[code] = sorted(
