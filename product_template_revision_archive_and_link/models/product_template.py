@@ -1,4 +1,6 @@
+import itertools
 import logging
+from string import ascii_uppercase
 
 from odoo import _, fields, models
 
@@ -45,6 +47,22 @@ class ProductTemplate(models.Model):
             ]
         )
 
+        def iter_all_strings():
+            for size in itertools.count(1):
+                for s in itertools.product(ascii_uppercase, repeat=size):
+                    yield "".join(s)
+
+        i = 1
+        list_abc = {}
+        for string in iter_all_strings():
+            list_abc[string] = i
+            i += 1
+            if string == "ZZ":
+                break
+            # To avoid infinite loop just in case
+            if i > 1000:
+                break
+
         code_group = {}
 
         for product in all_product_tmpl_ids:
@@ -56,10 +74,16 @@ class ProductTemplate(models.Model):
                         len(code) == 5
                         and code.isdigit()
                         and not revision.isnumeric()
-                        and len(revision) == 1
+                        and 0 < len(revision) < 3
                     ):
                         code_group[code] = [revision] + code_group.get(code, [])
-                        code_group[code].sort(reverse=True)
+                        test = code_group[code]
+                        test.sort(reverse=True)
+                        code_group[code] = sorted(
+                            code_group[code],
+                            key=lambda ele: list_abc[ele],
+                            reverse=True,
+                        )
 
         for code in code_group:
             archived_products = self.env["product.template"]
