@@ -13,9 +13,9 @@ Archive old Revision Products and link them to the new Revision
     Then the found old revisions is archived.
 
     Internal reference needs to have a similar pattern. Right now
-    the pattern needs to be "12345 A", meaning first 5 characters
-    in a string needs to be a number and the character after it
-    needs to be a letter.
+    the pattern needs to be "12345 X", meaning first 5 characters
+    in a string needs to be a number and X after it can be DEV,
+    0.001, A, B, A.001 and so on.
 
     The old revisions are linked to the new product revision.
     These can be seen in product template form view with
