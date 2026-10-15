@@ -76,15 +76,9 @@ class ProductTemplate(models.Model):
                 split_values = product.default_code.split()
                 if len(split_values) == 2:
                     code, revision = split_values
-                    if (
-                        len(code) == 5
-                        and code.isdigit()
-                        and not revision.isnumeric()
-                        and len(revision.split(".")) < 3
-                        and (
-                            revision in list_abc.keys()
-                            or revision.split(".")[0] in list_abc.keys()
-                        )
+                    if len(revision.split(".")) < 3 and (
+                        revision in list_abc.keys()
+                        or revision.split(".")[0] in list_abc.keys()
                     ):
                         code_group[code] = [revision] + code_group.get(code, [])
                         code_group[code] = sorted(
