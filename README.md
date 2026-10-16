@@ -48,6 +48,7 @@ addon | version | maintainers | summary
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 17.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_on_hand_qty_opens_readonly_view](product_on_hand_qty_opens_readonly_view/) | 17.0.1.0.0 |  | Only users in a specific access group see the editable list view
 [product_parse_gs1_barcode](product_parse_gs1_barcode/) | 17.0.1.0.0 |  | Extract information to product barcode while reading a barcode
+[product_parse_revision_code](product_parse_revision_code/) | 17.0.1.0.2 |  | Scheduled action to parse revision codes from default codes
 [product_pricelist](product_pricelist/) | 17.0.1.0.0 |  | Add a pricelist information to product
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_pricelist_divide_price](product_pricelist_divide_price/) | 17.0.1.0.4 |  | Divide the result in pricelist rule with Divide by -field
