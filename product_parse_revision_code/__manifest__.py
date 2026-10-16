@@ -21,7 +21,7 @@
 {
     "name": "Parse Revision Code From Default Code",
     "summary": "Scheduled action to parse revision codes from default codes",
-    "version": "17.0.1.0.0",
+    "version": "17.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
