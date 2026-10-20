@@ -13,9 +13,17 @@ Archive old Revision Products and link them to the new Revision
     Then the found old revisions is archived.
 
     Internal reference needs to have a similar pattern. Right now
-    the pattern needs to be "12345 A", meaning first 5 characters
-    in a string needs to be a number and the character after it
-    needs to be a letter.
+    the pattern needs to be "{} {}". First characters in a string is
+    split to group products with their product code without revision
+    code. String after it can be DEV, 0.001, A, B, A.001 and so on.
+
+    Revision codes are ordered in reverse order. For example:
+    Product test: 12345 B
+    Product test: 12345 A
+    Product test: 12345 C
+
+    This is grouped and ordered by: 12345 [C, B, A]. Then A and B
+    are archived and linked to C.
 
     The old revisions are linked to the new product revision.
     These can be seen in product template form view with

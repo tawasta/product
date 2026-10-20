@@ -38,6 +38,26 @@ class ProductTemplate(models.Model):
             else:
                 template.revision_product_tmpl_count = 0
 
+    def get_list_abc(self):
+        def iter_all_strings():
+            for size in itertools.count(1):
+                for s in itertools.product(ascii_uppercase, repeat=size):
+                    yield "".join(s)
+
+        i = 1
+        list_abc = {"DEV": 0, "0": 0}
+        for string in iter_all_strings():
+            if i < 10:
+                list_abc[str(i)] = i
+            list_abc[string] = i
+            i += 1
+            if string == "ZZ":
+                break
+            # To avoid infinite loop just in case
+            if i > 1000:
+                break
+        return list_abc
+
     def archive_old_revision_product(self):
         all_product_tmpl_ids = self.env["product.template"].search(
             [
@@ -47,21 +67,7 @@ class ProductTemplate(models.Model):
             ]
         )
 
-        def iter_all_strings():
-            for size in itertools.count(1):
-                for s in itertools.product(ascii_uppercase, repeat=size):
-                    yield "".join(s)
-
-        i = 1
-        list_abc = {}
-        for string in iter_all_strings():
-            list_abc[string] = i
-            i += 1
-            if string == "ZZ":
-                break
-            # To avoid infinite loop just in case
-            if i > 1000:
-                break
+        list_abc = self.get_list_abc()
 
         code_group = {}
 
@@ -70,18 +76,17 @@ class ProductTemplate(models.Model):
                 split_values = product.default_code.split()
                 if len(split_values) == 2:
                     code, revision = split_values
-                    if (
-                        len(code) == 5
-                        and code.isdigit()
-                        and not revision.isnumeric()
-                        and 0 < len(revision) < 3
+                    if len(revision.split(".")) < 3 and (
+                        revision in list_abc.keys()
+                        or revision.split(".")[0] in list_abc.keys()
                     ):
                         code_group[code] = [revision] + code_group.get(code, [])
-                        test = code_group[code]
-                        test.sort(reverse=True)
                         code_group[code] = sorted(
                             code_group[code],
-                            key=lambda ele: list_abc[ele],
+                            key=lambda ele: list_abc[ele.split(".")[0]]
+                            + float(ele.split(".")[1])
+                            if "." in ele and len(ele.split(".")) < 3
+                            else list_abc[ele],
                             reverse=True,
                         )
 
