@@ -84,7 +84,7 @@ class ProductTemplate(models.Model):
                         code_group[code] = sorted(
                             code_group[code],
                             key=lambda ele: list_abc[ele.split(".")[0]]
-                            + float(ele.split(".")[1])
+                            + float("0.{}".format(ele.split(".")[1]))
                             if "." in ele and len(ele.split(".")) < 3
                             else list_abc[ele],
                             reverse=True,
