@@ -137,3 +137,5 @@ class SolidworksImport(models.Model):
                 existing_bom = self.env["mrp.bom"].search(
                     [("code", "=", rec.title)], limit=1
                 )
+            rec.bom_ids = [(5, 0, 0)]
+            rec.bom_ids = [(4, existing_bom.id)]
