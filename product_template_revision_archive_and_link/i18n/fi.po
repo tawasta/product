@@ -1,0 +1,54 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* product_template_revision_archive_and_link
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0-20250131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-10-08 09:29+0000\n"
+"PO-Revision-Date: 2026-10-08 12:30+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.9\n"
+
+#. module: product_template_revision_archive_and_link
+#: model:ir.actions.server,name:product_template_revision_archive_and_link.ir_cron_archive_old_revision_product_ir_actions_server
+msgid "Archive Old revision products"
+msgstr "Arkistoi vanhat tuoterevisiot"
+
+#. module: product_template_revision_archive_and_link
+#: model:ir.model.fields,field_description:product_template_revision_archive_and_link.field_product_product__revision_product_tmpl_ids
+#: model:ir.model.fields,field_description:product_template_revision_archive_and_link.field_product_template__revision_product_tmpl_ids
+msgid "Code revisions"
+msgstr "Revisiokoodit"
+
+#. module: product_template_revision_archive_and_link
+#: model:ir.model,name:product_template_revision_archive_and_link.model_product_template
+msgid "Product"
+msgstr "Tuote"
+
+#. module: product_template_revision_archive_and_link
+#: model:ir.model.fields,field_description:product_template_revision_archive_and_link.field_product_product__product_tmpl_revision_id
+#: model:ir.model.fields,field_description:product_template_revision_archive_and_link.field_product_template__product_tmpl_revision_id
+msgid "Recent product revision"
+msgstr "Viimeisin tuoterevisio"
+
+#. module: product_template_revision_archive_and_link
+#: model:ir.model.fields,field_description:product_template_revision_archive_and_link.field_product_product__revision_product_tmpl_count
+#: model:ir.model.fields,field_description:product_template_revision_archive_and_link.field_product_template__revision_product_tmpl_count
+msgid "Revision Count"
+msgstr "Revisiomäärä"
+
+#. module: product_template_revision_archive_and_link
+#. odoo-python
+#: code:addons/product_template_revision_archive_and_link/models/product_template.py:0
+#: model_terms:ir.ui.view,arch_db:product_template_revision_archive_and_link.product_template_only_form_view
+#, python-format
+msgid "Revisions"
+msgstr "Revisiot"

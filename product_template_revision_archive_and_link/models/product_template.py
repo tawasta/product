@@ -1,0 +1,195 @@
+import itertools
+import logging
+from string import ascii_uppercase
+
+from odoo import _, fields, models
+
+_logger = logging.getLogger(__name__)
+
+
+class ProductTemplate(models.Model):
+    _inherit = "product.template"
+
+    revision_product_tmpl_ids = fields.One2many(
+        "product.template",
+        "product_tmpl_revision_id",
+        string="Code revisions",
+        copy=False,
+        context={"active_test": False},
+    )
+
+    product_tmpl_revision_id = fields.Many2one(
+        "product.template",
+        string="Recent product revision",
+    )
+
+    revision_product_tmpl_count = fields.Integer(
+        string="Revision Count", compute="_compute_revision_product_tmpl_count"
+    )
+
+    def _compute_revision_product_tmpl_count(self):
+        for template in self:
+            if template.revision_product_tmpl_ids:
+                template.revision_product_tmpl_count = len(
+                    template.with_context(
+                        active_test=False
+                    ).revision_product_tmpl_ids.ids
+                )
+            else:
+                template.revision_product_tmpl_count = 0
+
+    def get_list_abc(self):
+        def iter_all_strings():
+            for size in itertools.count(1):
+                for s in itertools.product(ascii_uppercase, repeat=size):
+                    yield "".join(s)
+
+        i = 1
+        list_abc = {"DEV": 0, "0": 0}
+        for string in iter_all_strings():
+            if i < 10:
+                list_abc[str(i)] = i
+            list_abc[string] = i
+            i += 1
+            if string == "ZZ":
+                break
+            # To avoid infinite loop just in case
+            if i > 1000:
+                break
+        return list_abc
+
+    def archive_old_revision_product(self):
+        all_product_tmpl_ids = self.env["product.template"].search(
+            [
+                "|",
+                ("active", "=", True),
+                ("active", "=", False),
+            ]
+        )
+
+        list_abc = self.get_list_abc()
+
+        code_group = {}
+
+        for product in all_product_tmpl_ids:
+            if product.default_code:
+                split_values = product.default_code.split()
+                if len(split_values) == 2:
+                    code, revision = split_values
+                    if len(revision.split(".")) < 3 and (
+                        revision in list_abc.keys()
+                        or revision.split(".")[0] in list_abc.keys()
+                    ):
+                        code_group[code] = [revision] + code_group.get(code, [])
+                        code_group[code] = sorted(
+                            code_group[code],
+                            key=lambda ele: list_abc[ele.split(".")[0]]
+                            + float("0.{}".format(ele.split(".")[1]))
+                            if "." in ele and len(ele.split(".")) < 3
+                            else list_abc[ele],
+                            reverse=True,
+                        )
+
+        for code in code_group:
+            archived_products = self.env["product.template"]
+
+            if len(code_group[code]) > 1:
+                active_product = code_group[code].pop(0)
+
+                active_default_code = f"{code} {active_product}"
+                active_product_id = (
+                    self.env["product.template"]
+                    .with_context(active_test=False)
+                    .search([("default_code", "=", active_default_code)])
+                )
+
+                old_products = False
+
+                for rev in code_group[code]:
+                    default_code = f"{code} {rev}"
+                    old_products = self.env["product.template"].search(
+                        [
+                            "|",
+                            ("active", "=", True),
+                            ("active", "=", False),
+                            ("default_code", "=", default_code),
+                        ]
+                    )
+
+                    if old_products:
+                        old_products.active = False
+                        archived_products |= old_products
+
+                if archived_products:
+                    self.copy_revision_pricelist_to_active_product(
+                        archived_products, active_product_id
+                    )
+
+                    active_product_id.write(
+                        {"revision_product_tmpl_ids": [(6, 0, archived_products.ids)]}
+                    )
+                    _logger.info(
+                        "These products have been automatically archived: {}".format(
+                            archived_products.ids
+                        )
+                    )
+
+    def copy_revision_pricelist_to_active_product(
+        self, archived_products, active_product_id
+    ):
+        supplier_pricelists_to_copy = self.env["product.supplierinfo"].search(
+            [("product_tmpl_id", "=", archived_products[0].id)]
+        )
+
+        pricelists = []
+        deduplicate_vendor_pricelists = self.env["product.supplierinfo"]
+
+        active_product_pricelists = self.env["product.supplierinfo"].search(
+            [("product_tmpl_id", "=", active_product_id.id)]
+        )
+
+        if active_product_pricelists:
+            active_values = [
+                (s.partner_id, s.price, s.min_qty) for s in active_product_pricelists
+            ]
+        else:
+            active_values = []
+
+        if supplier_pricelists_to_copy:
+            for sup_pricelist in supplier_pricelists_to_copy:
+                if (
+                    sup_pricelist.partner_id,
+                    sup_pricelist.price,
+                    sup_pricelist.min_qty,
+                ) not in pricelists + active_values:
+                    pricelists.append(
+                        (
+                            sup_pricelist.partner_id,
+                            sup_pricelist.price,
+                            sup_pricelist.min_qty,
+                        )
+                    )
+                    deduplicate_vendor_pricelists |= sup_pricelist
+
+            copied_pricelists = self.env["product.supplierinfo"]
+
+            if deduplicate_vendor_pricelists:
+                for dedup_pricelist in deduplicate_vendor_pricelists:
+                    copied_pricelists |= dedup_pricelist.copy()
+
+            if copied_pricelists:
+                copied_pricelists.write({"product_tmpl_id": active_product_id.id})
+
+    def action_open_revision_products(self):
+        self.ensure_one()
+        return {
+            "name": _("Revisions"),
+            "type": "ir.actions.act_window",
+            "res_model": "product.template",
+            "view_mode": "tree,form,kanban",
+            "domain": [
+                ("active", "=", False),
+                ("id", "in", self.revision_product_tmpl_ids.ids),
+            ],
+            "target": "current",
+        }
