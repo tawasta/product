@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record model="ir.actions.server" id="server_action_new_solidworks_import">
+        <field name="name">Process</field>
+        <field
+            name="model_id"
+            ref="product_solidworks_import.model_solidworks_import"
+        />
+        <field
+            name="binding_model_id"
+            ref="product_solidworks_import.model_solidworks_import"
+        />
+        <field name="binding_view_types">tree,form</field>
+        <field name="state">code</field>
+        <field name="code">
+            for rec in records:
+                rec._process_csv_file()
+        </field>
+    </record>
+</odoo>

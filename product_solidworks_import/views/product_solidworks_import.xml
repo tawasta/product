@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record id="solidworks_import_tree_view" model="ir.ui.view">
+        <field name="name">solidworks.import.tree</field>
+        <field name="model">solidworks.import</field>
+        <field name="arch" type="xml">
+            <tree edit="0">
+                <field name="level" />
+                <field name="title" />
+                <field name="description" />
+                <field name="item_type" />
+                <field name="co2_calculated_value" />
+                <field name="product_template_id" />
+                <field name="create_date" />
+                <field name="write_date" />
+                <field name="processing_status" />
+            </tree>
+        </field>
+    </record>
+
+    <record id="solidworks_import_form_view" model="ir.ui.view">
+        <field name="name">solidworks.import.form</field>
+        <field name="model">solidworks.import</field>
+        <field name="arch" type="xml">
+            <form>
+                <group>
+                    <field name="level" />
+                    <field name="title" />
+                    <field name="description" />
+                    <field name="item_type" />
+                    <field name="co2_calculated_value" />
+                    <field name="product_template_id" />
+                    <field name="create_date" />
+                    <field name="write_date" />
+                    <field name="processing_status" />
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="product_solidworks_import_action" model="ir.actions.act_window">
+        <field name="name">Solidworks Imports</field>
+        <field name="res_model">solidworks.import</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="solidworks_import_tree_view" />
+    </record>
+
+    <menuitem
+        name="Solidworks import"
+        id="menu_solidworks_import"
+        parent="mrp.menu_mrp_configuration"
+        sequence="30"
+        action="product_solidworks_import_action"
+    />
+</odoo>
