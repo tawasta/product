@@ -71,14 +71,30 @@ class ProductTemplate(models.Model):
 
         code_group = {}
 
+        ir_config_model = self.env["ir.config_parameter"]
+        archive_code_len = ir_config_model.sudo().get_param("archive_code_len") or False
+        code_check_digit = ir_config_model.sudo().get_param("code_is_digit") or False
+
         for product in all_product_tmpl_ids:
             if product.default_code:
                 split_values = product.default_code.split()
                 if len(split_values) == 2:
                     code, revision = split_values
-                    if len(revision.split(".")) < 3 and (
-                        revision in list_abc.keys()
-                        or revision.split(".")[0] in list_abc.keys()
+                    code_len = (
+                        len(code) == float(archive_code_len)
+                        if archive_code_len
+                        else True
+                    )
+                    code_is_digit = code.isdigit() if code_check_digit else True
+
+                    if (
+                        code_len
+                        and code_is_digit
+                        and len(revision.split(".")) < 3
+                        and (
+                            revision in list_abc.keys()
+                            or revision.split(".")[0] in list_abc.keys()
+                        )
                     ):
                         code_group[code] = [revision] + code_group.get(code, [])
                         code_group[code] = sorted(
