@@ -48,6 +48,7 @@ addon | version | maintainers | summary
 [product_on_hand_qty_color](product_on_hand_qty_color/) | 17.0.1.0.0 |  | Show color if stock belongs to several locations
 [product_on_hand_qty_opens_readonly_view](product_on_hand_qty_opens_readonly_view/) | 17.0.1.0.0 |  | Only users in a specific access group see the editable list view
 [product_parse_gs1_barcode](product_parse_gs1_barcode/) | 17.0.1.0.0 |  | Extract information to product barcode while reading a barcode
+[product_parse_revision_code](product_parse_revision_code/) | 17.0.1.0.2 |  | Scheduled action to parse revision codes from default codes
 [product_pricelist](product_pricelist/) | 17.0.1.0.0 |  | Add a pricelist information to product
 [product_pricelist_disable_company_check](product_pricelist_disable_company_check/) | 17.0.1.0.0 |  | Don't force using same company for product and product pricelist
 [product_pricelist_divide_price](product_pricelist_divide_price/) | 17.0.1.0.4 |  | Divide the result in pricelist rule with Divide by -field
@@ -68,7 +69,7 @@ addon | version | maintainers | summary
 [product_template_dimension](product_template_dimension/) | 17.0.1.0.1 |  | Variant dimensions are managed in the related product template
 [product_template_hide_sh_tags](product_template_hide_sh_tags/) | 17.0.1.0.0 |  | Hide SH tags from product template
 [product_template_materials](product_template_materials/) | 17.0.1.0.0 |  | Product Materials on Product template
-[product_template_revision_archive_and_link](product_template_revision_archive_and_link/) | 17.0.1.1.6 |  | Archive old Revision Products and link them to the new Revision
+[product_template_revision_archive_and_link](product_template_revision_archive_and_link/) | 17.0.1.1.7 |  | Archive old Revision Products and link them to the new Revision
 [product_template_revision_code](product_template_revision_code/) | 17.0.1.0.2 |  | Add Revision Code -field to product template
 [product_template_tags_kanban](product_template_tags_kanban/) | 17.0.1.0.0 |  | Product tags shown on Kanban view
 [product_template_update_variant_volume](product_template_update_variant_volume/) | 17.0.1.0.0 |  | Variant weight and volume is managed in related product template
