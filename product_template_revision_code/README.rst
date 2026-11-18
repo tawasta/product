@@ -6,31 +6,23 @@
 Revision Code of product template
 =================================
 
-::
-
-    Install the module to have revision_code, revision_note and revision_date
-    fields on product.template model. The fields are shown in its form view
-    to inventory administrators and they are purely informative on their own.
-    These fields are primarily meant to be used together with other functionalities.
+Install the module to have revision_code, revision_note and revision_date
+fields on product.template model. The fields are shown in its form view
+to inventory administrators and they are purely informative on their own.
+These fields are primarily meant to be used together with other functionalities.
 
 Configuration
 =============
-::
-
-    No configuration is necessary
+No configuration is necessary
 
 Usage
 =====
-::
-
-    Go to Apps to install the module
+Go to Apps to install the module
 
 Known issues / Roadmap
 ======================
-::
-
-    Check if there exists a module in the installation that uses the same
-    technical field name, revision_code, on product.template model.
+Check if there exists a module in the installation that uses the same
+technical field name, revision_code, on product.template model.
 
 Credits
 =======
