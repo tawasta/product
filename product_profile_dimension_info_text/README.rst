@@ -6,27 +6,23 @@
 Product Profile info fields
 ===========================
 
-::
+Adds profile info fields to products. The functionality is purely informative.
 
-    Adds profile info fields to products. The functionality is purely informative.
+The fields are shown on the product form, Inventory tab. Product variants
+show the values of their product.
 
 Configuration
 =============
-::
-
-    None needed
+None needed
 
 Usage
 =====
-::
-
-    Write values to profile_info_type and profile_info_text fields on products.
+Write values to the Profile Info Type and Dimensions info fields
+(profile_info_type, dimension_text) on products.
 
 Known issues / Roadmap
 ======================
-::
-
-    None
+None
 
 Credits
 =======
@@ -40,8 +36,8 @@ Contributors
 Maintainer
 ----------
 
-.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
-   :alt: Oy Tawasta OS Technologies Ltd.
-   :target: http://tawasta.fi/
+.. image:: https://futural.fi/templates/tawastrap/images/logo.png
+   :alt: Futural Oy
+   :target: https://futural.fi/
 
-This module is maintained by Oy Tawasta OS Technologies Ltd.
+This module is maintained by Futural Oy.
