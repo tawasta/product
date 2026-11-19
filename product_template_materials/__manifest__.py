@@ -21,7 +21,7 @@
 {
     "name": "Product Materials on Product template",
     "summary": "Product Materials on Product template",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",

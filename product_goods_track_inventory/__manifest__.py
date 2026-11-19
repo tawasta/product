@@ -21,7 +21,7 @@
 {
     "name": "Track Inventory of products with Goods type",
     "summary": "Track Inventory of products with Goods type",
-    "version": "19.0.1.0.0",
+    "version": "19.0.1.0.1",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
     "author": "Futural",
