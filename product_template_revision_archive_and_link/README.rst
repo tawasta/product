@@ -1,0 +1,74 @@
+.. image:: https://img.shields.io/badge/licence-AGPL--3-blue.svg
+   :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
+   :alt: License: AGPL-3
+
+===============================================================
+Archive old Revision Products and link them to the new Revision
+===============================================================
+
+Go through products with similar internal reference patterns. This kind of
+search is used to identify old revisions of a product. Then the found old
+revisions are archived.
+
+Internal reference needs to have a similar pattern. Right now the pattern
+needs to be "{} {}". First characters in a string is split to group products
+with their product code without revision code. String after it can be DEV,
+0.001, A, B, A.001 and so on.
+
+Revision codes are ordered in reverse order. For example:
+
+* Product test: 12345 B
+* Product test: 12345 A
+* Product test: 12345 C
+
+This is grouped and ordered by: 12345 [C, B, A]. Then A and B are archived and
+linked to C.
+
+The old revisions are linked to the new product revision. These can be seen in
+product template form view with Revision smart button.
+
+The previous revision copies its vendor pricelist to the newest product
+revision.
+
+The Internal Reference is unique (product_code_unique), so two products cannot
+have the same revision code.
+
+Changes in 19.0
+===============
+* A revision with something else than digits after the dot, for example
+  "12345 A.B", is skipped. In 17.0 such a reference stopped the whole
+  scheduled action with an error, so no product was archived.
+
+Configuration
+=============
+A scheduled action is first set as inactive. Activate it to periodically
+archive old revisions.
+
+Usage
+=====
+Use the added scheduled action to archive old revisions of a product.
+
+Known issues / Roadmap
+======================
+* This module does not break anything. Understand when archiving happens to
+  avoid unwanted behaviour.
+* The number after the dot is compared as a decimal, so A.10 is older than
+  A.9. Then 12345 A.10 is archived and 12345 A.9 stays active.
+
+Credits
+=======
+
+Contributors
+------------
+
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
+* Valtteri Lattu <valtteri.lattu@futural.fi>
+
+Maintainer
+----------
+
+.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+   :alt: Oy Tawasta OS Technologies Ltd.
+   :target: http://tawasta.fi/
+
+This module is maintained by Oy Tawasta OS Technologies Ltd.
