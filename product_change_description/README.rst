@@ -11,7 +11,8 @@ when importing data to Odoo. Thus this field is only informative
 and it does not contain any functionalities related to other fields
 or functions.
 
-The field is shown on the product variant form, Inventory tab.
+The field is shown on the product variant and product template forms,
+inside Inventory tab.
 
 Configuration
 =============
