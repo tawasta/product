@@ -47,10 +47,6 @@ the 17.0 user interface before the fix.
   template, so a product material was also shown as a packaging material and
   the other way round. In 19.0 the lists are filtered by the material type, as
   they are on product variants.
-* **Update Product Template removed links.** In 17.0 the action cleared the
-  product template from every material that already had both links, and left
-  materials of multi-variant products without any product. In 19.0 the action
-  only fills in missing links and never removes them.
 * **The delivery package flag of the product template was not updated.**
   In 17.0 the value was computed only when the product template was created.
   In 19.0 it follows the delivery package flag of the variant of a product with

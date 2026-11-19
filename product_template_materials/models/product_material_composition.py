@@ -44,5 +44,13 @@ class ProductMaterialComposition(models.Model):
             and not material.product_product_id
             and material.product_tmpl_id.product_variant_count == 1
         )
+
         for template, materials in missing_variant.grouped("product_tmpl_id").items():
             materials.product_product_id = template.product_variant_ids
+
+        material_product_with_multiple_variants = self.filtered(
+            lambda material: material.product_product_id.product_tmpl_id.product_variant_count > 1
+        )
+
+        for material in material_product_with_multiple_variants:
+            material.product_tmpl_id = False
