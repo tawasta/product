@@ -2,9 +2,9 @@
    :target: http://www.gnu.org/licenses/agpl-3.0-standalone.html
    :alt: License: AGPL-3
 
-=============================
-Product default type: product
-=============================
+===========================================
+Track Inventory of products with Goods type
+===========================================
 
 * New goods products track inventory ("Track Inventory" checked) by default,
   also when products are imported or created by integrations
@@ -18,11 +18,12 @@ Configuration
 
 Usage
 =====
-\-
+* Create a new product with Goods type. See how its Track Inventory
+  is enabled by this choice
 
 Known issues / Roadmap
 ======================
-\-
+* The module changes default behaviour, but this does not create issues in Odoo
 
 Credits
 =======
@@ -31,6 +32,7 @@ Contributors
 ------------
 
 * Valtteri Lattu <valtteri.lattu@futural.fi>
+* Timo Kekäläinen <timo.kekalainen@tawasta.fi>
 
 Maintainer
 ----------

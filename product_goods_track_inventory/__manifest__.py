@@ -19,8 +19,8 @@
 ##############################################################################
 
 {
-    "name": "Product default type: product",
-    "summary": "Product default type: product",
+    "name": "Track Inventory of products with Goods type",
+    "summary": "Track Inventory of products with Goods type",
     "version": "19.0.1.0.0",
     "category": "Product",
     "website": "https://github.com/tawasta/product",
