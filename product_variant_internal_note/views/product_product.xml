@@ -7,12 +7,12 @@
     <field name="arch" type="xml">
       <xpath expr="//group[@name='group_lots_and_weight']" position="after">
         <group string="Variant Notes">
-            <field
-              name="internal_note"
-              nolabel="1"
-              colspan="8"
-              placeholder="Notes for a product variant..."
-            />
+          <field
+            name="internal_note"
+            nolabel="1"
+            colspan="8"
+            placeholder="Notes for a product variant..."
+          />
         </group>
       </xpath>
     </field>

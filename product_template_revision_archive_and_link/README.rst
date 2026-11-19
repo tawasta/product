@@ -6,85 +6,54 @@
 Archive old Revision Products and link them to the new Revision
 ===============================================================
 
-A scheduled action goes through the products whose Internal Reference has the
-pattern "<code> <revision>", for example "12345 B". Products with the same
-code are revisions of the same product.
+Go through products with similar internal reference patterns. This kind of
+search is used to identify old revisions of a product. Then the found old
+revisions are archived.
 
-* The newest revision stays active. The older revisions are archived and
-  linked to it.
-* The linked revisions are shown with the Revisions smart button of the
-  newest revision. An archived revision shows its newest revision in the
-  Recent product revision field (inventory administrators).
-* The vendor prices of the previous revision are copied to the newest
-  revision once, when the previous revision is linked to it.
+Internal reference needs to have a similar pattern. Right now the pattern
+needs to be "{} {}". First characters in a string is split to group products
+with their product code without revision code. String after it can be DEV,
+0.001, A, B, A.001 and so on.
 
-A revision is DEV, 0, 1-9 or A-ZZ, optionally followed by a dot and a number,
-for example A.001. The order is DEV and 0 first, then 1-9 or A-ZZ, then the
-number after the dot. For example 12345 A, 12345 B and 12345 C are grouped as
-12345 and ordered C, B, A. Then A and B are archived and linked to C.
+Revision codes are ordered in reverse order. For example:
 
-If the two newest revisions of a code have the same order, for example two
-products 12345 C, or 12345 1 and 12345 A, or 12345 DEV and 12345 0, the code
-is skipped and a warning is logged.
+* Product test: 12345 B
+* Product test: 12345 A
+* Product test: 12345 C
+
+This is grouped and ordered by: 12345 [C, B, A]. Then A and B are archived and
+linked to C.
+
+The old revisions are linked to the new product revision. These can be seen in
+product template form view with Revision smart button.
+
+The previous revision copies its vendor pricelist to the newest product
+revision.
+
+The Internal Reference is unique (product_code_unique), so two products cannot
+have the same revision code.
 
 Changes in 19.0
 ===============
-Fixed compared to 17.0:
-
-* A revision with letters after the dot, for example "A.B", stopped the
-  whole scheduled action with an error. Such references are now ignored.
-* Two products with the same newest reference, for example two "12345 C",
-  stopped the whole scheduled action with an error. Now the old revisions of
-  that code are left untouched and a warning is logged.
-* The number after the dot was compared as a decimal, so A.10 was older than
-  A.9. Now it is compared as a whole number.
-* The vendor prices of the previous revision were copied again on every run,
-  so a price changed on the newest revision got its old price back as a
-  second line. Now the prices are copied only once.
-* A vendor price of a specific variant of the old revision was copied with
-  that variant, so the newest revision never used it in purchases. Now the
-  copy applies to all variants of the newest revision.
-* The setting code_is_digit was on with any value, also "False". Now 1, True
-  or yes turns it on, 0, False or no turns it off, and another value stops
-  the scheduled action with an error.
-* An error in one product stopped the archiving of all products. Now the
-  failing code is skipped and the error is logged.
-* The Revisions smart button counted all linked revisions, but listed only
-  the archived ones. Now it lists all of them.
-* A duplicated archived revision kept the link to the newest revision. Now
-  the link is not copied.
-* The module did not depend on Inventory although its view uses the
-  Inventory administrator group.
-
-Price lines that 17.0 already duplicated are not removed.
+* A revision with something else than digits after the dot, for example
+  "12345 A.B", is skipped. In 17.0 such a reference stopped the whole
+  scheduled action with an error, so no product was archived.
 
 Configuration
 =============
-The scheduled action Archive Old revision products is inactive after the
-installation. Activate it to archive old revisions daily.
-
-Optional system parameters:
-
-* archive_code_len: only codes of this length are handled, for example 5.
-* code_is_digit: set to 1 to handle only codes that contain only digits.
+A scheduled action is first set as inactive. Activate it to periodically
+archive old revisions.
 
 Usage
 =====
-Activate the scheduled action, or run it manually from Settings > Technical >
-Scheduled Actions.
+Use the added scheduled action to archive old revisions of a product.
 
 Known issues / Roadmap
 ======================
-* Archiving is based only on the Internal Reference. Check the references
-  before activating the scheduled action to avoid unwanted archiving.
-* Products of different companies with the same code are handled as one
-  product, as in 17.0. Then the vendor prices of one company can be copied to
-  the product of another company.
-* If the old revision had different prices for its variants with the same
-  vendor and quantity, the newest revision gets all of them, and purchases
-  use the cheapest.
-* An archived newest revision is still the newest: the older revisions are
-  archived and linked to it, as in 17.0.
+* This module does not break anything. Understand when archiving happens to
+  avoid unwanted behaviour.
+* The number after the dot is compared as a decimal, so A.10 is older than
+  A.9. Then 12345 A.10 is archived and 12345 A.9 stays active.
 
 Credits
 =======
@@ -98,8 +67,8 @@ Contributors
 Maintainer
 ----------
 
-.. image:: https://futural.fi/templates/tawastrap/images/logo.png
-   :alt: Futural Oy
-   :target: https://futural.fi/
+.. image:: http://tawasta.fi/templates/tawastrap/images/logo.png
+   :alt: Oy Tawasta OS Technologies Ltd.
+   :target: http://tawasta.fi/
 
-This module is maintained by Futural Oy.
+This module is maintained by Oy Tawasta OS Technologies Ltd.

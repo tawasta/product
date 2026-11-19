@@ -6,9 +6,10 @@ class ProductTemplate(models.Model):
 
     is_storable = fields.Boolean(default=True)
 
-    @api.depends('type')
+    @api.depends("type")
     def compute_is_storable(self):
         """Re-check if the set product type is Goods and track its
         inventory in this case."""
-        super().compute_is_storable()
-        self.filtered(lambda t: t.type == 'consu').is_storable = True
+        res = super().compute_is_storable()
+        self.filtered(lambda t: t.type == "consu").is_storable = True
+        return res

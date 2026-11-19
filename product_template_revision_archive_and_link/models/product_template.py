@@ -1,33 +1,10 @@
+import itertools
 import logging
-import re
-from collections import defaultdict
+from string import ascii_uppercase
 
-from odoo import Command, api, fields, models
-from odoo.tools import str2bool
+from odoo import fields, models
 
 _logger = logging.getLogger(__name__)
-
-# "DEV" and "0" come before the first revision, then 1-9 or A-ZZ.
-# An optional numeric sub revision follows a dot, e.g. "A.001".
-REVISION_PATTERN = re.compile(r"^(DEV|[0-9]|[A-Z]{1,2})(?:\.([0-9]*))?$")
-
-
-def _revision_rank(revision):
-    """Return a sortable rank for the revision, or None if it is not one"""
-    match = REVISION_PATTERN.match(revision)
-    if not match:
-        return None
-    main, sub = match.groups()
-    if main in ("DEV", "0"):
-        rank = 0
-    elif main.isdigit():
-        rank = int(main)
-    else:
-        # A=1 ... Z=26, AA=27 ... ZZ=702
-        rank = 0
-        for letter in main:
-            rank = rank * 26 + ord(letter) - ord("A") + 1
-    return rank, int(sub or 0)
 
 
 class ProductTemplate(models.Model):
@@ -40,22 +17,189 @@ class ProductTemplate(models.Model):
         copy=False,
         context={"active_test": False},
     )
+
     product_tmpl_revision_id = fields.Many2one(
         "product.template",
         string="Recent product revision",
-        copy=False,
-        index="btree_not_null",
     )
+
     revision_product_tmpl_count = fields.Integer(
         string="Revision Count", compute="_compute_revision_product_tmpl_count"
     )
 
-    @api.depends("revision_product_tmpl_ids")
     def _compute_revision_product_tmpl_count(self):
         for template in self:
-            template.revision_product_tmpl_count = len(
-                template.revision_product_tmpl_ids
-            )
+            if template.revision_product_tmpl_ids:
+                template.revision_product_tmpl_count = len(
+                    template.with_context(
+                        active_test=False
+                    ).revision_product_tmpl_ids.ids
+                )
+            else:
+                template.revision_product_tmpl_count = 0
+
+    def get_list_abc(self):
+        def iter_all_strings():
+            for size in itertools.count(1):
+                for s in itertools.product(ascii_uppercase, repeat=size):
+                    yield "".join(s)
+
+        i = 1
+        list_abc = {"DEV": 0, "0": 0}
+        for string in iter_all_strings():
+            if i < 10:
+                list_abc[str(i)] = i
+            list_abc[string] = i
+            i += 1
+            if string == "ZZ":
+                break
+            # To avoid infinite loop just in case
+            if i > 1000:
+                break
+        return list_abc
+
+    def archive_old_revision_product(self):
+        all_product_tmpl_ids = self.env["product.template"].search(
+            [
+                "|",
+                ("active", "=", True),
+                ("active", "=", False),
+            ]
+        )
+
+        list_abc = self.get_list_abc()
+
+        code_group = {}
+
+        ir_config_model = self.env["ir.config_parameter"]
+        archive_code_len = ir_config_model.sudo().get_param("archive_code_len") or False
+        code_check_digit = ir_config_model.sudo().get_param("code_is_digit") or False
+
+        for product in all_product_tmpl_ids:
+            if product.default_code:
+                split_values = product.default_code.split()
+                if len(split_values) == 2:
+                    code, revision = split_values
+                    code_len = (
+                        len(code) == float(archive_code_len)
+                        if archive_code_len
+                        else True
+                    )
+                    code_is_digit = code.isdigit() if code_check_digit else True
+                    # A revision like "A.B" would stop the whole run when it is
+                    # sorted, so only digits are accepted after the dot
+                    sub_revision_ok = (
+                        revision.split(".")[1].isdecimal() if "." in revision else True
+                    )
+
+                    if (
+                        code_len
+                        and code_is_digit
+                        and sub_revision_ok
+                        and len(revision.split(".")) < 3
+                        and (
+                            revision in list_abc.keys()
+                            or revision.split(".")[0] in list_abc.keys()
+                        )
+                    ):
+                        code_group[code] = [revision] + code_group.get(code, [])
+                        code_group[code] = sorted(
+                            code_group[code],
+                            key=lambda ele: list_abc[ele.split(".")[0]]
+                            + float("0.{}".format(ele.split(".")[1]))
+                            if "." in ele and len(ele.split(".")) < 3
+                            else list_abc[ele],
+                            reverse=True,
+                        )
+
+        for code in code_group:
+            archived_products = self.env["product.template"]
+
+            if len(code_group[code]) > 1:
+                active_product = code_group[code].pop(0)
+
+                active_default_code = f"{code} {active_product}"
+                active_product_id = (
+                    self.env["product.template"]
+                    .with_context(active_test=False)
+                    .search([("default_code", "=", active_default_code)])
+                )
+
+                old_products = False
+
+                for rev in code_group[code]:
+                    default_code = f"{code} {rev}"
+                    old_products = self.env["product.template"].search(
+                        [
+                            "|",
+                            ("active", "=", True),
+                            ("active", "=", False),
+                            ("default_code", "=", default_code),
+                        ]
+                    )
+
+                    if old_products:
+                        old_products.active = False
+                        archived_products |= old_products
+
+                if archived_products:
+                    self.copy_revision_pricelist_to_active_product(
+                        archived_products, active_product_id
+                    )
+
+                    active_product_id.write(
+                        {"revision_product_tmpl_ids": [(6, 0, archived_products.ids)]}
+                    )
+                    _logger.info(
+                        "These products have been automatically archived: "
+                        f"{archived_products.ids}"
+                    )
+
+    def copy_revision_pricelist_to_active_product(
+        self, archived_products, active_product_id
+    ):
+        supplier_pricelists_to_copy = self.env["product.supplierinfo"].search(
+            [("product_tmpl_id", "=", archived_products[0].id)]
+        )
+
+        pricelists = []
+        deduplicate_vendor_pricelists = self.env["product.supplierinfo"]
+
+        active_product_pricelists = self.env["product.supplierinfo"].search(
+            [("product_tmpl_id", "=", active_product_id.id)]
+        )
+
+        if active_product_pricelists:
+            active_values = [
+                (s.partner_id, s.price, s.min_qty) for s in active_product_pricelists
+            ]
+        else:
+            active_values = []
+
+        if supplier_pricelists_to_copy:
+            for sup_pricelist in supplier_pricelists_to_copy:
+                if (
+                    sup_pricelist.partner_id,
+                    sup_pricelist.price,
+                    sup_pricelist.min_qty,
+                ) not in pricelists + active_values:
+                    pricelists.append(
+                        (
+                            sup_pricelist.partner_id,
+                            sup_pricelist.price,
+                            sup_pricelist.min_qty,
+                        )
+                    )
+                    deduplicate_vendor_pricelists |= sup_pricelist
+
+            copied_pricelists = self.env["product.supplierinfo"]
+
+            if deduplicate_vendor_pricelists:
+                for dedup_pricelist in deduplicate_vendor_pricelists:
+                    copied_pricelists |= dedup_pricelist.copy()
+
+            if copied_pricelists:
+                copied_pricelists.write({"product_tmpl_id": active_product_id.id})
 
     def action_open_revision_products(self):
         self.ensure_one()
@@ -65,94 +209,8 @@ class ProductTemplate(models.Model):
             "res_model": "product.template",
             "view_mode": "list,form,kanban",
             "domain": [
+                ("active", "=", False),
                 ("id", "in", self.revision_product_tmpl_ids.ids),
-                ("active", "in", [True, False]),
             ],
             "target": "current",
         }
-
-    @api.model
-    def archive_old_revision_product(self):
-        """Archive the old revisions and link them to the newest revision"""
-        for code, revisions in self._get_revision_groups().items():
-            # One failing product must not stop the archiving of the others
-            try:
-                with self.env.cr.savepoint():
-                    self._archive_old_revisions(revisions)
-            except Exception:
-                _logger.exception("Old revisions of code %s were not archived", code)
-
-    @api.model
-    def _get_revision_groups(self):
-        """Return {code: [(rank, template)]} of codes with several revisions"""
-        # The settings are readable only by administrators
-        icp = self.env["ir.config_parameter"].sudo()
-        code_length = int(float(icp.get_param("archive_code_len") or 0))
-        code_is_digit = str2bool(icp.get_param("code_is_digit") or "0")
-
-        templates = self.with_context(active_test=False).search_fetch(
-            [("default_code", "like", " ")],
-            ["default_code", "active", "product_tmpl_revision_id"],
-        )
-        groups = defaultdict(list)
-        for template in templates:
-            parts = template.default_code.split()
-            if len(parts) != 2:
-                continue
-            code, revision = parts
-            if code_length and len(code) != code_length:
-                continue
-            if code_is_digit and not code.isdigit():
-                continue
-            rank = _revision_rank(revision)
-            if rank is not None:
-                groups[code].append((rank, template))
-        return {code: revs for code, revs in groups.items() if len(revs) > 1}
-
-    @api.model
-    def _archive_old_revisions(self, revisions):
-        revisions.sort(key=lambda revision: revision[0], reverse=True)
-        (newest_rank, newest), (previous_rank, previous) = revisions[:2]
-        if newest_rank == previous_rank:
-            _logger.warning(
-                "Old revisions of %s were not archived: the newest revision "
-                "is not unique",
-                newest.default_code,
-            )
-            return
-
-        old_revisions = self.browse([template.id for _rank, template in revisions[1:]])
-        if not old_revisions.filtered(
-            lambda template: template.active
-            or template.product_tmpl_revision_id != newest
-        ):
-            return
-
-        # Copy the prices only once, so that later price changes are kept
-        if previous.product_tmpl_revision_id != newest:
-            self._copy_revision_supplierinfo(previous, newest)
-        to_archive = old_revisions.filtered("active")
-        to_archive.write({"active": False})
-        newest.revision_product_tmpl_ids = [Command.set(old_revisions.ids)]
-        if to_archive:
-            _logger.info(
-                "These products have been automatically archived: %s", to_archive.ids
-            )
-
-    @api.model
-    def _copy_revision_supplierinfo(self, previous, newest):
-        supplierinfo_model = self.env["product.supplierinfo"]
-        newest_supplierinfos = supplierinfo_model.search(
-            [("product_tmpl_id", "=", newest.id)]
-        )
-        seen = {(s.partner_id, s.price, s.min_qty) for s in newest_supplierinfos}
-        to_copy = supplierinfo_model
-        for supplierinfo in supplierinfo_model.search(
-            [("product_tmpl_id", "=", previous.id)]
-        ):
-            key = (supplierinfo.partner_id, supplierinfo.price, supplierinfo.min_qty)
-            if key not in seen:
-                seen.add(key)
-                to_copy |= supplierinfo
-        # The variant of the old revision would hide the price from the newest
-        to_copy.copy({"product_tmpl_id": newest.id, "product_id": False})

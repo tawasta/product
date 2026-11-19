@@ -25,7 +25,7 @@ msgstr "Näyttönimi"
 #. module: product_goods_track_inventory
 #: model:ir.model.fields,field_description:product_goods_track_inventory.field_product_template__id
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 #. module: product_goods_track_inventory
 #: model:ir.model,name:product_goods_track_inventory.model_product_template
