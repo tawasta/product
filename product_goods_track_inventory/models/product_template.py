@@ -1,8 +1,10 @@
-from odoo import api, models
+from odoo import api, fields, models
 
 
 class ProductTemplate(models.Model):
     _inherit = "product.template"
+
+    is_storable = fields.Boolean(default=True)
 
     @api.depends('type')
     def compute_is_storable(self):
